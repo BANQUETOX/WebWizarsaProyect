@@ -1,0 +1,30 @@
+.tittle{
+    text-align: center;
+    margin-top:36%;
+}
+
+.acme {
+    text-align: center;
+    margin-top: 0%;
+    font-size: larger;
+    line-height: 0.2;
+    
+    
+}
+
+.phrase{
+    display: block;
+    justify-content: center;
+    font-size: larger;
+    width: 34%;
+    text-align: center;
+    margin-left: 34%;
+}
+
+.phrase p:last-child {
+    text-decoration: transparent;
+    color: rgba(70, 70, 70, 0.535);
+    font-size: small;
+    margin-top: -10px;
+    
+}
