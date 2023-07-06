@@ -10,6 +10,10 @@
 	border-radius: .25rem;
 	color: #ffffff;
 	background-color: #9FD3C7;
+	cursor: pointer;
+}
+.button--green:hover{
+	background-color: #719d92;
 }
 
 .button--red{
@@ -24,6 +28,10 @@
 	border-radius: .25rem;
 	color: #ffffff;
 	background-color: #BE3144;
+	cursor: pointer;
+}
+.button--red:hover{
+	background-color: #852532;
 }
 .button--black{
 	font-family: 'Montserrat', sans-serif;
@@ -37,4 +45,9 @@
 	border-radius: .25rem;
 	color: #ffffff;
 	background-color: #000000;
+	cursor: pointer;
+}
+.button--black:hover{
+	background-color: #ffffff;
+	color: #000000;
 }
