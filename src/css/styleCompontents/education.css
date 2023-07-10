@@ -1,6 +1,6 @@
 .tittle{
     text-align: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 3vh;
     margin-top: 1%;
 
@@ -20,11 +20,12 @@
 
 .container-tittle{
     text-align: center;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Poppins', sans-serif;
 
   }
 
 .formulary{
+    font-family: 'Montserrat', sans-serif;
     display: grid;
     grid-template-columns: 1fr;
     gap: 25px;
@@ -241,44 +242,3 @@
 
   }
 
-.icons{
-    display: flex;
-    align-items: center;
-    justify-content: center;
- } 
-
-.icons a {
-    display: block;
-    margin-bottom: 10px;
-}
-
-.icons img {
-    width: 40px;
-    height: 40px;
-    margin: 0 5px;
-    border: none;
-}
-.pregunta-registro {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    text-align: center;
-    margin-top: 0.5%;
-}
-
-.pregunta-registro h4 {
-    margin: 0;
-}
-
-.pregunta-registro a {
-    text-decoration: none;
-    color: #fff;
-    font-size: medium;
-
-}
-.pregunta-registro a:hover {
-    color: #e86924;
-    
-}
