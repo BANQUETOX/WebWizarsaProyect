@@ -1,6 +1,7 @@
 .tittle{
     text-align: center;
     margin-top:36%;
+    font-family: 'Poppins', sans-serif;
 }
 
 .testament-owner {
@@ -8,6 +9,7 @@
     margin-top: 0%;
     font-size: larger;
     line-height: 0.2;
+    font-family: 'Poppins', sans-serif;
     
     
 }
@@ -19,6 +21,7 @@
     width: 34%;
     text-align: center;
     margin-left: 34%;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .phrase p:last-child {
@@ -26,5 +29,6 @@
     color: rgba(70, 70, 70, 0.535);
     font-size: small;
     margin-top: -10px;
+    font-family: 'Montserrat', sans-serif;
     
 }
