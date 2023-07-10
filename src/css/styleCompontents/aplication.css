@@ -1,0 +1,43 @@
+.aplication{
+    border: solid black 2px;
+    margin-bottom: 2vh;
+    width: 40vw;
+} 
+.aplication--name{
+    font-family: 'Montserrat', sans-serif;
+    padding-left: 10px;
+    margin: 0;
+}
+.aplication--description{
+    font-family: 'Montserrat', sans-serif;
+    padding-left: 10px;
+
+}
+.aplication--estatus__send{
+    font-family: 'Montserrat', sans-serif;
+    font-weight:bold;
+    margin-left: 75%;
+    color:#142D4C    ;
+
+}
+.aplication--estatus__review{
+    font-family: 'Montserrat', sans-serif;
+    font-weight:bold;
+    margin-left: 75%;
+    color:#303841    ;
+
+}
+.aplication--estatus__accepted{
+    font-family: 'Montserrat', sans-serif;
+    font-weight:bold;
+    margin-left: 75%;
+    color:#9FD3C7      ;
+
+}
+.aplication--estatus__denied{
+    font-family: 'Montserrat', sans-serif;
+    font-weight:bold;
+    margin-left: 75%;
+    color:#BE3144     ;
+
+}
