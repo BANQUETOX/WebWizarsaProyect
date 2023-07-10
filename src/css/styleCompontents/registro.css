@@ -1,0 +1,63 @@
+
+.internal_title {
+    margin-top: 10px;
+    margin-bottom: 50px;
+    color: aliceblue;
+    font-weight: 700;
+    font-size: 24px;
+    text-align: center;
+}
+
+.internal_form {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-left: 40px;
+    margin-left:500px;
+    width: 600px;
+    height: 100%;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 300px;
+    background-color: gray;
+}
+
+.input_class {
+    margin-bottom: 70px;
+    width: 300px;
+    
+}
+
+
+.input_email {
+    margin-bottom: 10px;
+}
+
+.internal_form select {
+    margin-bottom: 70px;
+    width: 250px;
+
+}
+
+.internal_form label {
+    margin-bottom: 20px;
+}
+
+
+
+.button-container {
+    position:absolute;
+    margin-top: 200px;
+
+    margin-right: 500px;
+}
+
+.button-container input {
+    margin: 0 5px; /* Ajusta el espaciado entre los botones */
+}
+
+.button {
+    width: 100px;
+    height: 30px;
+    background-color: rgb(243, 233, 233);
+}
+
