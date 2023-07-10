@@ -1,0 +1,30 @@
+Observaciones genearles:
+- Uso de html slectors para realizar cambios de estilo (Esto es para evitar conflictos en las hojas de estilo).
+
+- Uso del declaracion de estilos en el documeto html(Para este proyecto todos las modificaciones de estilo se van a realizar en archivos css, esto para que el html se encargue solo del markup de la pagina y sea mas legible).
+
+- Hace llamados a hojas de estilo que no corresponden al componente creado (Solo llame las hojas de estilo que sean necesarias para el componente, esto para no cargar al componente de archivos que no necesita, para evitar conflictos de clases, y poder hacer cambios desde un solo archivo css, omitiendo el css de google, y normalize.css).
+
+***Correcciones para el archivo "register.html"
+- Para el uso de codigo css de otros componente, por ejemplo los botones, copie el codigo los elementos que va a usar en la hoja de estilos del componente que este creando (en este "caso register.css").
+
+- Declaraciones de estilo en el documento html, dele una clase acorde con el estandar "BEM" al elemento, y haga los cambios de estilo en el archivo css correspondiente (en este caso  "caso register.css").
+
+- Eliminar links que llamen a hojas de estilo que no correspondan al componente creado ("buttons.css").
+
+
+***Correcciones para el archivo "welcome.html"
+- Eliminar las declaraciones css que hay en el html, paselas a un archivo css aparte para el componente.
+
+- No use html selector, en su lugar, declare clases a los elementos y modifiquelos desde el css.
+
+- Eliminar links que llamen a hojas de estilo que no correspondan al componente creado ("buttons.css" y "register.css").
+
+Correcciones visuales (register):
+- Redusca el largo del recuadro gris (parecido al de la imagen)
+- Aumente un poco el espacio entre los botones
+
+
+Nota: El resto de aspectos como estructura html, uso del css y sus clases, esta bien empleado,
+revise este documento para crear clases css mas claras y acorde a los que acordamos en el proyecto
+Ref: https://www.freecodecamp.org/news/css-naming-conventions-that-will-save-you-hours-of-debugging-35cea737d849/
