@@ -1,0 +1,22 @@
+Observaciones generales:
+- Espan;ol en los nombre de archivos
+- Uso de nombres poco descriptivos para archivos
+- Falta el uso de las fuentes definidas en el dise;o para los textos
+- Tenga en cuenta la manera en la que se estan referenciando los archivos css en este proyecto. 
+    (Me tome la libertad de poner las referencias al css, para que lo tome de referencia para el resto de paginas)
+
+
+***Correcciones para "inicio.html"
+- Darle un nombre mas especifico al archivo en ingles, para no generar conflictos con otros archivos del grupo
+    esto aplica tambien para el archivo css del componente
+- Usar las fuentes de texto
+
+***Correcciones visuales para "Inicio.html"
+- Separar verticalmente los elementos "olvide contrase;a", el boton "Ingresar" y "registrar si no tienes cuenta",
+ para que se asemeje mas al wireframe
+
+***Correcciones funcionales para "Inicio.html"
+- Realize una verificacion de inputs en donde verifique que los espacios no esten vacios,
+ y se asegure que el input de correo sea un correo electrinico, se puede guiar con los ejercicios que hemos hecho en clase 
+ 
+
