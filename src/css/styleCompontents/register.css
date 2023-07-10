@@ -1,0 +1,14 @@
+html {
+    font-family: 'Montserrat', sans-serif
+}
+.objectframe {
+    margin: 0 auto;
+    padding: 25px;
+    text-align: center;
+    width: 50%;
+    background-color: #716F6F;
+    color: #FFFFFF
+}
+.objectframe h2 {
+    margin-top: 0;
+}
