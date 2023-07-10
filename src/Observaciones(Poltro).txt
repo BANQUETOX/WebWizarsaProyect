@@ -1,0 +1,9 @@
+Observaciones generales:
+- No hace uso de las fuentes acordadas por el grupo(use los links requeridos para el uso de las fuentes de texto
+ de lo contrario no se aplican las funetes)
+
+Recomendacion:
+- Al crear una pagina html use "!" y presione "enter" esto genera una base para codigo html consistente.
+
+Nota: EL uso de es estandar "BEM" esta bien implementado, 
+el uso de "div" para encapsulamiento de secciones esta bien implementado
