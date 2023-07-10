@@ -20,3 +20,8 @@ Observaciones generales:
  y se asegure que el input de correo sea un correo electrinico, se puede guiar con los ejercicios que hemos hecho en clase 
  
 
+**Correcciones para "formularioCrearEmpleo.html"
+- Darle un nombre mas especifico al archivo en ingles, para no generar conflictos con otros archivos del grupo
+    esto aplica tambien para el archivo css del componente
+
+Nota: El uso de clases de css esta bien empleado, al igual que la estuctura html  
