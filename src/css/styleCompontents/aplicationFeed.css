@@ -1,0 +1,105 @@
+.aplicationFeed{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+/* filters  */
+.select{
+    margin-bottom: 10px;
+    margin-left: 40%;
+}
+.select__element {
+    /* Reset Select */
+    appearance: none;
+    outline: 0;
+    border: 0;
+    box-shadow: none;
+    /* Personalize */
+    flex: 1;
+    padding: 0 1em;
+    color: #fff;
+    background-color: #34495e;
+    background-image: none;
+    cursor: pointer;
+}
+.select__element::-ms-expand {
+    display: none;
+}
+.select {
+    position: relative;
+    display: flex;
+    width: 20em;
+    height: 3em;
+    border-radius: .25em;
+    overflow: hidden;
+}
+.select::after {
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1em;
+    background-color: #34495e;
+    transition: .25s all ease;
+    pointer-events: none;
+}
+.select:hover::after {
+    color: #f39c12;
+}
+
+/* aplications */
+.aplicationFeed--jobAplications{
+    max-width: 42vw;
+    max-height: 60vh;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+.aplicationFeed--jobAplications>a{
+    color: black;
+    text-decoration: none;
+}
+.aplication{
+    border: solid black 2px;
+    margin-bottom: 2vh;
+    width: 40vw;
+} 
+.aplication--name{
+    font-family: 'Montserrat', sans-serif;
+    padding-left: 10px;
+    margin: 0;
+}
+.aplication--description{
+    font-family: 'Montserrat', sans-serif;
+    padding-left: 10px;
+
+}
+.aplication--estatus__send{
+    font-family: 'Montserrat', sans-serif;
+    font-weight:bold;
+    margin-left: 75%;
+    color:#142D4C    ;
+
+}
+.aplication--estatus__review{
+    font-family: 'Montserrat', sans-serif;
+    font-weight:bold;
+    margin-left: 75%;
+    color:#303841    ;
+
+}
+.aplication--estatus__accepted{
+    font-family: 'Montserrat', sans-serif;
+    font-weight:bold;
+    margin-left: 75%;
+    color:#9FD3C7      ;
+
+}
+.aplication--estatus__denied{
+    font-family: 'Montserrat', sans-serif;
+    font-weight:bold;
+    margin-left: 75%;
+    color:#BE3144     ;
+
+}
+
+  
