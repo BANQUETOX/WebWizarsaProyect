@@ -12,7 +12,7 @@
     <title>AddWorkExperience</title>
 </head>
 <body>
-    <div class="addWorkExperience">
+    <form class="addWorkExperience" id="experienceForm">
         
         <ul class="addWorkExperience--inputs-list">
             <li>
@@ -20,63 +20,68 @@
             </li>
             <li>
                 <label for="noWorkExperience" class="addWorkExperience--input-label">Actualmente no tengo experiencia laboral </label>
-                <input type="checkbox" name="" id="noWorkExperience" class="addWorkExperience--input addWorkExperience--input-checkbox">
+                <input type="checkbox" name="" id="noWorkExperience"  class="addWorkExperience--input addWorkExperience--input-checkbox">
             </li>
             <li>
-                <label for="workPosition" class="addWorkExperience--input-label">Posicion de trabajo</label>
-                <input type="text" id="workPosition" class="addWorkExperience--input text-input">
+                <label for="workPosition" class="addWorkExperience--input-label">Posicion de trabajo*</label>
+                <input type="text" id="workPosition" required class="addWorkExperience--input text-input">
             </li>
             <li>
-                <label for="company" class="addWorkExperience--input-label">Empresa</label>
-                <input type="text" id="company" class="addWorkExperience--input text-input"> 
+                <label for="company" class="addWorkExperience--input-label">Empresa*</label>
+                <input type="text" id="company" required class="addWorkExperience--input text-input"> 
             </li>
             <li>
-                <label for="location" class="addWorkExperience--input-label">Ubicacion</label>
-                <input type="text" id="location" class="addWorkExperience--input text-input">
+                <label for="location" class="addWorkExperience--input-label">Ubicacion*</label>
+                <input type="text" id="location" required class="addWorkExperience--input text-input">
             </li>
             <li>
-                <label for="since" class="addWorkExperience--input-label">Desde</label>
-                <input type="date" id="since" class="addWorkExperience--input text-input">
-                <label for="until" class="addWorkExperience--input-label">Hasta</label>
-                <input type="date" id="until" class="addWorkExperience--input text-input">
+                <label for="since" class="addWorkExperience--input-label">Desde*</label>
+                <input type="date"  id="since" required class="addWorkExperience--input text-input">
+                <label for="until" class="addWorkExperience--input-label">Hasta*</label>
+                <input type="date" id="until" required class="addWorkExperience--input text-input">
             </li>
             <li>
                 <label for="workHere" class="addWorkExperience--input-label">Actualmente trabajo aqui </label>
                 <input type="checkbox" name="" id="workHere" class="addWorkExperience--input addWorkExperience--input-checkbox">
             </li>
             <li>
-                <label for="jobDescription" class=" addWorkExperience--input-label">Descripcion del trabajo</label>
-                <textarea name="" id="jobDescription" cols="30" rows="10" class="addWorkExperience--input text-input"></textarea>
+                <label for="jobDescription" class=" addWorkExperience--input-label">Descripcion del trabajo*</label>
+                <textarea name="" id="jobDescription" cols="30" rows="10" required class="addWorkExperience--input text-input"></textarea>
             </li>
+            <li>
+                <button class="button--white addWorkExperience--button" id="upload-work">Subir otro trabajo </button>
+            </li>
+           
+        </ul>
+    </form>
+
+    <form action="" class="addWorkExperience" id="userExtraData">
+        <ul class="addWorkExperience--inputs-list">
             <li>
                 <label for="crimeSheet" class="addWorkExperience--input-label">Subir hoja de delincuencia </label>
-                <input type="file" accept=".pdf" id="crimeSheet" class="addWorkExperience--input upload-input">
+                <input type="file"  accept=".pdf" id="crimeSheet" class="upload-input">
             </li>
             <li>
-                <label for="lifeSheet" class="addWorkExperience--input-label">Subir hoja de vida </label>
-                <input type="file" accept=".pdf" id="lifeSheet" class="addWorkExperience--input upload-input">
-            </li>
-            <li>
-                <button class="button--white addWorkExperience--button">Guardar y subir otro trabajo </button>
+                <label for="lifeSheet" class="addWorkExperience--input-label">Subir hoja de vida(obligatorio) </label>
+                <input type="file" accept=".pdf" id="lifeSheet"  class="upload-input">
             </li>
             <li>
                 <div class="avatar-upload">
                     <div class="avatar-edit">
                         <label for="imageUpload" class="avatar-upload-input--label">Foto de perfil</label>
-                        <input type='file' id="imageUpload" accept=".png" class="avatar-upload-input" />
+                        <input type='file' name="profilePicture" id="imageUpload" accept=".png"  class="avatar-upload-input" />
                     </div>
-                    <div class="avatar-preview">
+                    <div class="avatar-preview" id="avatar-preview">
                         <div id="imagePreview">
                         </div>
                     </div>
                 </div>
             </li>
+            <li><button class="button--white addWorkExperience--button addWorkExperience--button__save">Guardar</button></li>
+
         </ul>
 
-
-
-
-    </div>
+    </form>
     
 </body>
 </html>
