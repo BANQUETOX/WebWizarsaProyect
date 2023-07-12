@@ -1,0 +1,35 @@
+html {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+}
+
+.edit-info {
+    width: 100%;
+}
+
+.edit-info input {
+    box-sizing: border-box;
+    width: 40vh;
+}
+
+.edit-info {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+.info {
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.address {
+    display: flex;
+    flex-direction: column;
+    padding-left: 13.9%;
+}
+
+#paddress {
+    width: 130vh;
+}
