@@ -4,20 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="agregarEmpresas.css">
-    <script src="agregarEmpresas.js"></script>
+    <link rel="stylesheet" href="../../css/styleCompontents/agregarEmpresas.css">
+    <script src="../../js/agregarEmpresas.js"></script>
 </head>
 
 <body>
-
-
   <div class="form-container">
     <h1 class ="subtitles"></h1>
   
     <form id="companyForm">
       <div class="form-group">
         <label for="logo">Logo de Empresa:</label>
-        <input type="file" id="logo" name="logo" accept="image/*">
+        <input type="file" id="logo" name="logo" accept="image/png" required>
         <img id="logoPreview" src="#" alt="Logo Preview" style="display: none;">
       </div>
 
