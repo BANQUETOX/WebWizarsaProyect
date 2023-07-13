@@ -9,5 +9,5 @@ Correcciones para "agregarEmpresas.html"
 - Aplicar las fuentes de texto correspondientes
 - Afinar el aspecto de pagina, para que se paresca mas al wireframe
 
-Nota: De momento voy a ignorar el codigo Js porque para este entregable no es necesario
+Nota: De momento voy a ignorar el codigo Js porque para este entregable no es necesario.
 
