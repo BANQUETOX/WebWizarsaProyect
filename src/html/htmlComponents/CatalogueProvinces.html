@@ -7,33 +7,35 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:ital,wght@0,700;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../css/normalize.css">
     <link rel="stylesheet" href="../../css/styleCompontents/CatalogueProvinces.css">
+    <script src="../../js/jsComponents/catalogueProvinces.js" defer></script>
     <title>CatalogueProvinces</title>
 </head>
 <body>
-    <form class="catalogue">
-        <header class="">
+    <form class="catalogue" id="catalogueForm">
+        <header>
             <h1 class="catalogue__header">Lista de provincias registradas</h1>
             <h2 class="catalogue__subtitle">Codigo</h2>
             <h2 class="catalogue__subtitle">Nombre</h2>
         </header>
-        <div>
-            <div class="catalogue__canton-field">
-                <input type="text" class="text-input" placeholder="Id">
-                <input type="text" class="text-input" placeholder="Canton1">
-                <button class="button--black">Cantones...</button>
+        <div id="catalogue__location-container">
+            <div class="catalogue__location-field" id="1">
+                <input type="text" class="text-input" placeholder="Id" required>
+                <input type="text" class="text-input" placeholder="Canton1" required>
+                <button class="button--black" type="button">Cantones...</button>
             </div>
-            <div class="catalogue__canton-field">
+            <!-- <div class="catalogue__location-field">
                 <input type="text" class="text-input" placeholder="Id">
                 <input type="text" class="text-input" placeholder="Canton2">
                 <button class="button--black">Cantones...</button>
-                <button class="button--red">Eliminar</button>
-            </div>
-            <button class="button--green">Nuevo</button>
+                <button class="button--red" onclick="deleteNewLocationField()">Eliminar</button>
+            </div> -->
         </div>
+        
+        <button class="button--green" onclick="createNewLocationField()" type="button">Nuevo</button>
 
         <section class="catalogue__save-discard">
-            <button class="button--green">Guardar</button>
-            <button class="button--black">Descartar</button>
+            <button class="button--green" onclick="fillProvinces()">Guardar</button>
+            <button class="button--black" type="button" onclick="discardChanges()">Descartar</button>
         </section>
 
     </form>
