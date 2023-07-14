@@ -20,7 +20,7 @@
 }
 
 .message h2 {
-    font-weight: 700;
+    font-weight: 600;
     font-size: 25px;
     margin-bottom: 30px;
 
@@ -48,11 +48,22 @@
 }
 
 .internal_box {
+    font-family: 'Montserrat', sans-serif;
     margin-left: 20px;
     list-style: none;
     margin-left: 40px;
 
 }
+
+.internal_box1 p{
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+.internal_box1 h2 {
+    font-family: 'Montserrat', sans-serif;
+}
+
 
 .forgot_password a,
 .register_account a {
