@@ -4,21 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../../css/styleCompontents/agregarEmpresas.css">
-    <script src="../../js/agregarEmpresas.js"></script>
+    <link rel="stylesheet" href="../../css/styleCompontents/addCompany.css">
+    <script src="../../js/addCompany.js"></script>
 </head>
 
 <body>
-  <div class="form-container">
-    <h1 class ="subtitles"></h1>
+
   
+  <div class="form-container">
+   
+
+   
     <form id="companyForm">
+      
+      
+
+      
       <div class="form-group">
         <label for="logo">Logo de Empresa:</label>
-        <input type="file" id="logo" name="logo" accept="image/png" required>
+        <input type="file" id="logo" name="logo" accept="image/*">
         <img id="logoPreview" src="#" alt="Logo Preview" style="display: none;">
       </div>
+  
 
+      <br>
+      <br>
+      <div class="form-group">
+        <input type="submit" value="Editar" class="btn2">
+
+      </div>
+
+
+     
       <div class="form-group">
         <label for="name">Nombre de Empresa:</label>
         <input type="text" id="name" name="name" required>
@@ -40,27 +57,35 @@
       </div>
 
       <div class="form-group">
-        <label for="seleccionarSede">Direccion</label>
-        <select name="seleccionarSede" id="seleccionarSede">
+        
+          
+        <label for="selectRegion">Direccion:</label>
+        <table>
+        <td>
+        <select name="selectProvince" id="selectProvince">
           <option value="" disabled selected hidden>Seleccione la Provincia</option>
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
         </select>
-
-        <select name="seleccionarSede" id="seleccionarSede">
+        </td>
+        <td>
+        <select name="selectCanton" id="selectCanton">
           <option value="" disabled selected hidden>Seleccione el Canton</option>
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
         </select>
+      </td>
 
-        <select name="seleccionarSede" id="seleccionarSede">
+        <td><select name="selectDistrict" id="selectDistrict">
           <option value="" disabled selected hidden>Seleccione el Distrito</option>
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
         </select>
+        </td>
+      </table>
       </div>
 
 
@@ -75,7 +100,10 @@
       </div>
 
 
+
     </form>
+ 
+    </div>
 
     
 </body>

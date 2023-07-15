@@ -3,13 +3,14 @@
  
    position: relative;
     display: flex;
+
     justify-content: left;
     text-align: left;
     height:100%;
-    width: 75%;
+    width: 100%;
     margin: auto;
     border-radius: 10px;
-    border-color: black;
+    border-color: rgb(5, 3, 3);
     background:#f2f2f2; ;
     font-weight: bold;
     color: #29271f;
@@ -18,30 +19,55 @@
     
 }
 
-.form-group {
-  margin-bottom: 20px;
+.form-group:after {
+  margin-bottom: 25px;
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .form-group label {
   display: block;
   font-weight: bold;
+  float: left;
+  width: 25%;
+  margin-top: 6px;
 }
 
 .form-group input[type="text"] {
-  width: 100%;
+  width: 70%;
   padding: 5px;
+  float: left;
+  margin-top: 6px;
+  
 }
 
 .form-group textarea {
-  width: 100%;
+  width: 70%;
   padding: 5px;
+  
 }
 
 .form-group .btn {
-  background-color: #4CAF50;
+  background-color: #1d1c1c;
   color: white;
   padding: 10px 15px;
   border: none;
   cursor: pointer;
-  display: inline;
+  margin-left: 150px;
+}
+
+.form-group .btn2 {
+  background-color: #1d1c1c;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+
+  float: right;
+}
+
+table {
+  margin-left: 159px;
+
 }
