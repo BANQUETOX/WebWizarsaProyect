@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/styleCompontents/addCompany.css">
+    <script src="../../js/addCompany.js"></script>
+</head>
+
+<body>
+
+  
+  <div class="form-container">
+   
+
+   
+    <form id="companyForm">
+      
+      
+
+      
+      <div class="form-group">
+        <label for="logo">Logo de Empresa:</label>
+        <input type="file" id="logo" name="logo" accept="image/*">
+        <img id="logoPreview" src="#" alt="Logo Preview" style="display: none;">
+      </div>
+  
+
+      <br>
+      <br>
+      <div class="form-group">
+        <input type="submit" value="Editar" class="btn2">
+
+      </div>
+
+
+     
+      <div class="form-group">
+        <label for="name">Nombre de Empresa:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="id">Cedula Juridica:</label>
+        <input type="text" id="id" name="id" required>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Telefono:</label>
+        <input type="text" id="phone" name="phone">
+      </div>
+
+      <div class="form-group">
+        <label for="sns">Social Media:</label>
+        <input type="text" id="sns" name="sns">
+      </div>
+
+      <div class="form-group">
+        
+          
+        <label for="selectRegion">Direccion:</label>
+        <table>
+        <td>
+        <select name="selectProvince" id="selectProvince">
+          <option value="" disabled selected hidden>Seleccione la Provincia</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+        </td>
+        <td>
+        <select name="selectCanton" id="selectCanton">
+          <option value="" disabled selected hidden>Seleccione el Canton</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+      </td>
+
+        <td><select name="selectDistrict" id="selectDistrict">
+          <option value="" disabled selected hidden>Seleccione el Distrito</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+        </td>
+      </table>
+      </div>
+
+
+      <div class="form-group">
+        <label for="direction">Direccion Detallada:</label>
+        <textarea id="direction" name="direction"></textarea>
+      </div>
+
+      <div class="form-group">
+        <input type="submit" value="Agregar" class="btn">
+        <input type="submit" value="Cancelar" class="btn">
+      </div>
+
+
+
+    </form>
+ 
+    </div>
+
+    
+</body>
+</html>
