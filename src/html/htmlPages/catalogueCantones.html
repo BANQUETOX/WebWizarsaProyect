@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:ital,wght@0,700;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/normalize.css">
+    <link rel="stylesheet" href="../../css/stylePages/catalogueLocations.css">
+    <script src="../../js/jsPages/catalogueLocations.js" defer></script>
+    <title>Catalogue Cantones</title>
+</head>
+<body>
+    <form class="catalogue" id="cantons-form">
+        
+        <header>
+            <h1 class="catalogue__header">Lista de cantones registrados</h1>
+            <div class="select" >
+                <select class="select__element" id="select-provinces">
+                  <option value="1">Seleccione la provincia</option>
+                  <option value="780">San Jose</option>
+                  <option value="593">Alajuela</option>
+                  <option value="593">Cartago</option>
+                </select>
+              </div>
+            <h2 class="catalogue__subtitle">Codigo</h2>
+            <h2 class="catalogue__subtitle">Nombre</h2>
+        </header>
+        
+        <div id="catalogue__location-container">
+            <div class="catalogue__location-field" id="1">
+                <input type="text" class="text-input" placeholder="Id" required>
+                <input type="text" class="text-input" placeholder="Canton" required>
+            </div>
+        </div>
+        
+        <button class="button--green"id="new-input-button" type="button">Nuevo</button>
+        <button class="button--green" id="save-canton-button" type="button">Guardar cantones</button>
+
+        <section class="catalogue__save-discard">
+            <button class="button--green" id="save-button">Guardar</button>
+            <button class="button--black" id="discard-button" type="button">Descartar</button>
+        </section>
+
+    </form>
+    
+</body>
+</html>
+<script>
+    // document.getElementById('save-canton-button').onclick = () =>{ 
+    //     let optionValue = document.getElementById('select-provinces').value
+    //     console.log(optionValue)
+    //     let provinceObject = listedProvinces.find(e => e.internId == optionValue)
+    //     let elementCollection = document.getElementsByClassName("catalogue__location-field")
+    //     for(let i = 0; i < elementCollection.length; i++){
+    //         let internId = elementCollection[i].id
+    //         let cantonObject
+    //         if(!provinceObject.cantones.find(e => e.internId == optionValue)){
+    //         cantonObject = createCantonObject(optionValue,internId)
+    //         }
+    //         else{
+    //             cantonObject =  provinceObject.cantones.find(e => e.internId == internId)
+    //         }
+    //         provinceObject.cantones.push(cantonObject)
+    //         console.log(provinceObject.cantones)
+    //         // provinceObject.cantones[i].cantonObject.name = elementCollection[i].childNodes[3].value
+    //         // provinceObject.cantones.id = elementCollection[i].childNodes[1].value
+    // }
+    // console.log(listedProvinces)
+    // }
+
+    const CANTONSFORM = document.getElementById('cantons-form')
+    document.getElementById('discard-button').onclick = ()=>{
+        CANTONSFORM.reset()
+    }
+
+    CANTONSFORM.addEventListener('submit', function(e){e.preventDefault()
+        document.location.href = "../htmlPages/catalogueDistricts.html"})
+</script>
