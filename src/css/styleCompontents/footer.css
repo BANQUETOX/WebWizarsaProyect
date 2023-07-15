@@ -1,0 +1,17 @@
+body {
+    background-color: rgb(165, 127, 255);
+    margin-left: 50%;
+    margin-right: 100%;
+}
+
+
+footer {
+    background-color: gray;
+}
+
+
+.sobre {
+    background-color: aquamarine;
+    text-decoration:none;
+    text-align: left;
+}
