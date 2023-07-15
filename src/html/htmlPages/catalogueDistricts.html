@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:ital,wght@0,700;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/normalize.css">
+    <link rel="stylesheet" href="../../css/stylePages/catalogueLocations.css">
+    <script src="../../js/jsPages/catalogueLocations.js" defer></script>
+    <title>Catalogue Distritos</title>
+</head>
+<body>
+    <form class="catalogue" id="district-form">
+        <header>
+            <h1 class="catalogue__header">Lista de Distritos registrados</h1>
+            <div class="select" >
+              <select class="select__element" id="select-provinces">
+                <option value="1">Seleccione la provincia</option>
+                <option value="780">San Jose</option>
+                <option value="593">Alajuela</option>
+                <option value="593">Cartago</option>
+              </select>
+            </div>
+              <div class="select">
+                <select class="select__element"id="select-cantons">
+                  <option value="1">Seleccione un canton</option>
+                </select>
+              </div>
+            <h2 class="catalogue__subtitle">Codigo</h2>
+            <h2 class="catalogue__subtitle">Nombre</h2>
+        </header>
+        <div id="catalogue__location-container">
+            <div class="catalogue__location-field" id="1">
+                <input type="text" class="text-input" placeholder="Id" required>
+                <input type="text" class="text-input" placeholder="Canton" required>
+            </div>
+        </div>
+        
+        <button class="button--green" id="new-input-button" type="button">Nuevo</button>
+        <button class="button--green" id="save-districts-button" type="button">Guardar distritos</button>
+
+        <section class="catalogue__save-discard">
+            <button class="button--green" id="save-button">Guardar</button>
+            <button class="button--black" id="discard-button" type="button">Descartar</button>
+        </section>
+
+    </form>
+    
+</body>
+</html>
+<script>
+  const DISTRICTFORM = document.getElementById('district-form')
+    document.getElementById('discard-button').onclick = ()=>{
+        DISTRICTFORM.reset()
+    }
+
+    DISTRICTFORM.addEventListener('submit', function(e){e.preventDefault()
+        document.location.href = "#"})
+</script>

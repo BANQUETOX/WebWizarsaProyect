@@ -1,0 +1,13 @@
+Observaciones generales
+- Los nombres de archivos debenn ser en ingles
+- Las clases,nombres y id css deben ser en ingles
+- A la hora de traer archivos externos html recuerde actualizar las referencias de los archivos css y js
+
+Correcciones para "agregarEmpresas.html"
+- Cambiar el nombre del archivo al ingles
+- Cambiar el nombre de las clases,nombre y ids  que estan en español al ingles
+- Aplicar las fuentes de texto correspondientes
+- Afinar el aspecto de pagina, para que se paresca mas al wireframe
+
+Nota: De momento voy a ignorar el codigo Js porque para este entregable no es necesario.
+

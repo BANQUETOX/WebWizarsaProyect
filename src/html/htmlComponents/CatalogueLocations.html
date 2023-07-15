@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:ital,wght@0,700;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/normalize.css">
+    <link rel="stylesheet" href="../../css/styleCompontents//CatalogueLocations.css">
+    <script src="../../js/jsComponents/catalogueProvinces.js" defer></script>
+    <title>Catalogue Locations</title>
+</head>
+<body>
+    <form class="catalogue" id="catalogueForm">
+        <header>
+            <h1 class="catalogue__header">Lista de provincias registradas</h1>
+            <h2 class="catalogue__subtitle">Codigo</h2>
+            <h2 class="catalogue__subtitle">Nombre</h2>
+        </header>
+        <div id="catalogue__location-container">
+            <div class="catalogue__location-field" id="1">
+                <input type="text" class="text-input" placeholder="Id" required>
+                <input type="text" class="text-input" placeholder="Prvincia" required>
+            </div>
+        </div>
+        
+        <button class="button--green" onclick="createNewLocationField()" type="button">Nuevo</button>
+
+        <section class="catalogue__save-discard">
+            <button class="button--green" onclick="fillProvinces()">Guardar</button>
+            <button class="button--black" type="button" onclick="discardChanges()">Descartar</button>
+        </section>
+
+    </form>
+    
+</body>
+</html>

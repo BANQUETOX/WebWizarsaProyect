@@ -1,0 +1,113 @@
+.initial_box {
+        position:absolute;
+        margin-left: 1000px;
+        margin-top: 4%;
+        padding-bottom: -10;
+        padding-left: 30px;
+        width: 400px;
+        height: 60%;
+        background-color: gray;
+        
+}
+
+.tittle {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+.message p {
+    font-size: 24px;
+}
+
+.message h2 {
+    font-weight: 600;
+    font-size: 25px;
+    margin-bottom: 30px;
+
+}
+
+.message h1 {
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.message {
+    position: absolute;
+    width: 30%;
+    margin-top: 3% ;
+    margin-left: 10%;
+}
+
+.box_title {
+    margin-top: 10px;
+    margin-bottom: 50px;
+    color: aliceblue;
+    font-weight: 700;
+    font-size: 24px;
+    
+}
+
+.internal_box {
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 20px;
+    list-style: none;
+    margin-left: 40px;
+
+}
+
+.internal_box1 p{
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+.internal_box1 h2 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.forgot_password a,
+.register_account a {
+    text-decoration: none;
+}
+
+.forgot_password {
+    display: absolute;
+    padding-left: 42px;
+    padding-bottom: 30px;
+    padding-top: 10px;
+    color: black;
+}
+
+.register_account {
+    display: absolute ;
+    padding-left: 20px;
+    margin-bottom: 30px;
+    color: black;
+}
+
+
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    margin-left: 50px;
+    width: 200px;
+    height: 40px;
+    background-color: rgb(255, 255, 255);
+}
+
+.input_class {
+    width: 70%;
+    height: 30px;
+    padding-left: 10%;
+    margin-bottom: 20px;
+}
+
+
+.input_email {
+    margin-bottom: 10px;
+}
+
+
