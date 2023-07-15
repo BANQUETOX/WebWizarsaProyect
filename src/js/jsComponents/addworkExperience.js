@@ -134,7 +134,7 @@ experinceForm.addEventListener("submit", function(e){
 userDataForm.addEventListener("submit",function(e){
     attachProfilepictureToUser(genericUser)
     attachSheetsToUser(genericUser)
-    console.log(genericUser)
     e.preventDefault()
+    document.location.href = "../../html/htmlPages/catalogueProvices.html"
 })
 
