@@ -1,4 +1,4 @@
-body {
+.user-profile {
     background: #ececec;
     background-color: #ececec;
     font-size: 20px;
@@ -6,7 +6,7 @@ body {
     font-weight: 400;
 }
 
-h2 {
+.edit-password--label {
     font-family: 'Poppins', sans-serif;
     font-size: 30px;
     font-weight: 600;

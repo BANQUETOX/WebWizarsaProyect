@@ -1,33 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <link rel="stylesheet" href="../htmlComponents/../../css/styleCompontents/education.css">
-    <link rel="stylesheet" href="../htmlComponents/../../css/normalize.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:ital,wght@0,700;1,600&display=swap" rel="stylesheet">
-    <title>Registro-Nivel de Educacion</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/normalize.css">
+    <link rel="stylesheet" href="../../css/styles.css">
+ 
 </head>
-
 <body>
+    <div class="aplication-landing--navbar">
+        <header class="header-fixed">
+    
+            <div class="header-limiter">
+        
+                <h1 class="header"><a href="#">Web<span>Wizard</span> Jobs</a></h1>
+                <nav>
+                    <a href="#">Ingresar</a>
+                </nav>
+            </div>
+        </header>
+        <div class="header-fixed-placeholder"></div>
+    </div>
+
     <div class="add-education">
 
         <div class="tittle">Registro</div>
 
-        <div class="container">
+        <div class="add-education-container">
             <div class="tittle">Mi Educacion</div>
 
             <form action="#" class="formulary" id="formulary">
 
                 <!--Nivel de eduacion -->
                 <div class="formulary__group" id="education-level">
-                    <label class="formulary__label">Nivel de eduacion</label>
-                    <div class="formulary__input-group">
-                        <select id="eduacion" name="eduacion" class="select__element">
+                    <label class="formulary__label formulary__label--education">Nivel de eduacion</label>
+                    <div class="formulary__input-group select select__education--container ">
+                        <select id="eduacion" name="eduacion" class="select__element select__education">
                             <option value="empty"></option>
                             <option value="bachillerato">Bachillerato</option>
                             <option value="diplimado">Diplomado</option>
                             <option value="master">Master</option>
+                            
                         </select>
                         <i class="formulary__status-validation fas fa-times-circle"></i>
                     </div>
@@ -98,3 +115,6 @@
         
         
     </div>
+
+
+<body>
