@@ -39,6 +39,7 @@
     .select__element {
       font-family: 'Montserrat', sans-serif;
 
+
      /* Reset Select */
      appearance: none;
      outline: 0;
@@ -479,7 +480,7 @@
   padding-left: 30px;
   width: 400px;
   height: 60%;
-  background-color: gray;
+  background-color: #303841;
   
 }
 
@@ -525,6 +526,7 @@ font-family: 'Montserrat', sans-serif;
 margin-left: 20px;
 list-style: none;
 margin-left: 40px;
+color: white;
 
 }
 
@@ -548,14 +550,14 @@ display: absolute;
 padding-left: 42px;
 padding-bottom: 30px;
 padding-top: 10px;
-color: black;
+color: white;
 }
 
 .register_account {
 display: absolute ;
 padding-left: 20px;
 margin-bottom: 30px;
-color: black;
+color: white;
 }
 
 
@@ -758,7 +760,7 @@ color: #000000;
 
 .add-education-container {
   width: 40vw; /* Ajusta el ancho según tus necesidades */
-  height: 90vh; /* Ajusta la altura según tus necesidades */
+  height: 120vh; /* Ajusta la altura según tus necesidades */
   border: 2px solid black; /* Establece el grosor y color del borde */
   background-color: lightgray; /* Establece el color de fondo */
   padding: 20px;
@@ -906,6 +908,7 @@ color: #000000;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: -10%;
 }
 
 .formulary__btn-level {
@@ -915,7 +918,7 @@ color: #000000;
   border: none;
   border-radius: 3px;
   cursor: pointer;
-  margin-top: -10%;
+  margin-bottom: 40%;
   margin-left: 25%;
   
 }
@@ -981,7 +984,7 @@ color: #000000;
 .button-container {
   display: flex;
   align-items: center;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .button--black {
@@ -1026,11 +1029,12 @@ color: #000000;
 
 .button-separator {
   display: inline-block;
-  margin: 0 1px; /* Ajusta el espacio horizontal entre el separador y los botones */
+  margin: 0 80px; /* Ajusta el espacio horizontal entre el separador y los botones */
   color: #ffffff;
   font-size: 6vh; /* Ajusta el tamaño de la fuente del separador */
-  margin-top: 15%;
-  margin-right: 15%;
+  margin-bottom: -10%;
+  padding-top: 18%;
+
 }
 
 /* structure */
@@ -1165,6 +1169,7 @@ color: #000000;
 .select__education--container::after{
   transform: scale(0.9);
   background-color: transparent;
+  
 }
 #education-level{
   margin-top: 2%;
@@ -1172,6 +1177,7 @@ color: #000000;
 }
 .formulary__label--education{
   margin-left: 15px;
+
 }
 .form-container {
   font-family: 'Montserrat', sans-serif;
@@ -1443,18 +1449,20 @@ color: #000000;
   display: flex;
   align-items: center;
   margin-top: -60px;
+  margin-left: 8%;
 }
 
 .button--black:not(:last-child) {
   
-  margin-right: 2vw; 
+  margin-right: 1vw; 
   
 }
 
 .button--black:last-child{
   
   border: 1px solid black;
-  padding: 8px 18px;
+  padding: 10px 45px;
+  margin-left: -9%;
   
 }
 
@@ -1464,10 +1472,12 @@ color: #000000;
 
 .button-separator {
   display: inline-block;
-  margin: 0 1px; 
+  margin: 0 20px; 
   color: #ffffff;
   font-size: 6vh; 
   margin-right: 20%;
+  align-items: center;
+  text-align: center;
   
 }
 
@@ -1581,7 +1591,7 @@ color: #000000;
 
 .page-footer {
   position: absolute;
-  background-color: rgb(112, 106, 106);
+  background-color:#303841;
   width: 100%;
   height: 150px;
   margin-top: 3vh;
