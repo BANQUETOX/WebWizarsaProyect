@@ -4,22 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../../css/styleCompontents/addCompany.css">
-    <script src="../../js/addCompany.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../css/normalize.css">
+    <link rel="stylesheet" href="../../../css/styles.css">
+ 
 </head>
-
 <body>
-
-  
+    <div class="aplication-landing--navbar">
+        <header class="header-fixed">
+    
+            <div class="header-limiter">
+        
+                <h1 class="header"><a href="../aplicationLanding/aplicationLandingPage.html">Web<span>Wizard</span> Jobs</a></h1>
+                <nav>
+                </nav>
+            </div>
+        </header>
+        <div class="header-fixed-placeholder"></div>
+    </div>
+    <div class="create-company">
+          
   <div class="form-container">
    
 
    
     <form id="companyForm">
-      
-      
-
-      
       <div class="form-group">
         <label for="logo">Logo de Empresa:</label>
         <input type="file" id="logo" name="logo" accept="image/*">
@@ -29,13 +40,7 @@
 
       <br>
       <br>
-      <div class="form-group">
-        <input type="submit" value="Editar" class="btn2">
 
-      </div>
-
-
-     
       <div class="form-group">
         <label for="name">Nombre de Empresa:</label>
         <input type="text" id="name" name="name" required>
@@ -95,8 +100,11 @@
       </div>
 
       <div class="form-group">
-        <input type="submit" value="Agregar" class="btn">
-        <input type="submit" value="Cancelar" class="btn">
+            <button type="submit" value="Agregar" class="btn">Agregar</button>
+       
+        <a href="../aplicationLanding/aplicationLandingPage.html">
+            <button value="Cancelar" class="btn" type="button"> Cancelar</button>
+        </a>
       </div>
 
 
@@ -104,7 +112,34 @@
     </form>
  
     </div>
+    </div>
 
-    
-</body>
-</html>
+    <footer class="page-footer">
+        <div class="message1">
+            <b>SNE, ©2023</b>
+        </div>
+
+        <div class="message2">
+            <b>SNE - Sistema Nacional de Empleos</b>
+            <b>Desarrollado por WebWizards</b>
+        </div>
+
+        <div class="redes">
+            <a href="https://www.instagram.com/"><img class= "iconos" src="../../../images/instagram.png" alt="instagram"></a><br>
+            <a href="https://es-la.facebook.com/"><img class= "iconos" src="../../../images/facebook.png" alt="facebook"></a><br>
+            <a href="https://twitter.com/"><img class= "iconos"  src="../../../images/twitter.png" alt="twitter"></a>
+        </div>
+
+        <div class="sobre">
+            <li class="1"><a class="link" src="" href="">Sobre el Equipo</a></li>
+        </div>
+
+    </footer>
+<body>
+    <script>
+        document.getElementById('companyForm').addEventListener('submit', (e)=>{
+            e.preventDefault()
+            document.location.href = '../adminPages/adminInitialInviteMembers.html'
+            
+        })
+    </script>

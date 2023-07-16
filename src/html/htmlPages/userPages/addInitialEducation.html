@@ -7,8 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../../css/normalize.css">
-    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../../css/normalize.css">
+    <link rel="stylesheet" href="../../../css/styles.css">
  
 </head>
 <body>
@@ -33,7 +33,7 @@
         <div class="add-education-container">
             <div class="tittle">Mi Educacion</div>
 
-            <form action="#" class="formulary" id="formulary">
+            <form action="#" class="formulary" id="education-formulary">
 
                 <!--Nivel de eduacion -->
                 <div class="formulary__group" id="education-level">
@@ -99,9 +99,12 @@
                 </div>
 
                 <div class="button-container">
-                    <button class="button--black">Continuar</button>
+                    <button class="button--black button--black__education">Continuar</button>
                     <span class="button-separator">|</span>
-                    <button class="button--black" type="button">Saltar</button>
+                    <a href="../userPages/userInitialWorkExperience.html">
+                        <button class="button--black button--black__education" type="button">Saltar</button>
+
+                    </a>
                 </div>
                 
                 <!-- MENSAJE DE CAMPOS REQUERIDOS -->
@@ -116,5 +119,33 @@
         
     </div>
 
+    <footer class="page-footer">
+        <div class="message1">
+            <b>SNE, ©2023</b>
+        </div>
+
+        <div class="message2">
+            <b>SNE - Sistema Nacional de Empleos</b>
+            <b>Desarrollado por WebWizards</b>
+        </div>
+
+        <div class="redes">
+            <a href="https://www.instagram.com/"><img class= "iconos" src="../../../images/instagram.png" alt="instagram"></a><br>
+            <a href="https://es-la.facebook.com/"><img class= "iconos" src="../../../images/facebook.png" alt="facebook"></a><br>
+            <a href="https://twitter.com/"><img class= "iconos"  src="../../../images/twitter.png" alt="twitter"></a>
+        </div>
+
+        <div class="sobre">
+            <li class="1"><a class="link" src="" href="">Sobre el Equipo</a></li>
+        </div>
+
+    </footer>
+
 
 <body>
+    <script>
+        document.getElementById('education-formulary').addEventListener('submit',(e)=>{
+            e.preventDefault()
+            document.location.href = '../userPages/userInitialWorkExperience.html'
+        })
+    </script>
