@@ -541,16 +541,32 @@ font-family: 'Montserrat', sans-serif;
 
 
 .forgot_password a,
-.register_account a {
+.register_account a{
 text-decoration: none;
+
 }
+
+
+
 
 .forgot_password {
 display: absolute;
+color: white;
+text-decoration: none;
 padding-left: 42px;
 padding-bottom: 30px;
 padding-top: 10px;
-color: white;
+}
+
+.forgot_password a {
+  text-decoration: none;
+  color: #fff;
+  font-size: medium;
+
+}
+.forgot_password a:hover {
+  color: #9FD3C7;
+
 }
 
 .register_account {
@@ -558,6 +574,17 @@ display: absolute ;
 padding-left: 20px;
 margin-bottom: 30px;
 color: white;
+}
+
+.register_account a {
+  text-decoration: none;
+  color: #fff;
+  font-size: medium;
+
+}
+.register_account a:hover {
+  color: #9FD3C7;
+
 }
 
 
@@ -737,9 +764,28 @@ padding: 10px 20px;
 font-size: 20px;
 line-height: 1.5;
 border-radius: .25rem;
-background-color: #9FD3C7;
+background-color: #ff0000;
 cursor: pointer;
 }
+
+.button__white-register{
+  font-family: 'Montserrat', sans-serif;
+  display: inline-block;
+color: #212529;
+text-align: center;
+border: 1px solid black;
+padding: 10px 20px;
+font-size: 20px;
+line-height: 1.5;
+border-radius: .25rem;
+background-color: #FFFFFF;
+cursor: pointer;
+}
+
+.button__white-register:hover{
+  background-color: #9fd3c7;
+}
+
 .button--white:hover{
 background-color: #c0c0c0;
 color: #000000;
