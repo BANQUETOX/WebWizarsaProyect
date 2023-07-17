@@ -2129,7 +2129,6 @@ color: #000000;
   padding-top: 14px;
 }
 
-<<<<<<< HEAD
 
 
 .title-job-description {
@@ -2252,7 +2251,7 @@ color: #000000;
   width: 130px;
   height: 60px;  
 }
-=======
+
 .nav-register-log-in a {
   font-family: 'Montserrat', sans-serif;
   text-decoration: none;
@@ -2266,4 +2265,4 @@ color: #000000;
 .nav-register-log-in a:hover{
    color: #9FD3C7 ;
 }
->>>>>>> a2787349dc9296e536861336fc358124680ab7da
+
