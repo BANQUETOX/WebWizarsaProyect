@@ -165,7 +165,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #595656;
+    background-color: #303841;
     
     
   }
@@ -176,10 +176,11 @@
   }
   
   .profile_images img {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     margin-right: 40px;
+    border: 2px solid #760101;
   }
 
   .container {
@@ -187,7 +188,8 @@
   }
   
   .aplication-header--navbar {
-    margin-left: -20px;
+    margin-left: -30px;
+    width: 200%;
   }
   
   .aplication-header--navbar ul {
@@ -227,6 +229,7 @@
     font-size: 20px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
+    
 }
 
 .edit-password--label {
@@ -349,6 +352,7 @@
     height: 40px;
     border: #ececec 1px solid;
     border-radius: 6px;
+    margin-top: 2%;
 }
 
 .btn-light:hover {
@@ -364,6 +368,7 @@
     height: 50px;
     border: none;
     border-radius: 6px;
+    margin-bottom: 2%;
 }
 
 .btn-dark:hover {
@@ -484,10 +489,21 @@
   
 }
 
+
 .tittle {
 font-family: 'Poppins', sans-serif;
 font-weight: 700;
 }
+
+.tittle-invite-members {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  text-align: center;
+  font-size: 4vh;
+  margin-left: 2%;
+  margin-right: auto;
+  margin-top: 1%;
+  }
 
 .message p {
 font-size: 24px;
@@ -541,16 +557,32 @@ font-family: 'Montserrat', sans-serif;
 
 
 .forgot_password a,
-.register_account a {
+.register_account a{
 text-decoration: none;
+
 }
+
+
+
 
 .forgot_password {
 display: absolute;
+color: white;
+text-decoration: none;
 padding-left: 42px;
 padding-bottom: 30px;
 padding-top: 10px;
-color: white;
+}
+
+.forgot_password a {
+  text-decoration: none;
+  color: #fff;
+  font-size: medium;
+
+}
+.forgot_password a:hover {
+  color: #9FD3C7;
+
 }
 
 .register_account {
@@ -558,6 +590,17 @@ display: absolute ;
 padding-left: 20px;
 margin-bottom: 30px;
 color: white;
+}
+
+.register_account a {
+  text-decoration: none;
+  color: #fff;
+  font-size: medium;
+
+}
+.register_account a:hover {
+  color: #9FD3C7;
+
 }
 
 
@@ -737,9 +780,28 @@ padding: 10px 20px;
 font-size: 20px;
 line-height: 1.5;
 border-radius: .25rem;
-background-color: #9FD3C7;
+background-color: #ff0000;
 cursor: pointer;
 }
+
+.button__white-register{
+  font-family: 'Montserrat', sans-serif;
+  display: inline-block;
+color: #212529;
+text-align: center;
+border: 1px solid black;
+padding: 10px 20px;
+font-size: 20px;
+line-height: 1.5;
+border-radius: .25rem;
+background-color: #FFFFFF;
+cursor: pointer;
+}
+
+.button__white-register:hover{
+  background-color: #9fd3c7;
+}
+
 .button--white:hover{
 background-color: #c0c0c0;
 color: #000000;
@@ -759,7 +821,7 @@ color: #000000;
 
 .add-education-container {
   width: 40vw; /* Ajusta el ancho según tus necesidades */
-  height: 120vh; /* Ajusta la altura según tus necesidades */
+  height: 100vh; /* Ajusta la altura según tus necesidades */
   border: 2px solid black; /* Establece el grosor y color del borde */
   background-color: lightgray; /* Establece el color de fondo */
   padding: 20px;
@@ -773,8 +835,16 @@ color: #000000;
 .container-tittle{
   text-align: center;
   font-family: 'Poppins', sans-serif;
-
+  margin-top: 1%;
 }
+.container-tittle-invite-members{
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 1%;
+  margin-left: 2.5%;
+  font-size: 20px;
+}
+
 
 .formulary{
   font-family: 'Montserrat', sans-serif;
@@ -790,6 +860,12 @@ color: #000000;
 .formulary__label {
   display: block;
   padding: 15px 0;
+}
+
+.formulary__label-collaborator {
+  display: block;
+  padding: 15px 0;
+  margin-left: 15%;
 }
 
 .formulary__label-year {
@@ -1003,6 +1079,51 @@ color: #000000;
   flex-grow: 1;
 }
 
+.button--black-collaborator {
+  font-family: 'Montserrat', sans-serif;
+  display: inline-block;
+  color: #212529;
+  text-align: center;
+  border: 1px solid black;
+  padding: 8px 5px;
+  font-size: 20px;
+  line-height: 1.5;
+  border-radius: .25rem;
+  color: #ffffff;
+  background-color: #9FD3C7 ;
+  cursor: pointer;
+  margin-bottom: -38%;
+  flex-grow: 1;
+}
+
+.button--black-collaborator:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.button--black-collaborator-skip {
+  font-family: 'Montserrat', sans-serif;
+  display: inline-block;
+  color: #212529;
+  text-align: center;
+  border: 1px solid black;
+  padding: 8px 5px;
+  font-size: 20px;
+  line-height: 1.5;
+  border-radius: .25rem;
+  color: #ffffff;
+  background-color: #9FD3C7 ;
+  cursor: pointer;
+  margin-bottom: -38%;
+  flex-grow: 1;
+  padding-left: 15%;
+  padding-right: 15%;
+  text-align: center;
+}
+.button--black-collaborator-skip:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
 .button--black__education{
   margin-bottom: -20%;
 
@@ -1017,7 +1138,8 @@ color: #000000;
 .button--black:last-child{
   
   border: 1px solid black;
-  padding: 8px 18px;
+  padding: 10px 18px;
+  margin-top: 2%;
   
 }
 
@@ -1059,7 +1181,8 @@ color: #000000;
 /* inputs */
 .addWorkExperience--input-label{
     font-family: 'Montserrat', sans-serif;
-	display: block;
+	 display: block;
+   
 }
 .addWorkExperience--input{
 	margin-bottom: 25px;  
@@ -1108,7 +1231,7 @@ color: #000000;
 	cursor: pointer;
 }
 .button--white:hover{
-	background-color: #c0c0c0;
+	background-color: #ffffff;
 	color: #000000;
 }
 .button--disabled{
@@ -1117,11 +1240,13 @@ color: #000000;
 }
 .addWorkExperience--button{
 	margin-top: 30px;
-	margin-left:140px ;
+	margin-left:50px ;
+  background-color: #9FD3C7 ;
 }
 .addWorkExperience--button__save{
     margin-top: 10px;
-	margin-left:190px ;
+	  margin-left: 11%;
+    width: 38%;
 }
 /* upload Foto  */
 .avatar-upload {
@@ -1153,9 +1278,18 @@ color: #000000;
 .avatar-upload-input[type ='file']{
     display: none;
 }
+
+#avatar-preview{
+  border-style: none;
+  box-shadow: none;
+  margin-top: 8%;
+  
+  margin-left: -37%;
+}
 .avatar-upload-input--label{
-  /* margin-left: 10px;
-  margin-bottom: 10px; */
+  width: 90%;
+  background-color: #9FD3C7 ;
+  margin-left: -46%;
 }
 
 
@@ -1168,6 +1302,21 @@ color: #000000;
 .select__education--container::after{
   transform: scale(0.9);
   background-color: transparent;
+  
+}
+
+.select__function--collaborator{
+  border: solid black 2px;
+  background-color: transparent;
+  transform: scale(0.9);
+  color: #000;
+  margin-right: 50%;
+  padding-left: 300%;
+}
+.select__function--container::after{
+  transform: scale(0.9);
+  background-color: transparent;
+  
   
 }
 #education-level{
@@ -1233,6 +1382,20 @@ color: #000000;
   margin-left: 150px;
 }
 
+.form-group .btn-register-business{
+  background-color: #9FD3C7 ;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  margin-left: 150px;
+}
+
+.form-group .btn-register-business:hover {
+  background-color: #c8c8c8 ;
+}
+
+
 .form-group .btn2 {
   background-color: #1d1c1c;
   color: white;
@@ -1241,6 +1404,20 @@ color: #000000;
   cursor: pointer;
 
   float: right;
+}
+
+.form-group .btn2-register-business {
+  background-color: #9FD3C7 ;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+
+  float: right;
+}
+
+.form-group .btn2-register-business:hover {
+  background-color: #c8c8c8 ;
 }
 
 .company-form--table {
@@ -1298,6 +1475,12 @@ color: #000000;
 
 .formulary__input-group {
   position: relative;
+}
+
+.formulary__input-group-collaborator {
+  position: relative;
+  margin-left: 10%;
+  
 }
 
 
@@ -1374,6 +1557,23 @@ color: #000000;
   align-items: center;
 }
 
+.formulary__group-btn-send-collaborator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1%;
+  margin-left: 1%;
+}
+
+.formulary__group-btn-send-education-user{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -5%;
+  
+}
+
+
 .formulary__btn-level {
   padding: 15px 35px;
   background: #ffffff;
@@ -1385,9 +1585,24 @@ color: #000000;
   margin-left: 25%;
   
 }
+.formulary__btn-level-education {
+  padding: 15px 35px;
+  background-color: #9FD3C7;
+  color: #ffffff;
+  border: none;
+  border-radius: 3px;
+  margin-top: 20%;
+  margin-left: 25%;
+  cursor: pointer;
+  
+}
+.formulary__btn-level-education:hover {
+  background-color: #898989;
+  
+}
 
 .formulary__btn-level:hover {
-  background: #0a6428;
+  background-color: #ffffff;
   transition: 1s;
 }
 .formulary__btn {
@@ -1480,9 +1695,17 @@ color: #000000;
   
 }
 
+.button-container__education{
+  padding-top: 10%;
+  margin-bottom: 20px;
+  margin-top: 30%;
+  margin-right: 10%;
+}
+
 .button-container__invite{
   margin:0;
   margin-bottom: 100px;
+  margin-right: 2%;
 }
 
 .button--white__invite-member{
@@ -1492,6 +1715,8 @@ color: #000000;
 .invite-members--form{
   margin-top:20px ;
   margin-left: 100px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .generaltext {
@@ -1540,9 +1765,55 @@ color: #ffffff;
 background-color: #9FD3C7;
   cursor: pointer;
 }
+
 .button--green:hover{
-background-color: #719d92;
+  background-color: #719d92;
+  }
+
+.button--green-admin-register{
+    font-family: 'Montserrat', sans-serif;
+    display: inline-block;
+    color: #212529;
+   text-align: center;
+    border: 1px solid black;
+    padding: 10px 20px;
+    font-size: 20px;
+    line-height: 1.5;
+    border-radius: .25rem;
+    color: #ffffff;
+    background-color: #9FD3C7;
+    cursor: pointer;
+    margin-left: 0%;
+    padding-left: 175px;
 }
+
+.button--green-admin-register:hover{
+  background-color: #808080;
+  }
+  
+/*Boton guardar en catalogos*/
+.button--green-catalogue{      
+  font-family: 'Montserrat', sans-serif;
+  display: inline-block;
+  color: #212529;
+  text-align: center;
+  border: 1px solid black;
+  padding: 10px 20px;
+  font-size: 20px;
+  line-height: 1.5;
+  border-radius: .25rem;
+  color: #ffffff;
+  background-color: #9FD3C7;
+  cursor: pointer;
+  margin-right: 1%;
+}
+
+
+
+.button--green-catalogue:hover{
+  background-color: #719d92;
+  }
+
 .button--red{
 font-family: 'Montserrat', sans-serif;
   display: inline-block;
@@ -1560,6 +1831,7 @@ background-color: #BE3144;
 .button--red:hover{
 background-color: #852532;
 }
+
 .button--black{
 font-family: 'Montserrat', sans-serif;
   display: inline-block;
@@ -1574,10 +1846,32 @@ color: #ffffff;
 background-color: #000000;
   cursor: pointer;
 }
+
 .button--black:hover{
+  background-color: #ffffff;
+  color: #000000;
+  }
+
+/*Boton de catalgos*/
+.button--black-catalogue{
+  font-family: 'Montserrat', sans-serif;
+  display: inline-block;
+  color: #212529;
+  text-align: center;
+  border: 1px solid black;
+  padding: 10px 20px;
+  font-size: 20px;
+  line-height: 1.5;
+  border-radius: .25rem;
+  color: #ffffff;
+  background-color: #000000;
+  cursor: pointer;
+  }
+.button--black-catalogue:hover{
 background-color: #ffffff;
 color: #000000;
 }
+
 /* inputs */
 .text-input{
   font-family: 'Montserrat', sans-serif;
@@ -1594,6 +1888,30 @@ color: #000000;
   width: 100%;
   height: 150px;
   margin-top: 3vh;
+}
+
+.page-footer-new-register {
+  position: absolute;
+  background-color:#303841;
+  width: 100%;
+  height: 150px;
+  margin-top: 7vh;
+}
+
+.page-footer-admin-profile {
+  position: absolute;
+  background-color:#303841;
+  width: 100%;
+  height: 150px;
+  margin-top: 0vh;
+}
+
+.page-footer-register-business {
+  position: absolute;
+  background-color:#303841;
+  width: 100%;
+  height: 158px;
+  margin-top: 6vh;
 }
 
 
@@ -1614,17 +1932,18 @@ color: #000000;
 
 
 .redes {
+  margin-top: 0.2%;
   display: flex;
   flex-direction:row;
   margin-left: 50%;
 }
 
 .iconos{
-  width: 25px;
-  height: 25px;
+  width: 35px;
+  height: 35px;
   margin-top: 15px;
-  margin-right: 90px;
-  margin-left: -40px;
+  margin-right: 70px;
+  margin-left: -38px;
 }
 
 .sobre {
@@ -1693,6 +2012,21 @@ color: #000000;
   margin-left: 800px;  
   width: 200px;
   height: 40px;
+}
+
+.button2-create-job {
+  margin-top: 120px;
+  margin-left: 850px;  
+  width: 200px;
+  height: 50px;
+  background-color: #9FD3C7 ;
+  margin-bottom: 5%;
+  text-align: center;
+  
+}
+
+.button2-create-job:hover {
+  background-color: #cccccc;
 }
 
 .select_opt_1 {
@@ -1787,7 +2121,15 @@ color: #000000;
 }
 
 
+.nav-register-log-in {
+  font-family: 'Montserrat', sans-serif;
+  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 14px;
+}
 
+<<<<<<< HEAD
 
 
 .title-job-description {
@@ -1910,3 +2252,18 @@ color: #000000;
   width: 130px;
   height: 60px;  
 }
+=======
+.nav-register-log-in a {
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+  padding-left: -12%;
+}
+
+.nav-register-log-in a:first-child {
+  margin-right: 40px; 
+}
+
+.nav-register-log-in a:hover{
+   color: #9FD3C7 ;
+}
+>>>>>>> a2787349dc9296e536861336fc358124680ab7da

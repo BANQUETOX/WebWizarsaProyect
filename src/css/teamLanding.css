@@ -1,0 +1,194 @@
+/* navbar */
+.team-landing--nav-bar{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    background-color: rgb(62, 166, 179);
+    padding: 10px;
+}
+.team-landing--nav-bar--head{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.team-landing--nav-bar--logo__arrow{
+    margin-top: 2.4vh;
+    justify-self: end;
+}
+.team-landing--nav-bar--logo-arrow{
+    width: 20px;
+}
+
+
+.team-landing--nav-bar--logo{
+    display: flex;
+}
+.team-landing--nav-bar--logo-image{
+    width: 40px;
+}
+
+.team-landing--nav-bar--logo-text{
+  color: black;
+  font-family: 'Poppins';
+  text-decoration: none; 
+  padding-left: 1vw;
+  margin-bottom: 0;
+}
+
+.team-landing--nav-bar--sections-container__none{
+    display: none;
+}
+.team-landing--nav-bar--sections{
+    text-decoration: none; 
+}
+.team-landing--nav-bar--sections p{
+    margin: 0;
+    margin-bottom: 4vh;
+    color: white;
+    padding-left: 11.5vw;
+}
+
+@media screen and (min-width: 720px){
+    .team-landing--nav-bar--logo__arrow{
+        display: none;
+    }
+    #team-landing--nav-bar--sections-container{
+        margin-top: -40px;
+        margin-left: 150px;
+        display: flex;
+    }
+
+    .team-landing--nav-bar--sections p{
+        margin-bottom: 2vh;
+        color: white;
+        padding: 0;
+        margin-left: 11.5vw;
+    }
+    
+
+}
+
+/* footer */
+.team-landing--footer{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    background-color: rgb(62, 166, 179);
+    padding: 10px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+
+}
+
+.team-landing--footer--socials{
+    justify-self: end;
+}
+
+.team-landing--footer--socials a{
+    text-decoration: none;
+}
+
+.team-landing--footer--socials img{
+    margin-top: 2.4vh;
+    padding: 5px;
+    width: 25px;
+}
+
+@media screen and (min-width: 720px){
+    .team-landing--footer--socials {
+        margin-left: 50vw;
+    }
+    
+    
+}
+
+/* about us */
+
+.team-landing--about-us{
+    background-color: lightgray;
+}
+
+.team-landing--about-us--section h1{
+    text-align: center;
+    font-family: 'Poppins';
+
+}
+.team-landing--about-us--section{
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px;
+    padding-top: 7vh;
+    text-align: justify;
+}
+
+.team-landing--about-us--section:last-of-type{
+    margin-bottom: 10vh;
+}
+
+
+.team-landing--products {
+
+  background: #fff;
+  width: 90vw;
+  margin-top: max(8vh, 2rem);
+  margin-right: auto;
+  margin-left: auto;
+
+}
+
+.team-landing--about-us--section--image img{
+    margin-left: 30vw;
+    width: 200px;
+}
+
+@media screen and (min-width: 720px){
+    
+    .team-landing--about-us{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        text-align: left;
+    }
+    .team-landing--about-us--section h1{
+        text-align: left;
+        font-family: 'Poppins';
+    }
+    .team-landing--about-us--section--image img{
+        width: 700px;
+    }
+    .team-landing--about-us--section--image{
+    margin-right: 250px;
+    margin-top: 10%;
+    }
+
+
+}
+
+/* group members */
+.team-landing--goup{
+    font-family: 'Montserrat', sans-serif;
+    background-color: lightgray;
+    text-align: justify;
+}
+
+.member-container{
+    padding: 30px;
+    
+}
+
+.member-image img{
+    display: inline-block;
+    max-width: 50px;
+}
+@media screen and (min-width: 720px){
+    .team-landing--goup{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        height: 82.9vh;
+    }
+    
+}
+
+/* products */
+.team-landing--products{
+    font-size: 30px;
+    font-family: 'Poppins';
+    height: 62.8vh;
+}
