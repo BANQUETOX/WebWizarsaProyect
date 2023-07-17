@@ -90,7 +90,15 @@
 .team-landing--footer--socials img{
     margin-top: 2.4vh;
     padding: 5px;
-    width: 20px;
+    width: 25px;
+}
+
+@media screen and (min-width: 720px){
+    .team-landing--footer--socials {
+        margin-left: 50vw;
+    }
+    
+    
 }
 
 /* about us */
@@ -132,14 +140,25 @@
 }
 
 @media screen and (min-width: 720px){
+    
     .team-landing--about-us{
+        display: grid;
+        grid-template-columns: auto auto auto;
         text-align: left;
     }
     .team-landing--about-us--section h1{
         text-align: left;
         font-family: 'Poppins';
-    
     }
+    .team-landing--about-us--section--image img{
+        width: 700px;
+    }
+    .team-landing--about-us--section--image{
+    margin-right: 250px;
+    margin-top: 10%;
+    }
+
+
 }
 
 /* group members */
@@ -157,4 +176,19 @@
 .member-image img{
     display: inline-block;
     max-width: 50px;
+}
+@media screen and (min-width: 720px){
+    .team-landing--goup{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        height: 82.9vh;
+    }
+    
+}
+
+/* products */
+.team-landing--products{
+    font-size: 30px;
+    font-family: 'Poppins';
+    height: 62.8vh;
 }
