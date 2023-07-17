@@ -46,6 +46,27 @@
     color: white;
     padding-left: 11.5vw;
 }
+
+@media screen and (min-width: 720px){
+    .team-landing--nav-bar--logo__arrow{
+        display: none;
+    }
+    #team-landing--nav-bar--sections-container{
+        margin-top: -40px;
+        margin-left: 150px;
+        display: flex;
+    }
+
+    .team-landing--nav-bar--sections p{
+        margin-bottom: 2vh;
+        color: white;
+        padding: 0;
+        margin-left: 11.5vw;
+    }
+    
+
+}
+
 /* footer */
 .team-landing--footer{
     font-family: 'Montserrat', sans-serif;
@@ -92,4 +113,37 @@
 
 .team-landing--about-us--section:last-of-type{
     margin-bottom: 10vh;
+}
+
+.team-landing--about-us--section--image img{
+    margin-left: 30vw;
+    width: 200px;
+}
+
+@media screen and (min-width: 720px){
+    .team-landing--about-us{
+        text-align: left;
+    }
+    .team-landing--about-us--section h1{
+        text-align: left;
+        font-family: 'Poppins';
+    
+    }
+}
+
+/* group members */
+.team-landing--goup{
+    font-family: 'Montserrat', sans-serif;
+    background-color: lightgray;
+    text-align: justify;
+}
+
+.member-container{
+    padding: 30px;
+    
+}
+
+.member-image img{
+    display: inline-block;
+    max-width: 50px;
 }
