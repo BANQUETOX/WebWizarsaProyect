@@ -151,7 +151,8 @@
         font-family: 'Poppins';
     }
     .team-landing--about-us--section--image img{
-        width: 700px;
+        justify-self: center;
+        width: 300px;
     }
     .team-landing--about-us--section--image{
     margin-right: 250px;
@@ -159,6 +160,12 @@
     }
 
 
+}
+
+@media screen and (min-width: 1080px){
+    .team-landing--about-us--section--image img{
+        width: 600px;
+    }
 }
 
 /* group members */
@@ -175,7 +182,7 @@
 
 .member-image img{
     display: inline-block;
-    max-width: 50px;
+    max-width: 80px;
 }
 @media screen and (min-width: 720px){
     .team-landing--goup{
