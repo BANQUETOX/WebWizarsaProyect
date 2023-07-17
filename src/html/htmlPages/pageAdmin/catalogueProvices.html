@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:ital,wght@0,700;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../css/normalize.css">
+    <link rel="stylesheet" href="../../../css/styles.css">
+    <script src="../../../js/jsPages/catalogueLocations.js" defer></script>
+    <!-- <script src="../../js/jsPages/catalogueProvinces.js" defer></script> -->
+    <title>CatalogueProvinces</title>
+</head>
+<body>
+    <div class="aplication-landing--navbar">
+        <header class="header-fixed">
+    
+            <div class="header-limiter">
+        
+                <h1 class="header"><a href="#">Web<span>Wizard</span> Jobs admin</a></h1>
+                <nav>
+                </nav>
+            </div>
+        </header>
+        <div class="header-fixed-placeholder"></div>
+    </div>
+
+
+    <form class="catalogue" id="provinces-form">
+        <header>
+            <h1 class="catalogue__header">Lista de provincias registradas</h1>
+            <h2 class="catalogue__subtitle">Codigo</h2>
+            <h2 class="catalogue__subtitle">Nombre</h2>
+        </header>
+        <div id="catalogue__location-container">
+            <div class="catalogue__location-field" id="1">
+                <input type="text" class="text-input" placeholder="Id" required>
+                <input type="text" class="text-input" placeholder="Provincia" required>
+            </div>
+        </div>
+        
+        <button class="button--green" type="button" id="new-input-button">Nuevo</button>
+
+        <section class="catalogue__save-discard">
+            <button class="button--green-catalogue" id="save-button" onclick="fillProvinces()">Guardar</button>
+            <button class="button--black-catalogue" id="discard-button" type="button">Descartar</button>
+        </section>
+
+    </form>
+    <footer class="page-footer">
+        <div class="message1">
+            <b>SNE, ©2023</b>
+        </div>
+
+        <div class="message2">
+            <b>SNE - Sistema Nacional de Empleos</b>
+            <b>Desarrollado por WebWizards</b>
+        </div>
+
+        <div class="redes">
+            <a href="https://www.instagram.com/"><img class= "iconos" src="../../../images/instagram.png" alt="instagram"></a><br>
+            <a href="https://es-la.facebook.com/"><img class= "iconos" src="../../../images/facebook.png" alt="facebook"></a><br>
+            <a href="https://twitter.com/"><img class= "iconos"  src="../../../images/twitter.png" alt="twitter"></a>
+        </div>
+
+        <div class="sobre">
+          <li class="1"><a class="link"  href="../teamLanding/teamGroup.html">Sobre el Equipo</a></li>
+        </div>
+
+    </footer>
+</body>
+</html>
+<script>
+    const PROVINCESFORM = document.getElementById('provinces-form')
+    document.getElementById('discard-button').onclick = ()=>{
+        PROVINCESFORM.reset()
+
+    }
+    PROVINCESFORM.addEventListener('submit', function(e){e.preventDefault() 
+        document.location.href = "./catalogueCantones.html"})
+    </script>

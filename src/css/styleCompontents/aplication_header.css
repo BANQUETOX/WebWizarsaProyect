@@ -1,4 +1,4 @@
-header {
+.aplication-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -24,23 +24,23 @@ header {
     text-align: left;
   }
   
-  nav {
+  .aplication-header--navbar {
     margin-left: -20px;
   }
   
-  nav ul {
+  .aplication-header--navbar ul {
     display: flex;
     list-style-type: none;
     
     padding: 0;
   }
   
-  nav ul li {
+  .aplication-header--navbar ul li {
     margin-left: 20px;
     
   }
   
-  nav ul li a {
+  .aplication-header--navbar ul li a {
     text-decoration: none;
     color: #ffffff;
     font-family: 'Montserrat', sans-serif;

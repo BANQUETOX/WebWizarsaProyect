@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../css/normalize.css">
+    <link rel="stylesheet" href="../../../css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" defer></script>
+    <script src="../../../js/jsComponents/addworkExperience.js" defer></script>
+ 
+</head>
+<body>
+    <div class="aplication-landing--navbar">
+        <header class="header-fixed">
+    
+            <div class="header-limiter">
+        
+                <h1 class="header"><a href="../aplicationLanding/aplicationLandingPage.html">Web<span>Wizard</span> Jobs</a></h1>
+                <div class="nav-register-log-in">
+                    
+                    <a  href="../sharedAplicationPages/newRegister.html">Registro</a>
+                    <a href="../aplicationLanding/aplicationLandingPage.html">Ingresar</a>
+                  
+              </div>
+                
+            </div>
+        </header>
+        <div class="header-fixed-placeholder"></div>
+    </div>
+    <div class="addWorkExperience--container">
+        <form class="addWorkExperience" id="experienceForm">
+            
+            <ul class="addWorkExperience--inputs-list">
+                <li>
+                    <h1 class="addWorkExperience--header">Mi Experiencia laboral</h1>
+                </li>
+                <li>
+                    <label for="noWorkExperience" class="addWorkExperience--input-label">Actualmente no tengo experiencia laboral </label>
+                    <input type="checkbox" name="" id="noWorkExperience"  class="addWorkExperience--input addWorkExperience--input-checkbox">
+                </li>
+                <li>
+                    <label for="workPosition" class="addWorkExperience--input-label">Posicion de trabajo*</label>
+                    <input type="text" id="workPosition" required class="addWorkExperience--input text-input">
+                </li>
+                <li>
+                    <label for="company" class="addWorkExperience--input-label">Empresa*</label>
+                    <input type="text" id="company" required class="addWorkExperience--input text-input"> 
+                </li>
+                <li>
+                    <label for="location" class="addWorkExperience--input-label">Ubicacion*</label>
+                    <input type="text" id="location" required class="addWorkExperience--input text-input">
+                </li>
+                <li>
+                    <label for="since" class="addWorkExperience--input-label">Desde*</label>
+                    <input type="date"  id="since" required class="addWorkExperience--input text-input">
+                    <label for="until" class="addWorkExperience--input-label">Hasta*</label>
+                    <input type="date" id="until" required class="addWorkExperience--input text-input">
+                </li>
+                <li>
+                    <label for="workHere" class="addWorkExperience--input-label">Actualmente trabajo aqui </label>
+                    <input type="checkbox" name="" id="workHere" class="addWorkExperience--input addWorkExperience--input-checkbox">
+                </li>
+                <li>
+                    <label for="jobDescription" class=" addWorkExperience--input-label">Descripcion del trabajo*</label>
+                    <textarea name="" id="jobDescription" cols="30" rows="10" required class="addWorkExperience--input text-input"></textarea>
+                </li>
+                <li>
+                    <button class="button--white addWorkExperience--button" id="upload-work">Subir otro trabajo </button>
+                </li>
+               
+            </ul>
+        </form>
+    
+        <form action="" class="addWorkExperience" id="userExtraData">
+            <ul class="addWorkExperience--inputs-list">
+                <li>
+                    <label for="crimeSheet" class="addWorkExperience--input-label">Subir hoja de delincuencia </label>
+                    <input type="file"  accept=".pdf" id="crimeSheet" class="upload-input">
+                </li>
+                <li>
+                    <label for="lifeSheet" class="addWorkExperience--input-label">Subir hoja de vida(obligatorio) </label>
+                    <input type="file" accept=".pdf" id="lifeSheet"  class="upload-input" required>
+                </li>
+                <li>
+                    <div class="avatar-upload">
+                        <label for="imageUpload" class="button--white avatar-upload-input--label">Foto de perfil</label>
+                        <input type='file' name="profilePicture" id="imageUpload" accept=".png"  class="avatar-upload-input" required />
+                        <div class="avatar-edit">
+                        </div>
+                        <div class="avatar-preview" id="avatar-preview">
+                            <div class="imagePreview"id="imagePreview">
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li><button class="button--white addWorkExperience--button addWorkExperience--button__save">Guardar</button></li>
+    
+            </ul>
+    
+        </form>
+    </div>
+    <footer class="page-footer">
+        <div class="message1">
+            <b>SNE, ©2023</b>
+        </div>
+
+        <div class="message2">
+            <b>SNE - Sistema Nacional de Empleos</b>
+            <b>Desarrollado por WebWizards</b>
+        </div>
+
+        <div class="redes">
+            <a href="https://www.instagram.com/"><img class= "iconos" src="../../../images/instagram.png" alt="instagram"></a><br>
+            <a href="https://es-la.facebook.com/"><img class= "iconos" src="../../../images/facebook.png" alt="facebook"></a><br>
+            <a href="https://twitter.com/"><img class= "iconos"  src="../../../images/twitter.png" alt="twitter"></a>
+        </div>
+
+        <div class="sobre">
+            <li class="1"><a class="link"  href="../teamLanding/teamGroup.html">Sobre el Equipo</a></li>
+            
+        </div>
+
+    </footer>
+    
+</body>
+</html>
+    <script>
+        document.getElementById('userExtraData').addEventListener('submit',(e)=>{
+            e.preventDefault()
+            document.location.href = '../aplicationLanding/welcome.html'
+        })
+    </script>
+    

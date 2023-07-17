@@ -5,20 +5,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Link to the normalize document-->
     <link rel="stylesheet" href="/src/css/normalize.css">
-    <!--Link to Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&display=swap" rel="stylesheet">
-    <!--Link to css-->
-    <link rel="stylesheet" href="/src/css/editar_perfil.css">
-    <!--Link for additional libraries-->
-    <!--Link to favicon-->
-    <title>Editar Perfil</title>
+    <link rel="stylesheet" href="../../../css/styles.css">
+    <title>User Profile</title>
 </head>
 
 <body>
+    <header class="aplication-header">
+        <div class="profile_images">
+            <a href="#">
+                <img src="../../../images/user.png" alt="Image 1">
+            </a>
+        </div>
+        <div class="container">
+            <nav class="aplication-header--navbar">
+                <ul>
+                    <li><a href="./userAplicationJobs.html">Trabajos</a></li>
+                    <li><a href="./userAplicationSatus.html">Aplicaciones</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="bell">
+            <a href="#"><img src="../../../images/campana.png" alt="Icono de campana" ></a>
+            
+        </div>
+      </header>
+    <div class="user-profile">
     <div class="container">
         <div class="avatar-upload">
             <div class="avatar-edit">
@@ -43,26 +58,12 @@
                     <input type="number" id="idnt" name="identity">
                     <label for="address">Dirrección de casa con distrito, cantón y provincia:</label>
                     <input type="text" id="address" name="address">
-                    <label for="exp">Experiencia laboral:</label>
-                    <input type="text" id="exp" name="exp">
-                    <label for="from">Desde:</label>
-                    <input type="date" id="from" name="from">
-                    <label for="until">Hasta:</label>
-                    <input type="date" id="until" name="until">
-                    <button class="btn-light">
-                        +
-                    </button>
 
                 </form>
-
-
             </div>
-
-
             <div>
                 <form>
-                    <label for="cv">Adjuntar CV(PDF)</label>
-                    <input type="file" id="cv" name="curriculum">
+                  
                     <label for="number">Número teléfonico:</label>
                     <input type="tel" id="num" name="number">
                     <label for="genres">Seleccione género o no especificar:</label>
@@ -74,15 +75,6 @@
                     </select>
                     <p></p>
                     <p></p>
-                    <label for="edc">Educación:</label>
-                    <input type="text" id="edc" name="edc">
-                    <label for="from">Desde:</label>
-                    <input type="date" id="from" name="from">
-                    <label for="until">Hasta:</label>
-                    <input type="date" id="until" name="until">
-                    <button class="btn-light">
-                        +
-                    </button>
                 </form>
             </div>
         </div>
@@ -92,7 +84,7 @@
             Guardar cambios
         </button>
     </div>
-    <h2>
+    <h2 class="edit-password--label">
         Editar Contraseña
     </h2>
     <div class="editPassword">
@@ -118,6 +110,29 @@
             Guardar cambios
         </button>
     </div>
+</div>
 </body>
+
+<footer class="page-footer-admin-profile">
+    <div class="message1">
+        <b>SNE, ©2023</b>
+    </div>
+
+    <div class="message2">
+        <b>SNE - Sistema Nacional de Empleos</b>
+        <b>Desarrollado por WebWizards</b>
+    </div>
+
+    <div class="redes">
+        <a href="https://www.instagram.com/"><img class= "iconos" src="../../../images/instagram.png" alt="instagram"></a><br>
+        <a href="https://es-la.facebook.com/"><img class= "iconos" src="../../../images/facebook.png" alt="facebook"></a><br>
+        <a href="https://twitter.com/"><img class= "iconos"  src="../../../images/twitter.png" alt="twitter"></a>
+    </div>
+
+    <div class="sobre">
+        <li class="1"><a class="link"  href="../teamLanding/teamGroup.html">Sobre el Equipo</a></li>
+    </div>
+
+</footer>
 
 </html>

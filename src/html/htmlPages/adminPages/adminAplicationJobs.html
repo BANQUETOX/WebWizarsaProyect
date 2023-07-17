@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:ital,wght@0,700;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../css/styles.css">
+    <link rel="stylesheet" href="../../../css/normalize.css">
+    <script src="../../../js/jsComponents/aplicationFeed.js" defer></script>
+    <title>Aplication feed</title>
+</head>
+<body>
+    <header class="aplication-header">
+        <div class="profile_images">
+            <a href="../adminPages/adminProfile.html">
+                <img src="../../../images/user.png" alt="Icono de Usuario">
+            </a>
+            <a href="../adminPages/adminCompanyProfile.html">
+                <img src="../../../images/work.png" alt="Icono de Empresa">
+            </a>
+        </div>
+        <div class="container">
+            <nav class="aplication-header--navbar">
+                <ul>
+                    <li><a href="#">Trabajos</a></li>
+                    <li><a href="../adminPages/adminAplicationStatus.html">Aplicaciones</a></li>
+                    <li class="aplication-header--navbar__request"><a href="../adminPages/adminInviteMembers.html">Solicitar vacantes</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="bell">
+            <a href="#"><img src="../../../images/campana.png" alt="Icono de campana" ></a>
+            
+        </div>
+      </header>
+    
+    <div class="aplicationFeed">
+        <div class="aplicationFeed--filters">
+            <div class="dropdown">
+                <span>Filtros</span>
+                <div class="dropdown-content">
+                  <div class="select">
+                      <select class="select__element">
+                        <option value="1">Provincia</option>
+                      </select>
+                    </div>
+                    <div class="select">
+                      <select class="select__element">
+                        <option value="1">Canton</option>
+                      </select>
+                    </div>
+                    <div class="select">
+                      <select class="select__element">
+                        <option value="1">Distrito</option>
+                      </select>
+                    </div>
+                    <div class="select select__range">
+                        <label for="salary-range-input" class="salary-range-input-label">Salario: <span id=salary-value></span></label>
+                        <input type="range" id="salary-range-input" min="0" max="10000000000" >
+                    </div>
+                </div>
+              </div>
+        </div>
+        <div class="aplicationFeed--jobAplications">
+            <a href="">
+                <div class="aplication">
+                    <h3 class="aplication--name">Developer</h3>
+                    <p class="aplication--description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, consequatur! Consequatur tenetur molestias molestiae neque veritatis, saepe qui dignissimos inventore! Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, qui. Nisi, iste ipsum explicabo quis sequi ea doloremque quaerat quam.</p>
+                    
+                </div>
+            </a>
+            <a href="">
+                <div class="aplication">
+                    <h3 class="aplication--name">Developer</h3>
+                    <p class="aplication--description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, consequatur! Consequatur tenetur molestias molestiae neque veritatis, saepe qui dignissimos inventore! Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, qui. Nisi, iste ipsum explicabo quis sequi ea doloremque quaerat quam.</p>
+                    
+                </div>
+            </a>
+            <a href="">
+                <div class="aplication">
+                    <h3 class="aplication--name">Developer</h3>
+                    <p class="aplication--description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, consequatur! Consequatur tenetur molestias molestiae neque veritatis, saepe qui dignissimos inventore! Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, qui. Nisi, iste ipsum explicabo quis sequi ea doloremque quaerat quam.</p>
+                    
+                </div>
+            </a>
+            <a href="">
+                <div class="aplication">
+                    <h3 class="aplication--name">Developer</h3>
+                    <p class="aplication--description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, consequatur! Consequatur tenetur molestias molestiae neque veritatis, saepe qui dignissimos inventore! Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, qui. Nisi, iste ipsum explicabo quis sequi ea doloremque quaerat quam.</p>
+                    
+                </div>
+            </a>
+            <a href="">
+                <div class="aplication">
+                    <h3 class="aplication--name">Developer</h3>
+                    <p class="aplication--description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, consequatur! Consequatur tenetur molestias molestiae neque veritatis, saepe qui dignissimos inventore! Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, qui. Nisi, iste ipsum explicabo quis sequi ea doloremque quaerat quam.</p>
+                    
+                </div>
+            </a>
+            <a href="">
+                <div class="aplication">
+                    <h3 class="aplication--name">Developer</h3>
+                    <p class="aplication--description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, consequatur! Consequatur tenetur molestias molestiae neque veritatis, saepe qui dignissimos inventore! Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, qui. Nisi, iste ipsum explicabo quis sequi ea doloremque quaerat quam.</p>
+                    
+                </div>
+            </a>
+            <a href="">
+                <div class="aplication">
+                    <h3 class="aplication--name">Developer</h3>
+                    <p class="aplication--description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, consequatur! Consequatur tenetur molestias molestiae neque veritatis, saepe qui dignissimos inventore! Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, qui. Nisi, iste ipsum explicabo quis sequi ea doloremque quaerat quam.</p>
+                    
+                </div>
+            </a>
+            <a href="">
+                <div class="aplication">
+                    <h3 class="aplication--name">Developer</h3>
+                    <p class="aplication--description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, consequatur! Consequatur tenetur molestias molestiae neque veritatis, saepe qui dignissimos inventore! Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, qui. Nisi, iste ipsum explicabo quis sequi ea doloremque quaerat quam.</p>
+                    
+                </div>
+            </a>
+        </div>
+        <div class="create-job">
+            <a href="../adminPages/adminCreateJob.html">
+                <button class="button--red">Crear trabajo</button>
+            </a>
+        </div>
+    </div>
+    <footer class="page-footer">
+        <div class="message1">
+            <b>SNE, ©2023</b>
+        </div>
+
+        <div class="message2">
+            <b>SNE - Sistema Nacional de Empleos</b>
+            <b>Desarrollado por WebWizards</b>
+        </div>
+
+        <div class="redes">
+            <a href="https://www.instagram.com/"><img class= "iconos" src="../../../images/instagram.png" alt="instagram"></a><br>
+            <a href="https://es-la.facebook.com/"><img class= "iconos" src="../../../images/facebook.png" alt="facebook"></a><br>
+            <a href="https://twitter.com/"><img class= "iconos"  src="../../../images/twitter.png" alt="twitter"></a>
+        </div>
+
+        <div class="sobre">
+            <li class="1"><a class="link"  href="../teamLanding/teamGroup.html">Sobre el Equipo</a></li>
+            
+        </div>
+
+    </footer>
+    
+</body>
+</html>

@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <main>
+    <div class="add-education">
 
         <div class="tittle">Registro</div>
 
@@ -23,7 +23,12 @@
                 <div class="formulary__group" id="education-level">
                     <label class="formulary__label">Nivel de eduacion</label>
                     <div class="formulary__input-group">
-                        <select id="eduacion" name="eduacion"></select>
+                        <select id="eduacion" name="eduacion" class="select__element">
+                            <option value="empty"></option>
+                            <option value="bachillerato">Bachillerato</option>
+                            <option value="diplimado">Diplomado</option>
+                            <option value="master">Master</option>
+                        </select>
                         <i class="formulary__status-validation fas fa-times-circle"></i>
                     </div>
                     <p class="formulary__input-error">Debes de rellenar este campo para poder continuar con el registro</p>
@@ -92,4 +97,4 @@
         </div>
         
         
-    </main>
+    </div>
