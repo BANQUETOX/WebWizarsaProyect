@@ -1586,9 +1586,32 @@ color: #ffffff;
 background-color: #9FD3C7;
   cursor: pointer;
 }
+
 .button--green:hover{
-background-color: #719d92;
+  background-color: #719d92;
+  }
+
+/*Boton guardar en catalogos*/
+.button--green-catalogue{      
+  font-family: 'Montserrat', sans-serif;
+  display: inline-block;
+  color: #212529;
+  text-align: center;
+  border: 1px solid black;
+  padding: 10px 20px;
+  font-size: 20px;
+  line-height: 1.5;
+  border-radius: .25rem;
+  color: #ffffff;
+  background-color: #9FD3C7;
+  cursor: pointer;
+  margin-right: 1%;
 }
+
+.button--green-catalogue:hover{
+  background-color: #719d92;
+  }
+
 .button--red{
 font-family: 'Montserrat', sans-serif;
   display: inline-block;
@@ -1606,6 +1629,7 @@ background-color: #BE3144;
 .button--red:hover{
 background-color: #852532;
 }
+
 .button--black{
 font-family: 'Montserrat', sans-serif;
   display: inline-block;
@@ -1620,10 +1644,32 @@ color: #ffffff;
 background-color: #000000;
   cursor: pointer;
 }
+
 .button--black:hover{
+  background-color: #ffffff;
+  color: #000000;
+  }
+
+/*Boton de catalgos*/
+.button--black-catalogue{
+  font-family: 'Montserrat', sans-serif;
+  display: inline-block;
+  color: #212529;
+  text-align: center;
+  border: 1px solid black;
+  padding: 10px 20px;
+  font-size: 20px;
+  line-height: 1.5;
+  border-radius: .25rem;
+  color: #ffffff;
+  background-color: #000000;
+  cursor: pointer;
+  }
+.button--black-catalogue:hover{
 background-color: #ffffff;
 color: #000000;
 }
+
 /* inputs */
 .text-input{
   font-family: 'Montserrat', sans-serif;
