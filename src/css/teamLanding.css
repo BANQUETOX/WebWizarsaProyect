@@ -115,6 +115,17 @@
     margin-bottom: 10vh;
 }
 
+
+.team-landing--products {
+
+  background: #fff;
+  width: 90vw;
+  margin-top: max(8vh, 2rem);
+  margin-right: auto;
+  margin-left: auto;
+
+}
+
 .team-landing--about-us--section--image img{
     margin-left: 30vw;
     width: 200px;
