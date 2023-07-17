@@ -1,0 +1,95 @@
+/* navbar */
+.team-landing--nav-bar{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    background-color: rgb(62, 166, 179);
+    padding: 10px;
+}
+.team-landing--nav-bar--head{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.team-landing--nav-bar--logo__arrow{
+    margin-top: 2.4vh;
+    justify-self: end;
+}
+.team-landing--nav-bar--logo-arrow{
+    width: 20px;
+}
+
+
+.team-landing--nav-bar--logo{
+    display: flex;
+}
+.team-landing--nav-bar--logo-image{
+    width: 40px;
+}
+
+.team-landing--nav-bar--logo-text{
+  color: black;
+  font-family: 'Poppins';
+  text-decoration: none; 
+  padding-left: 1vw;
+  margin-bottom: 0;
+}
+
+.team-landing--nav-bar--sections-container__none{
+    display: none;
+}
+.team-landing--nav-bar--sections{
+    text-decoration: none; 
+}
+.team-landing--nav-bar--sections p{
+    margin: 0;
+    margin-bottom: 4vh;
+    color: white;
+    padding-left: 11.5vw;
+}
+/* footer */
+.team-landing--footer{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    background-color: rgb(62, 166, 179);
+    padding: 10px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+
+}
+
+.team-landing--footer--socials{
+    justify-self: end;
+}
+
+.team-landing--footer--socials a{
+    text-decoration: none;
+}
+
+.team-landing--footer--socials img{
+    margin-top: 2.4vh;
+    padding: 5px;
+    width: 20px;
+}
+
+/* about us */
+
+.team-landing--about-us{
+    background-color: lightgray;
+}
+
+.team-landing--about-us--section h1{
+    text-align: center;
+    font-family: 'Poppins';
+
+}
+.team-landing--about-us--section{
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px;
+    padding-top: 7vh;
+    text-align: justify;
+}
+
+.team-landing--about-us--section:last-of-type{
+    margin-bottom: 10vh;
+}
