@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../css/normalize.css">
+    <link rel="stylesheet" href="../../../css/styleAplication/styles.css">
+ 
+</head>
+<body>
+    <header class="aplication-header">
+        <div class="profile_images">
+            <a href="./userProfile.html">
+                <img src="../../../images/imagesAplication/user.png" alt="Image 1">
+            </a>
+            
+        </div>
+        <div class="container">
+            <nav class="aplication-header--navbar">
+                <ul>
+                    <li><a href="#">Trabajos</a></li>
+                    <li><a href="../userPages/userAplicationSatus.html">Aplicaciones</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="bell">
+            <a href="#"><img src="../../../images/imagesAplication/campana.png" alt="Icono de campana" ></a>
+            
+        </div>
+      </header>
+
+    <div class="add-education">
+
+        <div class="tittle">Registro</div>
+
+        <div class="add-education-container">
+            <div class="tittle">Mi Educacion</div>
+
+            <form action="#" class="formulary" id="formulary">
+
+                <!--Nivel de eduacion -->
+                <div class="formulary__group" id="education-level">
+                    <label class="formulary__label formulary__label--education">Nivel de eduacion</label>
+                    <div class="formulary__input-group select select__education--container ">
+                        <select id="eduacion" name="eduacion" class="select__element select__education">
+                            <option value="empty"></option>
+                            <option value="bachillerato">Bachillerato</option>
+                            <option value="diplimado">Diplomado</option>
+                            <option value="master">Master</option>
+                            
+                        </select>
+                        <i class="formulary__status-validation fas fa-times-circle"></i>
+                    </div>
+                    <p class="formulary__input-error">Debes de rellenar este campo para poder continuar con el registro</p>
+                </div>
+        
+        
+        
+                <!--Nombre de la Escuela-->
+                <div class="formulary__group" id="school_group">
+                    <label class="formulary__label">Nombre de la Escuela</label>
+                    <div class="formulary__input-group">
+                        <input type="text" class="formulary__input" name="school" id="school" required>
+                        <i class="formulary__status-validation fas fa-times-circle"></i>
+                    </div>
+                    <p class="formulary__input-error">Debe de ingresar el nombre de la escuela a la que asistio</p>
+                </div>
+
+
+                <!--Area de Trabajo-->
+                <div class="formulary__group" id="study_area">
+                    <label class="formulary__label">Area de estudio </label>
+                    <div class="formulary__input-group">
+                        <input type="text" class="formulary__input" name="study" id="study" required>
+                        <i class="formulary__status-validation fas fa-times-circle"></i>
+                    </div>
+                    <p class="formulary__input-error">Debe de ingresar el area de estudio que tienes</p>
+                </div>
+
+                <!--Año de Finalizacion-->
+                <div class="formulary__group" id="ending_year">
+                    <label class="formulary__label-year">Año de Finalizacion </label>
+                    <div class="formulary__input-group-year">
+                        <input type="date" class="formulary__input-year" name="year" id="year" required>
+                        <i class="formulary__status-validation fas fa-times-circle"></i>
+                    </div>
+                    <p class="formulary__input-error">Debe de ingresar el año en el que finalizaste tus estudios</p>
+                </div>
+
+                <!--Carrera en curso-->
+                <div class="formulary__group formulary__group-carrer-progress" id="carrer__progress">
+                    <label class="formulary__label">
+                        <b class="formulary__span">Carrera en curso</b>
+                        <input class="formulary__checkbox" type="checkbox" name="carrer" id="carrer">
+                    </label>
+                </div>
+        
+                <!-- Adicionar otro nivel -->
+                <div class="formulary__group formulary__group-btn-send">
+                    <p class="formulary__active-message" id="add_another-level"></p>
+                    <input class="formulary__btn-level" type="submit" value="Adicionar otro nivel"a>
+                </div>
+
+                <div class="button-container">
+                    <button class="button--black button--black__education">Continuar</button>
+                    <span class="button-separator">|</span>
+                    <button class="button--black button--black__education" type="button">Saltar</button>
+                </div>
+                
+                <!-- MENSAJE DE CAMPOS REQUERIDOS -->
+                <div class="formulary__message" id="formulary__message">
+                    <p><i class="fas fa-exclamation-circle"> <b>Error:</b> Debes completar todos los campos</i></p>
+                </div>
+
+                </form> 
+        </div>
+    </div>
+
+
+    <footer class="page-footer">
+        <div class="message1">
+            <b>SNE, ©2023</b>
+        </div>
+
+        <div class="message2">
+            <b>SNE - Sistema Nacional de Empleos</b>
+            <b>Desarrollado por WebWizards</b>
+        </div>
+
+        <div class="redes">
+            <a href="https://www.instagram.com/"><img class= "iconos" src="../../../images/imagesAplication/instagram.png" alt="instagram"></a><br>
+            <a href="https://es-la.facebook.com/"><img class= "iconos" src="../../../images/imagesAplication/facebook.png" alt="facebook"></a><br>
+            <a href="https://twitter.com/"><img class= "iconos"  src="../../../images/imagesAplication/twitter.png" alt="twitter"></a>
+        </div>
+
+        <div class="sobre">
+            <li class="1"><a class="link" src="" href="../teamLanding/teamLandingPage.html">Sobre el Equipo</a></li>
+        </div>
+
+    </footer>
+
+<body>
