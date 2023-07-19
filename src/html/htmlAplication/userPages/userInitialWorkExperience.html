@@ -8,9 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../../css/normalize.css">
-    <link rel="stylesheet" href="../../../css/styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" defer></script>
-    <script src="../../../js/jsComponents/addworkExperience.js" defer></script>
+    <link rel="stylesheet" href="../../../css/styleAplication/styles.css">
  
 </head>
 <body>
@@ -26,11 +24,11 @@
                     <a href="../aplicationLanding/aplicationLandingPage.html">Ingresar</a>
                   
               </div>
-                
             </div>
         </header>
         <div class="header-fixed-placeholder"></div>
     </div>
+
     <div class="addWorkExperience--container">
         <form class="addWorkExperience" id="experienceForm">
             
@@ -88,7 +86,7 @@
                 <li>
                     <div class="avatar-upload">
                         <label for="imageUpload" class="button--white avatar-upload-input--label">Foto de perfil</label>
-                        <input type='file' name="profilePicture" id="imageUpload" accept=".png"  class="avatar-upload-input" required />
+                        <input type='file' name="profilePicture" id="imageUpload" accept=".png"  class="avatar-upload-input" />
                         <div class="avatar-edit">
                         </div>
                         <div class="avatar-preview" id="avatar-preview">
@@ -114,20 +112,19 @@
         </div>
 
         <div class="redes">
-            <a href="https://www.instagram.com/"><img class= "iconos" src="../../../images/instagram.png" alt="instagram"></a><br>
-            <a href="https://es-la.facebook.com/"><img class= "iconos" src="../../../images/facebook.png" alt="facebook"></a><br>
-            <a href="https://twitter.com/"><img class= "iconos"  src="../../../images/twitter.png" alt="twitter"></a>
+            <a href="https://www.instagram.com/"><img class= "iconos" src="../../../images/imagesAplication/instagram.png" alt="instagram"></a><br>
+            <a href="https://es-la.facebook.com/"><img class= "iconos" src="../../../images/imagesAplication/facebook.png" alt="facebook"></a><br>
+            <a href="https://twitter.com/"><img class= "iconos"  src="../../../images/imagesAplication/twitter.png" alt="twitter"></a>
         </div>
 
         <div class="sobre">
-            <li class="1"><a class="link"  href="../teamLanding/teamGroup.html">Sobre el Equipo</a></li>
-            
+            <li class="1"><a class="link" src="" href="../teamLanding/teamLandingPage.html">Sobre el Equipo</a></li>
         </div>
 
     </footer>
-    
-</body>
-</html>
+
+
+<body>
     <script>
         document.getElementById('userExtraData').addEventListener('submit',(e)=>{
             e.preventDefault()
