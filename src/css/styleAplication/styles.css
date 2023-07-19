@@ -1549,7 +1549,7 @@ color: #000000;
 
 
 
-.formulary__message, .formulary__group-btn-send{
+.formulary__message .formulary__group-btn-send{
   grid-column: span 1;
 }
 

@@ -1,0 +1,149 @@
+
+  .aplicationFeed{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-top: 12vh;
+    margin-left: 10%;
+}
+
+
+.dropdown {
+    font-family: 'Montserrat', sans-serif;
+     display: inline-block;
+     color: #212529;
+     text-align: center;
+     border: 1px solid black;
+     padding: 10px 20px;
+     font-size: 20px;
+     line-height: 1.5;
+     border-radius: .25rem;
+     color: #ffffff;
+     background-color: #9FD3C7;
+     cursor: pointer;
+    }
+    
+    .dropdown-content {
+     display: none;
+     position: absolute;
+     background-color: #f9f9f9;
+     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+     padding: 12px 16px;
+     z-index: 1;
+    }
+    
+    .dropdown:hover .dropdown-content {
+     display: block;
+    }
+
+
+    .select {
+        position: relative;
+        display: flex;
+        margin-top: 10px;
+        width: 20em;
+        height: 3em;
+        border-radius: .25em;
+        overflow: hidden;
+       }
+
+       .select::after {
+        content: '\25BC';
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 1em;
+        background-color: #34495e;
+        transition: .25s all ease;
+        pointer-events: none;
+       }
+       /* Transition */
+       .select:hover::after {
+        color: #f39c12;
+       }
+       
+       /* range */
+       .select__range{
+        background-color: #34495e;
+       }
+       .select__range::after{
+        content:none;
+       }
+       #salary-range-input{
+        position: fixed;
+        margin-left: 250px;
+        margin-top: 22px;
+       
+       
+       }
+       .salary-range-input-label{
+        margin-top: 15px;
+        margin-left: 20px;
+        
+       
+       }
+
+       .select__element {
+        font-family: 'Montserrat', sans-serif;
+  
+  
+       /* Reset Select */
+       appearance: none;
+       outline: 0;
+       border: 0;
+       box-shadow: none;
+       /* Personalize */
+       flex: 1;
+       padding: 0 1em;
+       color: #fff;
+       background-color: #34495e;
+       background-image: none;
+       cursor: pointer;
+      }
+      /* Remove IE arrow */
+      .select__element::-ms-expand {
+       display: none;
+      }
+
+      .aplicationFeed--jobAplications{
+        max-width: 42vw;
+        max-height: 60vh;
+        overflow: scroll;
+        overflow-x: hidden;
+    }
+    .aplicationFeed--jobAplications>a{
+        color: black;
+        text-decoration: none;
+    }
+    .aplication{
+        border: solid black 2px;
+        margin-bottom: 2vh;
+        width: 40vw;
+    } 
+    .aplication--name{
+        font-family: 'Montserrat', sans-serif;
+        padding-left: 10px;
+        margin: 0;
+    }
+    .aplication--description{
+        font-family: 'Montserrat', sans-serif;
+        padding-left: 10px;
+    
+    }
+
+    .button--red{
+        font-family: 'Montserrat', sans-serif;
+        display: inline-block;
+        color: #212529;
+        text-align: center;
+        border: 1px solid black;
+        padding: 10px 20px;
+        font-size: 20px;
+        line-height: 1.5;
+        border-radius: .25rem;
+        color: #ffffff;
+        background-color: #BE3144;
+        cursor: pointer;
+    }
+    .button--red:hover{
+        background-color: #852532;
+    }

@@ -1,6 +1,214 @@
-/* footer */
+/* footer aplicación*/
+.page-footer {
+    position: absolute;
+    background-color:#303841;
+    width: 100%;
+    height: 150px;
+    margin-top: 3vh;
+  }
+  
+  .page-footer-new-register {
+    position: absolute;
+    background-color:#303841;
+    width: 100%;
+    height: 150px;
+    margin-top: 7vh;
+  }
+  
+  .page-footer-admin-profile {
+    position: absolute;
+    background-color:#303841;
+    width: 100%;
+    height: 150px;
+    margin-top: 0vh;
+  }
+  
+  .page-footer-register-business {
+    position: absolute;
+    background-color:#303841;
+    width: 100%;
+    height: 158px;
+    margin-top: 6vh;
+  }
+  
+  
+  .message1 {
+    color: aliceblue;
+    margin-left: 100px;
+    margin-top: 60px;
+  }
+  
+  .message2 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-left: 100px;
+    margin-top: -2%;
+    color: white;
+  }
+  
+  
+  .redes {
+    margin-top: 0.2%;
+    display: flex;
+    flex-direction:row;
+    margin-left: 50%;
+  }
+  
+  .iconos{
+    width: 35px;
+    height: 35px;
+    margin-top: 15px;
+    margin-right: 70px;
+    margin-left: -38px;
+  }
+  
+  .sobre {
+    margin-top: -60px;
+    color: rgb(216, 219, 221);
+    margin-right: 100px;
+    text-decoration:none;
+    text-align: right;
+    list-style: none;
+    font-size: 20px;
+  }
+  
+  .sobre a {
+    text-decoration: none;
+    color: white;
+  }
 
-/* header */
+
+/*header equipo */
+
+.header-fixed {
+	background-color:#303841;
+	
+	padding: 20px 40px;
+	height: 80px;
+    
+	color: #ffffff;
+    box-shadow:0 1px 1px #ccc;
+	box-sizing: border-box;
+	top:-100px;
+
+
+}
+
+
+.header-fixed .header-limiter {
+	max-width: 1200px;
+	text-align: center;
+	margin: 0 auto;
+}
+
+
+.header-fixed .header-limiter .header {
+	float: left;
+	font: bold 28px Poppins;
+	line-height: 40px;
+	margin: 0;
+}
+
+.header-fixed .header-limiter .header span {
+	color: #BE3144;
+}
+
+.header-fixed .header-limiter a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.header-fixed .header-limiter nav {
+	font: semi-bold 16px Poppins;
+	line-height: 40px;
+	float: right;
+}
+
+.header-fixed .header-limiter nav a{
+	display: inline-block;
+	padding: 0 50px;
+	text-decoration:none;
+	color: #ffffff;
+
+}
+
+.nav-register-log-in {
+  font-family: 'Montserrat', sans-serif;
+  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 14px;
+}
+
+
+/* header aplicación*/
+
+.aplication-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #303841;
+    
+    
+  }
+  
+  .profile_images {
+    display: flex;
+    align-items: center;
+  }
+  
+  .profile_images img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 40px;
+    border: 2px solid #760101;
+  }
+
+  .container {
+    text-align: left;
+  }
+  
+  .aplication-header--navbar {
+    margin-left: -30px;
+    width: 200%;
+  }
+  
+  .aplication-header--navbar ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .aplication-header--navbar ul li {
+    margin-left: 20px;
+    
+  }
+  
+  .aplication-header--navbar ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    
+  }
+  
+  .bell{
+    
+    margin-left: auto;
+  }
+  
+  .bell img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-left: 0px;
+    margin-right: 10px;
+  }
+
+
+
 
 /* botones */
 
