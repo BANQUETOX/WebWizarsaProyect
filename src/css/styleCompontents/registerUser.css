@@ -1,0 +1,81 @@
+.register-user {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #ececec;
+}
+
+.register-user h1 {
+    font-family: 'poppins', sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.register-user h2 {
+    font-size: 30px;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+}
+
+.register-user .register form {
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.register-user .form {
+    color: #ececec;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+}
+
+.register-user div {
+    border-radius: 10px;
+    background-color: #303841;
+    width: 50%;
+}
+
+.register-user .register {
+    margin-left: 27%;
+}
+
+.register-user .text-input {
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 4vh;
+    resize: vertical;
+    padding: 15px;
+    border-radius: .25rem;
+    border: 0;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.06);
+}
+
+.register-user .button {
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    justify-content: space-between;
+    margin-top: 10%;
+    width: 100%;
+}
+
+.register-user .button--green {
+    font-family: 'Montserrat', sans-serif;
+    display: inline-block;
+    color: #212529;
+    text-align: center;
+    border: 1px solid black;
+    padding: 10px 20px;
+    font-size: 20px;
+    line-height: 1.5;
+    border-radius: .25rem;
+    color: #ffffff;
+    background-color: #9FD3C7;
+    cursor: pointer;
+}
+
+.register-user .button--green:hover {
+    background-color: #719d92;
+}
