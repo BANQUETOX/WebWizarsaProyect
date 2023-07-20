@@ -85,49 +85,63 @@ function checkInputs() {
 
     if (birthValue === '') {
         setErrorFor(birth, 'El campo no puede estar en blanco');
-    } else if (birthValue < '01/01/2005') {
-        setErrorFor(birth, 'Debes ser mayo de 18 años para registrarte');
+    } else if (!isAge(birthValue)) {
+        setErrorFor(birth, 'Debes ser mayor de 18 años para registrarte');
     } else {
         setSuccessFor(birth);
     }
+}
 
 
-    function setErrorFor(input, message) {
-        const formControl = input.parentElement;
-        const small = formControl.querySelector('small');
-        formControl.className = 'form-control error';
-        small.innerText = message;
-    }
+function setErrorFor(input, message) {
+    const formControl = input.parentElement;
+    const small = formControl.querySelector('small');
+    formControl.className = 'form-control error';
+    small.innerText = message;
+}
 
-    function setSuccessFor(input) {
-        const formControl = input.parentElement;
-        formControl.className = 'form-control success';
-    }
+function setSuccessFor(input) {
+    const formControl = input.parentElement;
+    formControl.className = 'form-control success';
+}
 
-    function setErrorFor(select, message) {
-        const formControl = select.parentElement;
-        const small = formControl.querySelector('small');
-        formControl.className = 'form-control error';
-        small.innerText = message;
-    }
+function setErrorFor(select, message) {
+    const formControl = select.parentElement;
+    const small = formControl.querySelector('small');
+    formControl.className = 'form-control error';
+    small.innerText = message;
+}
 
-    function setSuccessFor(select) {
-        const formControl = select.parentElement;
-        formControl.className = 'form-control success';
-    }
+function setSuccessFor(select) {
+    const formControl = select.parentElement;
+    formControl.className = 'form-control success';
+}
 
-    function isEmail(email) {
-        return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
-    }
+function isEmail(email) {
+    return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+}
 
-    function isPassword(password) {
-        return /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*(\W|_)).{6,100}$/.test(password);
-    }
+function isPassword(password) {
+    return /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*(\W|_)).{6,100}$/.test(password);
+}
 
-    eyeIcon.addEventListener('click', () => {
-        password.type = password.type === "password" ? "text" : "password";
-    });
+eyeIcon.addEventListener('click', () => {
+    password.type = password.type === "password" ? "text" : "password";
+});
 
-    eyeIcon2.addEventListener('click', () => {
-        password2.type = password2.type === "password" ? "text" : "password";
-    });
+eyeIcon2.addEventListener('click', () => {
+    password2.type = password2.type === "password" ? "text" : "password";
+});
+
+function isAge(birth) {
+    // get current date
+    let currentDate = new Date();
+    // get input date
+    let input = document.getElementById("birth").value;
+    let birthdate = new Date(input);
+    // return if age is over 18
+    let diff = new Date(currentDate - birthdate)
+    let age = Math.abs(diff.getUTCFullYear() - 1970);
+
+    return age >= 18;
+}
