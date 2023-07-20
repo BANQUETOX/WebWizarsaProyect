@@ -165,3 +165,99 @@ h2 {
 
 
 /*Header and footer styling*/
+
+.header-fixed {
+    background-color: #303841;
+    padding: 20px 40px;
+    height: 80px;
+    color: #ffffff;
+    box-shadow: 0 1px 1px #ccc;
+    box-sizing: border-box;
+    top: -100px;
+}
+
+.header-fixed .header-limiter {
+    max-width: 1200px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.header-fixed .header-limiter .header {
+    float: left;
+    font: bold 28px Poppins;
+    line-height: 40px;
+    margin: 0;
+}
+
+.header-fixed .header-limiter .header span {
+    color: #BE3144;
+}
+
+.header-fixed .header-limiter a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.header-fixed .header-limiter nav {
+    font: semi-bold 16px Poppins;
+    line-height: 40px;
+    float: right;
+}
+
+.header-fixed .header-limiter nav a {
+    display: inline-block;
+    padding: 0 50px;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.page-footer {
+    position: absolute;
+    background-color: rgb(112, 106, 106);
+    width: 100%;
+    height: 150px;
+}
+
+.message1 {
+    color: aliceblue;
+    margin-left: 100px;
+    margin-top: 60px;
+}
+
+.message2 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-left: 100px;
+    margin-top: -2%;
+    color: white;
+}
+
+.redes {
+    display: flex;
+    flex-direction: row;
+    margin-left: 50%;
+}
+
+.iconos {
+    width: 25px;
+    height: 25px;
+    margin-top: 15px;
+    margin-right: 90px;
+    margin-left: -40px;
+}
+
+.sobre {
+    margin-top: -60px;
+    color: rgb(216, 219, 221);
+    margin-right: 100px;
+    text-decoration: none;
+    text-align: right;
+    list-style: none;
+    font-size: 20px;
+}
+
+.sobre a {
+    text-decoration: none;
+    color: white;
+}
