@@ -15,13 +15,13 @@
     margin: 0;
 }
 
-h1 {
+.sct-form h1 {
     font-size: 40px;
     font-family: 'poppins', sans-serif;
     font-weight: 700;
 }
 
-h2 {
+.sct-form h2 {
     display: flex;
     justify-content: center;
     font-family: 'poppis', sans-serif;
