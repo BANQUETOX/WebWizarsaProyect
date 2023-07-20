@@ -5,7 +5,7 @@ const email = document.getElementById('email');
 const password = document.getElementById('password');
 const eyeIcon = document.getElementById('eye');
 const eyeIcon2 = document.getElementById('eye2');
-const confpassword = document.getElementById('confpassword');
+const password2 = document.getElementById('password2');
 const genre = document.getElementById('genre');
 const idty = document.getElementById('idty');
 const idnum = document.getElementById('idnum');
@@ -23,7 +23,7 @@ function checkInputs() {
     const lnameValue = lastname.value.trim();
     const emailValue = email.value.trim();
     const passwordValue = password.value.trim();
-    const confpasswordValue = confpassword.value.trim();
+    const password2Value = password2.value.trim();
     const genreValue = genre.value.trim();
     const idtyValue = idty.value.trim();
     const idnumValue = idnum.value.trim();
@@ -52,17 +52,17 @@ function checkInputs() {
     if (passwordValue === '') {
         setErrorFor(password, 'El campo no puede estar en blanco');
     } else if (!isPassword(passwordValue)) {
-        setErrorFor(password, 'Contraseña debe tener como mínimo 6 caracteres, una mayúscula, un número, una minúscula y un carácter especial');
+        setErrorFor(password, 'La contraseña debe tener como mínimo 6 caracteres, una mayúscula, un número, una minúscula y un carácter especial');
     } else {
         setSuccessFor(password);
     }
 
-    if (confpasswordValue === '') {
-        setErrorFor(confpassword, 'El campo no puede estar en blanco');
-    } else if (passwordValue !== confpasswordValue) {
-        setErrorFor(confpassword, 'Las contraseñas no coinciden');
+    if (password2Value === '') {
+        setErrorFor(password2, 'El campo no puede estar en blanco');
+    } else if (passwordValue !== password2Value) {
+        setErrorFor(password2, 'Las contraseñas no coinciden');
     } else {
-        setSuccessFor(confpasswordValue);
+        setSuccessFor(password2, 'Las contraseñas coinciden');
     }
 
     if (genreValue === 'empty') {
@@ -85,47 +85,49 @@ function checkInputs() {
 
     if (birthValue === '') {
         setErrorFor(birth, 'El campo no puede estar en blanco');
+    } else if (birthValue < '01/01/2005') {
+        setErrorFor(birth, 'Debes ser mayo de 18 años para registrarte');
     } else {
         setSuccessFor(birth);
     }
-}
 
-function setErrorFor(input, message) {
-    const formControl = input.parentElement;
-    const small = formControl.querySelector('small');
-    formControl.className = 'form-control error';
-    small.innerText = message;
-}
 
-function setSuccessFor(input) {
-    const formControl = input.parentElement;
-    formControl.className = 'form-control success';
-}
+    function setErrorFor(input, message) {
+        const formControl = input.parentElement;
+        const small = formControl.querySelector('small');
+        formControl.className = 'form-control error';
+        small.innerText = message;
+    }
 
-function setErrorFor(select, message) {
-    const formControl = select.parentElement;
-    const small = formControl.querySelector('small');
-    formControl.className = 'form-control error';
-    small.innerText = message;
-}
+    function setSuccessFor(input) {
+        const formControl = input.parentElement;
+        formControl.className = 'form-control success';
+    }
 
-function setSuccessFor(select) {
-    const formControl = select.parentElement;
-    formControl.className = 'form-control success';
-}
+    function setErrorFor(select, message) {
+        const formControl = select.parentElement;
+        const small = formControl.querySelector('small');
+        formControl.className = 'form-control error';
+        small.innerText = message;
+    }
 
-function isEmail(email) {
-    return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
-}
+    function setSuccessFor(select) {
+        const formControl = select.parentElement;
+        formControl.className = 'form-control success';
+    }
 
-function isPassword(password) {
-    return /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*(\W|_)).{6,100}$/.test(password);
-}
+    function isEmail(email) {
+        return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+    }
 
-eyeIcon.addEventListener('click', () => {
-    password.type = password.type === "password" ? "text" : "password";
-});
+    function isPassword(password) {
+        return /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*(\W|_)).{6,100}$/.test(password);
+    }
 
-eyeIcon2.addEventListener('click', () => {
-    confpassword.type = confpassword.type === "password" ? "text" : "password";
-});
+    eyeIcon.addEventListener('click', () => {
+        password.type = password.type === "password" ? "text" : "password";
+    });
+
+    eyeIcon2.addEventListener('click', () => {
+        password2.type = password2.type === "password" ? "text" : "password";
+    });
