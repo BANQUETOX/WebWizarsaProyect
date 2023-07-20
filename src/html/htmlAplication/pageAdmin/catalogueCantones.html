@@ -8,7 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../../css/normalize.css">
-    <link rel="stylesheet" href="../../../css/styleAplication/styles.css">
+    <link rel="stylesheet" href="../../../css/styleAplication/generalStyles.css">
+    <link rel="stylesheet" href="../../../css/styleAplication/pageAdmin/catalogues.css">
     <title>Cambiar Contraseña</title>
 </head>
 
@@ -47,13 +48,13 @@
         
         <div id="catalogue__location-container">
             <div class="catalogue__location-field" id="1">
-                <input type="text" class="text-input" placeholder="Id" required>
-                <input type="text" class="text-input" placeholder="Canton" required>
+                <input type="text" class="catalogue--text-input" placeholder="Id" required>
+                <input type="text" class="catalogue--text-input" placeholder="Canton" required>
             </div>
         </div>
         
-        <button class="button--green"id="new-input-button" type="button">Nuevo</button>
-        <button class="button--green" id="save-canton-button" type="button">Guardar cantones</button>
+        <button class="button--green-catalogue"id="new-input-button" type="button">Nuevo</button>
+        <button class="button--green-catalogue" id="save-canton-button" type="button">Guardar cantones</button>
     
         <section class="catalogue__save-discard">
             <button class="button--green-catalogue" id="save-button">Guardar</button>
@@ -116,7 +117,6 @@
     CANTONSFORM.addEventListener('submit', function(e){e.preventDefault()
         document.location.href = "./catalogueDistricts.html"})
 </script>
-
 
 
 
