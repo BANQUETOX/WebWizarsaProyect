@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 
-body {
+.sct-form {
     background-color: #ececec;
     display: flex;
     align-items: center;
