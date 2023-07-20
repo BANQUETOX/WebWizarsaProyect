@@ -44,7 +44,7 @@ function checkInputs() {
     if (emailValue === '') {
         setErrorFor(email, 'El campo no puede estar en blanco');
     } else if (!isEmail(emailValue)) {
-        setErrorFor(email, 'E-mail inválido');
+        setErrorFor(email, 'Correo invalido');
     } else {
         setSuccessFor(email);
     }
@@ -79,6 +79,8 @@ function checkInputs() {
 
     if (idnumValue === '') {
         setErrorFor(idnum, 'El campo no puede estar en blanco');
+    } else if (!isId(idnumValue)) {
+        setErrorFor(idnum, 'Formato incorrecto');
     } else {
         setSuccessFor(idnum);
     }
@@ -123,6 +125,10 @@ function isEmail(email) {
 
 function isPassword(password) {
     return /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*(\W|_)).{6,100}$/.test(password);
+}
+
+function isId(idnum) {
+    return /^.{8,12}$/.test(idnum);
 }
 
 eyeIcon.addEventListener('click', () => {
