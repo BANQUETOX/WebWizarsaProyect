@@ -27,7 +27,7 @@ function setErrorFor(input, message) {
 
 }
 
-function setSuccessFor(input) {
+function setSuccessFor(input, message) {
     const formControl = input.parentElement;
     formControl.className = 'form-control success';
 }
