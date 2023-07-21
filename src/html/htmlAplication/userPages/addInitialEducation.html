@@ -8,7 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../../css/normalize.css">
-    <link rel="stylesheet" href="../../../css/styleAplication/styles.css">
+    <link rel="stylesheet" href="../../../css/styleAplication/generalStyles.css">
+    <link rel="stylesheet" href="../../../css/styleAplication/userPages/addEducation.css">
  
 </head>
 <body>
@@ -31,12 +32,12 @@
 
     <div class="add-education">
 
-        <div class="tittle">Registro</div>
+        <div class="add-education--tittle">Registro</div>
 
         <div class="add-education-container">
-            <div class="tittle">Mi Educacion</div>
+            <div class="add-education--tittle">Mi Educacion</div>
 
-            <form action="#" class="formulary" id="education-formulary">
+            <form action="#" class="add-education--formulary" id="formulary">
 
                 <!--Nivel de eduacion -->
                 <div class="formulary__group" id="education-level">
@@ -96,15 +97,15 @@
                 </div>
         
                 <!-- Adicionar otro nivel -->
-                <div class="formulary__group formulary__group-btn-send-education-user">
+                <div class="formulary__group formulary__group-btn-send">
                     <p class="formulary__active-message" id="add_another-level"></p>
-                    <input class="formulary__btn-level-education" type="button" value="Adicionar otro nivel"a>
+                    <input class="formulary__btn-level" type="submit" value="Adicionar otro nivel"a>
                 </div>
 
-                <div class="button-container button-container__education">
-                    <button class="button--black-collaborator">Continuar</button>
-                    <span class="button-separator"></span>
-                    <button class="button--black-collaborator-skip" type="button" onclick="document.location.href = ('../aplicationLanding/welcome.html')" >Saltar</button>
+                <div class="button-container">
+                    <button class="button--black button--black__education">Continuar</button>
+                    <span class="button-separator">|</span>
+                    <button class="button--black button--black__education" type="button">Saltar</button>
                 </div>
                 
                 <!-- MENSAJE DE CAMPOS REQUERIDOS -->
@@ -112,12 +113,10 @@
                     <p><i class="fas fa-exclamation-circle"> <b>Error:</b> Debes completar todos los campos</i></p>
                 </div>
 
-
-                </form>
+                </form> 
         </div>
-        
-        
     </div>
+
 
     <footer class="page-footer">
         <div class="message1">
