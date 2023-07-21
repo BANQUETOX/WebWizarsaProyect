@@ -6,142 +6,136 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:ital,wght@0,700;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../../css/normalize.css">
-    <link rel="stylesheet" href="../../../css/styleAplication/adminpages/adminInitialInviteMembers.css">
+    <link rel="stylesheet" href="../../../css/styleAplication/adminpages/adminProfile.css">
     <link rel="stylesheet" href="../../../css/styleAplication/generalStyles.css">
+   
     <script src="../../../js/jsAplication/main.js" defer></script>
     <title>Aplication feed</title>
 </head>
 <body>
-    <div class="aplication-landing--navbar">
-        <header class="header-fixed">
-    
-            <div class="header-limiter">
-        
-                <h1 class="header"><a href="#">Web<span>Wizard</span> Jobs</a></h1>
-                <div class="nav-register-log-in">
-                    
-                    
-                    <a href="../aplicationLanding/aplicationLandingPage.html">Ingresar</a>
-                  
-              </div>
-            </div>
-        </header>
-        <div class="header-fixed-placeholder"></div>
-    </div>
-    <div class="invite-members">
-        
-        <div class="tittle-invite-members">Invitaciones</div>
-
-        <div class="invite-members--container">
-            <div class="container-tittle-invite-members">Inivita a managers y reclutadores de tu empresa a colaborar</div>
-
-            <form action="#" class="formulary invite-members--form" id="invite-formulary">
-
-        
-                <!--Nombre Colaborador-->
-                <div class="formulary__group" id="collaborator_name">
-                    <label class="formulary__label">Nombre del Colaborador</label>
-                    <div class="formulary__input-group">
-                        <input type="text" class="formulary__input" name="collaborator" id="collaborator" required>
-                        <i class="formulary__status-validation fas fa-times-circle"></i>
-                    </div>
-                    <p class="formulary__input-error">Debe de ingresar el nombre del colaborador</p>
-                </div>
-
-
-                <!--Apellido-->
-                <div class="formulary__group" id="lastname_group">
-                    <label class="formulary__label">Area de estudio </label>
-                    <div class="formulary__input-group">
-                        <input type="text" class="formulary__input" name="lastname" id="lastname" required>
-                        <i class="formulary__status-validation fas fa-times-circle"></i>
-                    </div>
-                    <p class="formulary__input-error">Debe de ingresar el apellido del colaborador </p>
-                </div>
-
-                <!--Correo-->
-                <div class="formulary__group" id="email_group">
-                    <label class="formulary__label">Correo electronico </label>
-                    <div class="formulary__input-group">
-                        <input type="email" class="formulary__input" name="email" id="email" required>
-                        <i class="formulary__status-validation fas fa-times-circle"></i>
-                    </div>
-                    <p class="formulary__input-error">Debe de ingresar el correo electronico del colaborador </p>
-                </div>
-
-
-                <!--Funcion del colaborador -->
-                <div class="formulary__group" id="function_collaborator">
-                    <label class="formulary__label-collaborator">Funcion del Colaborador</label>
-                        <div class="formulary__input-group-collaborator select select__function--container ">
-                            <select id="func_collaborator" name="func_collaborator" class="select__element select__education">
-                                <option value="empty"></option>
-                                <option value="bachillerato">Bachillerato</option>
-                                <option value="diplimado">Diplomado</option>
-                                <option value="master">Master</option>
-                                
-                            </select>
-                        <i class="formulary__status-validation fas fa-times-circle"></i>
-                    </div>
-                    <p class="formulary__input-error">Debes de seleccionar la funcion que va a tener el colaborador</p>
-                </div>
-
-        
-                <!-- Adicionar otro nivel -->
-               <div class="formulary__group formulary__group-btn-send-collaborator">
-                    <p class="formulary__active-message" id="add_another-collaborator"></p>
-                    <input class="button--white button--white__invite-member" type="submit" value="Invitar otro Colaborador"a>
-                </div>
-
-                <div class="button-container button-container__invite">
-                    <button class="button--black-collaborator">Continuar</button>
-                    <span class="button-separator"></span>
-                    <button class="button--black-collaborator-skip" type="button" onclick="document.location.href = ('../aplicationLanding/welcome.html')" >Saltar</button>
-                </div>
-                
-                <!-- MENSAJE DE CAMPOS REQUERIDOS -->
-                <div class="formulary__message" id="formulary__message">
-                    <p><i class="fas fa-exclamation-circle"> <b>Error:</b> Debes completar todos los campos</i></p>
-                </div>
-
-
-                </form>
+    <header class="aplication-header">
+        <div class="profile_images">
+            <a href="./adminProfile.html">
+                <img src="../../../images/imagesAplication/user.png" alt="Icono de Usuario">
+            </a>
+            <a href="./adminCompanyProfile.html">
+                <img src="../../../images/imagesAplication/work.png" alt="Icono de Empresa">
+            </a>
         </div>
-        
-        
+        <div class="container">
+            <nav class="aplication-header--navbar">
+                <ul>
+                    <li><a href="#">Trabajos</a></li>
+                    <li><a href="./adminAplicationStatus.html">Aplicaciones</a></li>
+                    <li class="aplication-header--navbar__request"><a href="./adminInviteMembers.html">Solicitar vacantes</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="bell">
+            <a href="#"><img src="../../../images/imagesAplication/campana.png" alt="Icono de campana" ></a>
+            
+        </div>
+      </header>
+
+      
+      <div class="user-profile">
+        <div class="container">
+            <div class="avatar-upload">
+                <div class="avatar-edit">
+                    <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
+                    <label for="imageUpload"></label>
+                </div>
+                <div class="avatar-preview">
+                    <div id="imagePreview" style="background-image: url('http://i.pravatar.cc/500?img=7');">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="personalInformation">
+            <div class="editInfo">
+                <div>
+                    <form>
+                        <label for="fullname">Nombre completo:</label>
+                        <input type="text" id="fullname" name="fullname">
+                        <label for="birth">Fecha de nacimiento:</label>
+                        <input type="date" id="birth" name="birth">
+                        <label for="idnt">Cédula, DIMEX o pasaporte:</label>
+                        <input type="number" id="idnt" name="identity">
+                        <label for="address">Dirrección de casa con distrito, cantón y provincia:</label>
+                        <input type="text" id="address" name="address">
+    
+                    </form>
+                </div>
+                <div>
+                    <form>
+                      
+                        <label for="number">Número teléfonico:</label>
+                        <input type="tel" id="num" name="number">
+                        <label for="genres">Seleccione género o no especificar:</label>
+                        <select name="genre" id="genre">
+                            <option value="empty"></option>
+                            <option value="man">Masculino</option>
+                            <option value="female">Femenino</option>
+                            <option value="no">No especificar</option>
+                        </select>
+                        <p></p>
+                        <p></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="btn">
+            <button class="btn-dark">
+                Guardar cambios
+            </button>
+        </div>
+        <h2 class="edit-password--label">
+            Editar Contraseña
+        </h2>
+        <div class="editPassword">
+            <div class="password">
+                <div>
+                    <form>
+                        <label for="password">Contraseña:</label>
+                        <input type="password" id="password" name="password">
+                    </form>
+                </div>
+                <div>
+                    <form>
+                        <label for="confirm">Confirmar Contraseña:</label>
+                        <input type="password" id="confirm" name="confirm">
+                    </form>
+    
+                </div>
+            </div>
+        </div>
+        <div class="btn">
+            <button class="btn-dark">
+                Guardar cambios
+            </button>
+        </div>
     </div>
 
     <footer class="page-footer">
         <div class="message1">
             <b>SNE, ©2023</b>
         </div>
-
         <div class="message2">
             <b>SNE - Sistema Nacional de Empleos</b>
             <b>Desarrollado por WebWizards</b>
         </div>
-
         <div class="redes">
             <a href="https://www.instagram.com/"><img class= "iconos" src="../../../images/imagesAplication/instagram.png" alt="instagram"></a><br>
             <a href="https://es-la.facebook.com/"><img class= "iconos" src="../../../images/imagesAplication/facebook.png" alt="facebook"></a><br>
             <a href="https://twitter.com/"><img class= "iconos"  src="../../../images/imagesAplication/twitter.png" alt="twitter"></a>
         </div>
-
         <div class="sobre">
-            <li class="1"><a class="link" src="" href="">Sobre el Equipo</a></li>
+            <li class="1"><a class="link"  href="../teamLanding/teamGroup.html">Sobre el Equipo</a></li>
         </div>
-
     </footer>
-
-</body>
-
-    <script>
-        document.getElementById('invite-formulary').addEventListener('submit',(e)=>{
-            e.preventDefault()
-            document.location.href = '../aplicationLanding/welcome.html'
-        })
-    </script>
     
+</body>
+</html>
 
 
 
@@ -149,4 +143,11 @@
 
 
 
- 
+
+
+
+
+
+
+
+
