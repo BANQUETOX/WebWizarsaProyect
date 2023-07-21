@@ -1,0 +1,56 @@
+.create-company{
+    margin-top: 7vh;
+    margin-bottom:6.1vh;
+  }
+.form-container {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    border-radius: 10px;
+    border-color: rgb(5, 3, 3);
+    /* background:#f2f2f2;  */
+    font-weight: bold;
+    /* color: #29271F; */
+    /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.548); */
+    margin-top: 1%;
+  }
+  .form-group:after {
+    margin-bottom: 25px;
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+
+  .form-group label {
+  display: block;
+  font-weight: bold;
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+.form-group input[type="text"] {
+  width: 70%;
+  padding: 5px;
+  float: left;
+  margin-top: 6px;
+}
+.form-group textarea {
+  width: 70%;
+  padding: 5px;
+}
+
+.company-form--table {
+    margin-left: 159px;
+  }
+
+
+
+
+
+
+
+
