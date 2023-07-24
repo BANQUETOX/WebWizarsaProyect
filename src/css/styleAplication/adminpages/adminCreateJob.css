@@ -1,75 +1,71 @@
 .title {
-    text-align: center;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-  }
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
 
-  .main {
-    font-family: 'Montserrat', sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items:flex-start;
-    margin-top: 100px;
-    margin-left: 400px;
-    margin-right: 500px;
-    font-size: 20px;
-  }
-  
-  .main select {
-    margin-bottom: 100px;
-    font-size: 18px;
-  }
-  
-  .main label {
-    margin-bottom: 20px;
-  }
+.main {
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 100px;
+  margin-left: 400px;
+  margin-right: 500px;
+  font-size: 20px;
+}
 
-  .main input {
-    margin-bottom: 80px;
-    
-  }
+.main select {
+  margin-bottom: 100px;
+  font-size: 18px;
+}
 
-  .input_class1 {
-    padding-left: 100px;
-    height: 20px;
-  }
-  
-  .input_class2 {
-    padding-left: 210px;
-    height: 200px;
-  }
+.main label {
+  margin-bottom: 20px;
+}
 
-  .button1 {
-    margin-top: -70px;
-  }
+.main input {
+  margin-bottom: 80px;
+}
 
-  .button--white{
-    font-family: 'Montserrat', sans-serif;
-      display: inline-block;
-    color: #212529;
-    text-align: center;
-    border: 1px solid black;
-    padding: 10px 20px;
-    font-size: 20px;
-    line-height: 1.5;
-    border-radius: .25rem;
-    background-color: #ff0000;
-    cursor: pointer;
-    }
+.input_class1 {
+  padding-left: 100px;
+  height: 20px;
+}
 
+.input_class2 {
+  padding-left: 210px;
+  height: 200px;
+}
 
-    .button2-create-job {
-        margin-top: 120px;
-        margin-left: 850px;  
-        width: 200px;
-        height: 50px;
-        background-color: #9FD3C7 ;
-        margin-bottom: 5%;
-        text-align: center;
-        
-      }
+.button1 {
+  margin-top: -70px;
+}
 
+.button--white {
+  font-family: "Montserrat", sans-serif;
+  display: inline-block;
+  color: #212529;
+  text-align: center;
+  border: 1px solid black;
+  padding: 10px 20px;
+  font-size: 20px;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  background-color: #ff0000;
+  cursor: pointer;
+}
 
-      .button2-create-job:hover {
-        background-color: #cccccc;
-      }
+.button2-create-job {
+  margin-top: 120px;
+  margin-left: 850px;
+  width: 200px;
+  height: 50px;
+  background-color: #9fd3c7;
+  margin-bottom: 5%;
+  text-align: center;
+}
+
+.button2-create-job:hover {
+  background-color: #cccccc;
+}
