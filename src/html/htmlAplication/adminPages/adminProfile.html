@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:ital,wght@0,700;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../css/normalize.css">
+    <link rel="stylesheet" href="../../../css/styleAplication/adminpages/adminProfile.css">
+    <link rel="stylesheet" href="../../../css/styleAplication/generalStyles.css">
+    <script src="../../../js/jsAplication/main.js" defer></script>
+    <script src="https://kit.fontawesome.com/73f851add2.js" crossorigin="anonymous" defer></script>
+    <title>Editar perfil</title>
+</head>
+
+<body>
+    <header class="aplication-header">
+        <div class="profile_images">
+            <a href="./adminProfile.html">
+                <img src="../../../images/imagesAplication/user.png" alt="Icono de Usuario">
+            </a>
+            <a href="./adminCompanyProfile.html">
+                <img src="../../../images/imagesAplication/work.png" alt="Icono de Empresa">
+            </a>
+        </div>
+        <div>
+            <nav class="aplication-header--navbar">
+                <ul>
+                    <li><a href="#">Trabajos</a></li>
+                    <li><a href="./adminAplicationStatus.html">Aplicaciones</a></li>
+                    <li class="aplication-header--navbar__request"><a href="./adminInviteMembers.html">Solicitar vacantes</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="bell">
+            <a href="#"><img src="../../../images/imagesAplication/campana.png" alt="Icono de campana" ></a>
+            
+        </div>
+      </header>
+
+    <section class="sct-form">
+        <div class="user-profile">
+            <div>
+                <div class="avatar-upload">
+                    <div class="avatar-edit">
+                        <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
+                        <label for="imageUpload"></label>
+                    </div>
+                    <div class="avatar-preview">
+                        <div id="imagePreview" style="background-image: url('http://i.pravatar.cc/500?img=7');">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-form">
+                <form class="form" id="form">
+                    <h2>Editar perfil</h2>
+                    <div class="colums">
+                        <div class="form-control">
+                            <label>Nombre Completo</label>
+                            <input class="text-input" type="text" placeholder="Juan Reyes" id="fname">
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>El campo no puede estar en blanco</small>
+                        </div>
+                        <div class="form-control">
+                            <label>Adjuntar CV(PDF)</label>
+                            <input type="file" placeholder="Juan Reyes" id="cv" accept="application/pdf">
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>El campo no puede estar en blanco</small>
+                        </div>
+                    </div>
+                    <div class="colums">
+                        <div class="form-control">
+                            <label>Fecha de nacimiento</label>
+                            <input  class="text-input" type="date" placeholder="01/12/1990" id="birth">
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>El campo no puede estar en blanco</small>
+                        </div>
+                        <div class="form-control">
+                            <label>Número teléfonico</label>
+                            <input class="text-input" type="tel" placeholder="1234 5678" id="tel" accept="application/pdf">
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>El campo no puede estar en blanco</small>
+                        </div>
+                    </div>
+                    <div class="colums">
+                        <div class="form-control">
+                            <label>Cédula, DIMEX, Pasaporte</label>
+                            <input  class="text-input" type="number" placeholder="12345678" id="idnum">
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>El campo no puede estar en blanco</small>
+                        </div>
+                        <div class="form-control">
+                            <label>Género</label>
+                            <select name="genre" id="genre">
+                                        <option value="empty"></option>
+                                        <option value="man">Masculino</option>
+                                        <option value="woman">Femenino</option>
+                                        <option value="nogender">Prefiero no especificar</option>
+                                    </select>
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>El campo no puede estar en blanco</small>
+                        </div>
+                    </div>
+                    <div class="form-control">
+                        <label>Dirección de casa por distrito, cantón y provincia</label>
+                        <input  class="text-input" type="text" placeholder="Ciudadela 15 de septiembre" id="address">
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small>El campo no puede estar en blanco</small>
+                    </div>
+                    <div class="row">
+                        <div class="form-control">
+                            <label>Experiencia laboral</label>
+                            <input class="text-input" type="text" placeholder="Amazon" id="exp">
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>El campo no puede estar en blanco</small>
+                        </div>
+                        <div class="form-control">
+                            <label>Desde</label>
+                            <input class="text-input" type="date" placeholder="01/12/1990" id="from">
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>El campo no puede estar en blanco</small>
+                        </div>
+                        <div class="form-control">
+                            <label>Hasta</label>
+                            <input class="text-input" type="date" placeholder="01/12/1990" id="to">
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>El campo no puede estar en blanco</small>
+                        </div>
+                    </div>
+                    <button class="button--white">+</button>
+                    <div class="row">
+                        <div class="form-control">
+                            <label>Educación</label>
+                            <input class="text-input" type="text" placeholder="Cenfotec" id="edc">
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>El campo no puede estar en blanco</small>
+                        </div>
+                        <div class="form-control">
+                            <label>Desde</label>
+                            <input class="text-input" type="date" placeholder="01/12/1990" id="from">
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>El campo no puede estar en blanco</small>
+                        </div>
+                        <div class="form-control">
+                            <label>Hasta</label>
+                            <input class="text-input" type="date" placeholder="01/12/1990" id="to">
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>El campo no puede estar en blanco</small>
+                        </div>
+                    </div>
+                    <button class="button--white">+</button>
+                </form>
+            </div>
+            <div class="btn-cont">
+                <div>
+                    <button class="button--green">Editar perfil</button>
+                </div>
+                <div>
+                    <button class="button--green">Guardar cambios</button>
+                </div>
+            </div>
+            <div class="container-form">
+                <form class="form" id="form">
+                    <h2>
+                        Editar Contraseña
+                    </h2>
+                    <form class="form" id="form">
+                        <div class="colums">
+                            <div class="form-control">
+                                <label>Contraseña</label>
+                                <input class="text-input" type="password" placeholder="Contraseña" id="password">
+                                <i class="fa-solid fa-eye" id="eye"></i>
+                                <i class="fas fa-check-circle"></i>
+                                <i class="fas fa-exclamation-circle"></i>
+                                <small>El campo no puede estar en blanco</small>
+                            </div>
+                            <div class="form-control">
+                                <label>Confirmar contraseña</label>
+                                <input class="text-input" type="password" placeholder="Contraseña" id="password2">
+                                <i class="fa-solid fa-eye" id="eye2"></i>
+                                <i class="fas fa-check-circle"></i>
+                                <i class="fas fa-exclamation-circle"></i>
+                                <small>El campo no puede estar en blanco</small>
+                            </div>
+                        </div>
+                    </form>
+            </div>
+            <div>
+                <div>
+                    <button class="button--green"> Editar perfil</button>
+                </div>
+                <div>
+                    <button class="button--green">Guardar cambios</button>
+                </div>
+            </div>
+    </section>
+    <footer class="page-footer">
+        <div class="message1">
+            <b>SNE, ©2023</b>
+        </div>
+        <div class="message2">
+            <b>SNE - Sistema Nacional de Empleos</b>
+            <b>Desarrollado por WebWizards</b>
+        </div>
+        <div class="redes">
+            <a href="https://www.instagram.com/"><img class="iconos" src="../../../images/imagesAplication/instagram.png" alt="instagram"></a><br>
+            <a href="https://es-la.facebook.com/"><img class="iconos" src="../../../images/imagesAplication/facebook.png" alt="facebook"></a><br>
+            <a href="https://twitter.com/"><img class="iconos" src="../../../images/imagesAplication/twitter.png" alt="twitter"></a>
+        </div>
+        <div class="sobre">
+            <li class="1"><a class="link" href="../teamLanding/teamGroup.html">Sobre el Equipo</a></li>
+        </div>
+    </footer>
+
+</body>
+
+</html>

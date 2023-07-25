@@ -1,0 +1,158 @@
+.container-tittle-invite-members {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  margin-top: 1%;
+  margin-left: 2.5%;
+  font-size: 20px;
+}
+.tittle-invite-members {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  font-size: 4vh;
+  margin-left: 2%;
+  margin-right: auto;
+  margin-top: 1%;
+}
+
+.invite-members--containercontainer {
+  width: 40vw;
+  height: 90vh;
+  border: 2px solid black;
+  background-color: lightgray;
+  padding: 20px;
+  padding-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1%;
+}
+
+.formulary {
+  font-family: "Montserrat", sans-serif;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.formulary__label {
+  display: block;
+  padding: 15px 0;
+}
+
+.invite-members--form {
+  margin-top: 20px;
+  margin-left: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.formulary__label-collaborator {
+  display: block;
+  padding: 15px 0;
+  margin-left: 15%;
+}
+
+.formulary__input-group {
+  position: relative;
+}
+
+/* .formulary__input {
+  width: 120%;
+  background: transparent;
+  border-bottom: 2px solid #000000;
+  border-right: 2px solid #000000;
+  color: #ffffff;
+  font-size: 17px;
+  outline: none;
+  line-height: 45px;
+  padding: 0 10px;
+  transition: all 1s;
+} */
+
+.formulary__status-validation {
+  position: absolute;
+  right: 45px;
+  bottom: 15px;
+  z-index: 1000;
+  font-size: 16px;
+  opacity: 0;
+}
+
+.formulary__input:focus {
+  box-shadow: 0 0 50px #34d026;
+}
+
+.formulary__input-error {
+  font-size: 12px;
+  margin-bottom: 0;
+  display: none;
+}
+
+.formulary__input-active-error {
+  display: block;
+}
+
+.formulary__input-group-collaborator {
+  position: relative;
+  margin-left: 10%;
+}
+
+.select__function--container::after {
+  transform: scale(0.9);
+  background-color: transparent;
+}
+
+.select__education {
+  border: solid black 2px;
+  background-color: transparent;
+  transform: scale(0.9);
+  color: #000;
+}
+
+.select__education--container::after {
+  transform: scale(0.9);
+  background-color: transparent;
+}
+
+.formulary__group-btn-send-collaborator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1%;
+  margin-left: 1%;
+}
+
+.formulary__active-message {
+  display: block;
+}
+
+.button-container__invite {
+  margin: 0;
+  margin-bottom: 100px;
+  margin-right: 2%;
+}
+
+.button-separator {
+  display: inline-block;
+  margin: 0 80px; /* Ajusta el espacio horizontal entre el separador y los botones */
+  color: #ffffff;
+  font-size: 6vh; /* Ajusta el tamaño de la fuente del separador */
+  margin-bottom: -10%;
+  padding-top: 18%;
+}
+
+.formulary__message {
+  display: none;
+  padding: 15px;
+  border-radius: 5px;
+  background: rgb(205, 17, 17);
+  text-align: center;
+}
+
+.formulary__message .formulary__group-btn-send {
+  grid-column: span 1;
+}
