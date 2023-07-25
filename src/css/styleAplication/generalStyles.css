@@ -194,6 +194,41 @@
 }
 
 /* botones */
+.button--white {
+  font-family: "Montserrat", sans-serif;
+  display: inline-block;
+  text-align: center;
+  border: 1px solid black;
+  padding: 10px 20px;
+  font-size: 20px;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  color: #000000;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+.button--white:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+.button--green {
+  font-family: "Montserrat", sans-serif;
+  display: inline-block;
+  color: #212529;
+  text-align: center;
+  border: 1px solid black;
+  padding: 10px 20px;
+  font-size: 20px;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  color: #ffffff;
+  background-color: #9fd3c7;
+  cursor: pointer;
+}
+.button--green:hover {
+  background-color: #719d92;
+}
+
 .button--red {
   font-family: "Montserrat", sans-serif;
   display: inline-block;
@@ -212,7 +247,15 @@
   background-color: #852532;
 }
 
-/* Text-inputs */
+/* inputs */
+.text-input {
+  font-family: "Montserrat", sans-serif;
+  resize: vertical;
+  padding: 15px;
+  border-radius: 0.25rem;
+  border: 1px solid black;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.06);
+}
 
 /* Select */
 .select {

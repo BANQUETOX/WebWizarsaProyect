@@ -1,3 +1,10 @@
+.container-tittle-invite-members {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  margin-top: 1%;
+  margin-left: 2.5%;
+  font-size: 20px;
+}
 .tittle-invite-members {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
@@ -18,13 +25,6 @@
   margin-left: auto;
   margin-right: auto;
   margin-top: 1%;
-}
-.container-tittle-invite-members {
-  text-align: center;
-  font-family: "Poppins", sans-serif;
-  margin-top: 1%;
-  margin-left: 2.5%;
-  font-size: 20px;
 }
 
 .formulary {
@@ -60,10 +60,10 @@
   position: relative;
 }
 
-.formulary__input {
+/* .formulary__input {
   width: 120%;
   background: transparent;
-  border-bottom: 2px solid #000000; /* Agrega un ancho y tipo de borde válido */
+  border-bottom: 2px solid #000000;
   border-right: 2px solid #000000;
   color: #ffffff;
   font-size: 17px;
@@ -71,7 +71,7 @@
   line-height: 45px;
   padding: 0 10px;
   transition: all 1s;
-}
+} */
 
 .formulary__status-validation {
   position: absolute;
@@ -99,51 +99,6 @@
 .formulary__input-group-collaborator {
   position: relative;
   margin-left: 10%;
-}
-
-.select__element {
-  font-family: "Montserrat", sans-serif;
-
-  /* Reset Select */
-  appearance: none;
-  outline: 0;
-  border: 0;
-  box-shadow: none;
-  /* Personalize */
-  flex: 1;
-  padding: 0 1em;
-  color: #fff;
-  background-color: #34495e;
-  background-image: none;
-  cursor: pointer;
-}
-/* Remove IE arrow */
-.select__element::-ms-expand {
-  display: none;
-}
-
-.select {
-  position: relative;
-  display: flex;
-  margin-top: 10px;
-  width: 20em;
-  height: 3em;
-  border-radius: 0.25em;
-  overflow: hidden;
-}
-/* Arrow */
-.select::after {
-  content: "\25BC";
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 1em;
-  background-color: #34495e;
-  transition: 0.25s all ease;
-  pointer-events: none;
-}
-.select:hover::after {
-  color: #f39c12;
 }
 
 .select__function--container::after {
@@ -175,80 +130,10 @@
   display: block;
 }
 
-.button--white {
-  font-family: "Montserrat", sans-serif;
-  display: inline-block;
-  color: #212529;
-  text-align: center;
-  border: 1px solid black;
-  padding: 10px 20px;
-  font-size: 20px;
-  line-height: 1.5;
-  border-radius: 0.25rem;
-  color: #000000;
-  background-color: #ffffff;
-  cursor: pointer;
-}
-.button--white:hover {
-  background-color: #ffffff;
-  color: #000000;
-}
-
-.button--white__invite-member {
-  margin-left: 50px;
-}
-
 .button-container__invite {
   margin: 0;
   margin-bottom: 100px;
   margin-right: 2%;
-}
-
-.button--black-collaborator {
-  font-family: "Montserrat", sans-serif;
-  display: inline-block;
-  color: #212529;
-  text-align: center;
-  border: 1px solid black;
-  padding: 8px 5px;
-  font-size: 20px;
-  line-height: 1.5;
-  border-radius: 0.25rem;
-  color: #ffffff;
-  background-color: #9fd3c7;
-  cursor: pointer;
-  margin-bottom: -38%;
-  flex-grow: 1;
-}
-
-.button--black-collaborator:hover {
-  background-color: #ffffff;
-  color: #000000;
-}
-
-.button--black-collaborator-skip {
-  font-family: "Montserrat", sans-serif;
-  display: inline-block;
-  color: #212529;
-  text-align: center;
-  border: 1px solid black;
-  padding: 8px 5px;
-  font-size: 20px;
-  line-height: 1.5;
-  border-radius: 0.25rem;
-  color: #ffffff;
-  background-color: #9fd3c7;
-  cursor: pointer;
-  margin-bottom: -38%;
-  flex-grow: 1;
-  padding-left: 15%;
-  padding-right: 15%;
-  text-align: center;
-}
-
-.button--black-collaborator-skip:hover {
-  background-color: #ffffff;
-  color: #000000;
 }
 
 .button-separator {
