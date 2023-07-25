@@ -303,7 +303,7 @@
 }
 /* Select-Range */
 .select__range {
-  background-color: #34495e;
+  background-color: #fff;
 }
 .select__range::after {
   content: none;
@@ -314,9 +314,9 @@
   margin-top: 17px;
 }
 .salary-range-input-label {
-  color: #fff;
+  color: #000;
   margin-top: 15px;
-  margin-left: 10px;
+  margin-left: 1em;
 }
 .select__element {
   font-family: "Montserrat", sans-serif;
