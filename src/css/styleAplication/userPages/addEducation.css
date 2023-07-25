@@ -9,8 +9,6 @@
 .add-education-container {
   width: 40vw; /* Ajusta el ancho según tus necesidades */
   height: 100vh; /* Ajusta la altura según tus necesidades */
-  border: 2px solid black; /* Establece el grosor y color del borde */
-  background-color: lightgray; /* Establece el color de fondo */
   padding: 20px;
   padding-bottom: 30px; /* Añade un relleno interno para los elementos internos */
   margin-left: auto;
@@ -46,74 +44,6 @@
   margin-top: 2%;
   margin-left: 50px;
 }
-.formulary__label {
-  display: block;
-  padding: 15px 0;
-}
-
-.formulary__label--education {
-  margin-left: 15px;
-}
-
-.formulary__input-group {
-  position: relative;
-}
-
-.select {
-  position: relative;
-  display: flex;
-  margin-top: 10px;
-  width: 20em;
-  height: 3em;
-  border-radius: 0.25em;
-  overflow: hidden;
-}
-
-.select::after {
-  content: "\25BC";
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 1em;
-  background-color: #34495e;
-  transition: 0.25s all ease;
-  pointer-events: none;
-}
-/* Transition */
-.select:hover::after {
-  color: #f39c12;
-}
-
-.select__education--container::after {
-  transform: scale(0.9);
-  background-color: transparent;
-}
-
-.select__element {
-  /* Reset Select */
-  appearance: none;
-  outline: 0;
-  border: 0;
-  box-shadow: none;
-  /* Personalize */
-  flex: 1;
-  padding: 0 1em;
-  color: #fff;
-  background-color: #34495e;
-  background-image: none;
-  cursor: pointer;
-}
-/* Remove IE arrow */
-.select__element::-ms-expand {
-  display: none;
-}
-
-.select__education {
-  border: solid black 2px;
-  background-color: transparent;
-  transform: scale(0.9);
-  color: #000;
-}
 
 .formulary__status-validation {
   position: absolute;
@@ -130,42 +60,8 @@
   display: none;
 }
 
-.formulary__input {
-  width: 120%;
-  background: transparent;
-  border-bottom: 2px solid #000000; /* Agrega un ancho y tipo de borde válido */
-  border-right: 2px solid #000000;
-  color: #ffffff;
-  font-size: 17px;
-  outline: none;
-  line-height: 45px;
-  padding: 0 10px;
-  transition: all 1s;
-}
-
-.formulary__label-year {
-  display: block;
-  padding: 15px 0;
-  text-align: left;
-  margin-left: -14%;
-}
-
 .formulary__input-group-year {
   text-align: left;
-}
-
-.formulary__input-year {
-  width: 149%;
-  background: transparent;
-  border-bottom: 2px solid #000000; /* Agrega un ancho y tipo de borde válido */
-  border-right: 2px solid #000000;
-  color: #ffffff;
-  font-size: 17px;
-  outline: none;
-  line-height: 45px;
-  padding: 0 10px;
-  transition: all 1s;
-  margin-left: -14%;
 }
 
 .formulary__status-validation {
@@ -183,11 +79,6 @@
   align-items: flex-start;
   margin-top: 2%;
   margin-right: 12%;
-}
-
-.formulary__label {
-  display: block;
-  padding: 15px 0;
 }
 
 .formulary__span {
@@ -214,46 +105,11 @@
   display: block;
 }
 
-.formulary__btn-level {
-  padding: 15px 35px;
-  background: #ffffff;
-  color: #000000;
-  border: none;
-  border-radius: 3px;
-  cursor: pointer;
-  margin-top: 20%;
-  margin-left: 25%;
-}
-
 .button-container {
   display: flex;
   align-items: center;
   margin-bottom: 30px;
 }
-
-.button--black {
-  font-family: "Montserrat", sans-serif;
-  display: inline-block;
-  color: #212529;
-  text-align: center;
-  border: 1px solid black;
-  padding: 10px 20px;
-  font-size: 20px;
-  line-height: 1.5;
-  border-radius: 0.25rem;
-  color: #ffffff;
-  background-color: #000000;
-  cursor: pointer;
-}
-.button--black:hover {
-  background-color: #ffffff;
-  color: #000000;
-}
-
-.button--black__education {
-  margin-bottom: -20%;
-}
-
 .button-separator {
   display: inline-block;
   margin: 0 20px;

@@ -28,10 +28,6 @@
   top: 10px;
 }
 
-.avatar-upload .avatar-edit input {
-  display: none;
-}
-
 .avatar-upload .avatar-edit input + label {
   display: inline-block;
   width: 34px;
@@ -99,7 +95,6 @@
 .editInfo div {
   justify-content: space-around;
   display: flex;
-  height: 500px;
   width: 100%;
 }
 
@@ -114,38 +109,6 @@
 
 #address {
   width: 243%;
-}
-
-.btn-light {
-  background-color: transparent;
-  color: #ececec;
-  width: 50px;
-  height: 40px;
-  border: #ececec 1px solid;
-  border-radius: 6px;
-  margin-top: 2%;
-}
-
-.btn-light:hover {
-  cursor: pointer;
-  background-color: #9fd3c7;
-}
-
-.btn-dark {
-  margin-left: 74%;
-  background-color: #303841;
-  color: #ececec;
-  width: 200px;
-  height: 50px;
-  border: none;
-  border-radius: 6px;
-  margin-bottom: 2%;
-}
-
-.btn-dark:hover {
-  cursor: pointer;
-  background-color: #9fd3c7;
-  color: black;
 }
 
 .editPassword {

@@ -20,28 +20,6 @@
   margin-bottom: 30px;
 }
 
-.button__white-register {
-  font-family: "Montserrat", sans-serif;
-  display: inline-block;
-  color: #212529;
-  text-align: center;
-  border: 1px solid black;
-  padding: 10px 20px;
-  font-size: 20px;
-  line-height: 1.5;
-  border-radius: 0.25rem;
-  background-color: #ffffff;
-  cursor: pointer;
-}
-
-.button__white-register:hover {
-  background-color: #9fd3c7;
-}
-
-.button--white:hover {
-  background-color: #c0c0c0;
-  color: #000000;
-}
 .new-register {
   margin-top: 8%;
   margin-bottom: 20.6vh;

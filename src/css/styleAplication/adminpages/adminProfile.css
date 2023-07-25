@@ -1,13 +1,7 @@
-HEAD .user-profile {
-  background: #ececec;
-  background-color: #ececec;
+.user-profile {
   font-size: 20px;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-}
-
-.container {
-  text-align: left;
 }
 
 .avatar-upload {
@@ -165,30 +159,14 @@ HEAD .user-profile {
   width: 75%;
 }
 
-.form-group .btn {
+/* .form-group .btn {
   background-color: #1d1c1c;
   color: white;
   padding: 10px 15px;
   border: none;
   cursor: pointer;
   margin-left: 150px;
-}
-
-.btn-dark {
-  margin-left: 74%;
-  background-color: #303841;
-  color: #ececec;
-  width: 200px;
-  height: 50px;
-  border: none;
-  border-radius: 6px;
-}
-
-.btn-dark:hover {
-  cursor: pointer;
-  background-color: #9fd3c7;
-  color: black;
-}
+} */
 
 .edit-password--label {
   font-family: "Poppins", sans-serif;
@@ -413,7 +391,7 @@ HEAD .user-profile {
 
 .form-control input {
   font-family: "Montserrat", sans-serif;
-  resize: vertical;
+  /* resize: vertical; */
   padding: 15px;
   border-radius: 0.25rem;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.06);
@@ -498,7 +476,7 @@ HEAD .user-profile {
   visibility: visible;
 }
 
-.form button {
+/* .form button {
   font-family: "Montserrat", sans-serif;
   display: inline-block;
   color: #000;
@@ -511,9 +489,9 @@ HEAD .user-profile {
   background-color: #ececec;
   cursor: pointer;
   margin-left: 20%;
-}
-
+} */
+/* 
 .form button:hover {
   background-color: #9fd3c7;
   color: #fff;
-}
+} */

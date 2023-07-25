@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="../../../css/normalize.css">
     <link rel="stylesheet" href="../../../css/styleAplication/adminpages/adminProfile.css">
     <link rel="stylesheet" href="../../../css/styleAplication/generalStyles.css">
-
     <script src="../../../js/jsAplication/main.js" defer></script>
     <script src="https://kit.fontawesome.com/73f851add2.js" crossorigin="anonymous" defer></script>
     <title>Editar perfil</title>
@@ -25,7 +24,7 @@
                 <img src="../../../images/imagesAplication/work.png" alt="Icono de Empresa">
             </a>
         </div>
-        <div class="container">
+        <div>
             <nav class="aplication-header--navbar">
                 <ul>
                     <li><a href="#">Trabajos</a></li>
@@ -35,14 +34,14 @@
             </nav>
         </div>
         <div class="bell">
-            <a href="#"><img src="../../../images/imagesAplication/campana.png" alt="Icono de campana"></a>
-
+            <a href="#"><img src="../../../images/imagesAplication/campana.png" alt="Icono de campana" ></a>
+            
         </div>
-    </header>
+      </header>
 
     <section class="sct-form">
         <div class="user-profile">
-            <div class="container1">
+            <div>
                 <div class="avatar-upload">
                     <div class="avatar-edit">
                         <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
@@ -61,7 +60,7 @@
                     <div class="colums">
                         <div class="form-control">
                             <label>Nombre Completo</label>
-                            <input type="text" placeholder="Juan Reyes" id="fname">
+                            <input class="text-input" type="text" placeholder="Juan Reyes" id="fname">
                             <i class="fas fa-check-circle"></i>
                             <i class="fas fa-exclamation-circle"></i>
                             <small>El campo no puede estar en blanco</small>
@@ -77,14 +76,14 @@
                     <div class="colums">
                         <div class="form-control">
                             <label>Fecha de nacimiento</label>
-                            <input type="date" placeholder="01/12/1990" id="birth">
+                            <input  class="text-input" type="date" placeholder="01/12/1990" id="birth">
                             <i class="fas fa-check-circle"></i>
                             <i class="fas fa-exclamation-circle"></i>
                             <small>El campo no puede estar en blanco</small>
                         </div>
                         <div class="form-control">
                             <label>Número teléfonico</label>
-                            <input type="tel" placeholder="1234 5678" id="tel" accept="application/pdf">
+                            <input class="text-input" type="tel" placeholder="1234 5678" id="tel" accept="application/pdf">
                             <i class="fas fa-check-circle"></i>
                             <i class="fas fa-exclamation-circle"></i>
                             <small>El campo no puede estar en blanco</small>
@@ -93,7 +92,7 @@
                     <div class="colums">
                         <div class="form-control">
                             <label>Cédula, DIMEX, Pasaporte</label>
-                            <input type="number" placeholder="12345678" id="idnum">
+                            <input  class="text-input" type="number" placeholder="12345678" id="idnum">
                             <i class="fas fa-check-circle"></i>
                             <i class="fas fa-exclamation-circle"></i>
                             <small>El campo no puede estar en blanco</small>
@@ -113,7 +112,7 @@
                     </div>
                     <div class="form-control">
                         <label>Dirección de casa por distrito, cantón y provincia</label>
-                        <input type="text" placeholder="Ciudadela 15 de septiembre" id="address">
+                        <input  class="text-input" type="text" placeholder="Ciudadela 15 de septiembre" id="address">
                         <i class="fas fa-check-circle"></i>
                         <i class="fas fa-exclamation-circle"></i>
                         <small>El campo no puede estar en blanco</small>
@@ -121,59 +120,59 @@
                     <div class="row">
                         <div class="form-control">
                             <label>Experiencia laboral</label>
-                            <input type="text" placeholder="Amazon" id="exp">
+                            <input class="text-input" type="text" placeholder="Amazon" id="exp">
                             <i class="fas fa-check-circle"></i>
                             <i class="fas fa-exclamation-circle"></i>
                             <small>El campo no puede estar en blanco</small>
                         </div>
                         <div class="form-control">
                             <label>Desde</label>
-                            <input type="date" placeholder="01/12/1990" id="from">
+                            <input class="text-input" type="date" placeholder="01/12/1990" id="from">
                             <i class="fas fa-check-circle"></i>
                             <i class="fas fa-exclamation-circle"></i>
                             <small>El campo no puede estar en blanco</small>
                         </div>
                         <div class="form-control">
                             <label>Hasta</label>
-                            <input type="date" placeholder="01/12/1990" id="to">
+                            <input class="text-input" type="date" placeholder="01/12/1990" id="to">
                             <i class="fas fa-check-circle"></i>
                             <i class="fas fa-exclamation-circle"></i>
                             <small>El campo no puede estar en blanco</small>
                         </div>
                     </div>
-                    <button>+</button>
+                    <button class="button--white">+</button>
                     <div class="row">
                         <div class="form-control">
                             <label>Educación</label>
-                            <input type="text" placeholder="Cenfotec" id="edc">
+                            <input class="text-input" type="text" placeholder="Cenfotec" id="edc">
                             <i class="fas fa-check-circle"></i>
                             <i class="fas fa-exclamation-circle"></i>
                             <small>El campo no puede estar en blanco</small>
                         </div>
                         <div class="form-control">
                             <label>Desde</label>
-                            <input type="date" placeholder="01/12/1990" id="from">
+                            <input class="text-input" type="date" placeholder="01/12/1990" id="from">
                             <i class="fas fa-check-circle"></i>
                             <i class="fas fa-exclamation-circle"></i>
                             <small>El campo no puede estar en blanco</small>
                         </div>
                         <div class="form-control">
                             <label>Hasta</label>
-                            <input type="date" placeholder="01/12/1990" id="to">
+                            <input class="text-input" type="date" placeholder="01/12/1990" id="to">
                             <i class="fas fa-check-circle"></i>
                             <i class="fas fa-exclamation-circle"></i>
                             <small>El campo no puede estar en blanco</small>
                         </div>
                     </div>
-                    <button class="btn">+</button>
+                    <button class="button--white">+</button>
                 </form>
             </div>
             <div class="btn-cont">
                 <div>
-                    <button class="btn-dark">Editar perfil</button>
+                    <button class="button--green">Editar perfil</button>
                 </div>
                 <div>
-                    <button class="btn-dark">Guardar cambios</button>
+                    <button class="button--green">Guardar cambios</button>
                 </div>
             </div>
             <div class="container-form">
@@ -185,7 +184,7 @@
                         <div class="colums">
                             <div class="form-control">
                                 <label>Contraseña</label>
-                                <input type="password" placeholder="Contraseña" id="password">
+                                <input class="text-input" type="password" placeholder="Contraseña" id="password">
                                 <i class="fa-solid fa-eye" id="eye"></i>
                                 <i class="fas fa-check-circle"></i>
                                 <i class="fas fa-exclamation-circle"></i>
@@ -193,7 +192,7 @@
                             </div>
                             <div class="form-control">
                                 <label>Confirmar contraseña</label>
-                                <input type="password" placeholder="Contraseña" id="password2">
+                                <input class="text-input" type="password" placeholder="Contraseña" id="password2">
                                 <i class="fa-solid fa-eye" id="eye2"></i>
                                 <i class="fas fa-check-circle"></i>
                                 <i class="fas fa-exclamation-circle"></i>
@@ -202,12 +201,12 @@
                         </div>
                     </form>
             </div>
-            <div class="btn-cont">
+            <div>
                 <div>
-                    <button class="btn-dark"> Editar perfil</button>
+                    <button class="button--green"> Editar perfil</button>
                 </div>
                 <div>
-                    <button class="btn-dark">Guardar cambios</button>
+                    <button class="button--green">Guardar cambios</button>
                 </div>
             </div>
     </section>

@@ -51,7 +51,7 @@
                 <div class="formulary__group" id="collaborator_name">
                     <label class="formulary__label">Nombre del Colaborador</label>
                     <div class="formulary__input-group">
-                        <input type="text" class="formulary__input" name="collaborator" id="collaborator" required>
+                        <input type="text" class="text-input" name="collaborator" id="collaborator" required>
                         <i class="formulary__status-validation fas fa-times-circle"></i>
                     </div>
                     <p class="formulary__input-error">Debe de ingresar el nombre del colaborador</p>
@@ -60,9 +60,9 @@
 
                 <!--Apellido-->
                 <div class="formulary__group" id="lastname_group">
-                    <label class="formulary__label">Area de estudio </label>
+                    <label class="formulary__label">Apellidos del colaborador </label>
                     <div class="formulary__input-group">
-                        <input type="text" class="formulary__input" name="lastname" id="lastname" required>
+                        <input type="text" class="text-input" name="lastname" id="lastname" required>
                         <i class="formulary__status-validation fas fa-times-circle"></i>
                     </div>
                     <p class="formulary__input-error">Debe de ingresar el apellido del colaborador </p>
@@ -72,7 +72,7 @@
                 <div class="formulary__group" id="email_group">
                     <label class="formulary__label">Correo electronico </label>
                     <div class="formulary__input-group">
-                        <input type="email" class="formulary__input" name="email" id="email" required>
+                        <input type="email" class="text-input" name="email" id="email" required>
                         <i class="formulary__status-validation fas fa-times-circle"></i>
                     </div>
                     <p class="formulary__input-error">Debe de ingresar el correo electronico del colaborador </p>
@@ -85,10 +85,8 @@
                         <div class="formulary__input-group-collaborator select select__function--container ">
                             <select id="func_collaborator" name="func_collaborator" class="select__element select__education">
                                 <option value="empty"></option>
-                                <option value="bachillerato">Bachillerato</option>
-                                <option value="diplimado">Diplomado</option>
-                                <option value="master">Master</option>
-                                
+                                <option value="bachillerato">Manager</option>
+                                <option value="diplimado">Reclutador</option>
                             </select>
                         <i class="formulary__status-validation fas fa-times-circle"></i>
                     </div>
@@ -99,13 +97,13 @@
                 <!-- Adicionar otro nivel -->
                <div class="formulary__group formulary__group-btn-send-collaborator">
                     <p class="formulary__active-message" id="add_another-collaborator"></p>
-                    <input class="button--white button--white__invite-member" type="submit" value="Invitar otro Colaborador"a>
+                    <input class="button--white" type="submit" value="Invitar otro Colaborador"a>
                 </div>
 
                 <div class="button-container button-container__invite">
-                    <button class="button--black-collaborator">Continuar</button>
+                    <button class="button--green">Continuar</button>
                     <span class="button-separator"></span>
-                    <button class="button--black-collaborator-skip" type="button" onclick="document.location.href = ('../aplicationLanding/welcome.html')" >Saltar</button>
+                    <button class="button--green" type="button" onclick="document.location.href = ('../aplicationLanding/welcome.html')" >Saltar</button>
                 </div>
                 
                 <!-- MENSAJE DE CAMPOS REQUERIDOS -->

@@ -20,18 +20,9 @@
   font-family: "Montserrat", sans-serif;
   display: block;
 }
-.addWorkExperience--input {
+.text-input {
   margin-bottom: 25px;
 }
-.text-input {
-  font-family: "Montserrat", sans-serif;
-  resize: vertical;
-  padding: 15px;
-  border-radius: 0.25rem;
-  border: 0;
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.06);
-}
-
 .addWorkExperience--input:invalid:required {
   border: 1.5px solid red;
 }
@@ -47,39 +38,9 @@
 }
 .addWorkExperience--input-checkbox {
   margin-top: 15px;
-  transform: scale(1.55);
+  transform: scale(1.6);
 }
-/* buttons */
-.button--white {
-  font-family: "Montserrat", sans-serif;
-  display: inline-block;
-  color: #212529;
-  text-align: center;
-  border: 1px solid black;
-  padding: 10px 20px;
-  font-size: 20px;
-  line-height: 1.5;
-  border-radius: 0.25rem;
-  color: #000000;
-  background-color: #ffffff;
-  cursor: pointer;
-}
-.button--white:hover {
-  background-color: #c0c0c0;
-  color: #000000;
-}
-.button--disabled {
-  background-color: #c0c0c0;
-  cursor: default;
-}
-.addWorkExperience--button {
-  margin-top: 30px;
-  margin-left: 140px;
-}
-.addWorkExperience--button__save {
-  margin-top: 10px;
-  margin-left: 190px;
-}
+
 /* upload Foto  */
 .avatar-upload {
   position: relative;

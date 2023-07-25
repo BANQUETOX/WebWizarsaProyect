@@ -59,13 +59,6 @@
   font-size: 24px;
 }
 
-.login--input {
-  width: 70%;
-  height: 30px;
-  padding-left: 10%;
-  margin-bottom: 20px;
-}
-
 .login--forgot_password {
   display: absolute;
   padding-left: 42px;
@@ -84,17 +77,6 @@
 .login--forgot_password a,
 .login--register_account a {
   text-decoration: none;
-}
-
-.login--button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 30px;
-  margin-left: 50px;
-  width: 200px;
-  height: 40px;
-  background-color: rgb(255, 255, 255);
 }
 
 /* testaments */
