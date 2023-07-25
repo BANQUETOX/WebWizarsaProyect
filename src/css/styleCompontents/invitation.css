@@ -1,247 +1,226 @@
-.tittle{
-    text-align: center;
-    font-family: 'Poppins', sans-serif;
-    font-size: 3vh;
-    margin-top: 1%;
-
+.tittle {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 3vh;
+  margin-top: 1%;
 }
 
 .invite-members--containercontainer {
-    width: 40vw; 
-    height: 90vh; 
-    border: 2px solid black; 
-    background-color: lightgray; 
-    padding: 20px;
-    padding-bottom: 30px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 1%;
- }
-  
+  width: 40vw;
+  height: 90vh;
+  border: 2px solid black;
+  background-color: lightgray;
+  padding: 20px;
+  padding-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1%;
+}
 
-.container-tittle{
-    text-align: center;
-    font-family: 'Poppins', sans-serif;
-    font-size: 2vh;
-    margin-left: auto;
-    margin-right: auto;
-  }
+.container-tittle {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 2vh;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-.formulary{
-    font-family: 'Montserrat', sans-serif;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 25px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 6%;
-    margin-right: 10%;
+.formulary {
+  font-family: "Montserrat", sans-serif;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 6%;
+  margin-right: 10%;
 }
 
 .formulary__label {
-    display: block;
-    padding: 15px 0;
+  display: block;
+  padding: 15px 0;
 }
-
 
 .formulary__input-group {
-    position: relative;
+  position: relative;
 }
-
 
 .formulary__input {
-    width: 120%;
-    background: transparent;
-    border-bottom: 2px solid #000000; 
-    border-right: 2px solid #000000;
-    color: #ffffff;
-    font-size: 17px;
-    outline: none;
-    line-height: 45px;
-    padding: 0 10px;
-    transition: all 1s;
-    
+  width: 120%;
+  background: transparent;
+  border-bottom: 2px solid #000000;
+  border-right: 2px solid #000000;
+  color: #ffffff;
+  font-size: 17px;
+  outline: none;
+  line-height: 45px;
+  padding: 0 10px;
+  transition: all 1s;
 }
 
-
 .formulary__status-validation {
-    position: absolute;
-    right: 45px;
-    bottom: 15px;
-    z-index: 1000;
-    font-size: 16px;
-    opacity: 0;
+  position: absolute;
+  right: 45px;
+  bottom: 15px;
+  z-index: 1000;
+  font-size: 16px;
+  opacity: 0;
 }
 
 .formulary__input:focus {
-    box-shadow: 0 0 50px #34d026;
+  box-shadow: 0 0 50px #34d026;
 }
 
 .formulary__input-error {
-    font-size: 12px;
-    margin-bottom: 0;
-    display: none;
+  font-size: 12px;
+  margin-bottom: 0;
+  display: none;
 }
 
-.formulary__input-active-error{
-    display: block;
+.formulary__input-active-error {
+  display: block;
 }
 
 .formulary__span {
-    font-size: 1em;
-    font-weight: 100;
-    text-align: left;
-    display: block;
-    margin-bottom: 10%;
-    margin-top: -20%;
+  font-size: 1em;
+  font-weight: 100;
+  text-align: left;
+  display: block;
+  margin-bottom: 10%;
+  margin-top: -20%;
 }
 
-
-
-
-
-.formulary__message, .formulary__group-btn-send{
-    grid-column: span 1;
+.formulary__message,
+.formulary__group-btn-send {
+  grid-column: span 1;
 }
 
 .formulary__message {
-    display: none;
-    padding: 15px;
-    border-radius: 5px;
-    background: rgb(205, 17, 17);
-    text-align: center;
+  display: none;
+  padding: 15px;
+  border-radius: 5px;
+  background: rgb(205, 17, 17);
+  text-align: center;
 }
 
 .formulary__active-message {
-    display: block;
+  display: block;
 }
 
 .formulary__group-btn-send {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .formulary__btn-level {
-    padding: 15px 35px;
-    background: #ffffff;
-    color: #000000;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-    margin-top: 20%;
-    margin-left: 25%;
-    
+  padding: 15px 35px;
+  background: #ffffff;
+  color: #000000;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: 20%;
+  margin-left: 25%;
 }
 
 .formulary__btn-level:hover {
-    background: #0a6428;
-    transition: 1s;
+  background: #0a6428;
+  transition: 1s;
 }
 .formulary__btn {
-    padding: 15px 35px;
-    background: #000;
-    color: #fff;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-    margin-top: 2%;
+  padding: 15px 35px;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: 2%;
 }
 
 .formulary__btn:hover {
-    background: #0a6428;
-    transition: 1s;
+  background: #0a6428;
+  transition: 1s;
 }
 
-.formulary__message-success{
-    font-size: 2em;
-    background: #20b80c;
-    padding: 15px;
-    text-align: center;
-    display: none;
-    border-radius: 5px;
-    display: none;
-    align-items: center;
-    width: auto;
-   
+.formulary__message-success {
+  font-size: 2em;
+  background: #20b80c;
+  padding: 15px;
+  text-align: center;
+  display: none;
+  border-radius: 5px;
+  display: none;
+  align-items: center;
+  width: auto;
 }
 
-.formulary__message-active-success { 
-    display: block;
+.formulary__message-active-success {
+  display: block;
 }
-
 
 /* --------------------------------------------- VALIDACIÓN ----------------------------------------- */
-.formulary__group-correct .formulary__status-validation{
-    color: #29ee0f;
-    opacity: 1;
+.formulary__group-correct .formulary__status-validation {
+  color: #29ee0f;
+  opacity: 1;
 }
 
-.formulary__group-incorrect .formulary__label{
-    color: #ee0f0f;
+.formulary__group-incorrect .formulary__label {
+  color: #ee0f0f;
 }
 
-
-.formulary__group-incorrect .formulary__status-validation{
-    color: #ee0f0f;
-    opacity: 1;
+.formulary__group-incorrect .formulary__status-validation {
+  color: #ee0f0f;
+  opacity: 1;
 }
 
-.formulary__group-incorrect .formulary__input{
-    border: 1px solid #ee0f0f;
-    
+.formulary__group-incorrect .formulary__input {
+  border: 1px solid #ee0f0f;
 }
 
 .button-container {
-    display: flex;
-    align-items: center;
-  }
-  
-  .button--black {
-    font-family: 'Montserrat', sans-serif;
-    display: inline-block;
-    color: #212529;
-    text-align: center;
-    border: 1px solid black;
-    padding: 8px 5px;
-    font-size: 20px;
-    line-height: 1.5;
-    border-radius: .25rem;
-    color: #ffffff;
-    background-color: #000000;
-    cursor: pointer;
-    margin-top: 50%;
-    flex-grow: 1;
-  }
-  
-  .button--black:not(:last-child) {
-    
-    margin-right: 2vw; 
-    
-  }
+  display: flex;
+  align-items: center;
+}
 
-  .button--black:last-child{
-    
-    border: 1px solid black;
-    padding: 8px 18px;
-    
-  }
-  
-  .button--black:hover {
-    background-color: #ffffff;
-    color: #000000;
-  }
-  
-  .button-separator {
-    display: inline-block;
-    margin: 0 1px; 
-    color: #ffffff;
-    font-size: 6vh; 
-    margin-top: 48%;
-    margin-right: 15%;
-    
-    
+.button--black {
+  font-family: "Montserrat", sans-serif;
+  display: inline-block;
+  color: #212529;
+  text-align: center;
+  border: 1px solid black;
+  padding: 8px 5px;
+  font-size: 20px;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  color: #ffffff;
+  background-color: #000000;
+  cursor: pointer;
+  margin-top: 50%;
+  flex-grow: 1;
+}
 
-  }
+.button--black:not(:last-child) {
+  margin-right: 2vw;
+}
+
+.button--black:last-child {
+  border: 1px solid black;
+  padding: 8px 18px;
+}
+
+.button--black:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.button-separator {
+  display: inline-block;
+  margin: 0 1px;
+  color: #ffffff;
+  font-size: 6vh;
+  margin-top: 48%;
+  margin-right: 15%;
+}

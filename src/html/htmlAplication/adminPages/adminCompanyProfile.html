@@ -1,150 +1,218 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:ital,wght@0,700;1,600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../../../css/normalize.css">
-    <link rel="stylesheet" href="../../../css/styleAplication/styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:ital,wght@0,700;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../../css/normalize.css" />
+    <link
+      rel="stylesheet"
+      href="../../../css/styleAplication/generalStyles.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../../css/styleAplication/adminpages/adminCompanyProfile.css"
+    />
     <script src="../../../js/jsAplication/main.js" defer></script>
     <title>Aplication feed</title>
-</head>
-<body>
-  <header class="aplication-header">
-        <div class="profile_images">
-            <a href="./adminProfile.html">
-                <img src="../../../images/imagesAplication/user.png" alt="Icono de Usuario">
-            </a>
-            <a href="./adminCompanyProfile.html">
-                <img src="../../../images/imagesAplication/work.png" alt="Icono de Empresa">
-            </a>
+  </head>
+  <body>
+    <header class="aplication-header">
+      <div class="profile_images">
+        <a href="./adminProfile.html">
+          <img
+            src="../../../images/imagesAplication/user.png"
+            alt="Icono de Usuario"
+          />
+        </a>
+        <a href="./adminCompanyProfile.html">
+          <img
+            src="../../../images/imagesAplication/work.png"
+            alt="Icono de Empresa"
+          />
+        </a>
+      </div>
+      <div class="container">
+        <nav class="aplication-header--navbar">
+          <ul>
+            <li><a href="#">Trabajos</a></li>
+            <li><a href="./adminAplicationStatus.html">Aplicaciones</a></li>
+            <li class="aplication-header--navbar__request">
+              <a href="./adminInviteMembers.html">Solicitar vacantes</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="bell">
+        <a href="#"
+          ><img
+            src="../../../images/imagesAplication/campana.png"
+            alt="Icono de campana"
+        /></a>
+      </div>
+    </header>
+
+    <div class="form-container">
+      <form id="companyForm">
+        <div class="form-group">
+          <label for="logo">Logo de Empresa:</label>
+          <input type="file" id="logo" name="logo" accept="image/*" />
+          <img
+            id="logoPreview"
+            src="#"
+            alt="Logo Preview"
+            style="display: none"
+          />
         </div>
-        <div class="container">
-            <nav class="aplication-header--navbar">
-                <ul>
-                    <li><a href="#">Trabajos</a></li>
-                    <li><a href="./adminAplicationStatus.html">Aplicaciones</a></li>
-                    <li class="aplication-header--navbar__request"><a href="./adminInviteMembers.html">Solicitar vacantes</a></li>
-                </ul>
-            </nav>
+        <br />
+        <br />
+        <div class="form-group">
+          <label for="name">Nombre de Empresa:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            class="text-input"
+            required
+          />
         </div>
-        <div class="bell">
-            <a href="#"><img src="../../../images/imagesAplication/campana.png" alt="Icono de campana" ></a>
-            
+
+        <div class="form-group">
+          <label for="id">Cedula Juridica:</label>
+          <input type="text" id="id" name="id" class="text-input" required />
         </div>
-  </header>
-    
-    
-  <div class="form-container">
-        <form id="companyForm">
-      
-          <div class="form-group">
-            <label for="logo">Logo de Empresa:</label>
-            <input type="file" id="logo" name="logo" accept="image/*">
-            <img id="logoPreview" src="#" alt="Logo Preview" style="display: none;">
-          </div>
-          <br>
-          <br>
-          <div class="form-group">
-            <input type="submit" value="Editar" class="btn2-register-business">
-          </div>
-          <div class="form-group">
-            <label for="name">Nombre de Empresa:</label>
-            <input type="text" id="name" name="name" required>
-          </div>
-      
-          <div class="form-group">
-            <label for="id">Cedula Juridica:</label>
-            <input type="text" id="id" name="id" required>
-          </div>
-      
-          <div class="form-group">
-            <label for="phone">Telefono:</label>
-            <input type="text" id="phone" name="phone">
-          </div>
-      
-          <div class="form-group">
-            <label for="sns">Social Media:</label>
-            <input type="text" id="sns" name="sns">
-          </div>
-      
-          <div class="form-group">
-            
-              
-            <label for="selectRegion">Direccion:</label>
-            <table class="company-form--table">
+
+        <div class="form-group">
+          <label for="phone">Telefono:</label>
+          <input type="text" id="phone" name="phone" class="text-input" />
+        </div>
+
+        <div class="form-group">
+          <label for="sns">Social Media:</label>
+          <input type="text" id="sns" name="sns" class="text-input" />
+        </div>
+
+        <div class="form-group">
+          <label for="selectRegion">Direccion:</label>
+          <table class="company-form--table">
             <td>
-            <select name="selectProvince" id="selectProvince">
-              <option value="" disabled selected hidden>Seleccione la Provincia</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-            </select>
+              <div class="select">
+                <select
+                  class="select__element"
+                  name="selectProvince"
+                  id="selectProvince"
+                >
+                  <option value="" disabled selected hidden>
+                    Seleccione la Provincia
+                  </option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+              </div>
             </td>
             <td>
-            <select name="selectCanton" id="selectCanton">
-              <option value="" disabled selected hidden>Seleccione el Canton</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-            </select>
-          </td>
-      
-            <td><select name="selectDistrict" id="selectDistrict">
-              <option value="" disabled selected hidden>Seleccione el Distrito</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-            </select>
+              <div class="select">
+                <select
+                  class="select__element"
+                  name="selectCanton"
+                  id="selectCanton"
+                >
+                  <option value="" disabled selected hidden>
+                    Seleccione el Canton
+                  </option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+              </div>
+            </td>
+
+            <td>
+              <div class="select">
+                <select
+                  class="select__element"
+                  name="selectDistrict"
+                  id="selectDistrict"
+                >
+                  <option value="" disabled selected hidden>
+                    Seleccione el Distrito
+                  </option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+              </div>
             </td>
           </table>
-          </div>
-      
-      
-          <div class="form-group">
-            <label for="direction">Direccion Detallada:</label>
-            <textarea id="direction" name="direction"></textarea>
-          </div>
-      
-          <div class="form-group">
-            <input type="submit" value="Agregar" class="btn-register-business">
-            <input type="submit" value="Cancelar" class="btn-register-business">
-          </div>
-      
-      
-      
-        </form>
-      
-  </div>
-    
-
-  <footer class="page-footer">
-        <div class="message1">
-            <b>SNE, ©2023</b>
         </div>
 
-        <div class="message2">
-            <b>SNE - Sistema Nacional de Empleos</b>
-            <b>Desarrollado por WebWizards</b>
+        <div class="form-group">
+          <label for="direction">Direccion Detallada:</label>
+          <textarea
+            id="direction"
+            name="direction"
+            class="text-input"
+          ></textarea>
         </div>
 
-        <div class="redes">
-            <a href="https://www.instagram.com/"><img class= "iconos" src="../../../images/imagesAplication/instagram.png" alt="instagram"></a><br>
-            <a href="https://es-la.facebook.com/"><img class= "iconos" src="../../../images/imagesAplication/facebook.png" alt="facebook"></a><br>
-            <a href="https://twitter.com/"><img class= "iconos"  src="../../../images/imagesAplication/twitter.png" alt="twitter"></a>
+        <div class="form-group">
+          <input
+            type="submit"
+            value="Editar"
+            class="btn2-register-business button--white"
+          />
+          <input
+            type="submit"
+            value="Guardar"
+            class="btn-register-business button--white"
+          />
         </div>
+      </form>
+    </div>
 
-        <div class="sobre">
-            <li class="1"><a class="link"  href="../teamLanding/teamGroup.html">Sobre el Equipo</a></li>
-            
-        </div>
+    <footer class="page-footer">
+      <div class="message1">
+        <b>SNE, ©2023</b>
+      </div>
 
-  </footer>
-    
-</body>
+      <div class="message2">
+        <b>SNE - Sistema Nacional de Empleos</b>
+        <b>Desarrollado por WebWizards</b>
+      </div>
+
+      <div class="redes">
+        <a href="https://www.instagram.com/"
+          ><img
+            class="iconos"
+            src="../../../images/imagesAplication/instagram.png"
+            alt="instagram" /></a
+        ><br />
+        <a href="https://es-la.facebook.com/"
+          ><img
+            class="iconos"
+            src="../../../images/imagesAplication/facebook.png"
+            alt="facebook" /></a
+        ><br />
+        <a href="https://twitter.com/"
+          ><img
+            class="iconos"
+            src="../../../images/imagesAplication/twitter.png"
+            alt="twitter"
+        /></a>
+      </div>
+
+      <div class="sobre">
+        <li class="1">
+          <a class="link" href="../teamLanding/teamGroup.html"
+            >Sobre el Equipo</a
+          >
+        </li>
+      </div>
+    </footer>
+  </body>
 </html>
-
-
-
-

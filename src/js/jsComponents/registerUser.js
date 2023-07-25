@@ -5,7 +5,7 @@ const email = document.getElementById('email');
 const password = document.getElementById('password');
 const eyeIcon = document.getElementById('eye');
 const eyeIcon2 = document.getElementById('eye2');
-const confpassword = document.getElementById('confpassword');
+const password2 = document.getElementById('password2');
 const genre = document.getElementById('genre');
 const idty = document.getElementById('idty');
 const idnum = document.getElementById('idnum');
@@ -23,7 +23,7 @@ function checkInputs() {
     const lnameValue = lastname.value.trim();
     const emailValue = email.value.trim();
     const passwordValue = password.value.trim();
-    const confpasswordValue = confpassword.value.trim();
+    const password2Value = password2.value.trim();
     const genreValue = genre.value.trim();
     const idtyValue = idty.value.trim();
     const idnumValue = idnum.value.trim();
@@ -44,7 +44,7 @@ function checkInputs() {
     if (emailValue === '') {
         setErrorFor(email, 'El campo no puede estar en blanco');
     } else if (!isEmail(emailValue)) {
-        setErrorFor(email, 'E-mail inválido');
+        setErrorFor(email, 'Correo invalido');
     } else {
         setSuccessFor(email);
     }
@@ -52,17 +52,17 @@ function checkInputs() {
     if (passwordValue === '') {
         setErrorFor(password, 'El campo no puede estar en blanco');
     } else if (!isPassword(passwordValue)) {
-        setErrorFor(password, 'Contraseña debe tener como mínimo 6 caracteres, una mayúscula, un número, una minúscula y un carácter especial');
+        setErrorFor(password, 'La contraseña debe tener como mínimo 6 caracteres, una mayúscula, un número, una minúscula y un carácter especial');
     } else {
         setSuccessFor(password);
     }
 
-    if (confpasswordValue === '') {
-        setErrorFor(confpassword, 'El campo no puede estar en blanco');
-    } else if (passwordValue !== confpasswordValue) {
-        setErrorFor(confpassword, 'Las contraseñas no coinciden');
+    if (password2Value === '') {
+        setErrorFor(password2, 'El campo no puede estar en blanco');
+    } else if (passwordValue !== password2Value) {
+        setErrorFor(password2, 'Las contraseñas no coinciden');
     } else {
-        setSuccessFor(confpasswordValue);
+        setSuccessFor(password2, 'Las contraseñas coinciden');
     }
 
     if (genreValue === 'empty') {
@@ -79,16 +79,21 @@ function checkInputs() {
 
     if (idnumValue === '') {
         setErrorFor(idnum, 'El campo no puede estar en blanco');
+    } else if (!isId(idnumValue)) {
+        setErrorFor(idnum, 'Formato incorrecto');
     } else {
         setSuccessFor(idnum);
     }
 
     if (birthValue === '') {
         setErrorFor(birth, 'El campo no puede estar en blanco');
+    } else if (!isAge(birthValue)) {
+        setErrorFor(birth, 'Debes ser mayor de 18 años para registrarte');
     } else {
         setSuccessFor(birth);
     }
 }
+
 
 function setErrorFor(input, message) {
     const formControl = input.parentElement;
@@ -122,10 +127,27 @@ function isPassword(password) {
     return /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*(\W|_)).{6,100}$/.test(password);
 }
 
+function isId(idnum) {
+    return /^.{8,12}$/.test(idnum);
+}
+
 eyeIcon.addEventListener('click', () => {
     password.type = password.type === "password" ? "text" : "password";
 });
 
 eyeIcon2.addEventListener('click', () => {
-    confpassword.type = confpassword.type === "password" ? "text" : "password";
+    password2.type = password2.type === "password" ? "text" : "password";
 });
+
+function isAge(birth) {
+    // get current date
+    let currentDate = new Date();
+    // get input date
+    let input = document.getElementById("birth").value;
+    let birthdate = new Date(input);
+    // return if age is over 18
+    let diff = new Date(currentDate - birthdate)
+    let age = Math.abs(diff.getUTCFullYear() - 1970);
+
+    return age >= 18;
+}
