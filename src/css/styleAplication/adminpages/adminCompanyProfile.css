@@ -12,7 +12,7 @@
   /* color: #29271f; */
   /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.548); */
   margin-top: 1%;
-  margin-bottom: 4%;
+  margin-bottom: 6%;
 }
 
 .form-group:after {
@@ -22,13 +22,40 @@
   clear: both;
 }
 
+.form-group_factory {
+  
+  padding-right: 10px;
+  margin-top: 4%;
+}
+
 .form-group label {
   display: block;
   font-weight: bold;
   float: left;
   width: 25%;
-  margin-top: 6px;
+  margin-top: 10px;
 }
+
+.form-group_factory label {
+  display: block;
+  font-weight: bold;
+  float: left;
+  width: 25%;
+  margin-top: 100px;
+  
+  
+}
+
+.form-group_factory input[type="file"] {
+ 
+  width: 70%; 
+  padding: 5px; 
+  float: left; 
+  margin-top: 90px; 
+  
+}
+
+
 
 .form-group input[type="text"] {
   width: 70%;
@@ -54,3 +81,31 @@
 .company-form--table {
   margin-left: 159px;
 }
+
+.select{
+  width: 8.5em;
+  height: 2em;
+  margin-left: -10% ;
+}
+
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  top: -0.5em;
+  right: -0.9em;
+  padding: 1em;
+  margin-bottom: 20%;
+}
+
+.button--white_edit{
+  margin-right: 10px;
+  padding: 0px 35px;
+}
+
+.button-container {
+  display: flex; /* Utiliza flexbox para alinear los botones */
+  justify-content: flex-end; /* Alinea los botones hacia el final del contenedor (derecha) */
+  margin-right: 3%;
+  
+}
+
