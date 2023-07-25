@@ -1,0 +1,139 @@
+.add-education--tittle {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  font-size: 3vh;
+  margin-top: 1%;
+}
+
+.add-education-container {
+  width: 40vw; /* Ajusta el ancho según tus necesidades */
+  height: 100vh; /* Ajusta la altura según tus necesidades */
+  padding: 20px;
+  padding-bottom: 30px; /* Añade un relleno interno para los elementos internos */
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1%;
+}
+
+.add-education--formulary {
+  font-family: "Montserrat", sans-serif;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.formulary {
+  font-family: "Montserrat", sans-serif;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 6%;
+  margin-right: 10%;
+}
+
+#education-level {
+  margin-top: 2%;
+  margin-left: 50px;
+}
+
+.formulary__status-validation {
+  position: absolute;
+  right: 45px;
+  bottom: 15px;
+  z-index: 1000;
+  font-size: 16px;
+  opacity: 0;
+}
+
+.formulary__input-error {
+  font-size: 12px;
+  margin-bottom: 0;
+  display: none;
+}
+
+.formulary__input-group-year {
+  text-align: left;
+}
+
+.formulary__status-validation {
+  position: absolute;
+  right: 45px;
+  bottom: 15px;
+  z-index: 1000;
+  font-size: 16px;
+  opacity: 0;
+}
+
+.formulary__group-carrer-progress {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 2%;
+  margin-right: 12%;
+}
+
+.formulary__span {
+  font-size: 1em;
+  font-weight: 100;
+  text-align: left;
+  display: block;
+  margin-bottom: 10%;
+  margin-top: -20%;
+}
+
+.formulary__checkbox {
+  cursor: pointer;
+  height: 1.5vh;
+  width: 1vw;
+  margin: 0 0.2vw;
+}
+
+.formulary__message,
+.formulary__group-btn-send {
+  grid-column: span 1;
+}
+.formulary__active-message {
+  display: block;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.button-separator {
+  display: inline-block;
+  margin: 0 20px;
+  color: #ffffff;
+  font-size: 6vh;
+  margin-right: 20%;
+  align-items: center;
+  text-align: center;
+}
+
+.formulary__message,
+.formulary__group-btn-send {
+  grid-column: span 1;
+}
+
+.formulary__message {
+  display: none;
+  padding: 15px;
+  border-radius: 5px;
+  background: rgb(205, 17, 17);
+  text-align: center;
+}
+
+.form-control.error i.fa-exclamation-circle {
+  color: #e74c3c;
+  visibility: visible;
+}

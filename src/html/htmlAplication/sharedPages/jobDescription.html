@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:ital,wght@0,700;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../../css/normalize.css" />
+    <link
+      rel="stylesheet"
+      href="../../../css/styleAplication/generalStyles.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../../css/styleAplication/sharedpages/jobDescription.css"
+    />
+    <script src="../../../js/jsAplication/main.js" defer></script>
+    <title>Aplication feed</title>
+  </head>
+  <body>
+    <header class="aplication-header">
+      <div class="profile_images">
+        <a href="./adminProfile.html">
+          <img
+            src="../../../images/imagesAplication/user.png"
+            alt="Icono de Usuario"
+          />
+        </a>
+        <a href="./adminCompanyProfile.html">
+          <img
+            src="../../../images/imagesAplication/work.png"
+            alt="Icono de Empresa"
+          />
+        </a>
+      </div>
+      <div class="container">
+        <nav class="aplication-header--navbar">
+          <ul>
+            <li><a href="#">Trabajos</a></li>
+            <li><a href="./adminAplicationStatus.html">Aplicaciones</a></li>
+            <li class="aplication-header--navbar__request">
+              <a href="./adminInviteMembers.html">Solicitar vacantes</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="bell">
+        <a href="#"
+          ><img
+            src="../../../images/imagesAplication/campana.png"
+            alt="Icono de campana"
+        /></a>
+      </div>
+    </header>
+
+    <div class="job-decription--container">
+      <h3 class="title-job-description">Nombre del trabajo</h3>
+      <div class="main-job-description">
+        <div class="first-job-description">
+          <div class="input-group">
+            <label for="provincia">Provincia:</label>
+            <input
+              class="text-input"
+              type="text"
+              name="provincia"
+              id="pronvincia"
+            />
+          </div>
+          <div class="input-group">
+            <label for="canton">Canton:</label>
+            <input class="text-input" type="text" name="canton" id="canton" />
+          </div>
+          <div class="input-group">
+            <label for="distrito">Distrito:</label>
+            <input
+              class="text-input"
+              type="text"
+              name="distrito"
+              id="distrito"
+            />
+          </div>
+        </div>
+
+        <div class="second_description">
+          <div class="input-group">
+            <label for="description">Descripción:</label>
+            <input
+              class="text-input"
+              type="text"
+              name="description"
+              id="description"
+            />
+          </div>
+          <div class="input-group">
+            <label for="minumum_required">Requisitos mínimos:</label>
+            <input
+              class="text-input"
+              type="text"
+              name="minumum_required"
+              id="minumum_required"
+            />
+          </div>
+          <div class="input-group">
+            <label for="preferred_requirements">Requisitos preferibles:</label>
+            <input
+              class="text-input"
+              type="text"
+              name="preferred_requirements"
+              id="preferred_requirements"
+            />
+          </div>
+        </div>
+
+        <div class="main-job-description2">
+          <img class="image" src="#" alt="Foto de perfil" />
+          <input
+            class="text-input"
+            type="read"
+            name="company_name"
+            id="company_name"
+            placeholder="Nombre Empresa"
+          />
+          <input
+            class="text-input"
+            type="read"
+            name="salary"
+            id="salary"
+            placeholder="Salario: $$$"
+          />
+        </div>
+      </div>
+      <button class="button--green" type="submit" value="Enviar">
+        Invitar a usuario
+      </button>
+      <button class="button--green" type="submit" value="Enviar">
+        Eliminar puesto
+      </button>
+      <button class="button--green" type="submit" value="Enviar">
+        Preguntar
+      </button>
+    </div>
+    <footer class="page-footer">
+      <div class="message1">
+        <b>SNE, ©2023</b>
+      </div>
+
+      <div class="message2">
+        <b>SNE - Sistema Nacional de Empleos</b>
+        <b>Desarrollado por WebWizards</b>
+      </div>
+
+      <div class="redes">
+        <a href="https://www.instagram.com/"
+          ><img
+            class="iconos"
+            src="../../../images/imagesAplication/instagram.png"
+            alt="instagram" /></a
+        ><br />
+        <a href="https://es-la.facebook.com/"
+          ><img
+            class="iconos"
+            src="../../../images/imagesAplication/facebook.png"
+            alt="facebook" /></a
+        ><br />
+        <a href="https://twitter.com/"
+          ><img
+            class="iconos"
+            src="../../../images/imagesAplication/twitter.png"
+            alt="twitter"
+        /></a>
+      </div>
+
+      <div class="sobre">
+        <li class="1">
+          <a class="link" href="../teamLanding/teamGroup.html"
+            >Sobre el Equipo</a
+          >
+        </li>
+      </div>
+    </footer>
+  </body>
+</html>

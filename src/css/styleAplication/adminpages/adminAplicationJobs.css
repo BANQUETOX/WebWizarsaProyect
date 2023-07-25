@@ -1,0 +1,78 @@
+.aplicationFeed {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  margin-top: 12vh;
+  margin-left: 10%;
+}
+.dropdown {
+  font-family: "Montserrat", sans-serif;
+  display: inline-block;
+  color: #212529;
+  text-align: center;
+  border: 1px solid black;
+  padding: 10px 20px;
+  font-size: 20px;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  color: #ffffff;
+  background-color: #9fd3c7;
+  cursor: pointer;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+#salary-range-input {
+  position: fixed;
+  margin-left: 250px;
+  margin-top: 22px;
+}
+.aplicationFeed--jobAplications {
+  max-width: 42vw;
+  max-height: 60vh;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+.aplicationFeed--jobAplications > a {
+  color: black;
+  text-decoration: none;
+}
+.aplication {
+  border: solid black 2px;
+  margin-bottom: 2vh;
+  width: 40vw;
+}
+.aplication--name {
+  font-family: "Montserrat", sans-serif;
+  padding-left: 10px;
+  margin: 0;
+}
+.aplication--description {
+  font-family: "Montserrat", sans-serif;
+  padding-left: 10px;
+}
+
+.button--red {
+  font-family: "Montserrat", sans-serif;
+  display: inline-block;
+  color: #212529;
+  text-align: center;
+  border: 1px solid black;
+  padding: 10px 20px;
+  font-size: 20px;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  color: #ffffff;
+  background-color: #be3144;
+  cursor: pointer;
+}
+.button--red:hover {
+  background-color: #852532;
+}

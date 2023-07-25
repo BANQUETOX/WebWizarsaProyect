@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/normalize.css">
+    <link rel="stylesheet" href="../../css/styteWebWizards/teamLanding.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&display=swap" rel="stylesheet">
+    <title>WebWizards</title>
+</head>
+<body>
+    <nav class="team-landing--nav-bar">
+        <div class="team-landing--nav-bar--head">
+            <div class="team-landing--nav-bar--logo">
+                <a href="./teamLandingPage.html">
+                    <img src="../../images/imagesWebWizards/wizard.png" alt="WebWizardsLogo" class="team-landing--nav-bar--logo-image">
+                </a>
+                <a href="./teamLandingPage.html"class="team-landing--nav-bar--logo-text">
+                    <p >WebWizards</p>
+                </a>
+            </div>
+            <div class="team-landing--nav-bar--logo__arrow">
+                    <img src="../../images/imagesWebWizards/down-arrow.png" alt="WebWizardsLogo" class="team-landing--nav-bar--logo-arrow" id="arrow-image">
+            </div>
+
+        </div>
+        <div id="team-landing--nav-bar--sections-container">
+            <a href="./teamProducts.html" class="team-landing--nav-bar--sections">
+               <p>Productos</p>
+            </a>
+            <a href="#" class="team-landing--nav-bar--sections">
+                <p>El equipo</p>
+             </a>
+        </div>
+    </nav>
+    <div class="team-landing--goup">
+        <div class="member-container">
+            <div class="member-image">
+                <img src="../../images/imagesWebWizards/poltro.jpg" alt="">
+            </div>
+            <div class="member-description">
+                <p>Carlos Poltronieri: </p>                
+            </div>
+        </div>
+
+        <div class="member-container">
+            <div class="member-image">
+                <img src="../../images/imagesWebWizards/jose.jpg" alt="">
+            </div>
+            <div class="member-description">
+                <p>Jose Daniel Steller:</p>                
+            </div>
+        </div>
+        <div class="member-container">
+            <div class="member-image">
+                <img src="../../images/imagesWebWizards/moi.jpg" alt="">
+            </div>
+            <div class="member-description">
+                <p>Moises Parajeles:</p>                
+            </div>
+        </div>
+        <div class="member-container">
+            <div class="member-image">
+                <img src="../../images/imagesWebWizards/pil.jpg" alt="">
+            </div>
+            <div class="member-description">
+                <p>Pil Jae Moon:</p>                
+            </div>
+        </div>
+        <div class="member-container">
+            <div class="member-image">
+                <img src="../../images/imagesWebWizards/felipe.jpg" alt="">
+            </div>
+            <div class="member-description">
+            <p> Felipe Mena: </p>                
+            </div>
+        </div>
+        <div class="member-container">
+            <div class="member-image">
+                <img src="../../images/imagesWebWizards/maike.jpg" alt="">
+            </div>
+            <div class="member-description">
+            <p>Michael Monge: </p>                
+            </div>
+        </div>
+    </div>
+    <footer class="team-landing--footer">
+        <div class="team-landing--footer--trade-mark">
+            <p>WebWizards Derechos reservados 2023</p>
+
+        </div>
+        <div class="team-landing--footer--socials">
+          <a href="https://www.facebook.com/">
+            <img src="../../images/imagesWebWizards/facebook.png" alt="">
+          </a>
+          <a href="https://twitter.com">
+            <img src="../../images/imagesWebWizards/twitter.png" alt="">
+          </a>
+          <a href="https://www.instagram.com/">
+            <img src="../../images/imagesWebWizards//instagram.png" alt="">
+          </a>
+
+        </div>
+    </footer>
+    
+</body>
+</html>
+
+<script>
+    document.getElementById('arrow-image').onclick = ()=>{
+        let sectionContainer = document.getElementById('team-landing--nav-bar--sections-container')
+        if(sectionContainer.classList.length == 0)
+            sectionContainer.classList.add('team-landing--nav-bar--sections-container__none')
+        else
+            sectionContainer.classList.remove('team-landing--nav-bar--sections-container__none')
+    }
+</script>

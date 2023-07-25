@@ -1,0 +1,22 @@
+.catalogue {
+  margin-left: 2vw;
+  margin-bottom: 34.7vh;
+}
+
+.catalogue__header {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+.catalogue__subtitle {
+  display: inline-block;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  margin-right: 150px;
+}
+.catalogue__location-field {
+  margin-bottom: 2vh;
+}
+.catalogue__save-discard {
+  margin-top: 2vw;
+  margin-left: 200px;
+}
