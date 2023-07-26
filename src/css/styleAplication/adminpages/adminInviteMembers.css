@@ -10,13 +10,11 @@
 
 .container-tittle-invite-members {
   text-align: center;
-  font-family: "Poppins", sans-serif;
+  font-family: "Montserrat", sans-serif;
   margin-top: 1%;
   margin-left: 2.5%;
   font-size: 20px;
 }
-
-
 
 .formulary {
   display: flex;
@@ -24,37 +22,19 @@
   margin-left: 45%;
   margin-top: 50px;
   font-family: "Montserrat", sans-serif;
-  
 }
-
-
-
-
 
 .formulary__label {
   display: flex;
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin-top: 43px;
+  margin-bottom: 9px;
 }
-
-
-
-
-/* .formulary__status-validation {
-  position: absolute;
-  right: 45px;
-  bottom: 15px;
-  z-index: 1000;
-  font-size: 16px;
-  opacity: 0;
-} */
 
 .formulary__input-error {
   font-size: 12px;
   margin-bottom: 0;
   display: none;
 }
-
 
 .button-container__invite {
   margin-left: 0%;
@@ -72,6 +52,12 @@
   grid-column: span 1;
 }
 
+#function_collaborator {
+  margin-top: 20px;
+}
+.select__function--container {
+  margin-left: 2px;
+}
 .formulary__message {
   display: none;
   padding: 15px;
@@ -79,4 +65,6 @@
   background: rgb(205, 17, 17);
   text-align: center;
 }
-
+.formulary__label__colaborator-name {
+  margin-top: 0;
+}
