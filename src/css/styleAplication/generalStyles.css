@@ -283,8 +283,8 @@
   height: 3em;
   border-radius: 0.25em;
   border: 1px black solid;
-  overflow: hidden;margin-left: -10.5%;
-  
+  overflow: hidden;
+  margin-left: -10.5%;
 }
 .select::after {
   content: "\25BC";
@@ -295,7 +295,6 @@
   background-color: #ffffff;
   transition: 0.25s all ease;
   pointer-events: none;
-  
 }
 /* Select-Transition */
 .select:hover::after {
@@ -310,8 +309,9 @@
 }
 #salary-range-input {
   position: fixed;
-  margin-left: 180px;
+  margin-left: 170px;
   margin-top: 17px;
+  width: 60px;
 }
 .salary-range-input-label {
   color: #000;
