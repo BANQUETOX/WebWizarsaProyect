@@ -5,7 +5,7 @@
   font-size: 4vh;
   margin-left: 2%;
   margin-right: auto;
-  margin-top: 1%;
+  margin-top: 3%;
 }
 
 .container-tittle-invite-members {
@@ -26,7 +26,7 @@
 
 .formulary__label {
   display: flex;
-  margin-top: 43px;
+  margin-top: 40px;
   margin-bottom: 9px;
 }
 
@@ -37,7 +37,7 @@
 }
 
 .button-container__invite {
-  margin-left: 0%;
+  margin-left: -4px;
   margin-bottom: 30px;
 }
 
@@ -45,7 +45,7 @@
   display: inline-block;
   margin: 20px; /* Ajusta el espacio horizontal entre el separador y los botones */
   color: #ffffff;
-  margin-top: 100px;
+  margin-top: 80px;
 }
 
 .formulary__message .formulary__group-btn-send {
@@ -53,7 +53,7 @@
 }
 
 #function_collaborator {
-  margin-top: 20px;
+  margin-top: 9px;
 }
 .select__function--container {
   margin-left: 2px;
