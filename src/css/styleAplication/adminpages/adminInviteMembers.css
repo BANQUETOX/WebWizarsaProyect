@@ -16,20 +16,29 @@
   font-size: 20px;
 }
 
+
+
 .formulary {
+  display: flex;
+  flex-direction: column;
+  margin-left: 45%;
   margin-top: 50px;
   font-family: "Montserrat", sans-serif;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 25px;
-  padding-left: 45%;
+  
 }
+
+
+
+
 
 .formulary__label {
   display: flex;
   margin-top: 15px;
   margin-bottom: 15px;
 }
+
+
+
 
 /* .formulary__status-validation {
   position: absolute;
@@ -46,15 +55,9 @@
   display: none;
 }
 
-.formulary__label-collaborator {
-  display: flex;
-  margin-bottom: 15px;
-}
-
-
 
 .button-container__invite {
-  margin-left: -10%;
+  margin-left: 0%;
   margin-bottom: 30px;
 }
 
@@ -76,3 +79,4 @@
   background: rgb(205, 17, 17);
   text-align: center;
 }
+
