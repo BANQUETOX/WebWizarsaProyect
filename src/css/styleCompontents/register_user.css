@@ -1,0 +1,263 @@
+* {
+    box-sizing: border-box;
+}
+
+
+/*Form styling*/
+
+.sct-form {
+    background-color: #ececec;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.sct-form h1 {
+    font-size: 40px;
+    font-family: 'poppins', sans-serif;
+    font-weight: 700;
+}
+
+.sct-form h2 {
+    display: flex;
+    justify-content: center;
+    font-family: 'poppis', sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.container {
+    color: #ececec;
+    border-radius: 5px;
+    background-color: #303841;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    width: 700px;
+    max-width: 100%;
+}
+
+.form {
+    padding: 30px 40px;
+}
+
+.form-control {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.form-control label {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.form-control input {
+    font-family: 'Montserrat', sans-serif;
+    resize: vertical;
+    padding: 15px;
+    border-radius: .25rem;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.06);
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+.form-control select {
+    font-family: 'Montserrat', sans-serif;
+    resize: vertical;
+    padding: 15px;
+    border-radius: .25rem;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.06);
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+.form-control input:focus {
+    outline: 0;
+    border-color: #777;
+}
+
+.form-control select:focus {
+    outline: 0;
+    border-color: #777;
+}
+
+.form-control.success input {
+    border-color: #04ff00;
+}
+
+.form-control.success select {
+    border-color: #04ff00;
+}
+
+.form-control.error input {
+    border-color: #ff0000;
+}
+
+.form-control.error select {
+    border-color: #ff0000;
+}
+
+.form-control.success i.fa-check-circle {
+    color: #2ecc71;
+    visibility: visible;
+}
+
+.form-control.error i.fa-exclamation-circle {
+    color: #e74c3c;
+    visibility: visible;
+}
+
+.form-control i {
+    visibility: hidden;
+    position: absolute;
+    top: 45px;
+    margin-left: 50%;
+}
+
+.form-control i.fa-eye {
+    color: #000;
+    visibility: visible;
+    position: absolute;
+    top: 50px;
+    margin-left: 35%;
+}
+
+.form-control small {
+    visibility: hidden;
+}
+
+.confirmation-mail {
+    visibility: hidden;
+}
+
+.form-control.error small {
+    color: #ff0000;
+    visibility: visible;
+}
+
+.form button {
+    font-family: 'Montserrat', sans-serif;
+    display: inline-block;
+    color: #000;
+    text-align: center;
+    border: 1px solid black;
+    padding: 10px 11px;
+    font-size: 20px;
+    line-height: 1.5;
+    border-radius: .25rem;
+    background-color: #ececec;
+    cursor: pointer;
+    margin-left: 20%;
+}
+
+.form button:hover {
+    background-color: #9fd3c7;
+    color: #fff;
+}
+
+
+/*Header and footer styling*/
+
+.header-fixed {
+    background-color: #303841;
+    padding: 20px 40px;
+    height: 80px;
+    color: #ffffff;
+    box-shadow: 0 1px 1px #ccc;
+    box-sizing: border-box;
+    top: -100px;
+}
+
+.header-fixed .header-limiter {
+    max-width: 1200px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.header-fixed .header-limiter .header {
+    float: left;
+    font: bold 28px Poppins;
+    line-height: 40px;
+    margin: 0;
+}
+
+.header-fixed .header-limiter .header span {
+    color: #BE3144;
+}
+
+.header-fixed .header-limiter a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.header-fixed .header-limiter nav {
+    font: semi-bold 16px Poppins;
+    line-height: 40px;
+    float: right;
+}
+
+.header-fixed .header-limiter nav a {
+    display: inline-block;
+    padding: 0 50px;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.page-footer {
+    position: absolute;
+    background-color: rgb(112, 106, 106);
+    width: 100%;
+    height: 150px;
+}
+
+.message1 {
+    color: aliceblue;
+    margin-left: 100px;
+    margin-top: 60px;
+}
+
+.message2 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-left: 100px;
+    margin-top: -2%;
+    color: white;
+}
+
+.redes {
+    display: flex;
+    flex-direction: row;
+    margin-left: 50%;
+}
+
+.iconos {
+    width: 25px;
+    height: 25px;
+    margin-top: 15px;
+    margin-right: 90px;
+    margin-left: -40px;
+}
+
+.sobre {
+    margin-top: -60px;
+    color: rgb(216, 219, 221);
+    margin-right: 100px;
+    text-decoration: none;
+    text-align: right;
+    list-style: none;
+    font-size: 20px;
+}
+
+.sobre a {
+    text-decoration: none;
+    color: white;
+}
