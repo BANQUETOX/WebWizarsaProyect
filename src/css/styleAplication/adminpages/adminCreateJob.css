@@ -10,16 +10,20 @@
   flex-direction: column;
   align-items: flex-start;
   margin-top: 100px;
-  margin-left: 400px;
+  margin-left: 670px;
   margin-right: 500px;
   font-size: 20px;
+  
 }
 
 .main .select {
   margin-bottom: 100px;
 }
 .main label {
-  margin-bottom: 20px;
+  margin-bottom: 2px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
 }
 
 .main input {
@@ -32,7 +36,14 @@
 
 .button--green {
   margin-top: 120px;
-  margin-left: 850px;
+  margin-left: 45%;
   width: 200px;
   margin-bottom: 5%;
 }
+
+.select{
+  margin-left: 0%;
+  width: 13.5em;
+  padding-bottom: 0%;
+}
+
