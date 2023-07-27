@@ -61,25 +61,27 @@
 }
 
 .login--tittle {
-  margin-top: 10px;
+  margin-top: 30px;
   margin-bottom: 50px;
   color: aliceblue;
   font-weight: 700;
   font-size: 24px;
 }
 
+
 .login--forgot_password {
   display: absolute;
   padding-left: 42px;
   padding-bottom: 30px;
-  padding-top: 10px;
-  color: black;
+  padding-top: 30px;
+  color: rgb(243, 242, 242);
 }
 
 .login--register_account {
   display: absolute;
-  padding-left: 20px;
-  margin-bottom: 30px;
+  padding-left: 5px;
+  margin-bottom: 40px;
+  margin-top: 15px;
   color: black;
 }
 
@@ -87,6 +89,12 @@
 .login--register_account a {
   text-decoration: none;
 }
+
+.login-container--internal_box button {
+  margin-left: 70px;
+  margin-top: -10px;
+}
+
 
 /* testaments */
 .users-testaments {
