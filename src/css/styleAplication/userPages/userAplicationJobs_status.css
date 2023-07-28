@@ -4,6 +4,15 @@
   margin-top: 12vh;
   margin-left: 10%;
 }
+
+.select {
+  margin-left: unset;
+}
+
+.select__range {
+  background-color: #ffffff;
+}
+
 .dropdown {
   font-family: "Montserrat", sans-serif;
   display: inline-block;
@@ -33,8 +42,7 @@
 }
 
 #salary-range-input {
-  position: fixed;
-  margin-left: 250px;
+  margin-left: 210px;
   margin-top: 22px;
 }
 

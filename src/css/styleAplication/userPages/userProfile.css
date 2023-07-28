@@ -1,148 +1,378 @@
-.user-profile {
-  background: #ececec;
-  background-color: #ececec;
-  font-size: 20px;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
-}
-
-.container {
-  text-align: left;
-}
-
-.container {
-  max-width: 200px;
-  padding: 20px;
+* {
+    box-sizing: border-box;
 }
 
 .avatar-upload {
-  position: relative;
-  max-width: 205px;
-  margin: auto;
+    position: relative;
+    max-width: 205px;
+    margin: auto;
 }
 
 .avatar-upload .avatar-edit {
-  position: absolute;
-  right: 12px;
-  z-index: 1;
-  top: 10px;
-}
-
-.avatar-upload .avatar-edit input + label {
-  display: inline-block;
-  width: 34px;
-  height: 34px;
-  margin-bottom: 0;
-  border-radius: 100%;
-  background: #ffffff;
-  border: 1px solid transparent;
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
-  cursor: pointer;
-  font-weight: normal;
-  transition: all 0.2s ease-in-out;
-}
-
-.avatar-upload .avatar-edit input + label:hover {
-  background: #f1f1f1;
-  border-color: #d6d6d6;
-}
-
-.avatar-upload .avatar-edit input + label:after {
-  content: "\f040";
-  font-family: "FontAwesome";
-  color: #757575;
-  position: absolute;
-  top: 10px;
-  left: 0;
-  right: 0;
-  text-align: center;
-  margin: auto;
+    position: absolute;
+    right: 12px;
+    z-index: 1;
+    top: 10px;
 }
 
 .avatar-upload .avatar-preview {
-  width: 192px;
-  height: 192px;
-  position: relative;
-  border-radius: 100%;
-  border: 6px solid #f8f8f8;
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+    width: 192px;
+    height: 192px;
+    position: relative;
+    border-radius: 100%;
+    border: 6px solid #f8f8f8;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
 }
 
-.avatar-upload .avatar-preview > div {
-  width: 100%;
-  height: 100%;
-  border-radius: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+.avatar-upload .avatar-preview>div {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
-.personalInformation {
-  display: flex;
-  justify-content: center;
-  height: 900px;
-  width: 100%;
+.avatar-upload {
+    position: relative;
+    max-width: 205px;
+    margin: 50px auto;
+    margin-left: 40%;
+    .avatar-preview {
+        width: 192px;
+        height: 192px;
+        border-radius: 100%;
+        border: 6px solid #f8f8f8;
+        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+        >div {
+            background-image: url(../../images/defaultUser.png);
+            width: 100%;
+            height: 100%;
+            border-radius: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+    .avatar-preview__error {
+        border: 6px solid #ff0000;
+    }
 }
 
-.editInfo {
-  display: flex;
-  background-color: #303841;
-  color: #ececec;
-  height: 95%;
-  width: 75%;
+.avatar-upload-input[type="file"] {
+    display: none;
 }
 
-.editInfo div {
-  justify-content: space-around;
-  display: flex;
-  width: 100%;
+#avatar-preview {
+    border-style: none;
+    box-shadow: none;
+    margin-top: 8%;
+    margin-left: -37%;
 }
 
-.editInfo div form {
-  justify-content: space-between;
-  display: flex;
-  flex-direction: column;
-  margin-top: 50px;
-  height: 750px;
-  width: 380px;
+.avatar-upload-input--label {
+    width: 90%;
+    background-color: #9fd3c7;
+    margin-left: -46%;
 }
 
-#address {
-  width: 243%;
+.avatar-upload .avatar-edit {
+    position: absolute;
+    right: 12px;
+    z-index: 1;
+    top: 10px;
 }
 
-.editPassword {
-  display: flex;
-  justify-content: center;
-  height: 170px;
-  width: 100%;
-  margin-bottom: 35px;
-}
-.edit-password--label {
-  font-family: "Poppins", sans-serif;
-  font-size: 30px;
-  font-weight: 600;
-  margin-left: 12.6%;
+.avatar-upload .avatar-preview>div {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
-.password {
-  display: flex;
-  background-color: #303841;
-  color: #ececec;
-  height: 95%;
-  width: 75%;
+.avatar-upload .avatar-edit input {
+    display: none;
 }
 
-.password div {
-  justify-content: space-around;
-  display: flex;
-  height: 75px;
-  margin-top: 30px;
-  width: 100%;
+.avatar-upload .avatar-edit input+label {
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+    margin-bottom: 0;
+    border-radius: 100%;
+    background: #ffffff;
+    border: 1px solid transparent;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+    font-weight: normal;
+    transition: all 0.2s ease-in-out;
+}
+
+.avatar-upload .avatar-edit input+label:hover {
+    background: #f1f1f1;
+    border-color: #d6d6d6;
+}
+
+.avatar-upload .avatar-edit input+label:after {
+    content: "\f040";
+    font-family: "FontAwesome";
+    color: #757575;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin: auto;
+}
+
+.avatar-upload .avatar-preview {
+    width: 192px;
+    height: 192px;
+    position: relative;
+    border-radius: 100%;
+    border: 6px solid #f8f8f8;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+.avatar-upload .avatar-preview>div {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.container-form {
+    color: #ececec;
+    border-radius: 5px;
+    background-color: #303841;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    width: 1100px;
+    max-width: 100%;
+}
+
+.form-group .btn {
+    background-color: #1d1c1c;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    margin-left: 150px;
 }
 
 .password div form {
-  justify-content: space-between;
-  display: flex;
-  flex-direction: column;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+}
+
+#address {
+    width: 86%;
+}
+
+.colums {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.colums div {
+    padding: 0 100px 0 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: space-between;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#from,
+#to {
+    width: 245px;
+}
+
+.sct-form {
+    display: flex;
+    align-items: center;
+    align-content: space-between;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.sct-form h2 {
+    display: flex;
+    justify-content: center;
+    font-family: "poppis", sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.container-form {
+    color: #ececec;
+    border-radius: 5px;
+    background-color: #303841;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    width: 1100px;
+    max-width: 100%;
+}
+
+.form {
+    padding: 30px 40px;
+}
+
+.form-control {
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.form-control label {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.form-control select {
+    font-family: "Montserrat", sans-serif;
+    resize: vertical;
+    padding: 15px;
+    border-radius: 0.25rem;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.06);
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    width: 335px;
+}
+
+.form-control input {
+    font-family: "Montserrat", sans-serif;
+    resize: vertical;
+    padding: 15px;
+    border-radius: 0.25rem;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.06);
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    width: 335px;
+}
+
+.form-control select {
+    font-family: "Montserrat", sans-serif;
+    resize: vertical;
+    padding: 15px;
+    border-radius: 0.25rem;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.06);
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    width: 335px;
+}
+
+.form-control input:focus {
+    outline: 0;
+    border-color: #777;
+}
+
+.form-control select:focus {
+    outline: 0;
+    border-color: #777;
+}
+
+.form-control.success input {
+    border-color: #04ff00;
+}
+
+.form-control.success select {
+    border-color: #04ff00;
+}
+
+.form-control.error input {
+    border-color: #ff0000;
+}
+
+.form-control.error select {
+    border-color: #ff0000;
+}
+
+.form-control.success i.fa-check-circle {
+    color: #2ecc71;
+    visibility: visible;
+}
+
+.form-control.error i.fa-exclamation-circle {
+    color: #e74c3c;
+    visibility: visible;
+}
+
+.form-control i {
+    visibility: hidden;
+    position: absolute;
+    top: 45px;
+    margin-left: 50%;
+}
+
+.form-control i.fa-eye {
+    color: #000;
+    visibility: visible;
+    position: absolute;
+    top: 50px;
+    margin-left: 35%;
+}
+
+.form-control small {
+    visibility: hidden;
+}
+
+.confirmation-mail {
+    visibility: hidden;
+}
+
+.form-control.error small {
+    color: #ff0000;
+    visibility: visible;
+}
+
+.form button {
+    font-family: "Montserrat", sans-serif;
+    display: inline-block;
+    color: #000;
+    text-align: center;
+    border: 1px solid black;
+    padding: 10px 11px;
+    font-size: 20px;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    background-color: #ececec;
+    cursor: pointer;
+    margin-left: 20%;
+}
+
+.form button:hover {
+    background-color: #9fd3c7;
+    color: #fff;
+}
+
+.btn-cont {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    margin: 30px 0 30px 0;
+}
+
+.btn-cont div {
+    margin: 0 0 20px 20px;
 }
