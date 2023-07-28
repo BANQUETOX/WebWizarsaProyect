@@ -1,7 +1,11 @@
+* {
+    box-sizing: border-box;
+}
+
+
 /*Form styling*/
 
 .sct-form {
-    background-color: #ececec;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -12,14 +16,14 @@
 
 .sct-form h1 {
     font-size: 40px;
-    font-family: "poppins", sans-serif;
+    font-family: 'poppins', sans-serif;
     font-weight: 700;
 }
 
 .sct-form h2 {
     display: flex;
     justify-content: center;
-    font-family: "poppis", sans-serif;
+    font-family: 'poppis', sans-serif;
     font-size: 30px;
     font-weight: 600;
 }
@@ -38,7 +42,7 @@
 }
 
 .form-control {
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 20px;
     align-items: center;
     display: flex;
@@ -54,7 +58,36 @@
     margin-bottom: 10px;
 }
 
+.form-control select {
+    font-family: "Montserrat", sans-serif;
+    resize: vertical;
+    padding: 15px;
+    border-radius: 0.25rem;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.06);
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    width: 335px;
+}
+
+.form-control input {
+    font-family: "Montserrat", sans-serif;
+    resize: vertical;
+    padding: 15px;
+    border-radius: 0.25rem;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.06);
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    width: 335px;
+}
+
 .form-control input:focus {
+    outline: 0;
+    border-color: #777;
+}
+
+.form-control select:focus {
     outline: 0;
     border-color: #777;
 }
@@ -111,4 +144,17 @@
 .form-control.error small {
     color: #ff0000;
     visibility: visible;
+}
+
+.form button {
+    font-family: 'Montserrat', sans-serif;
+    display: inline-block;
+    text-align: center;
+    border: 1px solid black;
+    padding: 10px 11px;
+    font-size: 20px;
+    line-height: 1.5;
+    border-radius: .25rem;
+    cursor: pointer;
+    margin-left: 20%;
 }
