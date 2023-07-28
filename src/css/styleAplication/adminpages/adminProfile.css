@@ -270,18 +270,6 @@
     width: 335px;
 }
 
-.form-control select {
-    font-family: "Montserrat", sans-serif;
-    resize: vertical;
-    padding: 15px;
-    border-radius: 0.25rem;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.06);
-    margin-bottom: 10px;
-    padding-bottom: 10px;
-    padding-left: 10px;
-    width: 335px;
-}
-
 .form-control input:focus {
     outline: 0;
     border-color: #777;
