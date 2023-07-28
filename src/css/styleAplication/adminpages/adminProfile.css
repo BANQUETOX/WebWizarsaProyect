@@ -364,3 +364,8 @@
 .btn-cont div {
     margin: 0 0 20px 20px;
 }
+
+.session {
+    display: flex;
+    justify-content: center;
+}
