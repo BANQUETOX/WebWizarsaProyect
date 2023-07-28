@@ -158,3 +158,17 @@
     cursor: pointer;
     margin-left: 20%;
 }
+
+.form a {
+    font-family: 'Montserrat', sans-serif;
+    display: inline-block;
+    text-align: center;
+    border: 1px solid black;
+    padding: 10px 11px;
+    font-size: 20px;
+    line-height: 1.5;
+    border-radius: .25rem;
+    cursor: pointer;
+    margin-left: 20%;
+    text-decoration: none;
+}
