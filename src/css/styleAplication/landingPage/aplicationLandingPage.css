@@ -63,10 +63,11 @@
 
 .aplication-landing--hero--login-container {
   position: absolute;
+  border-radius: 5%;
   margin-left: 1000px;
   margin-top: 53%;
-  margin-left: 41%;
-  padding-left: 35px;
+  margin-left: 40%;
+  padding-left: 50px;
   width: 400px;
   height: 60%;
   background-color: #303841;
