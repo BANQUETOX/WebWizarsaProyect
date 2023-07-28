@@ -23,20 +23,40 @@
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   text-align: center;
-  margin-top: 36%;
-  margin-top: 1%;
-}
-.aplication-landing--hero--benefits {
-  font-family: "Montserrat", sans-serif;
-  margin-left: 9%;
-  margin-top: -5%;
+  margin-top: 4%;
+  margin-bottom: 80px;
   
 }
-
-.aplication-landing--hero--benefits h2 {
-  margin-bottom: -8px;
+.menssagepromotion {
+  font-family: "Montserrat", sans-serif;
+  margin-left: 9%;
+  margin-top: -5%; 
+  font-size: 24px;  
 }
 
+.menssagepromotion2 {
+  font-family: "Montserrat", sans-serif;
+  margin-top: 19%;
+  font-size: 24px;
+  position: absolute;
+  width: 30%;
+  margin-left: 60%;
+}
+
+.menssagepromotion3 {
+  font-family: "Montserrat", sans-serif;
+  margin-top: 15%;
+  font-size: 24px;
+  position: absolute;
+  width: 28%;
+  margin-top: 30%;
+  margin-left: 330px;
+}
+
+.menssagepromotion3 h2{
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+}
 
 
 /* presentation -> login */
@@ -44,9 +64,9 @@
 .aplication-landing--hero--login-container {
   position: absolute;
   margin-left: 1000px;
-  margin-top: 4%;
-  padding-bottom: -10;
-  padding-left: 30px;
+  margin-top: 53%;
+  margin-left: 41%;
+  padding-left: 35px;
   width: 400px;
   height: 60%;
   background-color: #303841;
@@ -105,10 +125,9 @@
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   text-align: center;
-  margin-top: 36%;
-  margin-top: 1%;
   font-size: 3vh;
-  margin-top: 1%;
+  margin-right:-90px ;
+  margin-top: 90%;
 }
 
 .testament-owner {
@@ -116,6 +135,7 @@
   margin-top: 0%;
   font-size: larger;
   line-height: 0.2;
+  margin-left: 3%;
   font-family: "Poppins", sans-serif;
 }
 
@@ -125,7 +145,7 @@
   font-size: larger;
   width: 34%;
   text-align: center;
-  margin-left: 34%;
+  margin-left: 35%;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -133,6 +153,7 @@
 .aplication-landing--socials {
   margin-top: 8%;
   margin-bottom: 7%;
+  margin-left: 4%;
 }
 
 .aplication-landing--socials--toptext {
