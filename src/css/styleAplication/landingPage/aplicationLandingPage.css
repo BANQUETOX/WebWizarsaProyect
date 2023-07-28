@@ -1,4 +1,9 @@
 /* presentation */
+
+body {
+  width: auto;
+}
+
 .aplication-landing--hero--message {
   position: absolute;
   width: 30%;
@@ -7,11 +12,7 @@
 }
 .aplication-landing--hero--message p {
   font-size: 24px;
-}
-.aplication-landing--hero--message h2 {
-  font-weight: 600;
-  font-size: 25px;
-  margin-bottom: 30px;
+
 }
 
 .aplication-landing--hero--message h1 {
@@ -22,36 +23,32 @@
 .aplication-landing--hero--message--tittle {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
-  text-align: center;
+  margin-left: 9%;
   margin-top: 4%;
   margin-bottom: 80px;
+ 
   
 }
 .menssagepromotion {
   font-family: "Montserrat", sans-serif;
-  margin-left: 9%;
+  margin-left: 7%;
   margin-top: -5%; 
   font-size: 24px;  
 }
 
+
+
 .menssagepromotion2 {
   font-family: "Montserrat", sans-serif;
-  margin-top: 19%;
+  margin-top: 25%;
   font-size: 24px;
   position: absolute;
-  width: 30%;
-  margin-left: 60%;
+  width:28%;
+  margin-left: 17%;
+
 }
 
-.menssagepromotion3 {
-  font-family: "Montserrat", sans-serif;
-  margin-top: 15%;
-  font-size: 24px;
-  position: absolute;
-  width: 28%;
-  margin-top: 30%;
-  margin-left: 330px;
-}
+
 
 .menssagepromotion3 h2{
   font-family: "Montserrat", sans-serif;
@@ -59,14 +56,27 @@
 }
 
 
+.image {
+  position: relative;
+  margin-left: 36%;
+  padding-top: 40%
+  
+}
+.image img {
+  width: 50%; 
+  position: relative;
+}
+
+
+
 /* presentation -> login */
 
 .aplication-landing--hero--login-container {
   position: absolute;
   border-radius: 5%;
-  margin-left: 1000px;
-  margin-top: 53%;
   margin-left: 40%;
+  margin-top: -52%;
+  margin-left: 64%;
   padding-left: 50px;
   width: 400px;
   height: 60%;
@@ -127,8 +137,8 @@
   font-weight: 700;
   text-align: center;
   font-size: 3vh;
-  margin-right:-90px ;
-  margin-top: 90%;
+  margin-left:90px ;
+  margin-top: -40%;
 }
 
 .testament-owner {
@@ -171,3 +181,26 @@
   margin: 0 auto;
   text-align: center;
 }
+
+
+
+.login--forgot_password a {
+  color: transparent;
+  color: aliceblue;
+}
+
+.login--forgot_password a:hover {
+  color:#9fd3c7;
+}
+
+.login--register_account a {
+  color: transparent;
+  color: aliceblue;
+}
+
+.login--register_account a:hover{
+  color:#9fd3c7;
+}
+
+
+
