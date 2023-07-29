@@ -17,9 +17,10 @@
     />
     <link
       rel="stylesheet"
-      href="../../../css/styleAplication/adminpages/adminInviteMembers.css"
+      href="../../../css/styleAplication/adminpages/adminInitialInviteMembers.css"
     />
-    <title>Cambiar Contraseña</title>
+    <title>Register invite members</title>
+
   </head>
 
   <body>
@@ -53,9 +54,9 @@
         >
           <!--Nombre Colaborador-->
           <div class="formulary__group" id="collaborator_name">
-            <label class="formulary__label formulary__label__colaborator-name"
-              >Nombre del Colaborador</label
-            >
+
+            <label class="formulary__label">Nombre del Colaborador</label>
+
             <div class="formulary__input-group">
               <input
                 type="text"
@@ -108,11 +109,15 @@
           </div>
 
           <!--Funcion del colaborador -->
-          <div id="function_collaborator">
-            <label class="formulary__label formulary__label-collaborator"
+
+          <div class="formulary__group" id="function_collaborator">
+            <label class="formulary__label-collaborator"
               >Funcion del Colaborador</label
             >
-            <div class="select__function--container select">
+            <div
+              class="formulary__input-group-collaborator select__function--container select"
+            >
+
               <select
                 id="func_collaborator"
                 name="func_collaborator"
@@ -129,11 +134,26 @@
             </p>
           </div>
 
+          <!-- Adicionar otro nivel -->
+          <div class="formulary__group formulary__group-btn-send-collaborator">
+            <p
+              class="formulary__active-message"
+              id="add_another-collaborator"
+            ></p>
+            <input
+              class="button--white"
+              type="submit"
+              value="Invitar otro Colaborador"
+              a
+            />
+          </div>
+
           <div class="button-container button-container__invite">
-            <button class="button--green">Enviar</button>
+            <button class="button--green">Continuar</button>
             <span class="button-separator"></span>
             <button
-              class="button--white"
+              class="button--green"
+
               type="button"
               onclick="document.location.href = ('../aplicationLanding/welcome.html')"
             >

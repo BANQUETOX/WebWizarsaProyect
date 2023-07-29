@@ -2,24 +2,27 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:ital,wght@0,700;1,600&display=swap"
+
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../../../css/normalize.css" />
     <link
       rel="stylesheet"
-      href="../../../css/styleAplication/generalStyles.css"
+
+      href="../../../css/styleAplication/adminpages/adminInviteMembers.css"
     />
     <link
       rel="stylesheet"
-      href="../../../css/styleAplication/adminpages/adminInviteMembers.css"
+      href="../../../css/styleAplication/generalStyles.css"
     />
-    <title>Cambiar Contraseña</title>
+    <script src="../../../js/jsAplication/main.js" defer></script>
+    <title>invite members</title>
+
   </head>
   <body>
     <header class="aplication-header">
@@ -72,9 +75,10 @@
         >
           <!--Nombre Colaborador-->
           <div class="formulary__group" id="collaborator_name">
-            <label class="formulary__label formulary__label__colaborator-name"
-              >Nombre del Colaborador</label
-            >
+
+            <label class="formulary__label">Nombre del Colaborador</label>
+
+
             <div class="formulary__input-group">
               <input
                 type="text"
@@ -127,15 +131,19 @@
           </div>
 
           <!--Funcion del colaborador -->
-          <div id="function_collaborator">
-            <label class="formulary__label formulary__label-collaborator"
+
+          <div class="formulary__group" id="function_collaborator">
+            <label class="formulary__label-collaborator"
               >Funcion del Colaborador</label
             >
-            <div class="select__function--container select">
+            <div
+              class="formulary__input-group-collaborator select select__function--container"
+            >
               <select
                 id="func_collaborator"
                 name="func_collaborator"
-                class="select__element"
+                class="select__element select__education"
+
               >
                 <option value="empty"></option>
                 <option value="bachillerato">Manager</option>
@@ -148,11 +156,27 @@
             </p>
           </div>
 
+
+          <!-- Adicionar otro nivel -->
+          <div class="formulary__group formulary__group-btn-send-collaborator">
+            <p
+              class="formulary__active-message"
+              id="add_another-collaborator"
+            ></p>
+            <input
+              class="button--white"
+              type="submit"
+              value="Invitar otro Colaborador"
+              a
+            />
+          </div>
+
           <div class="button-container button-container__invite">
-            <button class="button--green">Enviar</button>
+            <button class="button--green">Continuar</button>
             <span class="button-separator"></span>
             <button
-              class="button--white"
+              class="button--green"
+
               type="button"
               onclick="document.location.href = ('../aplicationLanding/welcome.html')"
             >
