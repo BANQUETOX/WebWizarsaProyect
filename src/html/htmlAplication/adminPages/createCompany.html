@@ -17,7 +17,7 @@
     />
     <link
       rel="stylesheet"
-      href="../../../css/styleAplication/adminpages/createCompany.css"
+      href="../../../css/styleAplication/adminpages/adminCompanyProfile.css"
     />
     <title>Crear empresa</title>
   </head>
@@ -39,126 +39,127 @@
       <div class="header-fixed-placeholder"></div>
     </div>
 
-    <div class="create-company">
-      <div class="form-container">
-        <form id="companyForm">
-          <div class="form-group">
-            <label for="logo">Logo de Empresa:</label>
-            <input type="file" id="logo" name="logo" accept="image/*" />
-            <img
-              id="logoPreview"
-              src="#"
-              alt="Logo Preview"
-              style="display: none"
-            />
-          </div>
+    <div class="form-container">
+      <form id="companyForm">
+        <div class="form-group form-group_factory">
+          <label for="logo">Logo de Empresa:</label>
+          <input type="file" id="logo" name="logo" accept="image/*" />
+          <img
+            id="logoPreview"
+            src="#"
+            alt="Logo Preview"
+            style="display: none"
+          />
+        </div>
+        <br />
+        <br />
+        <div class="form-group">
+          <label for="name">Nombre de Empresa:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            class="text-input"
+            required
+          />
+        </div>
 
-          <br />
-          <br />
+        <div class="form-group">
+          <label for="id">Cedula Juridica:</label>
+          <input type="text" id="id" name="id" class="text-input" required />
+        </div>
 
-          <div class="form-group">
-            <label for="name">Nombre de Empresa:</label>
-            <input
-              class="text-input"
-              type="text"
-              id="name"
-              name="name"
-              required
-            />
-          </div>
+        <div class="form-group">
+          <label for="phone">Telefono:</label>
+          <input type="text" id="phone" name="phone" class="text-input" />
+        </div>
 
-          <div class="form-group">
-            <label for="id">Cedula Juridica:</label>
-            <input class="text-input" type="text" id="id" name="id" required />
-          </div>
+        <div class="form-group">
+          <label for="sns">Social Media:</label>
+          <input type="text" id="sns" name="sns" class="text-input" />
+        </div>
 
-          <div class="form-group">
-            <label for="phone">Telefono:</label>
-            <input class="text-input" type="text" id="phone" name="phone" />
-          </div>
+        <div class="form-group">
+          <label for="selectRegion">Direccion:</label>
+          <table class="company-form--table">
+            <td>
+              <div class="select">
+                <select
+                  class="select__element"
+                  name="selectProvince"
+                  id="selectProvince"
+                >
+                  <option value="" disabled selected hidden>
+                    Provincia
+                  </option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+              </div>
+            </td>
+            <td>
+              <div class="select">
+                <select
+                  class="select__element"
+                  name="selectCanton"
+                  id="selectCanton"
+                >
+                  <option value="" disabled selected hidden>
+                    Canton
+                  </option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+              </div>
+            </td>
 
-          <div class="form-group">
-            <label for="sns">Social Media:</label>
-            <input class="text-input" type="text" id="sns" name="sns" />
-          </div>
+            <td>
+              <div class="select">
+                <select
+                  class="select__element"
+                  name="selectDistrict"
+                  id="selectDistrict"
+                >
+                  <option value="" disabled selected hidden>
+                   Distrito
+                  </option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+              </div>
+            </td>
+          </table>
+        </div>
 
-          <div class="form-group">
-            <label for="selectRegion">Direccion:</label>
-            <table class="company-form--table">
-              <td>
-                <div class="select">
-                  <select
-                    class="select__element"
-                    name="selectProvince"
-                    id="selectProvince"
-                  >
-                    <option value="" disabled selected hidden>
-                      Seleccione la Provincia
-                    </option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                  </select>
-                </div>
-              </td>
-              <td>
-                <div class="select">
-                  <select
-                    class="select__element"
-                    name="selectCanton"
-                    id="selectCanton"
-                  >
-                    <option value="" disabled selected hidden>
-                      Seleccione el Canton
-                    </option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                  </select>
-                </div>
-              </td>
-
-              <td>
-                <div class="select">
-                  <select
-                    class="select__element"
-                    name="selectDistrict"
-                    id="selectDistrict"
-                  >
-                    <option value="" disabled selected hidden>
-                      Seleccione el Distrito
-                    </option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                  </select>
-                </div>
-              </td>
-            </table>
-          </div>
-
-          <div class="form-group">
-            <label for="direction">Direccion Detallada:</label>
-            <textarea id="direction" name="direction"></textarea>
-          </div>
-
-          <div class="form-group">
-            <input
-              class="button--green"
-              type="submit"
-              value="Agregar"
-              class="btn-register-business"
-            />
-            <input
-              class="button--green"
-              type="submit"
-              value="Cancelar"
-              class="btn-register-business"
-            />
-          </div>
-        </form>
-      </div>
+        <div class="form-group">
+          <label for="direction">Direccion Detallada:</label>
+          <textarea
+            id="direction"
+            name="direction"
+            class="text-input"
+          ></textarea>
+        </div>
+       <div class="button-container"
+            <div class="form-group">
+              <input
+                type="submit"
+                value="Editar"
+                class=" button--white button--white_edit"
+              />
+              <input
+                type="submit"
+                value="Guardar"
+                class="button--green "
+              />
+            </div>
+        </div>
+       </div>
+      </form>
     </div>
+
     <footer class="page-footer">
       <div class="message1">
         <b>SNE, ©2023</b>

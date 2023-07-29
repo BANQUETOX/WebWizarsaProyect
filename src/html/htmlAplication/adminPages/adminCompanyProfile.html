@@ -17,8 +17,10 @@
       rel="stylesheet"
       href="../../../css/styleAplication/adminpages/adminCompanyProfile.css"
     />
+
     <script src="../../../js/jsAplication/main.js" defer></script>
     <title>Company profile</title>
+
   </head>
   <body>
     <header class="aplication-header">
@@ -58,14 +60,15 @@
 
     <div class="form-container">
       <form id="companyForm">
-        <div class="form-group">
+        <div class="form-group form-group_factory">
           <label for="logo">Logo de Empresa:</label>
-          <input type="file" id="logo" name="logo" accept="image/*" />
+          <input class="company-input" type="file" id="logo" name="logo" accept="image/*" required disabled/>
           <img
             id="logoPreview"
             src="#"
             alt="Logo Preview"
             style="display: none"
+
           />
         </div>
         <br />
@@ -76,24 +79,25 @@
             type="text"
             id="name"
             name="name"
-            class="text-input"
+            class="text-input company-input"
             required
+            disabled
           />
         </div>
 
         <div class="form-group">
           <label for="id">Cedula Juridica:</label>
-          <input type="text" id="id" name="id" class="text-input" required />
+          <input type="text" id="id" name="id" class="text-input company-input" required disabled />
         </div>
 
         <div class="form-group">
           <label for="phone">Telefono:</label>
-          <input type="text" id="phone" name="phone" class="text-input" />
+          <input type="text" id="phone" name="phone" class="text-input company-input" required disabled />
         </div>
 
         <div class="form-group">
           <label for="sns">Social Media:</label>
-          <input type="text" id="sns" name="sns" class="text-input" />
+          <input type="text" id="sns" name="sns" class="text-input company-input" required disabled />
         </div>
 
         <div class="form-group">
@@ -102,12 +106,14 @@
             <td>
               <div class="select">
                 <select
-                  class="select__element"
+                  class="select__element company-input"
                   name="selectProvince"
                   id="selectProvince"
+                  required
+                  disabled
                 >
                   <option value="" disabled selected hidden>
-                    Seleccione la Provincia
+                    Provincia
                   </option>
                   <option value="1">1</option>
                   <option value="2">2</option>
@@ -118,12 +124,14 @@
             <td>
               <div class="select">
                 <select
-                  class="select__element"
+                  class="select__element company-input"
                   name="selectCanton"
                   id="selectCanton"
+                  required
+                  disabled
                 >
                   <option value="" disabled selected hidden>
-                    Seleccione el Canton
+                    Canton
                   </option>
                   <option value="1">1</option>
                   <option value="2">2</option>
@@ -135,12 +143,14 @@
             <td>
               <div class="select">
                 <select
-                  class="select__element"
+                  class="select__element company-input"
                   name="selectDistrict"
                   id="selectDistrict"
+                  required
+                  disabled
                 >
                   <option value="" disabled selected hidden>
-                    Seleccione el Distrito
+                   Distrito
                   </option>
                   <option value="1">1</option>
                   <option value="2">2</option>
@@ -156,22 +166,30 @@
           <textarea
             id="direction"
             name="direction"
-            class="text-input"
+            class="text-input company-input "
+            required
+            disabled
           ></textarea>
         </div>
-
-        <div class="form-group">
-          <input
-            type="submit"
-            value="Editar"
-            class="btn2-register-business button--white"
-          />
-          <input
-            type="submit"
-            value="Guardar"
-            class="btn-register-business button--white"
-          />
+        <div><p id="saved-changes">Se han guardado los cambios correctamente</p></div>
+       <div class="button-container"
+            <div class="form-group">
+              <input
+              id="edit-button"
+                type="button"
+                value="Editar"
+                class=" button--white button--white_edit"
+              />
+              <input
+              id="save-button"
+                type="submit"
+                value="Guardar"
+                class="button--green "
+                disabled
+              />
+            </div>
         </div>
+       </div>
       </form>
     </div>
 

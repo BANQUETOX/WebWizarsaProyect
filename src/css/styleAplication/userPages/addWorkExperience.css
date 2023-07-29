@@ -1,8 +1,7 @@
 .addWorkExperience {
-  margin-left: 30%;
-  background-color: lightgray;
+  margin: 0 auto;
   padding: 20px;
-  width: 40vw;
+  width: 550px;
 }
 .addWorkExperience--header {
   font-family: "Poppins", sans-serif;
@@ -12,7 +11,7 @@
   padding: 0;
 }
 .addWorkExperience--inputs-list > li {
-  margin-left: 20%;
+  margin-left: 100px;
 }
 
 /* inputs */
@@ -41,12 +40,28 @@
   transform: scale(1.6);
 }
 
+#since {
+  width: 198px;
+}
+
+#until {
+  width: 198px;
+}
+
+#save {
+  width: 123.84px;
+  margin: 0 auto;
+}
+
 /* upload Foto  */
+#avatar-form {
+  margin-left: unset;
+}
+
 .avatar-upload {
   position: relative;
   max-width: 205px;
   margin: 50px auto;
-  margin-left: 150px;
 
   .avatar-preview {
     width: 192px;

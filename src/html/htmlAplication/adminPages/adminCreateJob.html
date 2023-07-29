@@ -60,7 +60,7 @@
       <h1 class="title">Formulario Creación de empleo</h1>
 
       <div class="main">
-        <label for="name">Ingrese el nombre del trabajo:</label>
+        <label  for="name">Ingrese el nombre del trabajo:</label>
         <input class="text-input" type="text" id="work_name" name="work_name" />
         <label for="none">Coloque el código del nuevo puesto de trabajo:</label>
         <input class="text-input" type="text" id="work_code" name="work_code" />
@@ -85,10 +85,14 @@
         ></textarea>
 
         <label for="none">Requisitos básicos:</label>
-        <input class="text-input" type="text" />
-        <button class="button1 button--white" onclick="agregarInput()">
-          +
-        </button>
+        <textarea
+          class="text-input"
+          name="work_description"
+          id="work_description"
+          cols="30"
+          rows="5"
+        ></textarea>
+
       </div>
       <input class="button--green" type="submit" value="Enviar" />
     </div>
