@@ -2,27 +2,25 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:ital,wght@0,700;1,600&display=swap"
-
+      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../../../css/normalize.css" />
     <link
       rel="stylesheet"
-
-      href="../../../css/styleAplication/adminpages/adminInviteMembers.css"
+      href="../../../css/styleAplication/generalStyles.css"
     />
     <link
       rel="stylesheet"
-      href="../../../css/styleAplication/generalStyles.css"
+      href="../../../css/styleAplication/adminpages/adminInviteMembers.css"
     />
-    <script src="../../../js/jsAplication/main.js" defer></script>
+    <script src="../../../js/jsAplication/main.js"></script>
     <title>invite members</title>
-
   </head>
   <body>
     <header class="aplication-header">
@@ -75,9 +73,7 @@
         >
           <!--Nombre Colaborador-->
           <div class="formulary__group" id="collaborator_name">
-
             <label class="formulary__label">Nombre del Colaborador</label>
-
 
             <div class="formulary__input-group">
               <input
@@ -137,13 +133,12 @@
               >Funcion del Colaborador</label
             >
             <div
-              class="formulary__input-group-collaborator select select__function--container"
+              class="formulary__input-group-collaborator select__function--container select"
             >
               <select
                 id="func_collaborator"
                 name="func_collaborator"
-                class="select__element select__education"
-
+                class="select__element"
               >
                 <option value="empty"></option>
                 <option value="bachillerato">Manager</option>
@@ -155,7 +150,6 @@
               Debes de seleccionar la funcion que va a tener el colaborador
             </p>
           </div>
-
 
           <!-- Adicionar otro nivel -->
           <div class="formulary__group formulary__group-btn-send-collaborator">
@@ -176,9 +170,8 @@
             <span class="button-separator"></span>
             <button
               class="button--green"
-
               type="button"
-              onclick="document.location.href = ('../aplicationLanding/welcome.html')"
+              onclick="document.location.href = ('./adminAplicationJobs.html')"
             >
               Saltar
             </button>

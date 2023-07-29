@@ -17,6 +17,7 @@
       rel="stylesheet"
       href="../../../css/styleAplication/adminpages/adminCreateJob.css"
     />
+    <script src="../../../js/jsAplication/createJob.js" defer></script>
     <script src="../../../js/jsAplication/main.js" defer></script>
     <title>Create Job</title>
   </head>
@@ -59,19 +60,42 @@
     <div class="create-job">
       <h1 class="title">Formulario Creación de empleo</h1>
 
-      <div class="main">
-        <label  for="name">Ingrese el nombre del trabajo:</label>
-        <input class="text-input" type="text" id="work_name" name="work_name" />
+      <form class="main" id="job-creation-form">
+        <label for="name">Ingrese el nombre del trabajo:</label>
+        <input
+          class="text-input"
+          type="text"
+          id="work_name"
+          name="work_name"
+          required
+        />
         <label for="none">Coloque el código del nuevo puesto de trabajo:</label>
-        <input class="text-input" type="text" id="work_code" name="work_code" />
+        <input
+          class="text-input"
+          type="text"
+          id="work_code"
+          name="work_code"
+          required
+        />
         <div class="select">
-          <select class="select__element">
-            <option value="option_provincia">Seleccione la pronvincia</option>
+          <select class="select__element" required>
+            <option value="" disabled selected hidden>
+              Seleccione la pronvincia
+            </option>
           </select>
         </div>
         <div class="select">
-          <select class="select_opt_1 select__element">
-            <option value="option_canton">Seleccione el cantón</option>
+          <select class="select_opt_1 select__element" required>
+            <option value="" disabled selected hidden>
+              Seleccione el cantón
+            </option>
+          </select>
+        </div>
+        <div class="select">
+          <select class="select_opt_1 select__element" required>
+            <option value="" disabled selected hidden>
+              Seleccione el distrito
+            </option>
           </select>
         </div>
 
@@ -82,6 +106,7 @@
           id="work_description"
           cols="30"
           rows="5"
+          required
         ></textarea>
 
         <label for="none">Requisitos básicos:</label>
@@ -91,10 +116,20 @@
           id="work_description"
           cols="30"
           rows="5"
+          required
         ></textarea>
-
-      </div>
-      <input class="button--green" type="submit" value="Enviar" />
+        <div>
+          <p id="saved-changes">
+            ** Se ha creado el trabajo de forma exitosa **
+          </p>
+        </div>
+        <input
+          id="submit-job"
+          class="button--green"
+          type="submit"
+          value="Enviar"
+        />
+      </form>
     </div>
 
     <footer class="page-footer">

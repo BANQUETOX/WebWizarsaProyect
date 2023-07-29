@@ -7,10 +7,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:ital,wght@0,700;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../../css/normalize.css">
-    <link rel="stylesheet" href="../../../css/styleAplication/adminpages/adminProfile.css">
     <link rel="stylesheet" href="../../../css/styleAplication/generalStyles.css">
-    <script src="../../../js/jsAplication/main.js" defer></script>
+    <link rel="stylesheet" href="../../../css/styleAplication/adminpages/adminProfile.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"defer></script>
     <script src="https://kit.fontawesome.com/73f851add2.js" crossorigin="anonymous" defer></script>
+    <script src="../../../js/jsAplication/main.js" defer></script>
+    <script src="../../../js/jsAplication/adminProfile.js" defer></script>
 
     <title>Mi perfil</title>
 
@@ -44,13 +46,14 @@
     <section class="sct-form">
         <div class="user-profile">
             <div>
+                
                 <div class="avatar-upload">
                     <div class="avatar-edit">
-                        <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
+                        <input class="profile-input" type='file' id="imageUpload" accept=".png" />
                         <label for="imageUpload"></label>
                     </div>
-                    <div class="avatar-preview">
-                        <div id="imagePreview" style="background-image: url('http://i.pravatar.cc/500?img=7');">
+                    <div class="avatar-preview" id="avatar-preview">
+                        <div id="imagePreview">
                         </div>
                     </div>
                 </div>
@@ -62,14 +65,14 @@
                     <div class="colums">
                         <div class="form-control">
                             <label>Nombre Completo:</label>
-                            <input class="text-input" type="text" placeholder="Juan Reyes" id="fname">
+                            <input class="text-input profile-input" type="text" placeholder="Juan Reyes" id="fname">
                             <i class="fas fa-check-circle"></i>
                             <i class="fas fa-exclamation-circle"></i>
                             <small>El campo no puede estar en blanco</small>
                         </div>
                         <div class="form-control">
                             <label>Adjuntar CV(PDF):</label>
-                            <input type="file" placeholder="Juan Reyes" id="cv" accept="application/pdf">
+                            <input class="profile-input" type="file" placeholder="Juan Reyes" id="cv" accept="application/pdf">
                             <i class="fas fa-check-circle"></i>
                             <i class="fas fa-exclamation-circle"></i>
                             <small>El campo no puede estar en blanco</small>
@@ -78,14 +81,14 @@
                     <div class="colums">
                         <div class="form-control">
                             <label>Fecha de nacimiento:</label>
-                            <input class="text-input" type="date" placeholder="01/12/1990" id="birth">
+                            <input class="text-input profile-input" type="date" placeholder="01/12/1990" id="birth">
                             <i class="fas fa-check-circle"></i>
                             <i class="fas fa-exclamation-circle"></i>
                             <small>El campo no puede estar en blanco</small>
                         </div>
                         <div class="form-control">
                             <label>Número teléfonico:</label>
-                            <input class="text-input" type="tel" placeholder="1234 5678" id="tel" accept="application/pdf">
+                            <input class="text-input profile-input" type="tel" placeholder="1234 5678" id="tel" accept="application/pdf">
                             <i class="fas fa-check-circle"></i>
                             <i class="fas fa-exclamation-circle"></i>
                             <small>El campo no puede estar en blanco</small>
@@ -94,27 +97,30 @@
                     <div class="colums">
                         <div class="form-control">
                             <label>Cédula, DIMEX, Pasaporte:</label>
-                            <input class="text-input" type="number" placeholder="12345678" id="idnum">
+                            <input class="text-input profile-input" type="number" placeholder="12345678" id="idnum">
                             <i class="fas fa-check-circle"></i>
                             <i class="fas fa-exclamation-circle"></i>
                             <small>El campo no puede estar en blanco</small>
                         </div>
                         <div class="form-control">
                             <label>Género</label>
-                            <select name="genre" id="genre">
-                                        <option value="empty"></option>
-                                        <option value="man">Masculino</option>
-                                        <option value="woman">Femenino</option>
-                                        <option value="nogender">Prefiero no especificar</option>
-                                    </select>
-                            <i class="fas fa-check-circle"></i>
-                            <i class="fas fa-exclamation-circle"></i>
-                            <small>El campo no puede estar en blanco</small>
+                            <div class="select">
+                                <select name="genre" id="genre" class="select__element profile-input">
+                                            <option value="empty"></option>
+                                            <option value="man">Masculino</option>
+                                            <option value="woman">Femenino</option>
+                                            <option value="nogender">Prefiero no especificar</option>
+                                        </select>
+                                        <i class="fas fa-check-circle"></i>
+                                        <i class="fas fa-exclamation-circle"></i>
+                                        <small>El campo no puede estar en blanco</small>
+
+                            </div>
                         </div>
                     </div>
                     <div class="form-control">
                         <label>Dirección de casa por distrito, cantón y provincia:</label>
-                        <input class="text-input" type="text" placeholder="Ciudadela 15 de septiembre" id="address">
+                        <input class="text-input profile-input" type="text" placeholder="Ciudadela 15 de septiembre" id="address">
                         <i class="fas fa-check-circle"></i>
                         <i class="fas fa-exclamation-circle"></i>
                         <small>El campo no puede estar en blanco</small>
@@ -122,51 +128,51 @@
                     <div class="row">
                         <div class="form-control">
                             <label>Experiencia laboral:</label>
-                            <input class="text-input" type="text" placeholder="Amazon" id="exp">
+                            <input class="text-input profile-input" type="text" placeholder="Amazon" id="exp">
                             <i class="fas fa-check-circle"></i>
                             <i class="fas fa-exclamation-circle"></i>
                             <small>El campo no puede estar en blanco</small>
                         </div>
                         <div class="form-control">
                             <label>Desde:</label>
-                            <input class="text-input" type="date" placeholder="01/12/1990" id="from">
+                            <input class="text-input profile-input" type="date" placeholder="01/12/1990" id="from">
                             <i class="fas fa-check-circle"></i>
                             <i class="fas fa-exclamation-circle"></i>
                             <small>El campo no puede estar en blanco</small>
                         </div>
                         <div class="form-control">
                             <label>Hasta:</label>
-                            <input class="text-input" type="date" placeholder="01/12/1990" id="to">
+                            <input class="text-input profile-input" type="date" placeholder="01/12/1990" id="to">
                             <i class="fas fa-check-circle"></i>
                             <i class="fas fa-exclamation-circle"></i>
                             <small>El campo no puede estar en blanco</small>
                         </div>
                     </div>
-                    <button class="button--white">+</button>
+                    <button class="button--white profile-input">+</button>
                     <div class="row">
                         <div class="form-control">
                             <label>Educación:</label>
-                            <input class="text-input" type="text" placeholder="Cenfotec" id="edc">
+                            <input class="text-input profile-input" type="text" placeholder="Cenfotec" id="edc">
                             <i class="fas fa-check-circle"></i>
                             <i class="fas fa-exclamation-circle"></i>
                             <small>El campo no puede estar en blanco</small>
                         </div>
                         <div class="form-control">
                             <label>Desde:</label>
-                            <input class="text-input" type="date" placeholder="01/12/1990" id="from">
+                            <input class="text-input profile-input" type="date" placeholder="01/12/1990" id="from">
                             <i class="fas fa-check-circle"></i>
                             <i class="fas fa-exclamation-circle"></i>
                             <small>El campo no puede estar en blanco</small>
                         </div>
                         <div class="form-control">
                             <label>Hasta:</label>
-                            <input class="text-input" type="date" placeholder="01/12/1990" id="to">
+                            <input class="text-input profile-input" type="date" placeholder="01/12/1990" id="to">
                             <i class="fas fa-check-circle"></i>
                             <i class="fas fa-exclamation-circle"></i>
                             <small>El campo no puede estar en blanco</small>
                         </div>
                     </div>
-                    <button class="button--white">+</button>
+                    <button class="button--white profile-input">+</button>
                 </form>
             </div>
             <div class="btn-cont">

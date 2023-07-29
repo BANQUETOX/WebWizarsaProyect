@@ -13,21 +13,6 @@ let genericUser = {
 };
 workUntil.max = new Date().toISOString().slice(0, 10);
 
-function readURL(input) {
-  if (input.files && input.files[0]) {
-    let reader = new FileReader();
-    reader.onload = function (e) {
-      $("#imagePreview").css(
-        "background-image",
-        "url(" + e.target.result + ")"
-      );
-      $("#imagePreview").hide();
-      $("#imagePreview").fadeIn(650);
-    };
-    reader.readAsDataURL(input.files[0]);
-  }
-}
-
 function verifyInputs(elementList) {
   for (let i = 1; i < elementList.length; i++) {
     let element = elementList[i];
@@ -109,20 +94,6 @@ noWorkCheckbox.addEventListener("change", function () {
     disableInputs(inputsCollection);
   } else {
     enableInputs(inputsCollection);
-  }
-});
-
-$("#imageUpload").change(function () {
-  if (this.files[0].size > 20000000) {
-    document
-      .getElementById("avatar-preview")
-      .classList.add("avatar-preview__error");
-    this.value = "";
-  } else {
-    document
-      .getElementById("avatar-preview")
-      .classList.remove("avatar-preview__error");
-    readURL(this);
   }
 });
 
