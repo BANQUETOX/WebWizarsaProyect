@@ -2,12 +2,10 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:ital,wght@0,700;1,600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../../../css/normalize.css" />
@@ -19,7 +17,8 @@
       rel="stylesheet"
       href="../../../css/styleAplication/adminpages/adminCompanyProfile.css"
     />
-    <title>Crear empresa</title>
+    <title>Create company</title>
+
   </head>
 
   <body>
@@ -43,12 +42,13 @@
       <form id="companyForm">
         <div class="form-group form-group_factory">
           <label for="logo">Logo de Empresa:</label>
-          <input type="file" id="logo" name="logo" accept="image/*" />
+          <input class="company-input" type="file" id="logo" name="logo" accept="image/*" required />
           <img
             id="logoPreview"
             src="#"
             alt="Logo Preview"
             style="display: none"
+
           />
         </div>
         <br />
@@ -59,24 +59,25 @@
             type="text"
             id="name"
             name="name"
-            class="text-input"
+            class="text-input company-input"
             required
+            
           />
         </div>
 
         <div class="form-group">
           <label for="id">Cedula Juridica:</label>
-          <input type="text" id="id" name="id" class="text-input" required />
+          <input type="text" id="id" name="id" class="text-input company-input" required  />
         </div>
 
         <div class="form-group">
           <label for="phone">Telefono:</label>
-          <input type="text" id="phone" name="phone" class="text-input" />
+          <input type="text" id="phone" name="phone" class="text-input company-input" required  />
         </div>
 
         <div class="form-group">
           <label for="sns">Social Media:</label>
-          <input type="text" id="sns" name="sns" class="text-input" />
+          <input type="text" id="sns" name="sns" class="text-input company-input" required  />
         </div>
 
         <div class="form-group">
@@ -85,11 +86,13 @@
             <td>
               <div class="select">
                 <select
-                  class="select__element"
+                  class="select__element company-input"
                   name="selectProvince"
                   id="selectProvince"
+                  required
+                  
                 >
-                  <option value="" disabled selected hidden>
+                  <option value=""  selected hidden>
                     Provincia
                   </option>
                   <option value="1">1</option>
@@ -101,11 +104,13 @@
             <td>
               <div class="select">
                 <select
-                  class="select__element"
+                  class="select__element company-input"
                   name="selectCanton"
                   id="selectCanton"
+                  required
+                  
                 >
-                  <option value="" disabled selected hidden>
+                  <option value=""  selected hidden>
                     Canton
                   </option>
                   <option value="1">1</option>
@@ -118,11 +123,13 @@
             <td>
               <div class="select">
                 <select
-                  class="select__element"
+                  class="select__element company-input"
                   name="selectDistrict"
                   id="selectDistrict"
+                  required
+                  
                 >
-                  <option value="" disabled selected hidden>
+                  <option value=""  selected hidden>
                    Distrito
                   </option>
                   <option value="1">1</option>
@@ -139,26 +146,21 @@
           <textarea
             id="direction"
             name="direction"
-            class="text-input"
+            class="text-input company-input "
+            required
+            
           ></textarea>
         </div>
        <div class="button-container"
             <div class="form-group">
               <input
-                type="submit"
-                value="Editar"
-                class=" button--white button--white_edit"
-              />
-              <input
+              id="save-button"
                 type="submit"
                 value="Guardar"
                 class="button--green "
               />
             </div>
         </div>
-       </div>
-      </form>
-    </div>
 
     <footer class="page-footer">
       <div class="message1">
@@ -196,13 +198,10 @@
       </div>
     </footer>
   </body>
-
-  <script>
-    document
-      .getElementById("invite-formulary")
-      .addEventListener("submit", (e) => {
-        e.preventDefault();
-        document.location.href = "../aplicationLanding/welcome.html";
-      });
-  </script>
 </html>
+<script>
+  document.getElementById('companyForm').addEventListener("submit",(e)=>{
+    document.location.href = ('./adminInitialInviteMembers.html')
+    e.preventDefault()
+  })
+</script>

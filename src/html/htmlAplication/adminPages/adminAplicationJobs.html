@@ -19,8 +19,11 @@
     />
 
     <script src="../../../js/jsAplication/main.js" defer></script>
+    <script
+      src="../../../js/jsAplication/showRangeInputvalue.js"
+      defer
+    ></script>
     <title>Aplication Jobs</title>
-
   </head>
   <body>
     <header class="aplication-header">
@@ -49,12 +52,14 @@
           </ul>
         </nav>
       </div>
-      <div class="bell">
-        <a href="#"
-          ><img
-            src="../../../images/imagesAplication/campana.png"
-            alt="Icono de campana"
-        /></a>
+      <div class="bell dropdown--notifications">
+        <img
+          src="../../../images/imagesAplication/campana.png"
+          alt="Icono de campana"
+        />
+        <div class="dropdown-content--notifications">
+          <p class="notification">**Ha recibido una solicitud de trabajo</p>
+        </div>
       </div>
     </header>
 

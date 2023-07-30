@@ -68,3 +68,11 @@
 .formulary__label__colaborator-name {
   margin-top: 0;
 }
+#saved-changes {
+  display: none;
+}
+
+.select {
+  width: 21.8%;
+  margin-left: -1px;
+}

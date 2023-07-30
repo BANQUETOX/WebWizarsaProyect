@@ -19,6 +19,9 @@
       rel="stylesheet"
       href="../../../css/styleAplication/adminpages/adminInviteMembers.css"
     />
+    <script src="../../../js/jsAplication/main.js" defer></script>
+    <script src="../../../js/jsAplication/inviteMembers.js" defer></script>
+
     <title>Register invite members</title>
   </head>
 
@@ -53,8 +56,9 @@
         >
           <!--Nombre Colaborador-->
           <div class="formulary__group" id="collaborator_name">
-            <label class="formulary__label">Nombre del Colaborador</label>
-
+            <label class="formulary__label formulary__label__colaborator-name"
+              >Nombre del Colaborador</label
+            >
             <div class="formulary__input-group">
               <input
                 type="text"
@@ -107,20 +111,18 @@
           </div>
 
           <!--Funcion del colaborador -->
-
-          <div class="formulary__group" id="function_collaborator">
-            <label class="formulary__label-collaborator"
+          <div id="function_collaborator">
+            <label class="formulary__label formulary__label-collaborator"
               >Funcion del Colaborador</label
             >
-            <div
-              class="formulary__input-group-collaborator select__function--container select"
-            >
+            <div class="select__function--container select">
               <select
                 id="func_collaborator"
                 name="func_collaborator"
                 class="select__element"
+                required
               >
-                <option value="empty"></option>
+                <option value=""></option>
                 <option value="bachillerato">Manager</option>
                 <option value="diplimado">Reclutador</option>
               </select>
@@ -130,28 +132,19 @@
               Debes de seleccionar la funcion que va a tener el colaborador
             </p>
           </div>
-
-          <!-- Adicionar otro nivel -->
-          <div class="formulary__group formulary__group-btn-send-collaborator">
-            <p
-              class="formulary__active-message"
-              id="add_another-collaborator"
-            ></p>
-            <input
-              class="button--white"
-              type="submit"
-              value="Invitar otro Colaborador"
-              a
-            />
+          <div>
+            <p id="saved-changes">
+              ** Se ha enviado la inivtacion de forma exitosa **
+            </p>
           </div>
 
           <div class="button-container button-container__invite">
-            <button class="button--green">Continuar</button>
+            <button class="button--green">Enviar</button>
             <span class="button-separator"></span>
             <button
-              class="button--green"
+              class="button--white"
               type="button"
-              onclick="document.location.href = ('../aplicationLanding/welcome.html')"
+              onclick="document.location.href = ('./adminAplicationJobs.html')"
             >
               Saltar
             </button>
@@ -167,7 +160,6 @@
           </div>
         </form>
       </div>
-    </div>
 
     <footer class="page-footer">
       <div class="message1">
@@ -205,13 +197,4 @@
       </div>
     </footer>
   </body>
-
-  <script>
-    document
-      .getElementById("invite-formulary")
-      .addEventListener("submit", (e) => {
-        e.preventDefault();
-        document.location.href = "../aplicationLanding/welcome.html";
-      });
-  </script>
 </html>

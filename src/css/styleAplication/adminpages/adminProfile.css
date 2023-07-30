@@ -2,12 +2,6 @@
   box-sizing: border-box;
 }
 
-.avatar-upload {
-  position: relative;
-  max-width: 205px;
-  margin: auto;
-}
-
 .avatar-upload .avatar-edit {
   position: absolute;
   right: 12px;
@@ -36,8 +30,8 @@
 .avatar-upload {
   position: relative;
   max-width: 205px;
-  margin: 50px auto;
-  margin-left: 40%;
+  margin-left: -23%;
+  /* margin-top: 20%; */
   .avatar-preview {
     width: 192px;
     height: 192px;
@@ -59,6 +53,10 @@
   }
 }
 
+.avatar-upload {
+  margin-top: 150px;
+}
+
 .avatar-upload-input[type="file"] {
   display: none;
 }
@@ -74,13 +72,6 @@
   width: 90%;
   background-color: #9fd3c7;
   margin-left: -46%;
-}
-
-.avatar-upload .avatar-edit {
-  position: absolute;
-  right: 12px;
-  z-index: 1;
-  top: 10px;
 }
 
 .avatar-upload .avatar-preview > div {
@@ -108,6 +99,7 @@
   cursor: pointer;
   font-weight: normal;
   transition: all 0.2s ease-in-out;
+  margin-left: -80px;
 }
 
 .avatar-upload .avatar-edit input + label:hover {
@@ -125,6 +117,7 @@
   right: 0;
   text-align: center;
   margin: auto;
+  margin-left: -123px;
 }
 
 .avatar-upload .avatar-preview {
@@ -150,8 +143,9 @@
   border-radius: 5px;
   background-color: #303841;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  width: 1100px;
   max-width: 100%;
+  margin-top: -150px;
+  margin-bottom: 200px;
 }
 
 .form-group .btn {
@@ -205,7 +199,7 @@
   justify-content: center;
   flex-direction: column;
   min-height: 100vh;
-  margin: 0;
+  margin-top: -100px;
 }
 
 .sct-form h2 {
@@ -339,26 +333,6 @@
   visibility: visible;
 }
 
-.form button {
-  font-family: "Montserrat", sans-serif;
-  display: inline-block;
-  color: #000;
-  text-align: center;
-  border: 1px solid black;
-  padding: 10px 11px;
-  font-size: 20px;
-  line-height: 1.5;
-  border-radius: 0.25rem;
-  background-color: #ececec;
-  cursor: pointer;
-  margin-left: 20%;
-}
-
-.form button:hover {
-  background-color: #9fd3c7;
-  color: #fff;
-}
-
 .btn-cont {
   display: flex;
   flex-direction: row;
@@ -373,4 +347,8 @@
 .session {
   display: flex;
   justify-content: center;
+}
+
+.add-button {
+  margin-left: 79px;
 }

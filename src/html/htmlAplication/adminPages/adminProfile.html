@@ -37,10 +37,15 @@
                 </ul>
             </nav>
         </div>
-        <div class="bell">
-            <a href="#"><img src="../../../images/imagesAplication/campana.png" alt="Icono de campana"></a>
-
-        </div>
+        <div class="bell dropdown--notifications">
+            <img
+              src="../../../images/imagesAplication/campana.png"
+              alt="Icono de campana"
+            />
+            <div class="dropdown-content--notifications">
+              <p class="notification">**Ha recibido una solicitud de trabajo</p>
+            </div>
+          </div>
     </header>
 
     <section class="sct-form">
@@ -50,7 +55,7 @@
                 <div class="avatar-upload">
                     <div class="avatar-edit">
                         <input class="profile-input" type='file' id="imageUpload" accept=".png" />
-                        <label for="imageUpload"></label>
+                        <label  for="imageUpload"></label>
                     </div>
                     <div class="avatar-preview" id="avatar-preview">
                         <div id="imagePreview">
@@ -148,7 +153,7 @@
                             <small>El campo no puede estar en blanco</small>
                         </div>
                     </div>
-                    <button class="button--white profile-input">+</button>
+                    <button class="button--white profile-input add-button">+</button>
                     <div class="row">
                         <div class="form-control">
                             <label>Educación:</label>
@@ -172,23 +177,20 @@
                             <small>El campo no puede estar en blanco</small>
                         </div>
                     </div>
-                    <button class="button--white profile-input">+</button>
+                    <button class="button--white profile-input add-button">+</button>
+                    <div class="btn-cont">
+                        <div>
+                            <button class="button--red">Editar perfil</button>
+                        </div>
+                        <div>
+                            <button class="button--green">Guardar cambios</button>
+                        </div>
+                    </div>
                 </form>
-            </div>
-            <div class="btn-cont">
-                <div>
-                    <button class="button--red">Editar perfil</button>
-                </div>
-                <div>
-                    <button class="button--green">Guardar cambios</button>
-                </div>
             </div>
             <div class="container-form">
                 <form class="form" id="form">
-                    <h2>
-                        Editar Contraseña
-                    </h2>
-                    <form class="form" id="form">
+                        <h2>Editar Contraseña</h2>
                         <div class="colums">
                             <div class="form-control">
                                 <label>Contraseña</label>
@@ -207,15 +209,15 @@
                                 <small>El campo no puede estar en blanco</small>
                             </div>
                         </div>
+                        <div class="btn-cont">
+                            <div>
+                                <button class="button--red"> Editar contraseña</button>
+                            </div>
+                            <div>
+                                <button class="button--green">Guardar contraseña</button>
+                            </div>
+                        </div>
                     </form>
-            </div>
-            <div class="btn-cont">
-                <div>
-                    <button class="button--red"> Editar contraseña</button>
-                </div>
-                <div>
-                    <button class="button--green">Guardar contraseña</button>
-                </div>
             </div>
             <div class="session">
                 <a href="../landingPage/aplicationLandingPage.html"><button class="button--red">Cerrar sesión</button></a>
