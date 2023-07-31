@@ -29,10 +29,6 @@
 }
 
 .container {
-    color: #ececec;
-    border-radius: 5px;
-    background-color: #303841;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     width: 700px;
     max-width: 100%;
 }
