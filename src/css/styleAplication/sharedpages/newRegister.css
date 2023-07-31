@@ -6,15 +6,30 @@
     min-height: 20vh;
 }
 
+a {
+  text-decoration: none;
+}
+
 .toptext {
     font-family: "Montserrat", sans-serif;
     text-align: center;
 }
 
+h2 {
+  padding-top: 30px;
+}
+
 .objectframe {
-    font-family: "Montserrat", sans-serif;
-    margin: 0 auto;
-    text-align: center;
+
+  font-family: "Montserrat", sans-serif;
+  margin: 0 auto;
+  text-align: center;
+  color: #ececec;
+  border-radius: 10px;
+  background-color: #303841;
+  height: 180px;
+  width: 400px;
+
 }
 
 .message h2 {
