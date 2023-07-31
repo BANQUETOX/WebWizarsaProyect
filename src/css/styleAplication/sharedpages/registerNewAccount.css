@@ -42,15 +42,20 @@
 }
 
 .form-control {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-bottom: 10px;
-    padding-bottom: 10px;
-    position: relative;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  position: relative;
+
+}
+
+.select {
+  width: unset;
 }
 
 .form-control label {
@@ -126,11 +131,13 @@
 }
 
 .form-control i.fa-eye {
-    color: #000;
-    visibility: visible;
-    position: absolute;
-    top: 50px;
-    margin-left: 35%;
+
+  color: #000;
+  visibility: visible;
+  position: absolute;
+  top: 50px;
+  margin-left: 93.5%;
+
 }
 
 .form-control small {
@@ -142,6 +149,15 @@
 }
 
 .form-control.error small {
+
+  color: #ff0000;
+  visibility: visible;
+}
+
+.confirmation {
+  display: flex;
+  justify-content: center;
+
     color: #ff0000;
     visibility: visible;
 }
@@ -171,4 +187,5 @@
     cursor: pointer;
     margin-left: 20%;
     text-decoration: none;
+
 }

@@ -306,7 +306,6 @@
   border-radius: 0.25em;
   border: 1px black solid;
   overflow: hidden;
-  margin-left: -10.5%;
 }
 .select::after {
   content: "\25BC";
