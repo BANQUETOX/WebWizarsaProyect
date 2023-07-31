@@ -3,13 +3,14 @@
   font-weight: 700;
   text-align: center;
   font-size: 3vh;
-  margin-top: 1%;
+  margin-top: 4%;
 }
 
 .add-education-container {
   width: 40vw; /* Ajusta el ancho según tus necesidades */
-  height: 100vh; /* Ajusta la altura según tus necesidades */
+  height: 80vh; /* Ajusta la altura según tus necesidades */
   padding: 20px;
+  padding-top: 0px;
   padding-bottom: 30px; /* Añade un relleno interno para los elementos internos */
   margin-left: auto;
   margin-right: auto;

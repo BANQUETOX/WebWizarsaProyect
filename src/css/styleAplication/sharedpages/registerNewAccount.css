@@ -39,13 +39,16 @@
 .form-control {
   font-family: "Montserrat", sans-serif;
   font-size: 20px;
-  align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin-bottom: 10px;
   padding-bottom: 10px;
   position: relative;
+}
+
+.select {
+  width: unset;
 }
 
 .form-control label {
@@ -96,7 +99,7 @@
   visibility: visible;
   position: absolute;
   top: 50px;
-  margin-left: 35%;
+  margin-left: 93.5%;
 }
 
 .form-control small {
@@ -110,4 +113,9 @@
 .form-control.error small {
   color: #ff0000;
   visibility: visible;
+}
+
+.confirmation {
+  display: flex;
+  justify-content: center;
 }
