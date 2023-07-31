@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:ital,wght@0,700;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../../css/normalize.css" />
+    <link
+      rel="stylesheet"
+      href="../../../css/styleAplication/generalStyles.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../../../css/styleAplication/adminpages/adminCreateJob.css"
+    />
+    <script src="../../../js/jsAplication/createJob.js" defer></script>
+    <script src="../../../js/jsAplication/main.js" defer></script>
+    <title>Create Job</title>
+  </head>
+  <body>
+    <header class="aplication-header">
+      <div class="profile_images">
+        <a href="./managerProfile.html">
+          <img
+            src="../../../images/imagesAplication/user.png"
+            alt="Icono de Usuario"
+          />
+        </a>
+        <a href="./managerCompanyProfile.html">
+          <img
+            src="../../../images/imagesAplication/work.png"
+            alt="Icono de Empresa"
+          />
+        </a>
+      </div>
+      <div>
+        <nav class="aplication-header--navbar">
+          <ul>
+            <li><a href="./managerAplicationJobs.html">Trabajos</a></li>
+            <li><a href="./managerAplicationStatus.html">Aplicaciones</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="bell dropdown--notifications">
+        <img
+          src="../../../images/imagesAplication/campana.png"
+          alt="Icono de campana"
+        />
+        <div class="dropdown-content--notifications">
+          <p class="notification">**Ha recibido una solicitud de trabajo</p>
+        </div>
+      </div>
+    </header>
+
+    <div class="create-job">
+      <h1 class="title">Formulario Creación de empleo</h1>
+
+      <form class="main" id="job-creation-form">
+        <label for="name">Ingrese el nombre del trabajo:</label>
+        <input
+          class="text-input"
+          type="text"
+          id="work_name"
+          name="work_name"
+          required
+        />
+        <label for="none">Coloque el código del nuevo puesto de trabajo:</label>
+        <input
+          class="text-input"
+          type="text"
+          id="work_code"
+          name="work_code"
+          required
+        />
+        <div class="select">
+          <select class="select__element" required>
+            <option value="" disabled selected hidden>
+              Seleccione la pronvincia
+            </option>
+          </select>
+        </div>
+        <div class="select">
+          <select class="select_opt_1 select__element" required>
+            <option value="" disabled selected hidden>
+              Seleccione el cantón
+            </option>
+          </select>
+        </div>
+        <div class="select">
+          <select class="select_opt_1 select__element" required>
+            <option value="" disabled selected hidden>
+              Seleccione el distrito
+            </option>
+          </select>
+        </div>
+
+        <label for="none">Descripción del trabajo:</label>
+        <textarea
+          class="text-input"
+          name="work_description"
+          id="work_description"
+          cols="30"
+          rows="5"
+          required
+        ></textarea>
+
+        <label for="none">Requisitos básicos:</label>
+        <textarea
+          class="text-input"
+          name="work_description"
+          id="work_description"
+          cols="30"
+          rows="5"
+          required
+        ></textarea>
+        <div>
+          <p id="saved-changes">
+            ** Se ha creado el trabajo de forma exitosa **
+          </p>
+        </div>
+        <input
+          id="submit-job"
+          class="button--green"
+          type="submit"
+          value="Enviar"
+        />
+      </form>
+    </div>
+
+    <footer class="page-footer">
+      <div class="message1">
+        <b>SNE, ©2023</b>
+      </div>
+
+      <div class="message2">
+        <b>SNE - Sistema Nacional de Empleos</b>
+        <b>Desarrollado por WebWizards</b>
+      </div>
+
+      <div class="redes">
+        <a href="https://www.instagram.com/"
+          ><img
+            class="iconos"
+            src="../../../images/imagesAplication/instagram.png"
+            alt="instagram" /></a
+        ><br />
+        <a href="https://es-la.facebook.com/"
+          ><img
+            class="iconos"
+            src="../../../images/imagesAplication/facebook.png"
+            alt="facebook" /></a
+        ><br />
+        <a href="https://twitter.com/"
+          ><img
+            class="iconos"
+            src="../../../images/imagesAplication/twitter.png"
+            alt="twitter"
+        /></a>
+      </div>
+
+      <div class="sobre">
+        <li class="1">
+          <a class="link" href="../../htmlWebWizards/teamGroup.html"
+            >Sobre el Equipo</a
+          >
+        </li>
+      </div>
+    </footer>
+  </body>
+</html>
