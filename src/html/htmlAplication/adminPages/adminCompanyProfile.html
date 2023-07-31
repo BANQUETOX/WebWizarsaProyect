@@ -1,237 +1,224 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:ital,wght@0,700;1,600&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="../../../css/normalize.css" />
-    <link
-      rel="stylesheet"
-      href="../../../css/styleAplication/generalStyles.css"
-    />
-    <link
-      rel="stylesheet"
-      href="../../../css/styleAplication/adminpages/adminCompanyProfile.css"
-    />
 
-    <script src="../../../js/jsAplication/editCompanyProfile.js" defer></script>
-    <script src="../../../js/jsAplication/main.js"></script>
-    <title>Company profile</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:ital,wght@0,700;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../css/normalize.css">
+    <link rel="stylesheet" href="../../../css/styleAplication/generalStyles.css">
+    <link rel="stylesheet" href="../../../css/styleAplication/adminpages/adminProfile.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"defer></script>
+    <script src="https://kit.fontawesome.com/73f851add2.js" crossorigin="anonymous" defer></script>
+    <script src="../../../js/jsAplication/main.js" defer></script>
+    <script src="../../../js/jsAplication/adminProfile.js" defer></script>
 
-  </head>
-  <body>
-    <header class="aplication-header">
-      <div class="profile_images">
-        <a href="./adminProfile.html">
-          <img
-            src="../../../images/imagesAplication/user.png"
-            alt="Icono de Usuario"
-          />
-        </a>
-        <a href="./adminCompanyProfile.html">
-          <img
-            src="../../../images/imagesAplication/work.png"
-            alt="Icono de Empresa"
-          />
-        </a>
-      </div>
-      <div class="container">
-        <nav class="aplication-header--navbar">
-          <ul>
-            <li><a href="#">Trabajos</a></li>
-            <li><a href="./adminAplicationStatus.html">Aplicaciones</a></li>
-            <li class="aplication-header--navbar__request">
-              <a href="./adminInviteMembers.html">Solicitar vacantes</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-      <div class="bell dropdown--notifications">
+    <title>Perfil de empresa</title>
+
+</head>
+
+<body>
+  <header class="aplication-header">
+    <div class="profile_images">
+      <a href="./adminProfile.html">
         <img
-          src="../../../images/imagesAplication/campana.png"
-          alt="Icono de campana"
+          src="../../../images/imagesAplication/user.png"
+          alt="Icono de Usuario"
         />
-        <div class="dropdown-content--notifications">
-          <p class="notification">**Ha recibido una solicitud de trabajo</p>
-        </div>
+      </a>
+      <a href="./adminCompanyProfile.html">
+        <img
+          src="../../../images/imagesAplication/work.png"
+          alt="Icono de Empresa"
+        />
+      </a>
+    </div>
+    <div>
+      <nav class="aplication-header--navbar">
+        <ul>
+          <li><a href="./adminAplicationJobs.html">Trabajos</a></li>
+          <li><a href="./adminAplicationStatus.html">Aplicaciones</a></li>
+          <li class="aplication-header--navbar__request">
+            <a href="./adminInviteMembers.html">Solicitar vacantes</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="bell dropdown--notifications">
+      <img
+        src="../../../images/imagesAplication/campana.png"
+        alt="Icono de campana"
+      />
+      <div class="dropdown-content--notifications">
+        <p class="notification">**Ha recibido una solicitud de trabajo</p>
       </div>
-    </header>
+    </div>
+  </header>
 
-    <div class="form-container">
-      <form id="companyForm">
-        <div class="form-group form-group_factory">
-          <label for="logo">Logo de Empresa:</label>
-          <input class="company-input" type="file" id="logo" name="logo" accept="image/*" required disabled/>
-          <img
-            id="logoPreview"
-            src="#"
-            alt="Logo Preview"
-            style="display: none"
-
-          />
-        </div>
-        <br />
-        <br />
-        <div class="form-group">
-          <label for="name">Nombre de Empresa:</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            class="text-input company-input"
-            required
-            disabled
-          />
-        </div>
-
-        <div class="form-group">
-          <label for="id">Cedula Juridica:</label>
-          <input type="text" id="id" name="id" class="text-input company-input" required disabled />
-        </div>
-
-        <div class="form-group">
-          <label for="phone">Telefono:</label>
-          <input type="text" id="phone" name="phone" class="text-input company-input" required disabled />
-        </div>
-
-        <div class="form-group">
-          <label for="sns">Social Media:</label>
-          <input type="text" id="sns" name="sns" class="text-input company-input" required disabled />
-        </div>
-
-        <div class="form-group">
-          <label for="selectRegion">Direccion:</label>
-          <table class="company-form--table">
-            <td>
-              <div class="select">
-                <select
-                  class="select__element company-input"
-                  name="selectProvince"
-                  id="selectProvince"
-                  required
-                  disabled
-                >
-                  <option value="" disabled selected hidden>
-                    Provincia
-                  </option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                </select>
-              </div>
-            </td>
-            <td>
-              <div class="select">
-                <select
-                  class="select__element company-input"
-                  name="selectCanton"
-                  id="selectCanton"
-                  required
-                  disabled
-                >
-                  <option value="" disabled selected hidden>
-                    Canton
-                  </option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                </select>
-              </div>
-            </td>
-
-            <td>
-              <div class="select">
-                <select
-                  class="select__element company-input"
-                  name="selectDistrict"
-                  id="selectDistrict"
-                  required
-                  disabled
-                >
-                  <option value="" disabled selected hidden>
-                   Distrito
-                  </option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                </select>
-              </div>
-            </td>
-          </table>
-        </div>
-
-        <div class="form-group">
-          <label for="direction">Direccion Detallada:</label>
-          <textarea
-            id="direction"
-            name="direction"
-            class="text-input company-input "
-            required
-            disabled
-          ></textarea>
-        </div>
-        <div><p id="saved-changes">Se han guardado los cambios correctamente</p></div>
-       <div class="button-container"
-            <div class="form-group">
-              <input
-              id="edit-button"
-                type="button"
-                value="Editar"
-                class=" button--white button--white_edit"
-              />
-              <input
-              id="save-button"
-                type="submit"
-                value="Guardar"
-                class="button--green "
-                disabled
-              />
+    <section class="sct-form">
+        <div class="user-profile">
+            <div>
+                
+                <div class="avatar-upload">
+                    <div class="avatar-edit">
+                        <input class="profile-input" type='file' id="imageUpload" accept=".png" />
+                        <label  for="imageUpload"></label>
+                    </div>
+                    <div class="avatar-preview" id="avatar-preview">
+                        <div id="imagePreview">
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-       
 
+            <div class="container-form">
+                <form class="form" id="form">
+                    <h2>Editar perfil</h2>
+                    <div class="colums">
+                        <div class="form-control">
+                            <label>Nombre Completo:</label>
+                            <input class="text-input profile-input" type="text" placeholder="Juan Reyes" id="fname">
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>El campo no puede estar en blanco</small>
+                        </div>
+                        <div class="form-control">
+                            <label>Adjuntar CV(PDF):</label>
+                            <input class="profile-input" type="file" placeholder="Juan Reyes" id="cv" accept="application/pdf">
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>El campo no puede estar en blanco</small>
+                        </div>
+                    </div>
+                    <div class="colums">
+                        <div class="form-control">
+                            <label>Fecha de nacimiento:</label>
+                            <input class="text-input profile-input" type="date" placeholder="01/12/1990" id="birth">
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>El campo no puede estar en blanco</small>
+                        </div>
+                        <div class="form-control">
+                            <label>Número teléfonico:</label>
+                            <input class="text-input profile-input" type="tel" placeholder="1234 5678" id="tel" accept="application/pdf">
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>El campo no puede estar en blanco</small>
+                        </div>
+                    </div>
+                    <div class="colums">
+                        <div class="form-control">
+                            <label>Cédula, DIMEX, Pasaporte:</label>
+                            <input class="text-input profile-input" type="number" placeholder="12345678" id="idnum">
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>El campo no puede estar en blanco</small>
+                        </div>
+                        <div class="form-control">
+                            <label>Género</label>
+                            <div class="select">
+                                <select name="genre" id="genre" class="select__element profile-input">
+                                            <option value="empty"></option>
+                                            <option value="man">Masculino</option>
+                                            <option value="woman">Femenino</option>
+                                            <option value="nogender">Prefiero no especificar</option>
+                                        </select>
+                                        <i class="fas fa-check-circle"></i>
+                                        <i class="fas fa-exclamation-circle"></i>
+                                        <small>El campo no puede estar en blanco</small>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-control">
+                        <label>Dirección de casa por distrito, cantón y provincia:</label>
+                        <input class="text-input profile-input" type="text" placeholder="Ciudadela 15 de septiembre" id="address">
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small>El campo no puede estar en blanco</small>
+                    </div>
+                    <div class="row">
+                        <div class="form-control">
+                            <label>Experiencia laboral:</label>
+                            <input class="text-input profile-input" type="text" placeholder="Amazon" id="exp">
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>El campo no puede estar en blanco</small>
+                        </div>
+                        <div class="form-control">
+                            <label>Desde:</label>
+                            <input class="text-input profile-input" type="date" placeholder="01/12/1990" id="from">
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>El campo no puede estar en blanco</small>
+                        </div>
+                        <div class="form-control">
+                            <label>Hasta:</label>
+                            <input class="text-input profile-input" type="date" placeholder="01/12/1990" id="to">
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>El campo no puede estar en blanco</small>
+                        </div>
+                    </div>
+                    <button class="button--white profile-input add-button">+</button>
+                    <div class="row">
+                        <div class="form-control">
+                            <label>Educación:</label>
+                            <input class="text-input profile-input" type="text" placeholder="Cenfotec" id="edc">
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>El campo no puede estar en blanco</small>
+                        </div>
+                        <div class="form-control">
+                            <label>Desde:</label>
+                            <input class="text-input profile-input" type="date" placeholder="01/12/1990" id="from">
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>El campo no puede estar en blanco</small>
+                        </div>
+                        <div class="form-control">
+                            <label>Hasta:</label>
+                            <input class="text-input profile-input" type="date" placeholder="01/12/1990" id="to">
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>El campo no puede estar en blanco</small>
+                        </div>
+                    </div>
+                    <button class="button--white profile-input add-button">+</button>
+                    <div class="btn-cont">
+                        <div>
+                            <button class="button--red">Editar perfil</button>
+                        </div>
+                        <div>
+                            <button class="button--green">Guardar cambios</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="session">
+                <a href="../landingPage/aplicationLandingPage.html"><button class="button--red">Cerrar sesión</button></a>
+
+            </div>
+    </section>
     <footer class="page-footer">
-      <div class="message1">
-        <b>SNE, ©2023</b>
-      </div>
-
-      <div class="message2">
-        <b>SNE - Sistema Nacional de Empleos</b>
-        <b>Desarrollado por WebWizards</b>
-      </div>
-
-      <div class="redes">
-        <a href="https://www.instagram.com/"
-          ><img
-            class="iconos"
-            src="../../../images/imagesAplication/instagram.png"
-            alt="instagram" /></a
-        ><br />
-        <a href="https://es-la.facebook.com/"
-          ><img
-            class="iconos"
-            src="../../../images/imagesAplication/facebook.png"
-            alt="facebook" /></a
-        ><br />
-        <a href="https://twitter.com/"
-          ><img
-            class="iconos"
-            src="../../../images/imagesAplication/twitter.png"
-            alt="twitter"
-        /></a>
-      </div>
-
-      <div class="sobre">
-        <li class="1">
-          <a class="link" href="../../htmlWebWizards/teamGroup.html"
-            >Sobre el Equipo</a
-          >
-        </li>
-      </div>
+        <div class="message1">
+            <b>SNE, ©2023</b>
+        </div>
+        <div class="message2">
+            <b>SNE - Sistema Nacional de Empleos</b>
+            <b>Desarrollado por WebWizards</b>
+        </div>
+        <div class="redes">
+            <a href="https://www.instagram.com/"><img class="iconos" src="../../../images/imagesAplication/instagram.png" alt="instagram"></a><br>
+            <a href="https://es-la.facebook.com/"><img class="iconos" src="../../../images/imagesAplication/facebook.png" alt="facebook"></a><br>
+            <a href="https://twitter.com/"><img class="iconos" src="../../../images/imagesAplication/twitter.png" alt="twitter"></a>
+        </div>
+        <div class="sobre">
+            <li class="1"><a class="link" href="../../htmlWebWizards/teamGroup.html">Sobre el Equipo</a></li>
+        </div>
     </footer>
-  </body>
+
+</body>
+
 </html>
