@@ -149,18 +149,12 @@
     visibility: visible;
 }
 
-.form button {
-    font-family: 'Montserrat', sans-serif;
-    display: inline-block;
-    text-align: center;
-    border: 1px solid black;
-    padding: 10px 11px;
-    font-size: 20px;
-    line-height: 1.5;
-    border-radius: .25rem;
-    cursor: pointer;
-    margin-left: 20%;
+.button--green {
+    margin-left: 23%;
+    margin-right: 10%;
+    background-color: #9fd3c7 ;
 }
+
 
 .form a {
     font-family: 'Montserrat', sans-serif;
