@@ -5,48 +5,30 @@
   font-size: 4vh;
   margin-left: 2%;
   margin-right: auto;
-  margin-top: 1%;
+  margin-top: 3%;
 }
 
 .container-tittle-invite-members {
   text-align: center;
-  font-family: "Poppins", sans-serif;
+  font-family: "Montserrat", sans-serif;
   margin-top: 1%;
   margin-left: 2.5%;
   font-size: 20px;
 }
 
 .formulary {
-  font-family: "Montserrat", sans-serif;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 25px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.invite-members--form {
-  margin-top: 20px;
-  margin-left: 100px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 45%;
+  margin-top: 50px;
+  font-family: "Montserrat", sans-serif;
 }
 
 .formulary__label {
-  display: block;
-  padding: 15px 0;
+  display: flex;
+  margin-top: 40px;
+  margin-bottom: 9px;
 }
-
-/* .formulary__status-validation {
-  position: absolute;
-  right: 45px;
-  bottom: 15px;
-  z-index: 1000;
-  font-size: 16px;
-  opacity: 0;
-} */
 
 .formulary__input-error {
   font-size: 12px;
@@ -54,118 +36,43 @@
   display: none;
 }
 
-.formulary__label-collaborator {
-  display: block;
-  padding: 15px 0;
-  margin-left: 15%;
-}
-
-.formulary__input-group-collaborator {
-  position: relative;
-  margin-left: 10%;
-}
-
-.formulary__group-btn-send-collaborator {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 1%;
-  margin-left: 1%;
-}
-
-.button--white {
-  font-family: "Montserrat", sans-serif;
-  display: inline-block;
-  color: #212529;
-  text-align: center;
-  border: 1px solid black;
-  padding: 10px 20px;
-  font-size: 20px;
-  line-height: 1.5;
-  border-radius: 0.25rem;
-  background-color: #ff0000;
-  cursor: pointer;
-}
-
-.button--white__invite-member {
-  margin-left: 50px;
-}
-.button-container {
-  display: flex;
-  align-items: center;
-  margin-bottom: 30px;
-}
-
 .button-container__invite {
-  margin: 0;
-  margin-bottom: 100px;
-  margin-right: 2%;
-}
-
-.button--black-collaborator {
-  font-family: "Montserrat", sans-serif;
-  display: inline-block;
-  color: #212529;
-  text-align: center;
-  border: 1px solid black;
-  padding: 8px 5px;
-  font-size: 20px;
-  line-height: 1.5;
-  border-radius: 0.25rem;
-  color: #ffffff;
-  background-color: #9fd3c7;
-  cursor: pointer;
-  margin-bottom: -38%;
-  flex-grow: 1;
-}
-
-.button--black-collaborator:hover {
-  background-color: #ffffff;
-  color: #000000;
-}
-
-.button--black-collaborator-skip {
-  font-family: "Montserrat", sans-serif;
-  display: inline-block;
-  color: #212529;
-  text-align: center;
-  border: 1px solid black;
-  padding: 8px 5px;
-  font-size: 20px;
-  line-height: 1.5;
-  border-radius: 0.25rem;
-  color: #ffffff;
-  background-color: #9fd3c7;
-  cursor: pointer;
-  margin-bottom: -38%;
-  flex-grow: 1;
-  padding-left: 15%;
-  padding-right: 15%;
-  text-align: center;
-}
-
-.button--black-collaborator-skip:hover {
-  background-color: #ffffff;
-  color: #000000;
+  margin-left: -4px;
+  margin-bottom: 30px;
 }
 
 .button-separator {
   display: inline-block;
-  margin: 0 80px; /* Ajusta el espacio horizontal entre el separador y los botones */
+  margin: 20px; /* Ajusta el espacio horizontal entre el separador y los botones */
   color: #ffffff;
-  font-size: 6vh; /* Ajusta el tamaño de la fuente del separador */
-  margin-bottom: -10%;
-  padding-top: 18%;
+  margin-top: 80px;
 }
 
 .formulary__message .formulary__group-btn-send {
   grid-column: span 1;
 }
 
+#function_collaborator {
+  margin-top: 9px;
+}
+.select__function--container {
+  margin-left: 2px;
+}
 .formulary__message {
   display: none;
   padding: 15px;
   border-radius: 5px;
   background: rgb(205, 17, 17);
   text-align: center;
+}
+.formulary__label__colaborator-name {
+  margin-top: 0;
+}
+#saved-changes {
+  display: none;
+}
+
+.select {
+  width: 21.8%;
+  margin-left: -1px;
 }

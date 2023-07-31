@@ -19,6 +19,7 @@
       rel="stylesheet"
       href="../../../css/styleAplication/userPages/addEducation.css"
     />
+    <title>Agregar educacion</title>
   </head>
   <body>
     <header class="aplication-header">
@@ -37,12 +38,14 @@
           </ul>
         </nav>
       </div>
-      <div class="bell">
-        <a href="#"
-          ><img
-            src="../../../images/imagesAplication/campana.png"
-            alt="Icono de campana"
-        /></a>
+      <div class="bell dropdown--notifications">
+        <img
+          src="../../../images/imagesAplication/campana.png"
+          alt="Icono de campana"
+        />
+        <div class="dropdown-content--notifications">
+          <p class="notification">**Ha recibido una solicitud de trabajo</p>
+        </div>
       </div>
     </header>
 
@@ -144,20 +147,10 @@
             </label>
           </div>
 
-          <!-- Adicionar otro nivel -->
-          <div class="formulary__group formulary__group-btn-send">
-            <p class="formulary__active-message" id="add_another-level"></p>
-            <input
-              class="button--white"
-              type="submit"
-              value="Adicionar otro nivel"
-            />
-          </div>
-
           <div class="button-container">
-            <button class="button--black">Continuar</button>
+            <button class="button--green">Enviar</button>
             <span class="button-separator">|</span>
-            <button class="button--black" type="button">Saltar</button>
+            <button class="button--red" type="button">Saltar</button>
           </div>
 
           <!-- MENSAJE DE CAMPOS REQUERIDOS -->
@@ -205,7 +198,7 @@
 
       <div class="sobre">
         <li class="1">
-          <a class="link" src="" href="../teamLanding/teamLandingPage.html"
+          <a class="link" src="" href="../../htmlWebWizards/teamGroup.html"
             >Sobre el Equipo</a
           >
         </li>

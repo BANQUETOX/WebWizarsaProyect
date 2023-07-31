@@ -14,47 +14,44 @@
     <script src="../../../js/jsAplication/main.js" defer></script>
     <script src="../../../js/jsAplication/adminProfile.js" defer></script>
 
-    <title>Perfil de empresa</title>
+    <title>Mi perfil</title>
 
 </head>
 
 <body>
-  <header class="aplication-header">
-    <div class="profile_images">
-      <a href="./adminProfile.html">
-        <img
-          src="../../../images/imagesAplication/user.png"
-          alt="Icono de Usuario"
-        />
-      </a>
-      <a href="./adminCompanyProfile.html">
-        <img
-          src="../../../images/imagesAplication/work.png"
-          alt="Icono de Empresa"
-        />
-      </a>
-    </div>
-    <div>
-      <nav class="aplication-header--navbar">
-        <ul>
-          <li><a href="./adminAplicationJobs.html">Trabajos</a></li>
-          <li><a href="./adminAplicationStatus.html">Aplicaciones</a></li>
-          <li class="aplication-header--navbar__request">
-            <a href="./adminInviteMembers.html">Solicitar vacantes</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-    <div class="bell dropdown--notifications">
-      <img
-        src="../../../images/imagesAplication/campana.png"
-        alt="Icono de campana"
-      />
-      <div class="dropdown-content--notifications">
-        <p class="notification">**Ha recibido una solicitud de trabajo</p>
-      </div>
-    </div>
-  </header>
+    <header class="aplication-header">
+        <div class="profile_images">
+          <a href="./managerProfile.html">
+            <img
+              src="../../../images/imagesAplication/user.png"
+              alt="Icono de Usuario"
+            />
+          </a>
+          <a href="./managerCompanyProfile.html">
+            <img
+              src="../../../images/imagesAplication/work.png"
+              alt="Icono de Empresa"
+            />
+          </a>
+        </div>
+        <div>
+          <nav class="aplication-header--navbar">
+            <ul>
+              <li><a href="./managerAplicationJobs.html">Trabajos</a></li>
+              <li><a href="./managerAplicationStatus.html">Aplicaciones</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="bell dropdown--notifications">
+          <img
+            src="../../../images/imagesAplication/campana.png"
+            alt="Icono de campana"
+          />
+          <div class="dropdown-content--notifications">
+            <p class="notification">**Ha recibido una solicitud de trabajo</p>
+          </div>
+        </div>
+      </header>
 
     <section class="sct-form">
         <div class="user-profile">
@@ -196,6 +193,37 @@
                     </div>
                 </form>
             </div>
+            <div class="container-form">
+                <form class="form" id="form">
+                        <h2>Editar Contraseña</h2>
+                        <div class="colums">
+                            <div class="form-control">
+                                <label>Contraseña</label>
+                                <input class="text-input" type="password" placeholder="Contraseña" id="password">
+                                <i class="fa-solid fa-eye" id="eye"></i>
+                                <i class="fas fa-check-circle"></i>
+                                <i class="fas fa-exclamation-circle"></i>
+                                <small>El campo no puede estar en blanco</small>
+                            </div>
+                            <div class="form-control">
+                                <label>Confirmar contraseña</label>
+                                <input class="text-input" type="password" placeholder="Contraseña" id="password2">
+                                <i class="fa-solid fa-eye" id="eye2"></i>
+                                <i class="fas fa-check-circle"></i>
+                                <i class="fas fa-exclamation-circle"></i>
+                                <small>El campo no puede estar en blanco</small>
+                            </div>
+                        </div>
+                        <div class="btn-cont">
+                            <div>
+                                <button class="button--red"> Editar contraseña</button>
+                            </div>
+                            <div>
+                                <button class="button--green">Guardar contraseña</button>
+                            </div>
+                        </div>
+                    </form>
+            </div>
             <div class="session">
                 <a href="../landingPage/aplicationLandingPage.html"><button class="button--red">Cerrar sesión</button></a>
 
@@ -205,24 +233,9 @@
         <div class="message1">
             <b>SNE, ©2023</b>
         </div>
-
-
-        <div class="form-group">
-          <input
-            type="submit"
-            value="Editar"
-            class="btn2-register-business button--red"
-          />
-          <input
-            type="submit"
-            value="Guardar"
-            class="btn-register-business button--white"
-          />
-
         <div class="message2">
             <b>SNE - Sistema Nacional de Empleos</b>
             <b>Desarrollado por WebWizards</b>
-
         </div>
         <div class="redes">
             <a href="https://www.instagram.com/"><img class="iconos" src="../../../images/imagesAplication/instagram.png" alt="instagram"></a><br>

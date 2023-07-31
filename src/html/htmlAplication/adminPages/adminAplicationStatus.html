@@ -15,9 +15,12 @@
     />
     <link
       rel="stylesheet"
-      href="../../../css/styleAplication/adminpages/adminAplicationsStatus.css"
+      href="../../../css/styleAplication/adminpages/adminAplicationJobs__status.css"
     />
-    <script src="../../../js/jsAplication/main.js" defer></script>
+    <script
+      src="../../../js/jsAplication/showRangeInputvalue.js"
+      defer
+    ></script>
     <title>Aplications Status</title>
   </head>
   <body>
@@ -39,20 +42,22 @@
       <div class="container">
         <nav class="aplication-header--navbar">
           <ul>
-            <li><a href="#">Trabajos</a></li>
-            <li><a href="./adminAplicationStatus.html">Aplicaciones</a></li>
+            <li><a href="./adminAplicationJobs.html">Trabajos</a></li>
+            <li><a href="#">Aplicaciones</a></li>
             <li class="aplication-header--navbar__request">
               <a href="./adminInviteMembers.html">Solicitar vacantes</a>
             </li>
           </ul>
         </nav>
       </div>
-      <div class="bell">
-        <a href="#"
-          ><img
-            src="../../../images/imagesAplication/campana.png"
-            alt="Icono de campana"
-        /></a>
+      <div class="bell dropdown--notifications">
+        <img
+          src="../../../images/imagesAplication/campana.png"
+          alt="Icono de campana"
+        />
+        <div class="dropdown-content--notifications">
+          <p class="notification">**Ha recibido una solicitud de trabajo</p>
+        </div>
       </div>
     </header>
 
@@ -84,8 +89,11 @@
                 type="range"
                 id="salary-range-input"
                 min="0"
-                max="10000000000"
+                max="10000000"
               />
+            </div>
+            <div class="filter-button">
+              <button class="button--green">Filtrar</button>
             </div>
           </div>
         </div>
@@ -230,7 +238,7 @@
 
       <div class="sobre">
         <li class="1">
-          <a class="link" href="../teamLanding/teamGroup.html"
+          <a class="link" href="../../htmlWebWizards/teamGroup.html"
             >Sobre el Equipo</a
           >
         </li>

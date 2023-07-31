@@ -17,32 +17,52 @@
       rel="stylesheet"
       href="../../../css/styleAplication/adminpages/adminCompanyProfile.css"
     />
-    <title>Create company</title>
+
+    <script src="../../../js/jsAplication/editCompanyProfile.js" defer></script>
+    <script src="../../../js/jsAplication/main.js"></script>
+    <title>Company profile</title>
 
   </head>
-
   <body>
-    <div class="aplication-landing--navbar">
-      <header class="header-fixed">
-        <div class="header-limiter">
-          <h1 class="header">
-            <a href="#">Web<span>Wizard</span> Jobs</a>
-          </h1>
-          <div class="nav-register-log-in">
-            <a href="../aplicationLanding/aplicationLandingPage.html"
-              >Ingresar</a
-            >
-          </div>
+    <header class="aplication-header">
+      <div class="profile_images">
+        <a href="./recruiterProfile.html">
+          <img
+            src="../../../images/imagesAplication/user.png"
+            alt="Icono de Usuario"
+          />
+        </a>
+        <a href="./recruiterCompanyProfile.html">
+          <img
+            src="../../../images/imagesAplication/work.png"
+            alt="Icono de Empresa"
+          />
+        </a>
+      </div>
+      <div>
+        <nav class="aplication-header--navbar">
+          <ul>
+            <li><a href="./recruiterAplicationJobs.html">Trabajos</a></li>
+            <li><a href="./recruiterAplicationStatus.html">Aplicaciones</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="bell dropdown--notifications">
+        <img
+          src="../../../images/imagesAplication/campana.png"
+          alt="Icono de campana"
+        />
+        <div class="dropdown-content--notifications">
+          <p class="notification">**Ha recibido una solicitud de trabajo</p>
         </div>
-      </header>
-      <div class="header-fixed-placeholder"></div>
-    </div>
+      </div>
+    </header>
 
     <div class="form-container">
       <form id="companyForm">
         <div class="form-group form-group_factory">
           <label for="logo">Logo de Empresa:</label>
-          <input class="company-input" type="file" id="logo" name="logo" accept="image/*" required />
+          <input class="company-input" type="file" id="logo" name="logo" accept="image/*" required disabled/>
           <img
             id="logoPreview"
             src="#"
@@ -61,31 +81,23 @@
             name="name"
             class="text-input company-input"
             required
-            
+            disabled
           />
         </div>
 
         <div class="form-group">
           <label for="id">Cedula Juridica:</label>
-          <input type="text" id="id" name="id" class="text-input company-input" required  />
+          <input type="text" id="id" name="id" class="text-input company-input" required disabled />
         </div>
 
         <div class="form-group">
           <label for="phone">Telefono:</label>
-          <input type="text" id="phone" name="phone" class="text-input company-input" required  />
+          <input type="text" id="phone" name="phone" class="text-input company-input" required disabled />
         </div>
 
         <div class="form-group">
-          <label for="sns">Facebook:</label>
-          <input type="text" id="sns" name="sns" class="text-input company-input" required  />
-        </div>
-        <div class="form-group">
-          <label for="sns">Instagram:</label>
-          <input type="text" id="sns" name="sns" class="text-input company-input" required  />
-        </div>
-        <div class="form-group">
-          <label for="sns">Twitter:</label>
-          <input type="text" id="sns" name="sns" class="text-input company-input" required  />
+          <label for="sns">Social Media:</label>
+          <input type="text" id="sns" name="sns" class="text-input company-input" required disabled />
         </div>
 
         <div class="form-group">
@@ -98,9 +110,9 @@
                   name="selectProvince"
                   id="selectProvince"
                   required
-                  
+                  disabled
                 >
-                  <option value=""  selected hidden>
+                  <option value="" disabled selected hidden>
                     Provincia
                   </option>
                   <option value="1">1</option>
@@ -116,9 +128,9 @@
                   name="selectCanton"
                   id="selectCanton"
                   required
-                  
+                  disabled
                 >
-                  <option value=""  selected hidden>
+                  <option value="" disabled selected hidden>
                     Canton
                   </option>
                   <option value="1">1</option>
@@ -135,9 +147,9 @@
                   name="selectDistrict"
                   id="selectDistrict"
                   required
-                  
+                  disabled
                 >
-                  <option value=""  selected hidden>
+                  <option value="" disabled selected hidden>
                    Distrito
                   </option>
                   <option value="1">1</option>
@@ -156,19 +168,11 @@
             name="direction"
             class="text-input company-input "
             required
-            
+            disabled
           ></textarea>
         </div>
-       <div class="button-container"
-            <div class="form-group">
-              <input
-              id="save-button"
-                type="submit"
-                value="Guardar"
-                class="button--green "
-              />
-            </div>
         </div>
+       
 
     <footer class="page-footer">
       <div class="message1">
@@ -202,14 +206,12 @@
       </div>
 
       <div class="sobre">
-        <li class="1"><a class="link" src="" href="../../htmlWebWizards/teamGroup.html">Sobre el Equipo</a></li>
+        <li class="1">
+          <a class="link" href="../../htmlWebWizards/teamGroup.html"
+            >Sobre el Equipo</a
+          >
+        </li>
       </div>
     </footer>
   </body>
 </html>
-<script>
-  document.getElementById('companyForm').addEventListener("submit",(e)=>{
-    document.location.href = ('./adminInitialInviteMembers.html')
-    e.preventDefault()
-  })
-</script>

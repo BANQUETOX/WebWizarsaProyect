@@ -15,10 +15,15 @@
     />
     <link
       rel="stylesheet"
-      href="../../../css/styleAplication/adminpages/adminAplicationJobs.css"
+      href="../../../css/styleAplication/adminpages/adminAplicationJobs__status.css"
     />
+
     <script src="../../../js/jsAplication/main.js" defer></script>
-    <title>Aplication feed</title>
+    <script
+      src="../../../js/jsAplication/showRangeInputvalue.js"
+      defer
+    ></script>
+    <title>Aplication Jobs</title>
   </head>
   <body>
     <header class="aplication-header">
@@ -47,12 +52,14 @@
           </ul>
         </nav>
       </div>
-      <div class="bell">
-        <a href="#"
-          ><img
-            src="../../../images/imagesAplication/campana.png"
-            alt="Icono de campana"
-        /></a>
+      <div class="bell dropdown--notifications">
+        <img
+          src="../../../images/imagesAplication/campana.png"
+          alt="Icono de campana"
+        />
+        <div class="dropdown-content--notifications">
+          <p class="notification">**Ha recibido una solicitud de trabajo</p>
+        </div>
       </div>
     </header>
 
@@ -84,8 +91,11 @@
                 type="range"
                 id="salary-range-input"
                 min="0"
-                max="10000000000"
+                max="10000000"
               />
+            </div>
+            <div class="filter-button">
+              <button class="button--green">Filtrar</button>
             </div>
           </div>
         </div>
@@ -227,7 +237,7 @@
 
       <div class="sobre">
         <li class="1">
-          <a class="link" href="../teamLanding/teamGroup.html"
+          <a class="link" href="../../htmlWebWizards/teamGroup.html"
             >Sobre el Equipo</a
           >
         </li>

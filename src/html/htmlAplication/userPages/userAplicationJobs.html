@@ -18,7 +18,7 @@
       href="../../../css/styleAplication/userPages/userAplicationJobs_status.css"
     />
     <script src="../../../js/jsComponents/aplicationFeed.js" defer></script>
-    <title>Aplication feed</title>
+    <title>Aplication Jobs</title>
   </head>
   <body>
     <header class="aplication-header">
@@ -37,12 +37,14 @@
           </ul>
         </nav>
       </div>
-      <div class="bell">
-        <a href="#"
-          ><img
-            src="../../../images/imagesAplication/campana.png"
-            alt="Icono de campana"
-        /></a>
+      <div class="bell dropdown--notifications">
+        <img
+          src="../../../images/imagesAplication/campana.png"
+          alt="Icono de campana"
+        />
+        <div class="dropdown-content--notifications">
+          <p class="notification">**Ha recibido una solicitud de trabajo</p>
+        </div>
       </div>
     </header>
 
@@ -76,6 +78,9 @@
                 min="0"
                 max="1000000"
               />
+            </div>
+            <div class="filter-button">
+              <button class="button--green">Filtrar</button>
             </div>
           </div>
         </div>
@@ -213,7 +218,7 @@
 
       <div class="sobre">
         <li class="1">
-          <a class="link" src="" href="../teamLanding/teamLandingPage.html"
+          <a class="link" src="" href="../../htmlWebWizards/teamGroup.html"
             >Sobre el Equipo</a
           >
         </li>

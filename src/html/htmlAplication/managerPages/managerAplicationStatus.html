@@ -15,25 +15,35 @@
     />
     <link
       rel="stylesheet"
-      href="../../../css/styleAplication/userPages/userAplicationJobs_status.css"
+      href="../../../css/styleAplication/adminpages/adminAplicationJobs__status.css"
     />
-    <script src="../../../js/jsComponents/aplicationFeed.js" defer></script>
-    <title>Aplication Status</title>
+    <script
+      src="../../../js/jsAplication/showRangeInputvalue.js"
+      defer
+    ></script>
+    <title>Aplications Status</title>
   </head>
   <body>
     <header class="aplication-header">
       <div class="profile_images">
-        <a href="./userProfile.html">
-          <img src="../../../images/imagesAplication/user.png" alt="Image 1" />
+        <a href="./managerProfile.html">
+          <img
+            src="../../../images/imagesAplication/user.png"
+            alt="Icono de Usuario"
+          />
+        </a>
+        <a href="./managerCompanyProfile.html">
+          <img
+            src="../../../images/imagesAplication/work.png"
+            alt="Icono de Empresa"
+          />
         </a>
       </div>
-      <div class="container">
+      <div>
         <nav class="aplication-header--navbar">
           <ul>
-            <li><a href="#">Trabajos</a></li>
-            <li>
-              <a href="../userPages/userAplicationSatus.html">Aplicaciones</a>
-            </li>
+            <li><a href="./managerAplicationJobs.html">Trabajos</a></li>
+            <li><a href="./managerAplicationStatus.html">Aplicaciones</a></li>
           </ul>
         </nav>
       </div>
@@ -76,7 +86,7 @@
                 type="range"
                 id="salary-range-input"
                 min="0"
-                max="1000000"
+                max="10000000"
               />
             </div>
             <div class="filter-button">
@@ -192,7 +202,6 @@
         </a>
       </div>
     </div>
-
     <footer class="page-footer">
       <div class="message1">
         <b>SNE, ©2023</b>
@@ -226,7 +235,7 @@
 
       <div class="sobre">
         <li class="1">
-          <a class="link" src="" href="../../htmlWebWizards/teamGroup.html"
+          <a class="link" href="../../htmlWebWizards/teamGroup.html"
             >Sobre el Equipo</a
           >
         </li>
