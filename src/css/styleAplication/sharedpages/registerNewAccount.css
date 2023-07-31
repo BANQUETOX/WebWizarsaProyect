@@ -29,6 +29,8 @@
 }
 
 .container {
+
+    box-shadow: transparent;
     width: 700px;
     max-width: 100%;
 }
@@ -37,21 +39,21 @@
     padding: 30px 40px;
 }
 
-.form-control {
 
-  font-family: "Montserrat", sans-serif;
-  font-size: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-bottom: 10px;
-  padding-bottom: 10px;
-  position: relative;
-
+.eye {
+    margin-right: 28%;
 }
 
-.select {
-  width: unset;
+.form-control {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    position: relative;
 }
 
 .form-control label {
@@ -127,13 +129,11 @@
 }
 
 .form-control i.fa-eye {
-
-  color: #000;
-  visibility: visible;
-  position: absolute;
-  top: 50px;
-  margin-left: 93.5%;
-
+    color: #000;
+    visibility: visible;
+    position: absolute;
+    top: 50px;
+    margin-left: 35%;
 }
 
 .form-control small {
@@ -145,15 +145,6 @@
 }
 
 .form-control.error small {
-
-  color: #ff0000;
-  visibility: visible;
-}
-
-.confirmation {
-  display: flex;
-  justify-content: center;
-
     color: #ff0000;
     visibility: visible;
 }
@@ -183,5 +174,4 @@
     cursor: pointer;
     margin-left: 20%;
     text-decoration: none;
-
 }
