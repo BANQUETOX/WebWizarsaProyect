@@ -11,7 +11,11 @@
     <link rel="stylesheet" href="../../../css/normalize.css">
     <link rel="stylesheet" href="../../../css/styleAplication/generalStyles.css">
     <link rel="stylesheet" href="../../../css/styleAplication/sharedpages/registerNewAccount.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"defer></script>
+    <script src="../../../js/jsAplication/main.js"></script>
     <script src="https://kit.fontawesome.com/73f851add2.js" crossorigin="anonymous" defer></script>
+    
+    
 
     <title>Registrar cuenta</title>
 
@@ -116,6 +120,23 @@
                     <i class="fas fa-exclamation-circle"></i>
                     <small>El campo no puede estar en blanco</small>
                 </div>
+                <div class="avatar-upload">
+                    <label for="imageUpload" class="button--white avatar-upload-input--label"
+                      >Foto de perfil</label
+                    >
+                    <input
+                      type="file"
+                      name="profilePicture"
+                      id="imageUpload"
+                      accept=".png"
+                      class="avatar-upload-input"
+                    />
+                    <div class="avatar-edit"></div>
+                    <div class="avatar-preview" id="avatar-preview">
+                      <div class="imagePreview" id="imagePreview"></div>
+                    </div>
+                  </div>
+                  
 
                 <div class="confirmation">
                     <button class="button--green">Continuar</button>&nbsp;&nbsp;&nbsp;
