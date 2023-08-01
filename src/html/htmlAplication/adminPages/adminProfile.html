@@ -197,24 +197,29 @@
                 </form>
             </div>
             <div class="container-form">
-                <form class="form" id="form">
+                <form class="form" id="password-form">
                         <h2>Editar Contraseña</h2>
                         <div class="colums">
-                            <div class="form-control">
+                            <div class="form-control password-input-container">
                                 <label>Contraseña</label>
-                                <input class="text-input" type="password" placeholder="Contraseña" id="password">
+                                <input class="text-input" type="password" placeholder="Contraseña" id="first-new-password">
                                 <i class="fa-solid fa-eye" id="eye"></i>
                                 <i class="fas fa-check-circle"></i>
                                 <i class="fas fa-exclamation-circle"></i>
-                                <small>El campo no puede estar en blanco</small>
+                                <p id="first-password--message" class="error__message">
+                                    La contraseña no cumple con los requisitos (minimo 4 digitos -
+                                    maximo 12 digitos)
+                                  </p>
                             </div>
                             <div class="form-control">
                                 <label>Confirmar contraseña</label>
-                                <input class="text-input" type="password" placeholder="Contraseña" id="password2">
+                                <input class="text-input" type="password" placeholder="Contraseña" id="second-new-password">
                                 <i class="fa-solid fa-eye" id="eye2"></i>
                                 <i class="fas fa-check-circle"></i>
                                 <i class="fas fa-exclamation-circle"></i>
-                                <small>El campo no puede estar en blanco</small>
+                                <p id="second-password--message" class="error__message">
+                                    La contraseña no coincide
+                                  </p>
                             </div>
                         </div>
                         <div class="btn-cont">

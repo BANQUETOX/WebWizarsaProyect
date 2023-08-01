@@ -65,36 +65,37 @@
       <form class="main" id="job-creation-form">
         <label for="name">Ingrese el nombre del trabajo:</label>
         <input
-          class="text-input"
+          class="text-input job-input"
           type="text"
           id="work_name"
           name="work_name"
-          required
         />
         <label for="none">Coloque el código del nuevo puesto de trabajo:</label>
         <input
-          class="text-input"
+          class="text-input job-input"
           type="text"
           id="work_code"
           name="work_code"
-          required
         />
         <div class="select">
-          <select class="select__element" required>
+          <select class="select__element job-input">
             <option value="" disabled selected hidden>
               Seleccione la pronvincia
             </option>
+            <option value="SI">Chepe</option>
           </select>
         </div>
+
         <div class="select">
-          <select class="select_opt_1 select__element" required>
+          <select class="select__element job-input">
             <option value="" disabled selected hidden>
               Seleccione el cantón
             </option>
           </select>
         </div>
+
         <div class="select">
-          <select class="select_opt_1 select__element" required>
+          <select class="select__element job-input">
             <option value="" disabled selected hidden>
               Seleccione el distrito
             </option>
@@ -103,22 +104,20 @@
 
         <label for="none">Descripción del trabajo:</label>
         <textarea
-          class="text-input"
+          class="text-input job-input"
           name="work_description"
           id="work_description"
           cols="30"
           rows="5"
-          required
         ></textarea>
 
         <label for="none">Requisitos básicos:</label>
         <textarea
-          class="text-input"
+          class="text-input job-input"
           name="work_description"
           id="work_description"
           cols="30"
           rows="5"
-          required
         ></textarea>
         <div>
           <p id="saved-changes">

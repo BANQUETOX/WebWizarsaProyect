@@ -47,3 +47,14 @@
 #saved-changes {
   display: none;
 }
+
+.job-input__valid {
+  border: 2px solid green;
+}
+.job-input__invalid {
+  border: 2px solid red;
+}
+
+.prueba-de-border {
+  border: 2px solid red;
+}
