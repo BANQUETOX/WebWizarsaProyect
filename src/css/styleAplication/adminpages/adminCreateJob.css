@@ -58,3 +58,7 @@
 .prueba-de-border {
   border: 2px solid red;
 }
+
+#inputs-error {
+  display: none;
+}

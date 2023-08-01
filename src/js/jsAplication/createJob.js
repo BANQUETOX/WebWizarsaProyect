@@ -25,6 +25,11 @@ function verifyJobInputs() {
       }
     }
   }
+  let errorLabel = document.getElementById("inputs-error");
+  let invalidInputs = document.getElementsByClassName("job-input__invalid");
+  if (invalidInputs.length > 0) {
+    errorLabel.style.display = "initial";
+  }
 }
 
 jobForm.addEventListener("submit", (e) => {
