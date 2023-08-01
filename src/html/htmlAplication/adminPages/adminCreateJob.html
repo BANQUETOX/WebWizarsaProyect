@@ -82,7 +82,7 @@
             <option value="" disabled selected hidden>
               Seleccione la pronvincia
             </option>
-            <option value="SI">Chepe</option>
+            <option value="1">Chepe</option>
           </select>
         </div>
 
@@ -91,6 +91,7 @@
             <option value="" disabled selected hidden>
               Seleccione el cantón
             </option>
+            <option value="2">San Miguel </option>
           </select>
         </div>
 
@@ -99,6 +100,7 @@
             <option value="" disabled selected hidden>
               Seleccione el distrito
             </option>
+            <option value="3">Higuito</option>
           </select>
         </div>
 
@@ -119,12 +121,11 @@
           cols="30"
           rows="5"
         ></textarea>
-        <div>
-          <p id="inputs-error">FALTAN ESPACIOS</p>
-          <p id="saved-changes">
-            ** Se ha creado el trabajo de forma exitosa **
-          </p>
-        </div>
+        
+          <p  id="inputs-error">FALTAN ESPACIOS</p>
+
+          <p class="display-none" id="saved-changes"> Se ha creado el trabajo de forma exitosa </p>
+        
         <input
           id="submit-job"
           class="button--green"

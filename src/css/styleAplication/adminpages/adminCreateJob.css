@@ -34,7 +34,7 @@
 }
 
 .button--green {
-  margin-top: 20px;
+  margin-top: 40px;
   margin-left: 23%;
 }
 
@@ -44,9 +44,7 @@
   padding-bottom: 0%;
 }
 
-#saved-changes {
-  display: none;
-}
+
 
 .job-input__valid {
   border: 2px solid green;
@@ -62,3 +60,21 @@
 #inputs-error {
   display: none;
 }
+
+#saved-changes{
+  display: none;
+  padding: 10px;
+  border: 6px solid green;
+  margin-left: -8%;
+  padding-bottom: 2%;
+  margin-top: 20%;
+  color: rgb(0, 0, 0);
+  box-shadow: 5px 5px 10px rgb(62, 62, 62);
+  border-radius: 15px;
+}
+
+.display-none{
+  display: none;
+}
+
+

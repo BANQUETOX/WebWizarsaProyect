@@ -26,10 +26,20 @@ function verifyJobInputs() {
     }
   }
   let errorLabel = document.getElementById("inputs-error");
+  let correctLabel = document.getElementById("saved-changes");
   let invalidInputs = document.getElementsByClassName("job-input__invalid");
-  if (invalidInputs.length > 0) {
+  if (invalidInputs.length > 1) {
     errorLabel.style.display = "initial";
+    correctLabel.classList.add("display-none") 
+    console.log(invalidInputs.length,"llega aqui");
   }
+  else {
+   correctLabel.style.display = "initial";
+   errorLabel.style.display = "none";
+   console.log("sera");
+  }
+
+
 }
 
 jobForm.addEventListener("submit", (e) => {
