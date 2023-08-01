@@ -132,7 +132,7 @@
   visibility: visible;
   position: absolute;
   top: 50px;
-  margin-left: 93.5%;
+  margin-left: 48%;
 }
 
 .form-control small {
@@ -150,7 +150,7 @@
 
 .confirmation {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
 
   color: #ff0000;
   visibility: visible;
@@ -166,7 +166,6 @@
   line-height: 1.5;
   border-radius: 0.25rem;
   cursor: pointer;
-  margin-left: 20%;
 }
 
 .form a {
