@@ -365,4 +365,11 @@
   color: red;
   font-size: 15px;
   display: none;
+  margin-top: 0;
+}
+#first-password--message {
+  margin-left: -15px;
+}
+#second-password--message {
+  margin-left: -130px;
 }

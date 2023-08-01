@@ -23,6 +23,9 @@ let firstPasswordInput = document.getElementById("first-new-password");
 let secondPasswordInput = document.getElementById("second-new-password");
 let firstErrorLabel = document.getElementById("first-password--message");
 let secondErrorLabel = document.getElementById("second-password--message");
+let secondPasswordInputContainer = document.getElementById(
+  "second-password-input-container"
+);
 
 firstPasswordInput.addEventListener("keyup", () => {
   if (isValidPassword(firstPasswordInput.value)) {

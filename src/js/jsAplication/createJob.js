@@ -2,6 +2,8 @@ const jobForm = document.getElementById("job-creation-form");
 const saveMessage = document.getElementById("saved-changes");
 let inputsCollection = document.getElementsByClassName("job-input");
 let inputsSelectsCollection = document.getElementsByClassName("select");
+let errorLabel = document.getElementById("inputs-error");
+let invalidInputs = document.getElementsByClassName("job-input__invalid");
 
 function verifyJobInputs() {
   for (let i = 0; i < inputsCollection.length; i++) {
@@ -25,25 +27,17 @@ function verifyJobInputs() {
       }
     }
   }
-  let errorLabel = document.getElementById("inputs-error");
-  let correctLabel = document.getElementById("saved-changes");
-  let invalidInputs = document.getElementsByClassName("job-input__invalid");
-  if (invalidInputs.length > 1) {
+
+  if (invalidInputs.length >= 1) {
     errorLabel.style.display = "initial";
-    correctLabel.classList.add("display-none") 
-    console.log(invalidInputs.length,"llega aqui");
+    hideSavedChanges(saveMessage);
+  } else {
+    showSavedChanges(saveMessage);
+    errorLabel.style.display = "none";
   }
-  else {
-   correctLabel.style.display = "initial";
-   errorLabel.style.display = "none";
-   console.log("sera");
-  }
-
-
 }
 
 jobForm.addEventListener("submit", (e) => {
   verifyJobInputs();
-  showSavedChanges(saveMessage);
   e.preventDefault();
 });
