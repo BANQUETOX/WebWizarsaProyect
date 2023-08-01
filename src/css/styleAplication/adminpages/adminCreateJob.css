@@ -35,7 +35,7 @@
 
 .button--green {
   margin-top: 40px;
-  margin-left: 23%;
+  margin-left: 20%;
 }
 
 .select {
@@ -59,17 +59,25 @@
 
 #inputs-error {
   display: none;
+  padding: 10px;
+  border: 6px solid rgb(186, 0, 0);
+  margin-left: -12%;
+  padding-bottom: 2%;
+  margin-top:1%;
+  color: rgb(0, 0, 0);
+  box-shadow: 5px 5px 5px rgb(189, 25, 25);
+  border-radius: 15px;
 }
 
 #saved-changes{
   display: none;
   padding: 10px;
-  border: 6px solid green;
-  margin-left: -8%;
+  border: 6px solid rgb(42, 194, 42);
+  margin-left: -4%;
   padding-bottom: 2%;
-  margin-top: 20%;
+  margin-top:1%;
   color: rgb(0, 0, 0);
-  box-shadow: 5px 5px 10px rgb(62, 62, 62);
+  box-shadow: 5px 5px 5px rgb(105, 240, 125);
   border-radius: 15px;
 }
 
