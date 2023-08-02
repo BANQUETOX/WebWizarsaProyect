@@ -19,10 +19,10 @@
                 inputsSelectsCollection[i - 7].classList.remove("company-input__valid");
              }  
         } else {
-            inputsCollection[i].classList.add("company-input_valid");
-            inputsCollection[i].classList.remove("company-input_invalid");
-            if (inputsCollection[i].type == "slect-one"){
-                inputsCollection[i].classList.remove("company-input_invalid");
+            inputsCollection[i].classList.add("company-input__valid");
+            inputsCollection[i].classList.remove("company-input__invalid");
+            if (inputsCollection[i].type == "select-one"){
+                inputsCollection[i].classList.remove("company-input__invalid");
                 inputsCollection[i].classList.remove("company-input__valid");
                 inputsSelectsCollection[i - 7].classList.add("company-input__valid");
                 inputsSelectsCollection [i - 7].classList.remove("company-input__invalid")

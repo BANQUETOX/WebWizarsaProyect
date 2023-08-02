@@ -103,7 +103,7 @@
   display: flex; /* Utiliza flexbox para alinear los botones */
   justify-content: flex-end; /* Alinea los botones hacia el final del contenedor (derecha) */
   margin-right: 3%;
-  margin-top: 35%;
+  margin-top: 10%;
 }
 
 .form-container input:disabled,
@@ -152,7 +152,7 @@ textarea:disabled {
   display: none;
   padding: 10px;
   border: 6px solid rgb(42, 194, 42);
-  margin-left: -8%;
+  margin-left: 28%;
   padding-bottom: 2%;
   margin-top:1%;
   color: rgb(0, 0, 0);
