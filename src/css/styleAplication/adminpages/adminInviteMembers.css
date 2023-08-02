@@ -54,6 +54,7 @@
 
 #function_collaborator {
   margin-top: 9px;
+  
 }
 .select__function--container {
   margin-left: 2px;
@@ -76,3 +77,45 @@
   width: 21.8%;
   margin-left: -1px;
 }
+
+
+.invite-input__valid {
+  border: 2px solid green;
+}
+.invite-input__invalid {
+  border: 2px solid red;
+}
+
+.prueba-de-border {
+  border: 2px solid red;
+}
+
+#inputs-error {
+  display: none;
+  padding: 10px;
+  padding-right: -200px;
+  border: 6px solid rgb(186, 0, 0);
+  margin-left: -8%;
+  padding-bottom: 2%;
+  margin-top:1%;
+  color: rgb(0, 0, 0);
+  box-shadow: 5px 5px 5px rgb(189, 25, 25);
+  border-radius: 15px;
+  width: 40%;
+  text-align: center;
+}
+
+#saved-changes{
+  display: none;
+  padding: 10px;
+  border: 6px solid rgb(42, 194, 42);
+  margin-left: -8%;
+  padding-bottom: 2%;
+  margin-top:1%;
+  color: rgb(0, 0, 0);
+  box-shadow: 5px 5px 5px rgb(105, 240, 125);
+  border-radius: 15px;
+  text-align: center;
+  width: 38%;
+}
+

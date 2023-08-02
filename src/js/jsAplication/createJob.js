@@ -37,7 +37,37 @@ function verifyJobInputs() {
   }
 }
 
-jobForm.addEventListener("submit", (e) => {
+/*jobForm.addEventListener("submit", (e) => {
   verifyJobInputs();
   e.preventDefault();
+});*/
+//?-----------------------------------/
+jobForm.addEventListener("submit", (e) => {
+  e.preventDefault(); 
+
+  verifyJobInputs();
+
+  if (invalidInputs.length === 0) {
+    
+    showSavedChanges(saveMessage);
+    errorLabel.style.display = "none";
+
+    
+    setTimeout(() => {
+      jobForm.reset(); 
+      for (let i = 0; i < inputsCollection.length; i++) {
+        inputsCollection[i].classList.remove("job-input__valid");
+      }
+      for (let i = 0; i < inputsSelectsCollection.length; i++) {
+        inputsSelectsCollection[i].classList.remove("job-input__valid");
+      }
+      hideSavedChanges(saveMessage);
+      errorLabel.style.display = "none";
+     
+    }, 3000);
+  } else {
+    errorLabel.style.display = "initial";
+    hideSavedChanges(saveMessage);
+  }
 });
+
