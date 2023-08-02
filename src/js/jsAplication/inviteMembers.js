@@ -12,7 +12,7 @@ function verifyInviteinputs(){
       inputsCollection[i].classList.add("invite-input__invalid");
       inputsCollection[i].classList.remove("invite-input__valid");
       if(inputsCollection[i].type == "select-one"){
-        inputsCollection[i].classList.remove("invite-input__valid"); //? 
+        inputsCollection[i].classList.remove("invite-input__valid"); //? Esto lo que hace es quitarle la clase para que no se le sobre ponga
         inputsCollection[i].classList.remove("invite-input__invalid");
         inputsSelectsCollection[i - 3].classList.add("invite-input__invalid")
         inputsSelectsCollection[i - 3].classList.remove("invite-input__valid")

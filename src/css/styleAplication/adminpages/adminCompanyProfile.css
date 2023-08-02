@@ -117,10 +117,10 @@ textarea:disabled {
   display: none;
 }
 
-.invite-input__valid {
+.company-input__valid {
   border: 2px solid green;
 }
-.invite-input__invalid {
+.company-input__invalid {
   border: 2px solid red;
 }
 
@@ -128,7 +128,7 @@ textarea:disabled {
   border: 2px solid red;
 }
 
-#inputs-error {
+#inputs-errors {
   display: none;
   padding: 10px;
   padding-right: -200px;

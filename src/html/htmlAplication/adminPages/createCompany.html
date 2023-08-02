@@ -17,7 +17,7 @@
       rel="stylesheet"
       href="../../../css/styleAplication/adminpages/adminCompanyProfile.css"
     />
-    <script src="../../../js/jsAplication/inviteMembers.js" defer></script>
+    <script src="../../../js/jsAplication/createCompany.js" defer></script>
     <script src="../../../js/jsAplication/main.js" defer></script>
     <title>Create company</title>
 
@@ -44,7 +44,7 @@
       <form id="companyForm">
         <div class="form-group form-group_factory">
           <label for="logo">Logo de Empresa:</label>
-          <input class="company-input" type="file" id="logo" name="logo" accept="image/*" required />
+          <input class="company-input" type="file" id="logo" name="logo" accept="image/*"  />
           <img
             id="logoPreview"
             src="#"
@@ -62,32 +62,31 @@
             id="name"
             name="name"
             class="text-input company-input"
-            required
-            
+           
           />
         </div>
 
         <div class="form-group">
           <label for="id">Cedula Juridica:</label>
-          <input type="text" id="id" name="id" class="text-input company-input" required  />
+          <input type="text" id="id" name="id" class="text-input company-input"   />
         </div>
 
         <div class="form-group">
           <label for="phone">Telefono:</label>
-          <input type="text" id="phone" name="phone" class="text-input company-input" required  />
+          <input type="text" id="phone" name="phone" class="text-input company-input"   />
         </div>
 
         <div class="form-group">
           <label for="sns">Facebook:</label>
-          <input type="text" id="sns" name="sns" class="text-input company-input" required  />
+          <input type="text" id="sns" name="sns" class="text-input company-input"   />
         </div>
         <div class="form-group">
           <label for="sns">Instagram:</label>
-          <input type="text" id="sns" name="sns" class="text-input company-input" required  />
+          <input type="text" id="sns" name="sns" class="text-input company-input"  />
         </div>
         <div class="form-group">
           <label for="sns">Twitter:</label>
-          <input type="text" id="sns" name="sns" class="text-input company-input" required  />
+          <input type="text" id="sns" name="sns" class="text-input company-input "  />
         </div>
 
         <div class="form-group">
@@ -99,7 +98,7 @@
                   class="select__element company-input"
                   name="selectProvince"
                   id="selectProvince"
-                  required
+                 
                   
                 >
                   <option value=""  selected hidden>
@@ -117,7 +116,7 @@
                   class="select__element company-input"
                   name="selectCanton"
                   id="selectCanton"
-                  required
+                  
                   
                 >
                   <option value=""  selected hidden>
@@ -136,7 +135,7 @@
                   class="select__element company-input"
                   name="selectDistrict"
                   id="selectDistrict"
-                  required
+                  
                   
                 >
                   <option value=""  selected hidden>
@@ -157,10 +156,19 @@
             id="direction"
             name="direction"
             class="text-input company-input "
-            required
+            
             
           ></textarea>
+
+          <p  id="inputs-errors" >
+            Debes de rellenar todos los espacios en blancos
+          </p>
+          
+          <p id="saved-changes">
+               Se ha enviado la inivtacion de forma exitosa 
+          </p>
         </div>
+
        <div class="button-container"
             <div class="form-group">
               <input
@@ -209,9 +217,4 @@
     </footer>
   </body>
 </html>
-<script>
-  document.getElementById('companyForm').addEventListener("submit",(e)=>{
-    document.location.href = ('./adminInitialInviteMembers.html')
-    e.preventDefault()
-  })
-</script>
+
