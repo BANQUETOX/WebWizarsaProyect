@@ -368,8 +368,13 @@
   margin-top: 0;
 }
 #first-password--message {
-  margin-left: -15px;
+  margin-left: 89px;
 }
 #second-password--message {
   margin-left: -130px;
+}
+
+.password-inputs-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
 }

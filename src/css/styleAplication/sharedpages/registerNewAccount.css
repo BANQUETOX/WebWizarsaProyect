@@ -28,18 +28,19 @@
 }
 
 .container {
+
+  color: #ececec;
+  border-radius: 5px;
+  background-color: #303841;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   box-shadow: transparent;
-  width: 700px;
-  max-width: 100%;
+
 }
 
 .form {
   padding: 30px 40px;
 }
 
-.eye {
-  margin-right: 28%;
-}
 
 .form-control {
   font-family: "Montserrat", sans-serif;
@@ -51,6 +52,12 @@
   margin-bottom: 10px;
   padding-bottom: 10px;
   position: relative;
+
+}
+
+.select {
+  width: unset;
+
 }
 
 .form-control label {
@@ -130,7 +137,9 @@
   visibility: visible;
   position: absolute;
   top: 50px;
-  margin-left: 35%;
+
+  margin-left: 48%;
+
 }
 
 .form-control small {
@@ -146,10 +155,25 @@
   visibility: visible;
 }
 
-.button--green {
-  margin-left: 23%;
-  margin-right: 10%;
-  background-color: #9fd3c7;
+
+.confirmation {
+  display: flex;
+  justify-content: flex-end;
+
+  color: #ff0000;
+  visibility: visible;
+}
+
+.form button {
+  font-family: "Montserrat", sans-serif;
+  display: inline-block;
+  text-align: center;
+  border: 1px solid black;
+  padding: 10px 11px;
+  font-size: 20px;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  cursor: pointer;
 }
 
 .form a {
@@ -166,17 +190,42 @@
   text-decoration: none;
 }
 
-.text-input__invalid {
-  border: 2px solid red;
-}
+.avatar-upload {
+  position: relative;
+  max-width: 205px;
+  margin: 50px auto;
 
-.text-input__valid {
-  border: 2px solid green;
+  .avatar-preview {
+    width: 192px;
+    height: 192px;
+    border-radius: 100%;
+    border: 6px solid #f8f8f8;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+    > div {
+      background-image: url(../../images/defaultUser.png);
+      width: 100%;
+      height: 100%;
+      border-radius: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+  .avatar-preview__error {
+    border: 6px solid #ff0000;
+  }
 }
-
-.error__message {
-  font-family: "Montserrat", sans-serif;
-  color: red;
-  font-size: 15px;
+.avatar-upload-input[type="file"] {
   display: none;
+}
+.avatar-upload-input--label {
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 10px;
+  background-color: white;
+  margin-left: 1.5vw;
+  border: 1px solid #ccc;
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+
 }
