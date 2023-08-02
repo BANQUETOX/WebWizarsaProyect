@@ -5,21 +5,21 @@ let inputsCollection = document.getElementsByClassName("company-input");
 let inputsSelectsCollection = document.getElementsByClassName("select");
 let errorLabel = document.getElementById("inputs-errors");
 let invalidInputs = document.getElementsByClassName("company-input__invalid");
-let inputsErrorLabels = document.getElementsByClassName("error--input-label");
+//let inputsErrorLabels = document.getElementsByClassName("error--input-label");
 
 function verifyComapanyinputs() {
   for (let i = 0; i < inputsCollection.length; i++) {
-    if (inputsCollection[i].value == "") {
+    if (inputsCollection[i].value == "") { //? Fomrulario esta vacio
       inputsCollection[i].classList.add("company-input__invalid");
       inputsCollection[i].classList.remove("company-input__valid");
       //   inputsErrorLabels[i].style.display = "initial";
       if (inputsCollection[i].type == "select-one") {
-        inputsCollection[i].classList.remove("company-input__invalid");
+        inputsCollection[i].classList.remove("company-input__invalid"); //? LLego y quito las otras clases para evitar que se sobrepongan
         inputsCollection[i].classList.remove("company-input__valid");
         inputsSelectsCollection[i - 7].classList.add("company-input__invalid");
         inputsSelectsCollection[i - 7].classList.remove("company-input__valid");
       }
-    } else {
+    } else { // TODO Este es cuando el formualario se lleno correctamente
       inputsCollection[i].classList.add("company-input__valid");
       inputsCollection[i].classList.remove("company-input__invalid");
       //   inputsErrorLabels[i].style.display = "none";
@@ -27,9 +27,7 @@ function verifyComapanyinputs() {
         inputsCollection[i].classList.remove("company-input__invalid");
         inputsCollection[i].classList.remove("company-input__valid");
         inputsSelectsCollection[i - 7].classList.add("company-input__valid");
-        inputsSelectsCollection[i - 7].classList.remove(
-          "company-input__invalid"
-        );
+        inputsSelectsCollection[i - 7].classList.remove("company-input__invalid");
       }
     }
   }
