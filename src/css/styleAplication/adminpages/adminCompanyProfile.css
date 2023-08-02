@@ -22,6 +22,8 @@
   clear: both;
 }
 
+
+
 .form-group_factory {
   padding-right: 10px;
   margin-top: 4%;
@@ -55,11 +57,13 @@
   padding: 5px;
   float: left;
   margin-top: 6px;
+
 }
 
 .form-group textarea {
   width: 70%;
   padding: 5px;
+  margin-bottom: 40px;
 }
 
 .form-group .btn {
@@ -99,6 +103,7 @@
   display: flex; /* Utiliza flexbox para alinear los botones */
   justify-content: flex-end; /* Alinea los botones hacia el final del contenedor (derecha) */
   margin-right: 3%;
+  margin-top: 35%;
 }
 
 .form-container input:disabled,
@@ -133,9 +138,9 @@ textarea:disabled {
   padding: 10px;
   padding-right: -200px;
   border: 6px solid rgb(186, 0, 0);
-  margin-left: -8%;
+  margin-left: 26%;
   padding-bottom: 2%;
-  margin-top:1%;
+  margin-top:50%;
   color: rgb(0, 0, 0);
   box-shadow: 5px 5px 5px rgb(189, 25, 25);
   border-radius: 15px;

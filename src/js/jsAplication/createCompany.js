@@ -8,11 +8,11 @@
 
  function verifyComapanyinputs(){
     for (let i = 0; i < inputsCollection.length; i++){
-        if (inputsCollection[i].value = ""){
+        if (inputsCollection[i].value == ""){
             inputsCollection[i].classList.add("company-input__invalid");
             inputsCollection[i].classList.remove('company-input__valid');
 
-            if (inputsSelectsCollection[i].type == "select-one"){
+            if (inputsCollection[i].type == "select-one"){
                 inputsCollection[i].classList.remove("company-input__invalid");
                 inputsCollection[i].classList.remove("company-input__valid");
                 inputsSelectsCollection[i - 7].classList.add("company-input__invalid");
