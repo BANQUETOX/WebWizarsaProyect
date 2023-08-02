@@ -59,7 +59,6 @@
     <section class="sct-form">
         <div class="user-profile">
             <div>
-                
                 <div class="avatar-upload">
                     <div class="avatar-edit">
                         <input class="profile-input" type='file' id="imageUpload" accept=".png" />
@@ -82,8 +81,8 @@
                             <small>El campo no puede estar en blanco</small>
                         </div>
                         <div class="form-control">
-                            <label>Adjuntar CV(PDF):</label>
-                            <input class="profile-input" type="file" placeholder="Juan Reyes" id="cv" accept="application/pdf">
+                            <label>Número teléfonico:</label>
+                            <input class="text-input profile-input" type="tel" placeholder="1234 5678" id="tel" accept="application/pdf">
                             <i class="fas fa-check-circle"></i>
                             <i class="fas fa-exclamation-circle"></i>
                             <small>El campo no puede estar en blanco</small>
@@ -98,26 +97,19 @@
                             <small>El campo no puede estar en blanco</small>
                         </div>
                         <div class="form-control">
-                            <label>Número teléfonico:</label>
-                            <input class="text-input profile-input" type="tel" placeholder="1234 5678" id="tel" accept="application/pdf">
-                            <i class="fas fa-check-circle"></i>
-                            <i class="fas fa-exclamation-circle"></i>
-                            <small>El campo no puede estar en blanco</small>
-                        </div>
-                    </div>
-                    <div class="colums">
-                        <div class="form-control">
                             <label>Cédula, DIMEX, Pasaporte:</label>
                             <input class="text-input profile-input" type="number" placeholder="12345678" id="idnum">
                             <i class="fas fa-check-circle"></i>
                             <i class="fas fa-exclamation-circle"></i>
                             <small>El campo no puede estar en blanco</small>
                         </div>
-                        <div class="form-control">
+                    </div>
+                    <div class="colums">
+                        <div class="form-control genre-container">
                             <label>Género</label>
                             <div class="select">
                                 <select name="genre" id="genre" class="select__element profile-input">
-                                            <option value="empty"></option>
+                                            <option value=""></option>
                                             <option value="man">Masculino</option>
                                             <option value="woman">Femenino</option>
                                             <option value="nogender">Prefiero no especificar</option>
@@ -128,56 +120,47 @@
 
                             </div>
                         </div>
-                    </div>
-                    <div class="form-control">
-                        <label>Dirección de casa por distrito, cantón y provincia:</label>
-                        <input class="text-input profile-input" type="text" placeholder="Ciudadela 15 de septiembre" id="address">
-                        <i class="fas fa-check-circle"></i>
-                        <i class="fas fa-exclamation-circle"></i>
-                        <small>El campo no puede estar en blanco</small>
-                    </div>
-                    <div class="row">
                         <div class="form-control">
-                            <label>Experiencia laboral:</label>
-                            <input class="text-input profile-input" type="text" placeholder="Amazon" id="exp">
-                            
-                            <small>El campo no puede estar en blanco</small>
-                        </div>
-                        <div class="form-control">
-                            <label>Desde:</label>
-                            <input class="text-input profile-input" type="date" placeholder="01/12/1990" id="from">
-                            
-                            <small>El campo no puede estar en blanco</small>
-                        </div>
-                        <div class="form-control">
-                            <label>Hasta:</label>
-                            <input class="text-input profile-input" type="date" placeholder="01/12/1990" id="to">
-                            
-                            <small>El campo no puede estar en blanco</small>
+                            <label>Correo electronico:</label>
+                            <input class="text-input profile-input" type="email" id="idnum">
                         </div>
                     </div>
-                    <button class="button--white profile-input add-button">+</button>
-                    <div class="row">
-                        <div class="form-control">
-                            <label>Educación:</label>
-                            <input class="text-input profile-input" type="text" placeholder="Cenfotec" id="edc">
-                            
-                            <small>El campo no puede estar en blanco</small>
+                    <div class="colums general-location-container">
+                        <div class="form-control location-container">
+                            <label>Provincia</label>
+                            <div class="select">
+                                <select name="genre" id="province" class="select__element profile-input">
+                                            <option value=""></option>
+                                        </select>
+                                        <i class="fas fa-check-circle"></i>
+                                        <i class="fas fa-exclamation-circle"></i>
+                                        <small>El campo no puede estar en blanco</small>
+                            </div>
                         </div>
-                        <div class="form-control">
-                            <label>Desde:</label>
-                            <input class="text-input profile-input" type="date" placeholder="01/12/1990" id="from">
-                            
-                            <small>El campo no puede estar en blanco</small>
+
+                        <div class="form-control location-container">
+                            <label>Canton</label>
+                            <div class="select">
+                                <select name="genre" id="province" class="select__element profile-input">
+                                            <option value=""></option>
+                                            
+                                        </select>
+                            </div>
                         </div>
-                        <div class="form-control">
-                            <label>Hasta:</label>
-                            <input class="text-input profile-input" type="date" placeholder="01/12/1990" id="to">
-                            
-                            <small>El campo no puede estar en blanco</small>
+                        <div class="form-control  location-container">
+                            <label>Distrito</label>
+                            <div class="select">
+                                <select name="genre" id="province" class="select__element profile-input">
+                                            <option value=""></option>
+                                          
+                                        </select>
+                            </div>
                         </div>
+                        
                     </div>
-                    <button class="button--white profile-input add-button">+</button>
+
+                  
+    
                     <div class="btn-cont">
                         <div>
                             <button class="button--red">Editar perfil</button>
@@ -208,6 +191,34 @@
                                 <i class="fa-solid fa-eye" id="eye2"></i>
                                 <p id="second-password--message" class="error__message">
                                     La contraseña no coincide
+                                  </p>
+                            </div>
+                        </div>
+                        <div class="btn-cont">
+                            <div>
+                                <button class="button--red"> Editar contraseña</button>
+                            </div>
+                            <div>
+                                <button class="button--green">Guardar contraseña</button>
+                            </div>
+                        </div>
+                    </form>
+            </div>
+            <div class="container-form">
+                <form class="form" id="password-form">
+                        <h2>Ceder permisos de administrador</h2>
+                        <div class="password-inputs-container">
+                            <div class="form-control password-input-container" id="first-password-input-container">
+                                <label>Email del nuevo administrador</label>
+                                <input class="text-input" type="email">
+                                
+                            </div>
+                            <div class="form-control password-input-container" id="second-password-input-container">
+                                <label> Contraseña de Confirmacion</label>
+                                <input class="text-input" type="password" id="confirmation-password">
+                                <i class="fa-solid fa-eye" id="confirmation-eye"></i>
+                                <p id="confirmation-password--message" class="error__message">
+                                   Contraseña incorrecta
                                   </p>
                             </div>
                         </div>

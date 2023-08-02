@@ -337,6 +337,7 @@
 .session {
   display: flex;
   justify-content: center;
+  margin-top: -170px;
 }
 
 .add-button {
@@ -376,4 +377,16 @@
 .password-inputs-container {
   display: grid;
   grid-template-columns: auto auto auto;
+}
+.location-container {
+  margin-right: -200px;
+}
+
+.general-location-container {
+  margin-top: 40px;
+  margin-right: 200px;
+}
+
+.genre-container {
+  margin-right: 40px;
 }
