@@ -28,31 +28,36 @@
 }
 
 .container {
+
   color: #ececec;
   border-radius: 5px;
   background-color: #303841;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  width: 700px;
-  max-width: 100%;
+  box-shadow: transparent;
+
 }
 
 .form {
   padding: 30px 40px;
 }
 
+
 .form-control {
   font-family: "Montserrat", sans-serif;
   font-size: 20px;
+  align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin-bottom: 10px;
   padding-bottom: 10px;
   position: relative;
+
 }
 
 .select {
   width: unset;
+
 }
 
 .form-control label {
@@ -132,7 +137,9 @@
   visibility: visible;
   position: absolute;
   top: 50px;
+
   margin-left: 48%;
+
 }
 
 .form-control small {
@@ -147,6 +154,7 @@
   color: #ff0000;
   visibility: visible;
 }
+
 
 .confirmation {
   display: flex;
@@ -219,4 +227,5 @@
   display: inline-block;
   padding: 6px 12px;
   cursor: pointer;
+
 }

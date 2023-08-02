@@ -48,6 +48,7 @@
   padding: 5px;
   float: left;
   margin-top: 90px;
+  max-width: 500px;
 }
 
 .form-group input[type="text"] {
@@ -55,11 +56,14 @@
   padding: 5px;
   float: left;
   margin-top: 6px;
+  max-width: 500px;
 }
 
 .form-group textarea {
   width: 70%;
   padding: 5px;
+  margin-bottom: 40px;
+  max-width: 500px;
 }
 
 .form-group .btn {
@@ -99,6 +103,7 @@
   display: flex; /* Utiliza flexbox para alinear los botones */
   justify-content: flex-end; /* Alinea los botones hacia el final del contenedor (derecha) */
   margin-right: 3%;
+  margin-top: 10%;
 }
 
 .form-container input:disabled,
@@ -116,3 +121,49 @@ textarea:disabled {
 #saved-changes {
   display: none;
 }
+
+.company-input__valid {
+  border: 2px solid green;
+}
+.company-input__invalid {
+  border: 2px solid red;
+}
+
+.prueba-de-border {
+  border: 2px solid red;
+}
+
+#inputs-errors {
+  display: none;
+  padding: 10px;
+  padding-right: -200px;
+  border: 6px solid rgb(186, 0, 0);
+  margin-left: 26%;
+  padding-bottom: 2%;
+  margin-top: 50%;
+  color: rgb(0, 0, 0);
+  box-shadow: 5px 5px 5px rgb(189, 25, 25);
+  border-radius: 15px;
+  width: 40%;
+  text-align: center;
+}
+
+#saved-changes {
+  display: none;
+  padding: 10px;
+  border: 6px solid rgb(42, 194, 42);
+  margin-left: 28%;
+  padding-bottom: 2%;
+  margin-top: 1%;
+  color: rgb(0, 0, 0);
+  box-shadow: 5px 5px 5px rgb(105, 240, 125);
+  border-radius: 15px;
+  text-align: center;
+  width: 38%;
+}
+
+/* .error--input-label {
+  display: none;
+  margin-left: 230px;
+  font-size: 10px;
+} */

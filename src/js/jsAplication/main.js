@@ -55,3 +55,21 @@ function readURL(input) {
     reader.readAsDataURL(input.files[0]);
   }
 }
+
+function isValidEmail(email) {
+  return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
+    email
+  );
+}
+
+function isValidPassword(password) {
+  return /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*(\W|_)).{6,12}$/.test(password);
+}
+
+function isValidId(idnum) {
+  return /^.{8,12}$/.test(idnum);
+}
+
+function checkTwoPasswords(firstPassword, secondPassword) {
+  return firstPassword === secondPassword ? true : false;
+}

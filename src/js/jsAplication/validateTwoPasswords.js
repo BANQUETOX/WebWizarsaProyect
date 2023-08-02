@@ -1,36 +1,9 @@
-let styleElement = document.createElement("style");
-const inputsCollection = document.getElementsByClassName("profile-input");
-// disableInputs(inputsCollection);
-// disableSelectStyle(styleElement);
-
-$("#imageUpload").change(function () {
-  if (this.files[0].size > 20000000) {
-    document
-      .getElementById("avatar-preview")
-      .classList.add("avatar-preview__error");
-    this.value = "";
-  } else {
-    document
-      .getElementById("avatar-preview")
-      .classList.remove("avatar-preview__error");
-    readURL(this);
-  }
-});
-
-//passwords section
 let passwordForm = document.getElementById("password-form");
 let firstPasswordInput = document.getElementById("first-new-password");
-let firstErrorLabel = document.getElementById("first-password--message");
-let firstPasswordInputContainer = document.getElementById(
-  "first-password-input-container"
-);
-let firstEye = document.getElementById("eye");
 let secondPasswordInput = document.getElementById("second-new-password");
+let firstErrorLabel = document.getElementById("first-password--message");
 let secondErrorLabel = document.getElementById("second-password--message");
-let secondPasswordInputContainer = document.getElementById(
-  "second-password-input-container"
-);
-let secondEye = document.getElementById("eye2");
+let boxContainer = document.getElementById("forget-password--blue-box");
 
 firstPasswordInput.addEventListener("keyup", () => {
   if (isValidPassword(firstPasswordInput.value)) {
@@ -41,8 +14,8 @@ firstPasswordInput.addEventListener("keyup", () => {
     firstPasswordInput.classList.add("text-input__invalid");
     firstPasswordInput.classList.remove("text-input__valid");
     firstErrorLabel.style.display = "initial";
+    boxContainer.style.paddingBottom = "200px";
   }
-  alingInputs();
 });
 
 firstPasswordInput.addEventListener("blur", () => {
@@ -55,7 +28,6 @@ firstPasswordInput.addEventListener("blur", () => {
     firstPasswordInput.classList.remove("text-input__valid");
     firstErrorLabel.style.display = "initial";
   }
-  alingInputs();
 });
 
 secondPasswordInput.addEventListener("keyup", () => {
@@ -66,12 +38,13 @@ secondPasswordInput.addEventListener("keyup", () => {
     secondPasswordInput.classList.add("text-input__valid");
     secondPasswordInput.classList.remove("text-input__invalid");
     secondErrorLabel.style.display = "none";
+    boxContainer.style.paddingBottom = "70px";
   } else {
     secondPasswordInput.classList.add("text-input__invalid");
     secondPasswordInput.classList.remove("text-input__valid");
     secondErrorLabel.style.display = "initial";
+    boxContainer.style.paddingBottom = "200px";
   }
-  alingInputs();
 });
 
 secondPasswordInput.addEventListener("blur", () => {
@@ -82,12 +55,13 @@ secondPasswordInput.addEventListener("blur", () => {
     secondPasswordInput.classList.add("text-input__valid");
     secondPasswordInput.classList.remove("text-input__invalid");
     secondErrorLabel.style.display = "none";
+    boxContainer.style.paddingBottom = "70px";
   } else {
     secondPasswordInput.classList.add("text-input__invalid");
     secondPasswordInput.classList.remove("text-input__valid");
     secondErrorLabel.style.display = "initial";
+    boxContainer.style.paddingBottom = "200px";
   }
-  alingInputs();
 });
 
 passwordForm.addEventListener("submit", (e) => {
@@ -99,23 +73,3 @@ passwordForm.addEventListener("submit", (e) => {
   }
   e.preventDefault();
 });
-
-function alingInputs() {
-  if (
-    firstPasswordInput.classList.contains("text-input__invalid") &&
-    secondPasswordInput.classList.contains("text-input__invalid")
-  ) {
-    secondPasswordInputContainer.style.marginTop = "-9px";
-    secondEye.style.top = "61px";
-  } else if (secondPasswordInput.classList.contains("text-input__invalid")) {
-    firstPasswordInputContainer.style.marginTop = "-30px";
-    firstEye.style.top = "80px";
-  } else if (firstPasswordInput.classList.contains("text-input__invalid")) {
-    secondPasswordInputContainer.style.marginTop = "-45px";
-    secondEye.style.top = "98px";
-  }
-  if (firstPasswordInput.classList.contains("text-input__valid")) {
-    secondPasswordInputContainer.style.marginTop = "0px";
-    secondEye.style.top = "50px";
-  }
-}

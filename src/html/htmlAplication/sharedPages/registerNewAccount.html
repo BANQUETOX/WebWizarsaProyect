@@ -12,8 +12,6 @@
     <link rel="stylesheet" href="../../../css/styleAplication/generalStyles.css">
     <link rel="stylesheet" href="../../../css/styleAplication/sharedpages/registerNewAccount.css">
     <script src="https://kit.fontawesome.com/73f851add2.js" crossorigin="anonymous" defer></script>
-    
-    
 
     <title>Registrar cuenta</title>
 
@@ -82,19 +80,28 @@
                 </div>
                 <div class="form-control">
                     <label>Contraseña:</label>
-                    <input type="password" placeholder="Contraseña" id="password">
+                    <input type="password" placeholder="Contraseña" id="first-password">
+                    <div class= "eye">
                     <i class="fa-solid fa-eye" id="eye"></i>
                     <i class="fas fa-check-circle"></i>
                     <i class="fas fa-exclamation-circle"></i>
-                    <small>El campo no puede estar en blanco</small>
+                    </div>
+                    <p id="first-password--message" class="error__message">
+                        La contraseña no cumple con los requisitos (minimo 4 digitos -
+                        maximo 12 digitos)
+                      </p>
                 </div>
                 <div class="form-control">
                     <label>Confirmar contraseña:</label>
-                    <input type="password" placeholder="Contraseña" id="password2">
+                    <input type="password" placeholder="Contraseña" id="second-password">
+                    <div class= "eye">
                     <i class="fa-solid fa-eye" id="eye2"></i>
                     <i class="fas fa-check-circle"></i>
                     <i class="fas fa-exclamation-circle"></i>
-                    <small>El campo no puede estar en blanco</small>
+                    </div>
+                    <p id="second-password--message" class="error__message">
+                        La contraseña no coincide
+                      </p>
                 </div>
                 <div class="form-control">
                     <label>Género:</label>
@@ -152,10 +159,11 @@
                   </div>
                   
 
-                <div class="confirmation">
-                    <button class="button--green">Continuar</button>&nbsp;&nbsp;&nbsp;
+               
+                    <button class="button--green">Continuar</button>
                     <button class="button--red">Cancelar</button>
-                </div>
+            
+          
 
             </form>
 
