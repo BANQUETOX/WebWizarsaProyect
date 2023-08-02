@@ -308,7 +308,6 @@
   visibility: visible;
   position: absolute;
   top: 50px;
-  margin-left: 35%;
 }
 
 .form-control small {
@@ -368,8 +367,13 @@
   margin-top: 0;
 }
 #first-password--message {
-  margin-left: -15px;
+  margin-left: 89px;
 }
 #second-password--message {
   margin-left: -130px;
+}
+
+.password-inputs-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
 }
