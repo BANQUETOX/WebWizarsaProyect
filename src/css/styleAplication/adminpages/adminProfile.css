@@ -308,7 +308,6 @@
   visibility: visible;
   position: absolute;
   top: 50px;
-  margin-left: 35%;
 }
 
 .form-control small {
@@ -338,8 +337,56 @@
 .session {
   display: flex;
   justify-content: center;
+  margin-top: -170px;
 }
 
 .add-button {
   margin-left: 79px;
+}
+
+.password-input-container {
+  max-width: 500px;
+}
+.text-input {
+  border: 0;
+  outline: none;
+}
+
+.text-input__invalid {
+  border: 2px solid red;
+}
+
+.text-input__valid {
+  border: 2px solid green;
+}
+
+.error__message {
+  font-family: "Montserrat", sans-serif;
+  color: red;
+  font-size: 15px;
+  display: none;
+  margin-top: 0;
+}
+#first-password--message {
+  margin-left: 89px;
+}
+#second-password--message {
+  margin-left: -130px;
+}
+
+.password-inputs-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+.location-container {
+  margin-right: -200px;
+}
+
+.general-location-container {
+  margin-top: 40px;
+  margin-right: 200px;
+}
+
+.genre-container {
+  margin-right: 40px;
 }

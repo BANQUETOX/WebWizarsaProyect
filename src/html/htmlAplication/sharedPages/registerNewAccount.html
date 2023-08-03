@@ -64,23 +64,28 @@
                 </div>
                 <div class="form-control">
                     <label>Contraseña:</label>
-                    <input type="password" placeholder="Contraseña" id="password">
+                    <input type="password" placeholder="Contraseña" id="first-password">
                     <div class= "eye">
                     <i class="fa-solid fa-eye" id="eye"></i>
                     <i class="fas fa-check-circle"></i>
                     <i class="fas fa-exclamation-circle"></i>
                     </div>
-                    <small>El campo no puede estar en blanco</small>
+                    <p id="first-password--message" class="error__message">
+                        La contraseña no cumple con los requisitos (minimo 4 digitos -
+                        maximo 12 digitos)
+                      </p>
                 </div>
                 <div class="form-control">
                     <label>Confirmar contraseña:</label>
-                    <input type="password" placeholder="Contraseña" id="password2">
+                    <input type="password" placeholder="Contraseña" id="second-password">
                     <div class= "eye">
                     <i class="fa-solid fa-eye" id="eye2"></i>
                     <i class="fas fa-check-circle"></i>
                     <i class="fas fa-exclamation-circle"></i>
                     </div>
-                    <small>El campo no puede estar en blanco</small>
+                    <p id="second-password--message" class="error__message">
+                        La contraseña no coincide
+                      </p>
                 </div>
                 <div class="form-control">
                     <label>Género:</label>
@@ -120,6 +125,23 @@
                     <i class="fas fa-exclamation-circle"></i>
                     <small>El campo no puede estar en blanco</small>
                 </div>
+                <div class="avatar-upload">
+                    <label for="imageUpload" class="button--white avatar-upload-input--label"
+                      >Foto de perfil</label
+                    >
+                    <input
+                      type="file"
+                      name="profilePicture"
+                      id="imageUpload"
+                      accept=".png"
+                      class="avatar-upload-input"
+                    />
+                    <div class="avatar-edit"></div>
+                    <div class="avatar-preview" id="avatar-preview">
+                      <div class="imagePreview" id="imagePreview"></div>
+                    </div>
+                  </div>
+                  
 
                
                     <button class="button--green">Continuar</button>
