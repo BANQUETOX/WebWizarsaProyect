@@ -139,8 +139,39 @@
   background: rgb(205, 17, 17);
   text-align: center;
 }
-
-.form-control.error i.fa-exclamation-circle {
-  color: #e74c3c;
-  visibility: visible;
+.user-eduction-input__valid {
+  border: 2px solid green;
 }
+.user-eduction-input__invalid {
+  border: 2px solid red;
+}
+
+.prueba-de-border {
+  border: 2px solid red;
+}
+
+#inputs-error {
+  display: none;
+  padding: 10px;
+  border: 6px solid rgb(186, 0, 0);
+  margin-left: -12%;
+  padding-bottom: 2%;
+  margin-top:1%;
+  color: rgb(0, 0, 0);
+  box-shadow: 5px 5px 5px rgb(189, 25, 25);
+  border-radius: 15px;
+}
+
+#saved-changes{
+  display: none;
+  padding: 10px;
+  border: 6px solid rgb(42, 194, 42);
+  margin-left: -4%;
+  padding-bottom: 2%;
+  margin-top:1%;
+  color: rgb(0, 0, 0);
+  box-shadow: 5px 5px 5px rgb(105, 240, 125);
+  border-radius: 15px;
+}
+
+
