@@ -1,12 +1,12 @@
-const user_education_form =  document.getElementById("formulary_addEducation");
+const user_initial_form =  document.getElementById("formulary_initialEducation");
 const saveMessage = document.getElementById("saved-changes")
 
-let inputsCollection = document.getElementsByClassName("user_education-input");
+let inputsCollection = document.getElementsByClassName("user_initialeduc-input");
 let inputsSelectsCollection = document.getElementsByClassName("select");
 let errorLabel = document.getElementById("inputs-errors");
 let invalidInputs = document.getElementsByClassName("user-input__invalid");
 
-function verify_Educationinputs(){
+function verify_InitialEducationinputs(){
     for (let i = 0; i < inputsCollection.length;i++){
         if (inputsCollection[i].value == ""){
             inputsCollection[i].classList.add("user-input__invalid");
@@ -41,16 +41,16 @@ function verify_Educationinputs(){
     }
 }
 
-user_education_form.addEventListener("submit",(e) => {
+user_initial_form.addEventListener("submit",(e) => {
     e.preventDefault();
-    verify_Educationinputs();
+    verify_InitialEducationinputs();
 
     if(invalidInputs.length === 0){
         showSavedChanges(saveMessage);
         errorLabel.style.display = "none";
         
         setTimeout(() =>{
-            user_education_form.reset();
+            user_initial_form.reset();
             for (let i = 0; i < inputsCollection.length; i++) {
                 inputsCollection[i].classList.remove("user-input__valid");
               }
