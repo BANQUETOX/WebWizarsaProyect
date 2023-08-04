@@ -8,10 +8,10 @@ let workHereCheckbox = document.getElementById("workHere");
 let workUntil = document.getElementById("until");
 let workSince = document.getElementById("since");
 
-let genericUser = {
-  workEperiences: [],
-};
+
 workUntil.max = new Date().toISOString().slice(0, 10);
+
+
 
 function verifyInputs(elementList) {
   for (let i = 1; i < elementList.length; i++) {
@@ -58,29 +58,6 @@ function enableInputs(elementList) {
   enableWorkButton();
 }
 
-function createWorkExperienceObject() {
-  return {
-    jobPosition: document.getElementById("workPosition").value,
-    company: document.getElementById("company").value,
-    location: document.getElementById("location").value,
-    since: document.getElementById("since").value,
-    until: document.getElementById("until").value,
-    workHere: document.getElementById("workHere").checked,
-    description: document.getElementById("jobDescription").value,
-  };
-}
-
-function attachWorkExperiencesToUser(user, workExperienceObject) {
-  user.workEperiences.push(workExperienceObject);
-}
-function attachProfilepictureToUser(user) {
-  user.profilePicture = document.getElementById("imageUpload").value;
-}
-
-function attachSheetsToUser(user) {
-  user.liveSheet = document.getElementById("lifeSheet").value;
-  user.crimeSheet = document.getElementById("crimeSheet").value;
-}
 workHereCheckbox.addEventListener("change", function () {
   if (this.checked) {
     workUntil.value = new Date().toISOString().slice(0, 10);
@@ -99,15 +76,10 @@ noWorkCheckbox.addEventListener("change", function () {
 
 experinceForm.addEventListener("submit", function (e) {
   verifyInputs(inputsCollection);
-  attachWorkExperiencesToUser(genericUser, createWorkExperienceObject());
   disableInputs(inputsCollection);
   enableInputs(inputsCollection);
   disableNoWorkExperience();
   e.preventDefault();
 });
 
-// userDataForm.addEventListener("submit",function(e){
-//     attachProfilepictureToUser(genericUser)
-//     attachSheetsToUser(genericUser)
-//     e.preventDefault()
-// })
+

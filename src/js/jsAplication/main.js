@@ -37,6 +37,7 @@ function hideSavedChanges(savedChangesLabel) {
   savedChangesLabel.style.display = "none";
 }
 
+
 function moveToPage(pageReference) {
   window.location.href = pageReference;
 }

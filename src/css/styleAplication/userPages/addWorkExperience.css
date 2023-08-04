@@ -9,9 +9,12 @@
 .addWorkExperience--inputs-list {
   list-style: none;
   padding: 0;
+  
+  
 }
 .addWorkExperience--inputs-list > li {
   margin-left: 100px;
+  
 }
 
 /* inputs */
@@ -52,4 +55,82 @@
 #save {
   width: 123.84px;
   margin: 0 auto;
+}
+
+.work-input__valid {
+  border: 2px solid green;
+}
+.work-input__invalid {
+  border: 2px solid red;
+}
+
+.prueba-de-border {
+  border: 2px solid red;
+}
+
+.button--green{
+  margin-left: 10%;
+  margin-top: 2%;
+}
+
+#inputs-errors {
+  display: none;
+  padding: 10px;
+  border: 6px solid rgb(186, 0, 0);
+  margin-left: 17%;
+  padding-bottom: 2%;
+  margin-top:10%;
+
+  color: rgb(0, 0, 0);
+  box-shadow: 5px 5px 5px rgb(189, 25, 25);
+  border-radius: 15px;
+}
+
+#saved-changes{
+  display: none;
+  padding: 10px;
+  border: 6px solid rgb(42, 194, 42);
+  margin-left: 20%;
+  padding-bottom: 2%;
+  margin-top:1%;
+  color: rgb(0, 0, 0);
+  box-shadow: 5px 5px 5px rgb(105, 240, 125);
+  border-radius: 15px;
+  
+}
+
+#inputs-error {
+  display: none;
+  padding: 10px;
+  border: 6px solid rgb(186, 0, 0);
+  margin-left: 18%;
+  padding-bottom: 2%;
+  margin-top:14%;
+  margin-bottom: 20%;
+
+  color: rgb(0, 0, 0);
+  box-shadow: 5px 5px 5px rgb(189, 25, 25);
+  border-radius: 15px;
+}
+
+.button-save{
+  margin-left: -8%;
+  margin-top: 50%;
+}
+
+.message_validation{
+  margin-top: 500%;
+}
+
+#saved-change{
+  display: none;
+  padding: 10px;
+  border: 6px solid rgb(42, 194, 42);
+  margin-left: 24%;
+  padding-bottom: 2%;
+  margin-top:1%;
+  color: rgb(0, 0, 0);
+  box-shadow: 5px 5px 5px rgb(105, 240, 125);
+  border-radius: 15px;
+  
 }
