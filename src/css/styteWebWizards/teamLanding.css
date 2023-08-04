@@ -108,7 +108,6 @@
 }
 
 .team-landing--about-us--section h1{
-    text-align: center;
     font-family: 'Poppins';
 
 }
@@ -117,10 +116,13 @@
     padding: 10px;
     padding-top: 7vh;
     text-align: justify;
+    width:auto;
+    margin-left: 25%;
 }
 
 .team-landing--about-us--section:last-of-type{
     margin-bottom: 10vh;
+    margin-left: 25%;
 }
 
 
@@ -135,9 +137,11 @@
 }
 
 .team-landing--about-us--section--image img{
-    margin-left: 30vw;
+    margin-left: 10vw;
     width: 200px;
+    border-radius: 5%;
 }
+
 
 @media screen and (min-width: 720px){
     
@@ -164,7 +168,7 @@
 
 @media screen and (min-width: 1080px){
     .team-landing--about-us--section--image img{
-        width: 600px;
+        width: 700px;
     }
 }
 
@@ -182,8 +186,21 @@
 
 .member-image img{
     display: inline-block;
-    max-width: 80px;
+    max-width: 100px;
+    height: 100px;
+    width: 85px; 
+    margin-left: 28%;
+    margin-top: 50px;
+    border-radius: 5%;
+    border-color: rgb(254, 254, 255);
+    border-width: 7px;
+    border-style:double;
 }
+
+.member-description {
+    margin-left: 28%;
+}
+
 @media screen and (min-width: 720px){
     .team-landing--goup{
         display: grid;
