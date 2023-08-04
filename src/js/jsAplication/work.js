@@ -90,10 +90,8 @@ function verifydata_form(){
 userDataForm.addEventListener("submit",(e) =>{
   e.preventDefault();
   
-  if (invalidInputs.length >= 1){
-    hideSavedChanges(saveMessage);
-  }
   
+
   if (noWorkCheckbox.checked){
     verifydata_form();
 
@@ -132,7 +130,7 @@ userDataForm.addEventListener("submit",(e) =>{
     hideSavedChanges(saveMessage_extra);
     hideSavedChanges(saveMessage);
     errorLabel_extra.style.display = "initial";
-    errorLabel.style.display = "initial";
+    
     
   }
 });
