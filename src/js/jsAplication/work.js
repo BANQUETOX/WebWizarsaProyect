@@ -76,10 +76,12 @@ function verifydata_form(){
     if (invalidInputs.length >= 1){
       errorLabel_extra.style.display = "initial";
       hideSavedChanges(saveMessage_extra);
+      
 
     } else{
       showSavedChanges(saveMessage_extra);
       errorLabel_extra.style.display = "none";
+      
 
     }
   }
@@ -87,31 +89,50 @@ function verifydata_form(){
 
 userDataForm.addEventListener("submit",(e) =>{
   e.preventDefault();
-  verifyWorkInputs();
-  verifydata_form();
+  
+  if (invalidInputs.length >= 1){
+    hideSavedChanges(saveMessage);
+  }
+  
+  if (noWorkCheckbox.checked){
+    verifydata_form();
+
+  }else{
+    verifyWorkInputs();
+    verifydata_form();
+    
+
+  }
+  
 
   
 
   if (invalidInputs.length === 0){
-    showSavedChanges(saveMessage)
     showSavedChanges(saveMessage_extra);
+    hideSavedChanges(saveMessage);
     errorLabel_extra.style.display = "none"
     
 
     setTimeout(() =>{
       userDataForm.reset();
+      workForm.reset();
       for (let i = 0; i < inputsCollection_extra.length; i++){
         inputsCollection_extra[i].classList.remove("work-input__valid");
+      
+      for (let i = 0; i < inputsCollection.length; i++){
+        inputsCollection[i].classList.remove("work-input__valid");
 
       }
       hideSavedChanges(saveMessage_extra);
       hideSavedChanges(saveMessage);
       errorLabel_extra.style.display = "none";
-    },3000)
+      errorLabel.style.display = "none";
+    }},3000)
   } else{
     hideSavedChanges(saveMessage_extra);
     hideSavedChanges(saveMessage);
     errorLabel_extra.style.display = "initial";
+    errorLabel.style.display = "initial";
     
   }
 });

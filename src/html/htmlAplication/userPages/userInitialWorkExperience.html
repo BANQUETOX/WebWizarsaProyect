@@ -23,7 +23,8 @@
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"
       defer
     ></script>
-    <script src="../../../js/jsAplication/addworkExperience.js" defer></script>
+    <script src="../../../js/jsAplication/work.js" defer></script>
+    <script src="../../../js/jsAplication/main.js" defer></script>
     <title>Agregar experiencia laboral</title>
   </head>
   <body>
@@ -70,7 +71,7 @@
             <input
               type="text"
               id="workPosition"
-              required
+              
               class="addWorkExperience--input text-input"
             />
           </li>
@@ -81,7 +82,7 @@
             <input
               type="text"
               id="company"
-              required
+              
               class="addWorkExperience--input text-input"
             />
           </li>
@@ -92,7 +93,7 @@
             <input
               type="text"
               id="location"
-              required
+              
               class="addWorkExperience--input text-input"
             />
           </li>
@@ -103,7 +104,7 @@
             <input
               type="date"
               id="since"
-              required
+              
               class="addWorkExperience--input text-input"
             />
             <label for="until" class="addWorkExperience--input-label"
@@ -112,7 +113,7 @@
             <input
               type="date"
               id="until"
-              required
+              
               class="addWorkExperience--input text-input"
             />
           </li>
@@ -136,11 +137,15 @@
               id="jobDescription"
               cols="30"
               rows="10"
-              required
+              
               class="addWorkExperience--input text-input"
             ></textarea>
-          </li>
-          <li>
+          </li><br>
+          <p  id="inputs-errors">Debes de rellenar todos los espacios en blanco</p>
+
+          <p class="display-none" id="saved-changes"> Se han guardado los datos ingresados </p>
+          <br>
+          <li><br><br>
             <button class="button--green" id="upload-work">
               Subir otro trabajo
             </button>
@@ -170,11 +175,18 @@
               accept=".pdf"
               id="lifeSheet"
               class="upload-input"
-              required
+              
             />
           </li>
+          <br><br>
+
+          
+          <p  class="message_validation" id="inputs-error">Debes de rellenar todos los espacios en blanco</p>
+
+          <p class="display-none" id="saved-change"> Se han guardado los datos ingresados </p>
+
           <li id="save">
-            <button class="button--green">Guardar</button>
+            <button class="button--green button-save" >Guardar</button>
           </li>
         </ul>
       </form>
