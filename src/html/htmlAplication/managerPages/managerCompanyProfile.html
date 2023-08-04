@@ -15,11 +15,13 @@
     />
     <link
       rel="stylesheet"
-      href="../../../css/styleAplication/adminpages/adminCompanyProfile.css"
+      href="../../../css/styleAplication/adminpages/adminProfile.css"
     />
 
-    <script src="../../../js/jsAplication/editCompanyProfile.js" defer></script>
-    <script src="../../../js/jsAplication/main.js"></script>
+    <script src="../../../js/jsAplication/main.js" defer></script>
+    <script src="../../../js/jsAplication/adminProfile.js" defer></script>
+    <script src="https://kit.fontawesome.com/73f851add2.js" crossorigin="anonymous" defer></script>
+
     <title>Company profile</title>
 
   </head>
@@ -58,120 +60,117 @@
       </div>
     </header>
 
-    <div class="form-container">
-      <form id="companyForm">
-        <div class="form-group form-group_factory">
-          <label for="logo">Logo de Empresa:</label>
-          <input class="company-input" type="file" id="logo" name="logo" accept="image/*" required disabled/>
-          <img
-            id="logoPreview"
-            src="#"
-            alt="Logo Preview"
-            style="display: none"
-
-          />
-        </div>
-        <br />
-        <br />
-        <div class="form-group">
-          <label for="name">Nombre de Empresa:</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            class="text-input company-input"
-            required
-            disabled
-          />
-        </div>
-
-        <div class="form-group">
-          <label for="id">Cedula Juridica:</label>
-          <input type="text" id="id" name="id" class="text-input company-input" required disabled />
-        </div>
-
-        <div class="form-group">
-          <label for="phone">Telefono:</label>
-          <input type="text" id="phone" name="phone" class="text-input company-input" required disabled />
-        </div>
-
-        <div class="form-group">
-          <label for="sns">Social Media:</label>
-          <input type="text" id="sns" name="sns" class="text-input company-input" required disabled />
-        </div>
-
-        <div class="form-group">
-          <label for="selectRegion">Direccion:</label>
-          <table class="company-form--table">
-            <td>
-              <div class="select">
-                <select
-                  class="select__element company-input"
-                  name="selectProvince"
-                  id="selectProvince"
-                  required
-                  disabled
-                >
-                  <option value="" disabled selected hidden>
-                    Provincia
-                  </option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                </select>
+    <section class="sct-form">
+      <div class="user-profile">
+          <div>
+              <div class="avatar-upload">
+                  <div class="avatar-edit">
+                      <input class="profile-input" type='file' id="imageUpload" accept=".png" />
+                      <label  for="imageUpload"></label>
+                  </div>
+                  <div class="avatar-preview" id="avatar-preview">
+                      <div id="imagePreview">
+                      </div>
+                  </div>
               </div>
-            </td>
-            <td>
-              <div class="select">
-                <select
-                  class="select__element company-input"
-                  name="selectCanton"
-                  id="selectCanton"
-                  required
-                  disabled
-                >
-                  <option value="" disabled selected hidden>
-                    Canton
-                  </option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                </select>
-              </div>
-            </td>
-
-            <td>
-              <div class="select">
-                <select
-                  class="select__element company-input"
-                  name="selectDistrict"
-                  id="selectDistrict"
-                  required
-                  disabled
-                >
-                  <option value="" disabled selected hidden>
-                   Distrito
-                  </option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                </select>
-              </div>
-            </td>
-          </table>
-        </div>
-
-        <div class="form-group">
-          <label for="direction">Direccion Detallada:</label>
-          <textarea
-            id="direction"
-            name="direction"
-            class="text-input company-input "
-            required
-            disabled
-          ></textarea>
-        </div>
-        </div>
+          </div>
+  
+          <div class="container-form">
+              <form class="form" id="form">
+                  <h2>Editar perfil</h2>
+                  <div class="colums">
+                      <div class="form-control">
+                          <label>Nombre de la empresa:</label>
+                          <input class="text-input profile-input" type="text" placeholder="Juan Reyes" id="fname">
+                          <small>El campo no puede estar en blanco</small>
+                      </div>
+                      <div class="form-control">
+                          <label>Número teléfonico:</label>
+                          <input class="text-input profile-input" type="tel" placeholder="1234 5678" id="tel" accept="application/pdf">
+                          <i class="fas fa-check-circle"></i>
+                          <i class="fas fa-exclamation-circle"></i>
+                          <small>El campo no puede estar en blanco</small>
+                      </div>
+                  </div>
+                  <div class="colums">
+                      <div class="form-control">
+                          <label>Cédula Juridica:</label>
+                          <input class="text-input profile-input" type="number" placeholder="12345678" id="idnum">
+                          <i class="fas fa-check-circle"></i>
+                          <i class="fas fa-exclamation-circle"></i>
+                          <small>El campo no puede estar en blanco</small>
+                      </div>
+                      <div class="form-control">
+                          <label>Correo electronico:</label>
+                          <input class="text-input profile-input" type="email" id="idnum">
+                      </div>
+                      
+                  </div>
+                  <div class="colums general-location-container">
+                      <div class="form-control location-container">
+                          <label>Facebook:</label>
+                          <input class="text-input profile-input" type="text" name="" id="">
+                      </div>
+  
+                      <div class="form-control location-container">
+                          <label>instagram:</label>
+                          <input class="text-input profile-input " type="text" name="" id="">
+                      </div>
+                      <div class="form-control  location-container">
+                          <label>Twitter:</label>
+                          <input class="text-input profile-input" type="text" name="" id="">
+                      </div>
+                      
+                  </div>
+                  <div class="colums general-location-container">
+                      <div class="form-control location-container">
+                          <label>Provincia</label>
+                          <div class="select">
+                              <select name="genre" id="province" class="select__element profile-input">
+                                          <option value=""></option>
+                                      </select>
+                                      <i class="fas fa-check-circle"></i>
+                                      <i class="fas fa-exclamation-circle"></i>
+                                      <small>El campo no puede estar en blanco</small>
+                          </div>
+                      </div>
+  
+                      <div class="form-control location-container">
+                          <label>Canton</label>
+                          <div class="select">
+                              <select name="genre" id="province" class="select__element profile-input">
+                                          <option value=""></option>
+                                          
+                                      </select>
+                          </div>
+                      </div>
+                      <div class="form-control  location-container">
+                          <label>Distrito</label>
+                          <div class="select">
+                              <select name="genre" id="province" class="select__element profile-input">
+                                          <option value=""></option>
+                                        
+                                      </select>
+                          </div>
+                      </div>
+                      
+                  </div>
+  
+                  <div class="colums">
+                      <div class="form-control">
+                          <label>Direccion detallada</label>
+                          <textarea class="text-input" id="" cols="30" rows="10"></textarea>
+                          
+                      </div>
+  
+                  </div>
+              </form>
+          </div>
+          <div class="session">
+              <a href="../landingPage/aplicationLandingPage.html"><button class="button--red">Cerrar sesión</button></a>
+  
+          </div>
+  </section>
        
 
     <footer class="page-footer">

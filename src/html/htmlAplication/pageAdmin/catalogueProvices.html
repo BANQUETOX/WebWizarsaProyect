@@ -19,6 +19,7 @@
       rel="stylesheet"
       href="../../../css/styleAplication/pageAdmin/catalogues.css"
     />
+    <script src="../../../js/jsAplication/catalogueLocations.js" defer></script>
 
     <title>Catalogo de provincias</title>
   </head>
@@ -31,7 +32,7 @@
             <a href="#">Web<span>Wizard</span> Jobs</a>
           </h1>
           <div class="nav-register-log-in">
-            <a href="../aplicationLanding/aplicationLandingPage.html"
+            <a href="../landingPage/aplicationLandingPage.html"
               >Salir de catálogos</a
             >
           </div>
@@ -66,7 +67,7 @@
         <button
           class="button--green"
           id="save-button"
-          onclick="fillProvinces()"
+          onclick="createNewLocationField()"
         >
           Guardar
         </button>
