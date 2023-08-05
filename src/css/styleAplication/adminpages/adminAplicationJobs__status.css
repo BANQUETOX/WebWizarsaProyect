@@ -1,9 +1,8 @@
 .aplicationFeed {
   display: grid;
   grid-template-columns: auto auto auto;
-  margin-top: 12vh;
+  margin-top: 10.6vh;
   margin-left: 10%;
-  margin-bottom: 1%;
 }
 .select {
   margin-left: unset;
