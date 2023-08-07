@@ -390,3 +390,7 @@
 .genre-container {
   margin-right: 40px;
 }
+
+select:disabled {
+  opacity: 1;
+}
