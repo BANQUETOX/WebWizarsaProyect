@@ -106,3 +106,17 @@ passwordForm.addEventListener("submit", (e) => {
   }
   e.preventDefault();
 });
+
+$("#imageUpload").change(function () {
+  if (this.files[0].size > 20000000) {
+    document
+      .getElementById("avatar-preview")
+      .classList.add("avatar-preview__error");
+    this.value = "";
+  } else {
+    document
+      .getElementById("avatar-preview")
+      .classList.remove("avatar-preview__error");
+    readURL(this);
+  }
+});
