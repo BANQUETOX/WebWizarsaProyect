@@ -1,9 +1,9 @@
 .new-register {
-    display: flex;
-    justify-content: center;
-    margin-top: 8%;
-    margin-bottom: 20.6vh;
-    min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  margin-top: 8%;
+  margin-bottom: 21.6vh;
+  min-height: 20vh;
 }
 
 a {
@@ -11,8 +11,8 @@ a {
 }
 
 .toptext {
-    font-family: "Montserrat", sans-serif;
-    text-align: center;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
 }
 
 h2 {
@@ -20,7 +20,6 @@ h2 {
 }
 
 .objectframe {
-
   font-family: "Montserrat", sans-serif;
   margin: 0 auto;
   text-align: center;
@@ -29,25 +28,24 @@ h2 {
   background-color: #303841;
   height: 180px;
   width: 400px;
-
 }
 
 .message h2 {
-    font-weight: 600;
-    font-size: 25px;
-    margin-bottom: 30px;
+  font-weight: 600;
+  font-size: 25px;
+  margin-bottom: 30px;
 }
 
 .container {
-    color: #ececec;
-    border-radius: 5px;
-    background-color: #303841;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    width: 450px;
-    height: 350px;
-    max-width: 100%;
+  color: #ececec;
+  border-radius: 5px;
+  background-color: #303841;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  width: 450px;
+  height: 350px;
+  max-width: 100%;
 }
 
 button {
-    width: 180px;
+  width: 180px;
 }
