@@ -30,7 +30,6 @@
 .avatar-upload {
   position: relative;
   max-width: 205px;
-  margin-left: -23%;
   /* margin-top: 20%; */
   .avatar-preview {
     width: 192px;
@@ -334,10 +333,18 @@
   margin: 0 0 20px 20px;
 }
 
+.btn-cont button {
+  width: 245px;
+}
+
 .session {
   display: flex;
   justify-content: center;
   margin-top: -170px;
+}
+
+.session button {
+  width: 245px;
 }
 
 .add-button {
@@ -389,4 +396,8 @@
 
 .genre-container {
   margin-right: 40px;
+}
+
+select:disabled {
+  opacity: 1;
 }

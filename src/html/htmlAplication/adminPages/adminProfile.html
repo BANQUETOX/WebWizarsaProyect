@@ -61,7 +61,7 @@
             <div>
                 <div class="avatar-upload">
                     <div class="avatar-edit">
-                        <input class="profile-input" type='file' id="imageUpload" accept=".png" />
+                        <input class="profile-input" type='file' id="imageUpload" accept=".png" disabled />
                         <label  for="imageUpload"></label>
                     </div>
                     <div class="avatar-preview" id="avatar-preview">
@@ -77,71 +77,56 @@
                     <div class="colums">
                         <div class="form-control">
                             <label>Nombre Completo:</label>
-                            <input class="text-input profile-input" type="text" placeholder="Juan Reyes" id="fname">
+                            <input class="text-input profile-input" type="text" placeholder="Juan Reyes" id="fname" readonly>
                             <small>El campo no puede estar en blanco</small>
                         </div>
                         <div class="form-control">
                             <label>Número teléfonico:</label>
-                            <input class="text-input profile-input" type="tel" placeholder="1234 5678" id="tel" accept="application/pdf">
-                            <i class="fas fa-check-circle"></i>
-                            <i class="fas fa-exclamation-circle"></i>
-                            <small>El campo no puede estar en blanco</small>
+                            <input class="text-input profile-input" type="tel" placeholder="1234 5678" id="tel" accept="application/pdf" readonly>
                         </div>
                     </div>
                     <div class="colums">
                         <div class="form-control">
                             <label>Fecha de nacimiento:</label>
-                            <input class="text-input profile-input" type="date" placeholder="01/12/1990" id="birth">
-                            <i class="fas fa-check-circle"></i>
-                            <i class="fas fa-exclamation-circle"></i>
-                            <small>El campo no puede estar en blanco</small>
+                            <input class="text-input profile-input" type="date" placeholder="01/12/1990" id="birth" readonly>
                         </div>
                         <div class="form-control">
                             <label>Cédula, DIMEX, Pasaporte:</label>
-                            <input class="text-input profile-input" type="number" placeholder="12345678" id="idnum">
-                            <i class="fas fa-check-circle"></i>
-                            <i class="fas fa-exclamation-circle"></i>
-                            <small>El campo no puede estar en blanco</small>
+                            <input class="text-input profile-input" type="number" placeholder="12345678" readonly>
                         </div>
                     </div>
                     <div class="colums">
                         <div class="form-control genre-container">
                             <label>Género</label>
                             <div class="select">
-                                <select name="genre" id="genre" class="select__element profile-input">
+                                <select name="genre" id="genre" class="select__element profile-input" disabled>
                                             <option value=""></option>
                                             <option value="man">Masculino</option>
                                             <option value="woman">Femenino</option>
                                             <option value="nogender">Prefiero no especificar</option>
                                         </select>
-                                        <i class="fas fa-check-circle"></i>
-                                        <i class="fas fa-exclamation-circle"></i>
-                                        <small>El campo no puede estar en blanco</small>
 
                             </div>
                         </div>
                         <div class="form-control">
                             <label>Correo electronico:</label>
-                            <input class="text-input profile-input" type="email" id="idnum">
+                            <input class="text-input profile-input" type="email"  readonly>
                         </div>
                     </div>
                     <div class="colums general-location-container">
                         <div class="form-control location-container">
                             <label>Provincia</label>
                             <div class="select">
-                                <select name="genre" id="province" class="select__element profile-input">
+                                <select name="genre"  class="select__element profile-input" disabled >
                                             <option value=""></option>
                                         </select>
-                                        <i class="fas fa-check-circle"></i>
-                                        <i class="fas fa-exclamation-circle"></i>
-                                        <small>El campo no puede estar en blanco</small>
                             </div>
                         </div>
 
                         <div class="form-control location-container">
                             <label>Canton</label>
                             <div class="select">
-                                <select name="genre" id="province" class="select__element profile-input">
+                                <select name="genre"  class="select__element profile-input" disabled>
                                             <option value=""></option>
                                             
                                         </select>
@@ -150,7 +135,7 @@
                         <div class="form-control  location-container">
                             <label>Distrito</label>
                             <div class="select">
-                                <select name="genre" id="province" class="select__element profile-input">
+                                <select name="genre"  class="select__element profile-input" disabled>
                                             <option value=""></option>
                                           
                                         </select>
@@ -163,10 +148,10 @@
     
                     <div class="btn-cont">
                         <div>
-                            <button class="button--red">Editar perfil</button>
+                            <button class="button--red" id="profile-edit-button" type="button">Editar perfil</button>
                         </div>
                         <div>
-                            <button class="button--green">Guardar cambios</button>
+                            <button class="button--green profile-input" disabled>Guardar cambios</button>
                         </div>
                     </div>
                 </form>
@@ -177,7 +162,7 @@
                         <div class="password-inputs-container">
                             <div class="form-control password-input-container" id="first-password-input-container">
                                 <label>Contraseña</label>
-                                <input class="text-input" type="password" placeholder="Contraseña" id="first-new-password">
+                                <input class="text-input change-password-input" type="password" placeholder="Contraseña" id="first-new-password" readonly>
                                 <i class="fa-solid fa-eye" id="eye"></i>
                                 
                                 <p id="first-password--message" class="error__message">
@@ -187,7 +172,7 @@
                             </div>
                             <div class="form-control password-input-container" id="second-password-input-container">
                                 <label>Confirmar contraseña</label>
-                                <input class="text-input" type="password" placeholder="Contraseña" id="second-new-password">
+                                <input class="text-input change-password-input" type="password" placeholder="Contraseña" id="second-new-password" readonly>
                                 <i class="fa-solid fa-eye" id="eye2"></i>
                                 <p id="second-password--message" class="error__message">
                                     La contraseña no coincide
@@ -196,26 +181,26 @@
                         </div>
                         <div class="btn-cont">
                             <div>
-                                <button class="button--red"> Editar contraseña</button>
+                                <button class="button--red" id="change-password-button"> Editar contraseña</button>
                             </div>
                             <div>
-                                <button class="button--green">Guardar contraseña</button>
+                                <button class="button--green change-password-input" disabled>Guardar contraseña</button>
                             </div>
                         </div>
                     </form>
             </div>
             <div class="container-form">
-                <form class="form" id="password-form">
+                <form class="form" id="access-form">
                         <h2>Ceder permisos de administrador</h2>
                         <div class="password-inputs-container">
                             <div class="form-control password-input-container" id="first-password-input-container">
                                 <label>Email del nuevo administrador</label>
-                                <input class="text-input" type="email">
+                                <input class="text-input access-input" type="email" readonly>
                                 
                             </div>
                             <div class="form-control password-input-container" id="second-password-input-container">
                                 <label> Contraseña de Confirmacion</label>
-                                <input class="text-input" type="password" id="confirmation-password">
+                                <input class="text-input access-input" type="password" id="confirmation-password" readonly>
                                 <i class="fa-solid fa-eye" id="confirmation-eye"></i>
                                 <p id="confirmation-password--message" class="error__message">
                                    Contraseña incorrecta
@@ -224,10 +209,10 @@
                         </div>
                         <div class="btn-cont">
                             <div>
-                                <button class="button--red"> Editar contraseña</button>
+                                <button class="button--red" id="edit-access-button" type="button"> Editar contraseña</button>
                             </div>
                             <div>
-                                <button class="button--green">Guardar contraseña</button>
+                                <button class="button--green access-input" disabled>Guardar contraseña</button>
                             </div>
                         </div>
                     </form>

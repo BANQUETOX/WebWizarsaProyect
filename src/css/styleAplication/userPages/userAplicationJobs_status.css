@@ -1,16 +1,8 @@
 .aplicationFeed {
   display: grid;
   grid-template-columns: auto auto auto;
-  margin-top: 12vh;
+  margin-top: 11.5vh;
   margin-left: 10%;
-}
-
-.select {
-  margin-left: unset;
-}
-
-.select__range {
-  background-color: #ffffff;
 }
 
 .dropdown {

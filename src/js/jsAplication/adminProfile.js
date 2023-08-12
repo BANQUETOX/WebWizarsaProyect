@@ -1,8 +1,5 @@
 let styleElement = document.createElement("style");
 const inputsCollection = document.getElementsByClassName("profile-input");
-// disableInputs(inputsCollection);
-// disableSelectStyle(styleElement);
-
 $("#imageUpload").change(function () {
   if (this.files[0].size > 20000000) {
     document
@@ -119,3 +116,33 @@ function alingInputs() {
     secondEye.style.top = "50px";
   }
 }
+
+// Habilitar inputs
+let profileInputsCollection = document.getElementsByClassName("profile-input");
+let changePasswordCollection = document.getElementsByClassName(
+  "change-password-input"
+);
+let accessInputsCollection = document.getElementsByClassName("access-input");
+let editProfileButton = document.getElementById("profile-edit-button");
+let changePasswordEditButton = document.getElementById(
+  "change-password-button"
+);
+let accessEditButton = document.getElementById("edit-access-button");
+function enableProfileinputs(inputsCollection) {
+  for (let i = 0; i < inputsCollection.length; i++) {
+    inputsCollection[i].readOnly = false;
+    inputsCollection[i].disabled = false;
+  }
+}
+
+editProfileButton.addEventListener("click", () => {
+  enableProfileinputs(profileInputsCollection);
+});
+
+changePasswordEditButton.addEventListener("click", () => {
+  enableProfileinputs(changePasswordCollection);
+});
+
+accessEditButton.addEventListener("click", () => {
+  enableProfileinputs(accessInputsCollection);
+});
