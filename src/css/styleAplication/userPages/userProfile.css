@@ -173,6 +173,10 @@
   justify-content: center;
 }
 
+.colums1 {
+  margin-right: 10%;
+} 
+
 .colums div {
   padding: 0 100px 0 100px;
   display: flex;
@@ -210,6 +214,10 @@
   padding: 30px 40px;
 }
 
+a {
+  color: #d6d6d6;
+}
+
 
 .form-control {
   font-family: "Montserrat", sans-serif;
@@ -228,6 +236,7 @@
 .form-control label {
   margin-bottom: 30px;
 }
+
 
 .form-control select {
   font-family: "Montserrat", sans-serif;
