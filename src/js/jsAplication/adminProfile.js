@@ -146,3 +146,16 @@ changePasswordEditButton.addEventListener("click", () => {
 accessEditButton.addEventListener("click", () => {
   enableProfileinputs(accessInputsCollection);
 });
+
+function confirmSave() {
+  var message = "Se han guardado los cambios";
+  var result = alert(message);
+
+};
+
+let saveChangesButton = document.getElementById("profile-save-button");
+saveChangesButton.addEventListener("click", () => {
+
+  confirmSave();
+});
+

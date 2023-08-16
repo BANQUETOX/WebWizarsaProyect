@@ -12,7 +12,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"defer></script>
     <script src="https://kit.fontawesome.com/73f851add2.js" crossorigin="anonymous" defer></script>
     <script src="../../../js/jsAplication/main.js" defer></script>
-    <script src="../../../js/jsAplication/adminProfile.js" defer></script>
+    <script src="../../../js/jsAplication/managerProfile.js" defer></script>
 
     <title>Mi perfil</title>
 
@@ -74,12 +74,12 @@
                     <div class="colums">
                         <div class="form-control">
                             <label>Nombre Completo:</label>
-                            <input class="text-input profile-input" type="text" placeholder="Juan Reyes" id="fname">
+                            <input class="text-input profile-input" type="text" placeholder="Juan Reyes" id="fname" readonly>
                             <small>El campo no puede estar en blanco</small>
                         </div>
                         <div class="form-control">
                             <label>Número teléfonico:</label>
-                            <input class="text-input profile-input" type="tel" placeholder="1234 5678" id="tel" accept="application/pdf">
+                            <input class="text-input profile-input" type="tel" placeholder="1234 5678" id="tel" accept="application/pdf" readonly>
                             <i class="fas fa-check-circle"></i>
                             <i class="fas fa-exclamation-circle"></i>
                             <small>El campo no puede estar en blanco</small>
@@ -88,14 +88,14 @@
                     <div class="colums">
                         <div class="form-control">
                             <label>Fecha de nacimiento:</label>
-                            <input class="text-input profile-input" type="date" placeholder="01/12/1990" id="birth">
+                            <input class="text-input profile-input" type="date" placeholder="01/12/1990" id="birth" readonly>
                             <i class="fas fa-check-circle"></i>
                             <i class="fas fa-exclamation-circle"></i>
                             <small>El campo no puede estar en blanco</small>
                         </div>
                         <div class="form-control">
                             <label>Cédula, DIMEX, Pasaporte:</label>
-                            <input class="text-input profile-input" type="number" placeholder="12345678" id="idnum">
+                            <input class="text-input profile-input" type="number" placeholder="12345678" id="number" readonly>
                             <i class="fas fa-check-circle"></i>
                             <i class="fas fa-exclamation-circle"></i>
                             <small>El campo no puede estar en blanco</small>
@@ -105,7 +105,7 @@
                         <div class="form-control genre-container">
                             <label>Género</label>
                             <div class="select">
-                                <select name="genre" id="genre" class="select__element profile-input">
+                                <select name="genre" id="genre" class="select__element profile-input" disabled>
                                             <option value=""></option>
                                             <option value="man">Masculino</option>
                                             <option value="woman">Femenino</option>
@@ -119,14 +119,14 @@
                         </div>
                         <div class="form-control">
                             <label>Correo electronico:</label>
-                            <input class="text-input profile-input" type="email" id="idnum">
+                            <input class="text-input profile-input" type="email" id="idnum" readonly>
                         </div>
                     </div>
                     <div class="colums general-location-container">
                         <div class="form-control location-container">
                             <label>Provincia</label>
                             <div class="select">
-                                <select name="genre" id="province" class="select__element profile-input">
+                                <select name="genre" id="province" class="select__element profile-input" disabled>
                                             <option value=""></option>
                                         </select>
                                         <i class="fas fa-check-circle"></i>
@@ -138,7 +138,7 @@
                         <div class="form-control location-container">
                             <label>Canton</label>
                             <div class="select">
-                                <select name="genre" id="province" class="select__element profile-input">
+                                <select name="genre" id="canton" class="select__element profile-input" disabled>
                                             <option value=""></option>
                                             
                                         </select>
@@ -147,7 +147,7 @@
                         <div class="form-control  location-container">
                             <label>Distrito</label>
                             <div class="select">
-                                <select name="genre" id="province" class="select__element profile-input">
+                                <select name="genre" id="distrito" class="select__element profile-input" disabled>
                                             <option value=""></option>
                                           
                                         </select>
@@ -160,10 +160,10 @@
     
                     <div class="btn-cont">
                         <div>
-                            <button class="button--red">Editar perfil</button>
+                            <button class="button--red" id="profile-edit-button">Editar perfil</button>
                         </div>
                         <div>
-                            <button class="button--green">Guardar cambios</button>
+                            <button class="button--green" id="profile-save-button">Guardar cambios</button>
                         </div>
                     </div>
                 </form>
@@ -193,10 +193,10 @@
                         </div>
                         <div class="btn-cont">
                             <div>
-                                <button class="button--red"> Editar contraseña</button>
+                                <button class="button--red" id="change-password-button"> Editar contraseña</button>
                             </div>
                             <div>
-                                <button class="button--green">Guardar contraseña</button>
+                                <button class="button--green change-password-inpu">Guardar contraseña</button>
                             </div>
                         </div>
                     </form>
