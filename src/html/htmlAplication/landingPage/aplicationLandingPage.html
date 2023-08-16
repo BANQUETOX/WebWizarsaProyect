@@ -19,6 +19,8 @@
       rel="stylesheet"
       href="../../../css/styleAplication/landingPage/aplicationLandingpage.css"
     />
+    <script src="../../../js/jsAplication/aplicationLandingPage.js" defer></script>
+
     <title>Sistema Nacional de Empleos</title>
   </head>
 
@@ -81,6 +83,7 @@
               placeholder="ejemplo@correo.com"
               required
             /><br />
+          
             <br />
             <label class="input-label" for="lastname">Contraseña:</label><br />
             <input
@@ -90,6 +93,15 @@
               name="password"
               required
             />
+
+            <p  id="inputs-error" >
+              Debes de rellenar los espacios en blanco
+            </p>
+
+            <p id="saved-changes">
+              Ingreso correcto 
+         </p>
+
 
             <div class="login--forgot_password">
               <a href="../sharedPages/forgetPassword.html"
@@ -168,6 +180,7 @@
         /></a>
       </div>
     </div>
+
 
     <footer class="page-footer">
       <div class="message1">
