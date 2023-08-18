@@ -19,6 +19,7 @@
       rel="stylesheet"
       href="../../../css/styleAplication/sharedpages/newRegister.css"
     />
+    <script src="../../../js/jsAplication/newRegister.js" defer></script>
     <title>Registrarse como</title>
   </head>
 
@@ -30,7 +31,7 @@
             <a href="#">Web<span>Wizard</span> Jobs</a>
           </h1>
           <div class="nav-register-log-in">
-            <a href="../landingPage/aplicationLandingPage.html">Ingresar</a>
+            <a href="/sne/">Ingresar</a>
           </div>
         </div>
       </header>
@@ -43,12 +44,28 @@
         <div class="objectframe">
           <h2>Registrate como:</h2>
           <br />
-          <a href="../sharedPages/registerNewAccount.html">
-            <button class="button--green">Usuario</button><br /><br /><br />
-          </a>
-          <a href="../sharedPages/registerNewAccount.html">
-            <button class="button--green">Adminstrador</button>
-          </a>
+          <form action="/sne/newRegister" method="post" id="buttons-form">
+              <button
+                class="button--green"
+                id="registerUser"
+                name="userType"
+                value="user"
+                type="submit"
+              >
+                Usuario</button
+              ><br /><br /><br />
+            </a>
+              <button
+                class="button--green"
+                id="registerAdmin"
+                name="userType"
+                value="admin"
+                type="submit"
+              >
+                Adminstrador
+              </button>
+            </a>
+          </form>
         </div>
       </div>
     </div>
@@ -86,11 +103,10 @@
 
       <div class="sobre">
         <li class="1">
-          <a class="link" src="" href="../../htmlWebWizards/teamGroup.html"
-            >Sobre el Equipo</a
-          >
+          <a class="link" src="" href="/webWizards/group">Sobre el Equipo</a>
         </li>
       </div>
     </footer>
   </body>
 </html>
+

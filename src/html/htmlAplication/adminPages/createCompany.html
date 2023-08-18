@@ -17,6 +17,8 @@
       rel="stylesheet"
       href="../../../css/styleAplication/adminpages/adminCompanyProfile.css"
     />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"defer></script>
+    <script src="https://kit.fontawesome.com/73f851add2.js" crossorigin="anonymous" defer></script>
     <script src="../../../js/jsAplication/createCompany.js" defer></script>
     <script src="../../../js/jsAplication/main.js" defer></script>
     <title>Create company</title>
@@ -28,10 +30,10 @@
       <header class="header-fixed">
         <div class="header-limiter">
           <h1 class="header">
-            <a href="#">Web<span>Wizard</span> Jobs</a>
+            <a href="/sne/">Web<span>Wizard</span> Jobs</a>
           </h1>
           <div class="nav-register-log-in">
-            <a href="../aplicationLanding/aplicationLandingPage.html"
+            <a href="/sne/"
               >Ingresar</a
             >
           </div>
@@ -41,18 +43,21 @@
     </div>
 
     <div class="form-container">
-      <form id="companyForm">
+      <form id="companyForm" action="/sne/app/admin/createCompany" method="post">
         <div class="form-group form-group_factory">
           <label for="logo">Logo de Empresa:</label>
-          <input class="company-input" type="file" id="logo" name="logo" accept="image/*"  />
-          <img
-            id="logoPreview"
-            src="#"
-            alt="Logo Preview"
-            style="display: none"
-
-          />
-          <!-- <p class="error--input-label">Por favor seleccione una imagen</p> -->
+          <div>
+            <div class="avatar-upload">
+                <div class="avatar-edit">
+                    <input class="company-input" type='file' id="imageUpload" accept=".png" name="companyImage"  />
+                    <label  for="imageUpload"></label>
+                </div>
+                <div class="avatar-preview" id="avatar-preview">
+                    <div id="imagePreview">
+                    </div>
+                </div>
+            </div>
+        </div>
         </div>
         <br />
         <br />
@@ -61,7 +66,7 @@
           <input
             type="text"
             id="name"
-            name="name"
+            name="companyName"
             class="text-input company-input"
            
           />
@@ -70,29 +75,29 @@
 
         <div class="form-group">
           <label for="id">Cedula Juridica:</label>
-          <input type="text" id="id" name="id" class="text-input company-input"   />
+          <input type="text" id="id" name="companyId" class="text-input company-input"   />
           <!-- <p class="error--input-label">Por favor colocar cedula juridica</p> -->
         </div>
 
         <div class="form-group">
           <label for="phone">Telefono:</label>
-          <input type="text" id="phone" name="phone" class="text-input company-input"   />
+          <input type="text" id="phone" name="companyPhone" class="text-input company-input"   />
           <!-- <p class="error--input-label">Por favor ingresar telefono</p> -->
         </div>
 
         <div class="form-group">
           <label for="sns">Facebook:</label>
-          <input type="text" id="sns" name="sns" class="text-input company-input"   />
+          <input type="text" id="sns" name="companyFacebook" class="text-input company-input"   />
           <!-- <p class="error--input-label">Por favor ingresar facebook</p> -->
         </div>
         <div class="form-group">
           <label for="sns">Instagram:</label>
-          <input type="text" id="sns" name="sns" class="text-input company-input"  />
+          <input type="text" id="sns" name="companyInstagram" class="text-input company-input"  />
           <!-- <p class="error--input-label">Por favor ingresar instagram</p> -->
         </div>
         <div class="form-group">
           <label for="sns">Twitter:</label>
-          <input type="text" id="sns" name="sns" class="text-input company-input "  />
+          <input type="text" id="sns" name="companyTwitter" class="text-input company-input "  />
           <!-- <p class="error--input-label">Por favor ingresar twitter</p> -->
         </div>
 
@@ -103,7 +108,7 @@
               <div class="select">
                 <select
                   class="select__element company-input"
-                  name="selectProvince"
+                  name="companyProvince"
                   id="selectProvince"
                 >
                   <option value=""  selected hidden>
@@ -120,7 +125,7 @@
               <div class="select">
                 <select
                   class="select__element company-input"
-                  name="selectCanton"
+                  name="companyCanton"
                   id="selectCanton"
                   
                   
@@ -141,7 +146,7 @@
               <div class="select">
                 <select
                   class="select__element company-input"
-                  name="selectDistrict"
+                  name="companyDistrict"
                   id="selectDistrict"
                 >
                   <option value=""  selected hidden>
@@ -162,7 +167,7 @@
           <label for="direction">Direccion Detallada:</label>
           <textarea
             id="direction"
-            name="direction"
+            name="companyAddress"
             class="text-input company-input "
           ></textarea>
            <!-- <p class="error--input-label">Por favor indicar direccion</p> -->
@@ -180,7 +185,6 @@
               <input
               id="save-button"
                 type="submit"
-                value="Guardar"
                 class="button--green "
               />
             </div>
@@ -218,7 +222,7 @@
       </div>
 
       <div class="sobre">
-        <li class="1"><a class="link" src="" href="../../htmlWebWizards/teamGroup.html">Sobre el Equipo</a></li>
+        <li class="1"><a class="link" src="" href="/webWizards/group">Sobre el Equipo</a></li>
       </div>
     </footer>
   </body>

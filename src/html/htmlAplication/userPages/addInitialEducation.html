@@ -28,14 +28,10 @@
       <header class="header-fixed">
         <div class="header-limiter">
           <h1 class="header">
-            <a href="../aplicationLanding/aplicationLandingPage.html"
-              >Web<span>Wizard</span> Jobs</a
-            >
+            <a href="/sne/">Web<span>Wizard</span> Jobs</a>
           </h1>
           <div class="nav-register-log-in">
-            <a href="../aplicationLanding/aplicationLandingPage.html"
-              >Ingresar</a
-            >
+            <a href="/sne/">Ingresar</a>
           </div>
         </div>
       </header>
@@ -48,24 +44,27 @@
       <div class="add-education-container">
         <div class="add-education--tittle">Mi Educacion</div>
 
-        <form action="#" class="add-education--formulary" id="formulary_initialEducation">
+        <form
+          action="/sne/app/user/addInitialEducation"
+          method="post"
+          class="add-education--formulary"
+          id="formulary_addEducation"
+        >
           <!--Nivel de eduacion -->
           <div class="formulary__group" id="education-level">
             <label class="formulary__label--education">Nivel de eduacion</label>
             <div class="select">
               <select
                 id="eduacion"
-                name="eduacion"
-                class="select__element select__education user_initialeduc-input"
+                name="educationLevel"
+                class="select__element select__education user_education-input"
               >
                 <option value=""></option>
                 <option value="bachillerato">Bachillerato</option>
                 <option value="diplimado">Diplomado</option>
                 <option value="master">Master</option>
               </select>
-              
             </div>
-            
           </div>
 
           <!--Nombre de la Escuela-->
@@ -74,14 +73,11 @@
             <div class="">
               <input
                 type="text"
-                class="text-input user_initialeduc-input"
-                name="school"
+                class="text-input user_education-input"
+                name="schoolName"
                 id="school"
-                
               />
-             
             </div>
-            
           </div>
 
           <!--Area de Trabajo-->
@@ -90,14 +86,11 @@
             <div class="">
               <input
                 type="text"
-                class="text-input user_initialeduc-input"
-                name="study"
+                class="text-input user_education-input"
+                name="studyField"
                 id="study"
-                
               />
-             
             </div>
-            
           </div>
 
           <!--Año de Finalizacion-->
@@ -106,14 +99,11 @@
             <div class="">
               <input
                 type="date"
-                class="text-input user_initialeduc-input"
-                name="year"
+                class="text-input user_education-input"
+                name="endingYear"
                 id="year"
-                
               />
-              
             </div>
-            
           </div>
 
           <!--Carrera en curso-->
@@ -126,33 +116,27 @@
               <input
                 class="formulary__checkbox"
                 type="checkbox"
-                name="carrer"
+                name="carrerInCourse"
                 id="carrer"
               />
             </label>
           </div>
 
-          <!-- Adicionar otro nivel -->
-          <div class="formulary__group formulary__group-btn-send">
-            <p class="formulary__active-message" id="add_another-level"></p>
-            <input
-              class="button--white"
-              type="submit"
-              value="Adicionar otro nivel"
-            />
-          </div>
+          <p id="inputs-errors">
+            Debes de rellenar todos los espacios en blanco
+          </p>
 
-          <p  id="inputs-errors">Debes de rellenar todos los espacios en blanco</p>
-
-          <p class="display-none" id="saved-changes"> Se han guardado los datos ingresados </p>
+          <p class="display-none" id="saved-changes">
+            Se han guardado los datos ingresados
+          </p>
 
           <div class="button-container">
-            <button class="button--green">Enviar</button>
+            <button class="button--green" type="submit">Enviar</button>
             <span class="button-separator">|</span>
-            <button class="button--red" type="button">Saltar</button>
+            <button class="button--red" type="button" id="skip-button">
+              Saltar
+            </button>
           </div>
-
-         
         </form>
       </div>
     </div>
@@ -190,13 +174,9 @@
 
       <div class="sobre">
         <li class="1">
-          <a class="link" src="" href="../../htmlWebWizards/teamGroup.html"
-            >Sobre el Equipo</a
-          >
+          <a class="link" src="" href="/webWizards/group">Sobre el Equipo</a>
         </li>
       </div>
     </footer>
-
-    
   </body>
 </html>

@@ -9,7 +9,8 @@ let invalidInputs = document.getElementsByClassName("company-input__invalid");
 
 function verifyComapanyinputs() {
   for (let i = 0; i < inputsCollection.length; i++) {
-    if (inputsCollection[i].value == "") { //? Fomrulario esta vacio
+    if (inputsCollection[i].value == "") {
+      //? Fomrulario esta vacio
       inputsCollection[i].classList.add("company-input__invalid");
       inputsCollection[i].classList.remove("company-input__valid");
       //   inputsErrorLabels[i].style.display = "initial";
@@ -19,7 +20,8 @@ function verifyComapanyinputs() {
         inputsSelectsCollection[i - 7].classList.add("company-input__invalid");
         inputsSelectsCollection[i - 7].classList.remove("company-input__valid");
       }
-    } else { // TODO Este es cuando el formualario se lleno correctamente
+    } else {
+      // TODO Este es cuando el formualario se lleno correctamente
       inputsCollection[i].classList.add("company-input__valid");
       inputsCollection[i].classList.remove("company-input__invalid");
       //   inputsErrorLabels[i].style.display = "none";
@@ -27,7 +29,9 @@ function verifyComapanyinputs() {
         inputsCollection[i].classList.remove("company-input__invalid");
         inputsCollection[i].classList.remove("company-input__valid");
         inputsSelectsCollection[i - 7].classList.add("company-input__valid");
-        inputsSelectsCollection[i - 7].classList.remove("company-input__invalid");
+        inputsSelectsCollection[i - 7].classList.remove(
+          "company-input__invalid"
+        );
       }
     }
   }
@@ -46,6 +50,7 @@ companyFormulary.addEventListener("submit", (e) => {
   if (invalidInputs.length === 0) {
     showSavedChanges(saveMessage);
     errorLabel.style.display = "none";
+    companyFormulary.submit();
 
     setTimeout(() => {
       companyForm.reset();
@@ -57,9 +62,25 @@ companyFormulary.addEventListener("submit", (e) => {
       }
       hideSavedChanges(saveMessage);
       errorLabel.style.display = "none";
+      window.location.href = "/sne/welcome";
     }, 3000);
   } else {
     errorLabel.style.display = "initial";
     hideSavedChanges(saveMessage);
+  }
+});
+
+//image upload
+$("#imageUpload").change(function () {
+  if (this.files[0].size > 20000000) {
+    document
+      .getElementById("avatar-preview")
+      .classList.add("avatar-preview__error");
+    this.value = "";
+  } else {
+    document
+      .getElementById("avatar-preview")
+      .classList.remove("avatar-preview__error");
+    readURL(this);
   }
 });

@@ -26,16 +26,16 @@
   <body>
     <header class="aplication-header">
       <div class="profile_images">
-        <a href="./userProfile.html">
+        <a href="/sne/app/user/profile">
           <img src="../../../images/imagesAplication/user.png" alt="Image 1" />
         </a>
       </div>
       <div class="container">
         <nav class="aplication-header--navbar">
           <ul>
-            <li><a href="#">Trabajos</a></li>
+            <li><a href="/sne/app/user/">Trabajos</a></li>
             <li>
-              <a href="../userPages/userAplicationSatus.html">Aplicaciones</a>
+              <a href="/sne/app/user/aplications">Aplicaciones</a>
             </li>
           </ul>
         </nav>
@@ -57,14 +57,19 @@
       <div class="add-education-container">
         <div class="add-education--tittle">Mi Educacion</div>
 
-        <form action="#" class="add-education--formulary" id="formulary_addEducation">
+        <form
+          action="/sne/app/user/addEducation"
+          method="post"
+          class="add-education--formulary"
+          id="formulary_addEducation"
+        >
           <!--Nivel de eduacion -->
           <div class="formulary__group" id="education-level">
             <label class="formulary__label--education">Nivel de eduacion</label>
             <div class="select">
               <select
                 id="eduacion"
-                name="eduacion"
+                name="educationLevel"
                 class="select__element select__education user_education-input"
               >
                 <option value=""></option>
@@ -72,9 +77,7 @@
                 <option value="diplimado">Diplomado</option>
                 <option value="master">Master</option>
               </select>
-             
             </div>
-            
           </div>
 
           <!--Nombre de la Escuela-->
@@ -84,13 +87,10 @@
               <input
                 type="text"
                 class="text-input user_education-input"
-                name="school"
+                name="schoolName"
                 id="school"
-                
               />
-              
             </div>
-            
           </div>
 
           <!--Area de Trabajo-->
@@ -100,13 +100,10 @@
               <input
                 type="text"
                 class="text-input user_education-input"
-                name="study"
+                name="studyField"
                 id="study"
-                
               />
-              
             </div>
-            
           </div>
 
           <!--Año de Finalizacion-->
@@ -116,13 +113,10 @@
               <input
                 type="date"
                 class="text-input user_education-input"
-                name="year"
+                name="endingYear"
                 id="year"
-                
               />
-             
             </div>
-            
           </div>
 
           <!--Carrera en curso-->
@@ -133,27 +127,27 @@
             <label class="">
               <b class="formulary__span">Carrera en curso</b>
               <input
-                class="formulary__checkbox "
+                class="formulary__checkbox"
                 type="checkbox"
-                name="carrer"
+                name="carrerInCourse"
                 id="carrer"
-                
               />
             </label>
           </div>
 
-          <p  id="inputs-errors">Debes de rellenar todos los espacios en blanco</p>
+          <p id="inputs-errors">
+            Debes de rellenar todos los espacios en blanco
+          </p>
 
-          <p class="display-none" id="saved-changes"> Se han guardado los datos ingresados </p>
+          <p class="display-none" id="saved-changes">
+            Se han guardado los datos ingresados
+          </p>
 
           <div class="button-container">
-            <button class="button--green">Enviar</button>
+            <button class="button--green" type="submit">Enviar</button>
             <span class="button-separator">|</span>
             <button class="button--red" type="button">Saltar</button>
           </div>
-
-          
-          
         </form>
       </div>
     </div>
@@ -191,9 +185,7 @@
 
       <div class="sobre">
         <li class="1">
-          <a class="link" src="" href="../../htmlWebWizards/teamGroup.html"
-            >Sobre el Equipo</a
-          >
+          <a class="link" src="" href="/webWizards/group">Sobre el Equipo</a>
         </li>
       </div>
     </footer>

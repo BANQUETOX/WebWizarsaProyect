@@ -24,13 +24,13 @@
   <body>
     <header class="aplication-header">
       <div class="profile_images">
-        <a href="./managerProfile.html">
+        <a href="/sne/app/manager/profile">
           <img
             src="../../../images/imagesAplication/user.png"
             alt="Icono de Usuario"
           />
         </a>
-        <a href="./managerCompanyProfile.html">
+        <a href="/sne/app/manager/companyProfile">
           <img
             src="../../../images/imagesAplication/work.png"
             alt="Icono de Empresa"
@@ -40,8 +40,11 @@
       <div>
         <nav class="aplication-header--navbar">
           <ul>
-            <li><a href="./managerAplicationJobs.html">Trabajos</a></li>
-            <li><a href="./managerAplicationStatus.html">Aplicaciones</a></li>
+            <li><a href="/sne/app/manager/">Trabajos</a></li>
+            <li><a href="/sne/app/manager/aplications">Aplicaciones</a></li>
+            <li class="aplication-header--navbar__request">
+              <a href="/sne/app/manager/inviteMembers">Solicitar vacantes</a>
+            </li>
           </ul>
         </nav>
       </div>
@@ -59,69 +62,77 @@
     <div class="create-job">
       <h1 class="title">Formulario Creación de empleo</h1>
 
-      <form class="main" id="job-creation-form">
+      <form
+        class="main"
+        id="job-creation-form"
+        action="/sne/app/admin/createJob"
+        method="post"
+      >
         <label for="name">Ingrese el nombre del trabajo:</label>
         <input
-          class="text-input"
+          class="text-input job-input"
           type="text"
           id="work_name"
-          name="work_name"
-          required
+          name="workName"
         />
         <label for="none">Coloque el código del nuevo puesto de trabajo:</label>
         <input
-          class="text-input"
+          class="text-input job-input"
           type="text"
           id="work_code"
-          name="work_code"
-          required
+          name="workCode"
         />
         <div class="select">
-          <select class="select__element" required>
+          <select class="select__element job-input" name="workProvince">
             <option value="" disabled selected hidden>
               Seleccione la pronvincia
             </option>
+            <option value="1">Chepe</option>
           </select>
         </div>
+
         <div class="select">
-          <select class="select_opt_1 select__element" required>
+          <select class="select__element job-input" name="workCanton">
             <option value="" disabled selected hidden>
               Seleccione el cantón
             </option>
+            <option value="2">San Miguel</option>
           </select>
         </div>
+
         <div class="select">
-          <select class="select_opt_1 select__element" required>
+          <select class="select__element job-input" name="workDistrict">
             <option value="" disabled selected hidden>
               Seleccione el distrito
             </option>
+            <option value="3">Higuito</option>
           </select>
         </div>
 
         <label for="none">Descripción del trabajo:</label>
         <textarea
-          class="text-input"
-          name="work_description"
+          class="text-input job-input"
+          name="workDescription"
           id="work_description"
           cols="30"
           rows="5"
-          required
         ></textarea>
 
         <label for="none">Requisitos básicos:</label>
         <textarea
-          class="text-input"
-          name="work_description"
+          class="text-input job-input"
+          name="workRequirements"
           id="work_description"
           cols="30"
           rows="5"
-          required
         ></textarea>
-        <div>
-          <p id="saved-changes">
-            ** Se ha creado el trabajo de forma exitosa **
-          </p>
-        </div>
+
+        <p id="inputs-error">Debes de rellenar todos los espacios en blanco</p>
+
+        <p class="display-none" id="saved-changes">
+          Se ha creado el trabajo de forma exitosa
+        </p>
+
         <input
           id="submit-job"
           class="button--green"
@@ -164,9 +175,7 @@
 
       <div class="sobre">
         <li class="1">
-          <a class="link" href="../../htmlWebWizards/teamGroup.html"
-            >Sobre el Equipo</a
-          >
+          <a class="link" href="/webWizards/group">Sobre el Equipo</a>
         </li>
       </div>
     </footer>

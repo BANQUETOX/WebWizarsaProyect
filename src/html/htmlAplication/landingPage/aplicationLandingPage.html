@@ -72,14 +72,14 @@
 
       <div class="aplication-landing--hero--login-container">
         <div class="login-container--internal_box">
-          <form class="login-form" action="">
+          <form class="login-form" action="/sne/" method="post">
             <h3 class="login--tittle">Ingresar</h3>
             <label class="input-label" for="name">Correo:</label><br />
             <input
               class="text-input"
               type="email"
               id="email"
-              name="email"
+              name="loginEmail"
               placeholder="ejemplo@correo.com"
               required
             /><br />
@@ -90,7 +90,7 @@
               class="text-input"
               type="text"
               id="password"
-              name="password"
+              name="loginPassword"
               required
             />
 
@@ -104,9 +104,7 @@
 
 
             <div class="login--forgot_password">
-              <a href="../sharedPages/forgetPassword.html"
-                >Olvidé mi contraseña</a
-              >
+              <a href="/sne/forgetPassword">Olvidé mi contraseña</a>
             </div>
             <a href="">
               <button
@@ -119,7 +117,7 @@
             </a>
           </form>
           <div class="login--register_account">
-            <a href="../../htmlAplication/sharedPages/registerNewAccount.html"
+            <a href="/sne/registerNewAccount"
               >Registrate aqui si no tienes cuenta</a
             >
           </div>
@@ -215,20 +213,17 @@
 
       <div class="sobre">
         <li class="1">
-          <a class="link" src="" href="../../htmlWebWizards/teamGroup.html"
-            >Sobre el Equipo</a
-          >
+          <a class="link" src="" href="/webWizards/group">Sobre el Equipo</a>
         </li>
       </div>
     </footer>
   </body>
 
   <script>
-    document
-      .getElementById("invite-formulary")
-      .addEventListener("submit", (e) => {
-        e.preventDefault();
-        document.location.href = "../aplicationLanding/welcome.html";
-      });
+    const loginForm = document.getElementById("invite-formulary");
+    loginForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      loginForm.submit();
+    });
   </script>
 </html>

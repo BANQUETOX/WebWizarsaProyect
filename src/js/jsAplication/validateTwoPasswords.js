@@ -69,7 +69,8 @@ passwordForm.addEventListener("submit", (e) => {
     checkTwoPasswords(firstPasswordInput.value, secondPasswordInput.value) &&
     isValidPassword(firstPasswordInput.value)
   ) {
-    window.location.href = "https://github.com/";
+    passwordForm.submit();
+    // window.location.href = "https://github.com/";
   }
   e.preventDefault();
 });

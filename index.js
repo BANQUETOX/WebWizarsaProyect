@@ -1,0 +1,27 @@
+const path = require("path");
+const express = require("express");
+const app = express();
+const bodyParser = require("body-parser");
+const adminPages = require("./src/js/routes/adminPages");
+const userPages = require("./src/js/routes/userPages");
+const appAdminPages = require("./src/js/routes/appAdminPages");
+const managerPages = require("./src/js/routes/managerPages");
+const recruiterPages = require("./src/js/routes/recruiterPages");
+const sharedPages = require("./src/js/routes/sharedPages");
+const teamPages = require("./src/js/routes/teamPages");
+app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "/src/html"));
+app.engine("html", require("ejs").renderFile);
+app.use(express.static("src"));
+app.use("/sne/app/admin/", adminPages);
+app.use("/sne/app/user/", userPages);
+app.use("/sne/app/manager/", managerPages);
+app.use("/sne/app/recruiter/", recruiterPages);
+app.use("/sne/admin/", appAdminPages);
+app.use("/sne/", sharedPages);
+app.use("/webWizards/", teamPages);
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.listen(3000, () => {
+  console.log(`Listening on port 3000`);
+});
