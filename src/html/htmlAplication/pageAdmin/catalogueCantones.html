@@ -20,6 +20,7 @@
       href="../../../css/styleAplication/pageAdmin/catalogues.css"
     />
     <script src="../../../js/jsAplication/catalogueLocations.js" defer></script>
+    <script src="../../../js/jsAplication/loadProvinces.js" defer></script>
 
     <title>Catalogo de Cantones</title>
   </head>
@@ -148,7 +149,7 @@
 
     CANTONSFORM.addEventListener("submit", function (e) {
       e.preventDefault();
-      document.location.href = "./catalogueDistricts.html";
+      window.location.href = "/sne/admin/districts";
     });
   </script>
 </html>

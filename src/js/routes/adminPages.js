@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const bodyParser = require("body-parser");
+const db = require("../../../db");
 let newAccount;
 let newCompany;
 router.use(bodyParser.json());
@@ -25,7 +26,6 @@ router.get("/createJob", (req, res) => {
 
 router.post("/createJob", (req, res) => {
   const data = req.body;
-  console.log(data);
 });
 
 //invite members
@@ -42,7 +42,6 @@ router.get("/initialInviteMembers", (req, res) => {
 
 router.post("/initialInviteMembers", (req, res) => {
   const data = req.body;
-  console.log(data);
 });
 // profile
 router.get("/profile", (req, res) => {
@@ -55,11 +54,25 @@ router.get("/createCompany", (req, res) => {
 router.post("/createCompany", (req, res) => {
   const sharedPages = require("./sharedPages");
   newAccount = sharedPages.newAccount;
-  newCompany = req.body;
+  newAccount.isActive = true;
+  newCompany = {
+    image: req.body.companyImage,
+    name: req.body.companyName,
+    id: req.body.companyId,
+    phone: req.body.companyPhone,
+    facebook: req.body.companyFacebook,
+    instagram: req.body.companyInstagram,
+    twitter: req.body.companyTwitter,
+    province: req.body.companyProvince,
+    canton: req.body.companyCanton,
+    district: req.body.companyDistrict,
+    address: req.body.companyAddress,
+    admin: {},
+    members: [],
+    jobPositions: [],
+  };
   newCompany.admin = newAccount;
-  newCompany.members = [];
-  newCompany.jobPositions = [];
-  module.exports.newCompany = newCompany;
+  db.createCompany(newCompany);
 });
 
 module.exports = router;

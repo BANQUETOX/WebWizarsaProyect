@@ -47,7 +47,6 @@ router.get("/registerNewAccount", (req, res) => {
 
 router.post("/registerNewAccount", (req, res) => {
   newAccount = req.body;
-  console.log(newAccount);
 });
 
 module.exports = router;

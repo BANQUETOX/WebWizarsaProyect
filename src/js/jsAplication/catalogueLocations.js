@@ -1,25 +1,27 @@
-const SAVEBUTTON = document.getElementById('save-button')
-const NEWINPUTBUTTON = document.getElementById('new-input-button')
-const DISCARDBUTTON = document.getElementById('discard-button')
-const SELECTPROVINCES = document.getElementById("select-provinces")
-let locationsContainer = document.getElementById('catalogue__location-container')
-let firstInput = document.getElementsByClassName('catalogue__location-field')[0]
+const SAVEBUTTON = document.getElementById("save-button");
+const NEWINPUTBUTTON = document.getElementById("new-input-button");
+const DISCARDBUTTON = document.getElementById("discard-button");
+const SELECTPROVINCES = document.getElementById("select-provinces");
+let locationsContainer = document.getElementById(
+  "catalogue__location-container"
+);
+let firstInput = document.getElementsByClassName(
+  "catalogue__location-field"
+)[0];
 
-
-
-function createNewLocationField(){
-    let newInput = firstInput.cloneNode(true)
-    newInput.childNodes[1].value = ""
-    newInput.childNodes[3].value = ""
-    let deleteButton = document.createElement('button')
-    let newInputId = Math.floor(Math.random() * (1000 - 0) + 0)
-    newInput.setAttribute("id", newInputId)
-    deleteButton.classList.add('button--red')
-    deleteButton.innerText = "Eliminar"
-    deleteButton.setAttribute('value',newInputId)
-    deleteButton.setAttribute('onClick','deleteLocation(this.value)')
-    newInput.appendChild(deleteButton)
-    locationsContainer.appendChild(newInput)
+function createNewLocationField() {
+  let newInput = firstInput.cloneNode(true);
+  newInput.childNodes[1].value = "";
+  newInput.childNodes[3].value = "";
+  let deleteButton = document.createElement("button");
+  let newInputId = Math.floor(Math.random() * (1000 - 0) + 0);
+  newInput.setAttribute("id", newInputId);
+  deleteButton.classList.add("button--red");
+  deleteButton.innerText = "Eliminar";
+  deleteButton.setAttribute("value", newInputId);
+  deleteButton.setAttribute("onClick", "deleteLocation(this.value)");
+  newInput.appendChild(deleteButton);
+  locationsContainer.appendChild(newInput);
 }
 
 // function createProvinceObject(internId){
@@ -48,11 +50,10 @@ function createNewLocationField(){
 //     listedProvinces.pop(provinceObject)
 // }
 
-function deleteLocation(elementId){
-    // deleteLocationObject(elementId)
-    let elementToRemove = document.getElementById(elementId)
-    locationsContainer.removeChild(elementToRemove)
-
+function deleteLocation(elementId) {
+  // deleteLocationObject(elementId)
+  let elementToRemove = document.getElementById(elementId);
+  locationsContainer.removeChild(elementToRemove);
 }
 
 // function fillProvinces(){
@@ -69,18 +70,10 @@ function deleteLocation(elementId){
 //     }
 // }
 
+NEWINPUTBUTTON.onclick = () => {
+  createNewLocationField();
+};
 
-
-
-
-NEWINPUTBUTTON.onclick = ()=>{
-    createNewLocationField()
-}
-
-SAVEBUTTON.onclick = ()=>{
-    fillProvinces()
-}
-
-
-
-
+// SAVEBUTTON.onclick = ()=>{
+//     fillProvinces()
+// }

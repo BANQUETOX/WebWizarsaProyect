@@ -9,6 +9,7 @@ const managerPages = require("./src/js/routes/managerPages");
 const recruiterPages = require("./src/js/routes/recruiterPages");
 const sharedPages = require("./src/js/routes/sharedPages");
 const teamPages = require("./src/js/routes/teamPages");
+require("./db");
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "/src/html"));
 app.engine("html", require("ejs").renderFile);

@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const bodyParser = require("body-parser");
+const db = require("../../../db");
 let newAccount;
 router.use(bodyParser.json());
 router.use(bodyParser.urlencoded({ extended: false }));
@@ -33,7 +34,7 @@ router.post("/addInitialWorkExperience", (req, res) => {
   newAccount.lifeSheet = workFormulary.userLifeSheet;
   newAccount.crimeSheet = workFormulary.userCrimeSheet;
   console.log(newAccount);
-  module.exports.newUser = newAccount;
+  db.createUser(newAccount);
 });
 
 router.get("/addWorkExperience", (req, res) => {

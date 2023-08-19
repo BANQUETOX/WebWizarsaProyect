@@ -39,7 +39,12 @@
       <div class="header-fixed-placeholder"></div>
     </div>
 
-    <form class="catalogue" id="provinces-form">
+    <form
+      class="catalogue"
+      id="provinces-form"
+      action="/sne/admin/"
+      method="post"
+    >
       <header>
         <h1 class="catalogue__header">Lista de provincias registradas</h1>
         <h2 class="catalogue__subtitle">Codigo</h2>
@@ -47,26 +52,34 @@
       </header>
       <div id="catalogue__location-container">
         <div class="catalogue__location-field" id="1">
-          <input type="text" class="text-input" placeholder="Id" required />
+          <input
+            type="text"
+            class="text-input"
+            placeholder="Id"
+            name="provinceId"
+            required
+          />
           <input
             type="text"
             class="text-input"
             placeholder="Provincia"
+            name="provinceName"
             required
           />
         </div>
       </div>
 
-      <button class="button--green" type="button" id="new-input-button">
+      <button
+        class="button--green"
+        type="button"
+        id="new-input-button"
+        onclick="createNewLocationField()"
+      >
         Nuevo
       </button>
 
       <section class="catalogue__save-discard">
-        <button
-          class="button--green"
-          id="save-button"
-          onclick="createNewLocationField()"
-        >
+        <button class="button--green" id="save-button" type="button">
           Guardar
         </button>
         <button class="button--black" id="discard-button" type="button">
@@ -114,13 +127,18 @@
     </footer>
   </body>
   <script>
+    const saveButton = document.getElementById("save-button");
+    const discardButton = document.getElementById("discard-button");
     const PROVINCESFORM = document.getElementById("provinces-form");
-    document.getElementById("discard-button").onclick = () => {
+    discardButton.onclick = () => {
       PROVINCESFORM.reset();
     };
-    PROVINCESFORM.addEventListener("submit", function (e) {
+    saveButton.addEventListener("click", (e) => {
+      PROVINCESFORM.submit();
+      setTimeout(() => {
+        window.location.href = "/sne/admin/cantones";
+      }, 1000);
       e.preventDefault();
-      document.location.href = "./catalogueCantones.html";
     });
   </script>
 </html>
