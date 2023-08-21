@@ -21,7 +21,7 @@
 <body>
     <header class="aplication-header">
         <div class="profile_images">
-          <a href="./userProfile.html">
+          <a href="/sne/app/user/profile">
             <img
               src="../../../images/imagesAplication/user.png"
               alt="Icono de Usuario"
@@ -31,8 +31,8 @@
         <div>
           <nav class="aplication-header--navbar">
             <ul>
-              <li><a href="./userAplicationJobs.html">Trabajos</a></li>
-              <li><a href="./userAplicationStatus.html">Aplicaciones</a></li>
+              <li><a href="/sne/app/user/">Trabajos</a></li>
+              <li><a href="/sne/app/user/aplications">Aplicaciones</a></li>
             </ul>
           </nav>
         </div>
@@ -68,12 +68,12 @@
                     <div class="colums">
                         <div class="form-control">
                             <label>Nombre Completo:</label>
-                            <input class="text-input profile-input" type="text" placeholder="Juan Reyes" id="fname">
+                            <input class="text-input profile-input" type="text" placeholder="Juan Reyes" id="fname" readonly>
                             <small>El campo no puede estar en blanco</small>
                         </div>
                         <div class="form-control">
                             <label>Número teléfonico:</label>
-                            <input class="text-input profile-input" type="tel" placeholder="1234 5678" id="tel" accept="application/pdf">
+                            <input class="text-input profile-input" type="tel" placeholder="1234 5678" id="tel" accept="application/pdf" readonly>
                             <i class="fas fa-check-circle"></i>
                             <i class="fas fa-exclamation-circle"></i>
                             <small>El campo no puede estar en blanco</small>
@@ -82,14 +82,14 @@
                     <div class="colums">
                         <div class="form-control">
                             <label>Fecha de nacimiento:</label>
-                            <input class="text-input profile-input" type="date" placeholder="01/12/1990" id="birth">
+                            <input class="text-input profile-input" type="date" placeholder="01/12/1990" id="birth" readonly>
                             <i class="fas fa-check-circle"></i>
                             <i class="fas fa-exclamation-circle"></i>
                             <small>El campo no puede estar en blanco</small>
                         </div>
                         <div class="form-control">
                             <label>Cédula, DIMEX, Pasaporte:</label>
-                            <input class="text-input profile-input" type="number" placeholder="12345678" id="idnum">
+                            <input class="text-input profile-input" type="number" placeholder="12345678" id="number" readonly>
                             <i class="fas fa-check-circle"></i>
                             <i class="fas fa-exclamation-circle"></i>
                             <small>El campo no puede estar en blanco</small>
@@ -99,7 +99,7 @@
                         <div class="form-control genre-container">
                             <label class="select-margin">Género</label>
                             <div class="select">
-                                <select name="genre" id="genre" class="select__element profile-input ">
+                                <select name="genre" id="genre" class="select__element profile-input " readonly>
                                             <option value=""></option>
                                             <option value="man">Masculino</option>
                                             <option value="woman">Femenino</option>
@@ -113,14 +113,14 @@
                         </div>
                         <div class="form-control">
                             <label>Correo electronico:</label>
-                            <input class="text-input profile-input" type="email" id="idnum">
+                            <input class="text-input profile-input" type="email" id="email">
                         </div>
                     </div>
                     <div class="colums general-location-container">
                         <div class="form-control location-container">
                             <label calss="arreglo">Provincia</label>
                             <div class="select select-user-profile">
-                                <select name="genre" id="province" class="select__element profile-input">
+                                <select name="genre" id="province" class="select__element profile-input" readonly>
                                             <option value=""></option>
                                         </select>
                                         <i class="fas fa-check-circle"></i>
@@ -132,7 +132,7 @@
                         <div class="form-control location-container">
                             <label>Canton</label>
                             <div class="select select-user-profile">
-                                <select name="genre" id="province" class="select__element profile-input">
+                                <select name="genre" id="canton" class="select__element profile-input" readonly>
                                             <option value=""></option>
                                             
                                         </select>
@@ -141,7 +141,7 @@
                         <div class="form-control  location-container">
                             <label>Distrito</label>
                             <div class="select select-user-profile">
-                                <select name="genre" id="province" class="select__element profile-input">
+                                <select name="genre" id="distrito" class="select__element profile-input" readonly>
                                             <option value=""></option>
                                           
                                         </select>
@@ -154,7 +154,7 @@
                     <div class="colums">
                     <div class="form-control location-container-last">
                         <label>Hoja de vida:</label>
-                        <input class="CV" type="file" id="logo" name="logo" accept="document/*">
+                        <input class="CV" type="file" id="cv" name="logo" accept="document/*">
                     </div>
 
                     <div class="form-control location-container-last">
@@ -225,10 +225,10 @@
                         </div>
                         <div class="btn-cont">
                             <div>
-                                <button class="button--red"> Editar contraseña</button>
+                                <button class="button--red" id="profile-edit-button" type="button"> Editar contraseña</button>
                             </div>
                             <div>
-                                <button class="button--green">Guardar contraseña</button>
+                                <button class="button--green" id="profile-save-button">Guardar contraseña</button>
                             </div>
                         </div>
                     </form>
@@ -252,7 +252,7 @@
             <a href="https://twitter.com/"><img class="iconos" src="../../../images/imagesAplication/twitter.png" alt="twitter"></a>
         </div>
         <div class="sobre">
-            <li class="1"><a class="link" href="../../htmlWebWizards/teamGroup.html">Sobre el Equipo</a></li>
+            <li class="1"><a class="link" href="/webWizards/group">Sobre el Equipo</a></li>
         </div>
     </footer>
 

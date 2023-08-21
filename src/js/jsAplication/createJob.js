@@ -43,18 +43,14 @@ function verifyJobInputs() {
 });*/
 //?-----------------------------------/
 jobForm.addEventListener("submit", (e) => {
-  e.preventDefault(); 
-
+  e.preventDefault();
   verifyJobInputs();
-
   if (invalidInputs.length === 0) {
-    
     showSavedChanges(saveMessage);
     errorLabel.style.display = "none";
-
-    
+    jobForm.submit();
     setTimeout(() => {
-      jobForm.reset(); 
+      jobForm.reset();
       for (let i = 0; i < inputsCollection.length; i++) {
         inputsCollection[i].classList.remove("job-input__valid");
       }
@@ -63,11 +59,9 @@ jobForm.addEventListener("submit", (e) => {
       }
       hideSavedChanges(saveMessage);
       errorLabel.style.display = "none";
-     
     }, 3000);
   } else {
     errorLabel.style.display = "initial";
     hideSavedChanges(saveMessage);
   }
 });
-

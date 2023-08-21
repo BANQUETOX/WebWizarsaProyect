@@ -26,26 +26,26 @@
   <body>
     <header class="aplication-header">
       <div class="profile_images">
-        <a href="./adminProfile.html">
+        <a href="/sne/app/admin/profile">
           <img
             src="../../../images/imagesAplication/user.png"
             alt="Icono de Usuario"
           />
         </a>
-        <a href="./adminCompanyProfile.html">
+        <a href="/sne/app/admin/companyProfile">
           <img
             src="../../../images/imagesAplication/work.png"
             alt="Icono de Empresa"
           />
         </a>
       </div>
-      <div class="container">
+      <div>
         <nav class="aplication-header--navbar">
           <ul>
-            <li><a href="./adminAplicationJobs.html">Trabajos</a></li>
-            <li><a href="./adminAplicationStatus.html">Aplicaciones</a></li>
+            <li><a href="/sne/app/admin/">Trabajos</a></li>
+            <li><a href="/sne/app/admin/aplications">Aplicaciones</a></li>
             <li class="aplication-header--navbar__request">
-              <a href="./adminInviteMembers.html">Solicitar vacantes</a>
+              <a href="/sne/app/admin/inviteMembers">Solicitar vacantes</a>
             </li>
           </ul>
         </nav>
@@ -70,7 +70,8 @@
         </div>
 
         <form
-          action="#"
+          action="/sne/app/admin/initialInviteMembers"
+          method="post"
           class="formulary invite-members--form"
           id="invite-formulary"
         >
@@ -83,13 +84,13 @@
               <input
                 type="text"
                 class="text-input invite-input"
-                name="collaborator"
+                name="colaboradorName"
                 id="collaborator"
                 
               />
               <i class="formulary__status-validation fas fa-times-circle"></i>
             </div>
-            <p class="formulary__input-error">
+            <p class="formulary__input-error "  >
               Debe de ingresar el nombre del colaborador
             </p>
           </div>
@@ -101,31 +102,31 @@
               <input
                 type="text"
                 class="text-input invite-input"
-                name="lastname"
+                name="collaboradorLastName"
                 id="lastname"
                 
               />
               <i class="formulary__status-validation fas fa-times-circle"></i>
             </div>
-            <p class="formulary__input-error">
+            <p class="formulary__input-error" >
               Debe de ingresar el apellido del colaborador
             </p>
           </div>
 
           <!--Correo-->
-          <div class="formulary__group" id="email_group">
+          <div class="formulary__group" >
             <label class="formulary__label">Correo electronico </label>
             <div class="formulary__input-group">
               <input
                 type="email"
                 class="text-input invite-input"
-                name="email"
+                name="collaboradorEmail"
                 id="email"
                 
               />
               <i class="formulary__status-validation fas fa-times-circle"></i>
             </div>
-            <p class="formulary__input-error">
+            <p class="formulary__input-error" >
               Debe de ingresar el correo electronico del colaborador
             </p>
           </div>
@@ -138,17 +139,18 @@
             <div class="select__function--container select">
               <select
                 id="func_collaborator"
-                name="func_collaborator"
+                name="collaboradorRole"
                 class="select__element invite-input"
                 
               >
                 <option value=""></option>
-                <option value="bachillerato">Manager</option>
-                <option value="diplimado">Reclutador</option>
+                <option value="Manager">Manager</option>
+                <option value="Reclutador">Reclutador</option>
               </select>
               <i class="formulary__status-validation fas fa-times-circle"></i>
             </div>
-            <br><br>
+          </div>
+          <br><br>
           <p  id="inputs-error" >
             Debes de rellenar todos los espacios en blancos
           </p>
@@ -156,10 +158,10 @@
           <p id="saved-changes">
                Se ha enviado la inivtacion de forma exitosa 
           </p>
-          </div>
+          
 
           <div class="button-container button-container__invite">
-            <button class="button--green">Enviar</button>
+            <button class="button--green" type="submit">Enviar</button>
             <span class="button-separator"></span>
             <button
               class="button--white"
@@ -170,14 +172,7 @@
             </button>
           </div>
 
-          <!-- MENSAJE DE CAMPOS REQUERIDOS -->
-          <div class="formulary__message" id="formulary__message">
-            <p>
-              <i class="fas fa-exclamation-circle">
-                <b>Error:</b> Debes completar todos los campos</i
-              >
-            </p>
-          </div>
+          
         </form>
       </div>
 
@@ -214,7 +209,7 @@
 
       <div class="sobre">
         <li class="1">
-          <a class="link" href="../../htmlWebWizards/teamGroup.html"
+          <a class="link" href="/webWizards/group"
             >Sobre el Equipo</a
           >
         </li>

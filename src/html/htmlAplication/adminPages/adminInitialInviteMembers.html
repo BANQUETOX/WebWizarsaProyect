@@ -33,7 +33,7 @@
             <a href="#">Web<span>Wizard</span> Jobs</a>
           </h1>
           <div class="nav-register-log-in">
-            <a href="../aplicationLanding/aplicationLandingPage.html"
+            <a href="/sne/"
               >Ingresar</a
             >
           </div>
@@ -49,7 +49,8 @@
         </div>
 
         <form
-          action="#"
+          action="/sne/app/admin/initialInviteMembers"
+          method="post"
           class="formulary invite-members--form"
           id="invite-formulary"
         >
@@ -62,7 +63,7 @@
               <input
                 type="text"
                 class="text-input invite-input"
-                name="collaborator"
+                name="colaboradorName"
                 id="collaborator"
                 
               />
@@ -80,7 +81,7 @@
               <input
                 type="text"
                 class="text-input invite-input"
-                name="lastname"
+                name="collaboradorLastName"
                 id="lastname"
                 
               />
@@ -98,7 +99,7 @@
               <input
                 type="email"
                 class="text-input invite-input"
-                name="email"
+                name="collaboradorEmail"
                 id="email"
                 
               />
@@ -117,13 +118,13 @@
             <div class="select__function--container select">
               <select
                 id="func_collaborator"
-                name="func_collaborator"
+                name="collaboradorRole"
                 class="select__element invite-input"
                 
               >
                 <option value=""></option>
-                <option value="bachillerato">Manager</option>
-                <option value="diplimado">Reclutador</option>
+                <option value="Manager">Manager</option>
+                <option value="Reclutador">Reclutador</option>
               </select>
               <i class="formulary__status-validation fas fa-times-circle"></i>
             </div>
@@ -139,7 +140,7 @@
           
 
           <div class="button-container button-container__invite">
-            <button class="button--green">Enviar</button>
+            <button class="button--green" type="submit">Enviar</button>
             <span class="button-separator"></span>
             <button
               class="button--white"
@@ -186,7 +187,7 @@
       </div>
 
       <div class="sobre">
-        <li class="1"><a class="link" src="" href="../../htmlWebWizards/teamGroup.html">Sobre el Equipo</a></li>
+        <li class="1"><a class="link" src="" href="/webWizards/group">Sobre el Equipo</a></li>
       </div>
     </footer>
   </body>

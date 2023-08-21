@@ -32,16 +32,19 @@
             <a href="#">Web<span>Wizard</span> Jobs</a>
           </h1>
           <div class="nav-register-log-in">
-            <a href="../landingPage/aplicationLandingPage.html"
-              >Salir de catálogos</a
-            >
+            <a href="/sne/">Salir de catálogos</a>
           </div>
         </div>
       </header>
       <div class="header-fixed-placeholder"></div>
     </div>
 
-    <form class="catalogue" id="provinces-form">
+    <form
+      class="catalogue"
+      id="provinces-form"
+      action="/sne/admin/"
+      method="post"
+    >
       <header>
         <h1 class="catalogue__header">Lista de provincias registradas</h1>
         <h2 class="catalogue__subtitle">Codigo</h2>
@@ -49,26 +52,34 @@
       </header>
       <div id="catalogue__location-container">
         <div class="catalogue__location-field" id="1">
-          <input type="text" class="text-input" placeholder="Id" required />
+          <input
+            type="text"
+            class="text-input"
+            placeholder="Id"
+            name="provinceId"
+            required
+          />
           <input
             type="text"
             class="text-input"
             placeholder="Provincia"
+            name="provinceName"
             required
           />
         </div>
       </div>
 
-      <button class="button--green" type="button" id="new-input-button">
+      <button
+        class="button--green"
+        type="button"
+        id="new-input-button"
+        onclick="createNewLocationField()"
+      >
         Nuevo
       </button>
 
       <section class="catalogue__save-discard">
-        <button
-          class="button--green"
-          id="save-button"
-          onclick="createNewLocationField()"
-        >
+        <button class="button--green" id="save-button" type="button">
           Guardar
         </button>
         <button class="button--black" id="discard-button" type="button">
@@ -110,21 +121,24 @@
 
       <div class="sobre">
         <li class="1">
-          <a class="link" src="" href="../../htmlWebWizards/teamGroup.html"
-            >Sobre el Equipo</a
-          >
+          <a class="link" src="" href="/webWizards/group">Sobre el Equipo</a>
         </li>
       </div>
     </footer>
   </body>
   <script>
+    const saveButton = document.getElementById("save-button");
+    const discardButton = document.getElementById("discard-button");
     const PROVINCESFORM = document.getElementById("provinces-form");
-    document.getElementById("discard-button").onclick = () => {
+    discardButton.onclick = () => {
       PROVINCESFORM.reset();
     };
-    PROVINCESFORM.addEventListener("submit", function (e) {
+    saveButton.addEventListener("click", (e) => {
+      PROVINCESFORM.submit();
+      setTimeout(() => {
+        window.location.href = "/sne/admin/cantones";
+      }, 1000);
       e.preventDefault();
-      document.location.href = "./catalogueCantones.html";
     });
   </script>
 </html>

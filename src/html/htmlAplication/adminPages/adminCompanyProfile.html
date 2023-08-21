@@ -12,49 +12,49 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"defer></script>
     <script src="https://kit.fontawesome.com/73f851add2.js" crossorigin="anonymous" defer></script>
     <script src="../../../js/jsAplication/main.js" defer></script>
-    <script src="../../../js/jsAplication/adminProfile.js" defer></script>
+    <script src="../../../js/jsAplication/adminCompanyProfile.js" defer></script>
 
     <title>Perfil de empresa</title>
 
 </head>
 
 <body>
-  <header class="aplication-header">
-    <div class="profile_images">
-      <a href="./adminProfile.html">
-        <img
-          src="../../../images/imagesAplication/user.png"
-          alt="Icono de Usuario"
-        />
-      </a>
-      <a href="./adminCompanyProfile.html">
-        <img
-          src="../../../images/imagesAplication/work.png"
-          alt="Icono de Empresa"
-        />
-      </a>
-    </div>
-    <div>
-      <nav class="aplication-header--navbar">
-        <ul>
-          <li><a href="./adminAplicationJobs.html">Trabajos</a></li>
-          <li><a href="./adminAplicationStatus.html">Aplicaciones</a></li>
-          <li class="aplication-header--navbar__request">
-            <a href="./adminInviteMembers.html">Solicitar vacantes</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-    <div class="bell dropdown--notifications">
-      <img
-        src="../../../images/imagesAplication/campana.png"
-        alt="Icono de campana"
-      />
-      <div class="dropdown-content--notifications">
-        <p class="notification">**Ha recibido una solicitud de trabajo</p>
-      </div>
-    </div>
-  </header>
+    <header class="aplication-header">
+        <div class="profile_images">
+          <a href="/sne/app/admin/profile">
+            <img
+              src="../../../images/imagesAplication/user.png"
+              alt="Icono de Usuario"
+            />
+          </a>
+          <a href="/sne/app/admin/companyProfile">
+            <img
+              src="../../../images/imagesAplication/work.png"
+              alt="Icono de Empresa"
+            />
+          </a>
+        </div>
+        <div>
+          <nav class="aplication-header--navbar">
+            <ul>
+              <li><a href="/sne/app/admin/">Trabajos</a></li>
+              <li><a href="/sne/app/admin/aplications">Aplicaciones</a></li>
+              <li class="aplication-header--navbar__request">
+                <a href="/sne/app/admin/inviteMembers">Solicitar vacantes</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="bell dropdown--notifications">
+          <img
+            src="../../../images/imagesAplication/campana.png"
+            alt="Icono de campana"
+          />
+          <div class="dropdown-content--notifications">
+            <p class="notification">**Ha recibido una solicitud de trabajo</p>
+          </div>
+        </div>
+      </header>
 
   <section class="sct-form">
     <div class="user-profile">
@@ -72,17 +72,17 @@
         </div>
 
         <div class="container-form">
-            <form class="form" id="form">
+            <form class="form" id="form" action="/sne/app/admin/companyProfile" method="post">
                 <h2>Editar perfil</h2>
                 <div class="colums">
                     <div class="form-control">
                         <label>Nombre de la empresa:</label>
-                        <input class="text-input profile-input" type="text" placeholder="Juan Reyes" id="fname">
+                        <input class="text-input profile-input" type="text" placeholder="Juan Reyes" id="fname" readonly>
                         <small>El campo no puede estar en blanco</small>
                     </div>
                     <div class="form-control">
                         <label>Número teléfonico:</label>
-                        <input class="text-input profile-input" type="tel" placeholder="1234 5678" id="tel" accept="application/pdf">
+                        <input class="text-input profile-input" type="tel" placeholder="1234 5678" id="tel" accept="application/pdf" readonly>
                         <i class="fas fa-check-circle"></i>
                         <i class="fas fa-exclamation-circle"></i>
                         <small>El campo no puede estar en blanco</small>
@@ -91,30 +91,27 @@
                 <div class="colums">
                     <div class="form-control">
                         <label>Cédula Juridica:</label>
-                        <input class="text-input profile-input" type="number" placeholder="12345678" id="idnum">
-                        <i class="fas fa-check-circle"></i>
-                        <i class="fas fa-exclamation-circle"></i>
-                        <small>El campo no puede estar en blanco</small>
+                        <input class="text-input profile-input" type="number" placeholder="12345678" id="idnum" name="companyId">
                     </div>
                     <div class="form-control">
                         <label>Correo electronico:</label>
-                        <input class="text-input profile-input" type="email" id="idnum">
+                        <input class="text-input profile-input" type="email" id="idnum" name="companyEmail">
                     </div>
                     
                 </div>
                 <div class="colums general-location-container">
                     <div class="form-control location-container">
                         <label>Facebook:</label>
-                        <input class="text-input profile-input" type="text" name="" id="">
+                        <input class="text-input profile-input" type="text" name="companyFacebook" id="">
                     </div>
 
                     <div class="form-control location-container">
                         <label>instagram:</label>
-                        <input class="text-input profile-input " type="text" name="" id="">
+                        <input class="text-input profile-input " type="text" name="companyInstagram" id="">
                     </div>
                     <div class="form-control  location-container">
                         <label>Twitter:</label>
-                        <input class="text-input profile-input" type="text" name="" id="">
+                        <input class="text-input profile-input" type="text" name="companyTwitter" id="">
                     </div>
                     
                 </div>
@@ -122,30 +119,28 @@
                     <div class="form-control location-container">
                         <label>Provincia</label>
                         <div class="select">
-                            <select name="genre" id="province" class="select__element profile-input">
+                            <select name="companyProvince" id="province" class="select__element profile-input">
                                         <option value=""></option>
+                                        <option value="si">San Jose</option>
                                     </select>
-                                    <i class="fas fa-check-circle"></i>
-                                    <i class="fas fa-exclamation-circle"></i>
-                                    <small>El campo no puede estar en blanco</small>
                         </div>
                     </div>
 
                     <div class="form-control location-container">
                         <label>Canton</label>
                         <div class="select">
-                            <select name="genre" id="province" class="select__element profile-input">
+                            <select name="companyCanton" id="province" class="select__element profile-input">
                                         <option value=""></option>
-                                        
+                                        <option value="sipa">Esca</option>
                                     </select>
                         </div>
                     </div>
                     <div class="form-control  location-container">
                         <label>Distrito</label>
                         <div class="select">
-                            <select name="genre" id="province" class="select__element profile-input">
+                            <select name="companyDistrict" id="province" class="select__element profile-input">
                                         <option value=""></option>
-                                      
+                                        <option value="pinga">san mige</option>
                                     </select>
                         </div>
                     </div>
@@ -155,8 +150,7 @@
                 <div class="colums">
                     <div class="form-control">
                         <label>Direccion detallada</label>
-                        <textarea class="text-input" id="" cols="30" rows="10"></textarea>
-                        
+                        <textarea class="text-input" id="" cols="30" rows="10" name="companyAddress"></textarea>
                     </div>
 
                 </div>
@@ -165,26 +159,25 @@
 
                 <div class="btn-cont">
                     <div>
-                        <button class="button--red">Editar perfil</button>
+                        <button class="button--red" type="button">Editar perfil</button>
                     </div>
                     <div>
-                        <button class="button--green">Guardar cambios</button>
+                        <button class="button--green" type="submit">Guardar cambios</button>
                     </div>
                 </div>
             </form>
         </div>
         <div class="session">
-            <a href="../landingPage/aplicationLandingPage.html"><button class="button--red">Cerrar sesión</button></a>
+            <a href=""><button class="button--red">Cerrar sesión</button></a>
 
         </div>
 </section>
+
+
     <footer class="page-footer">
         <div class="message1">
             <b>SNE, ©2023</b>
         </div>
-
-
-    
 
         <div class="message2">
             <b>SNE - Sistema Nacional de Empleos</b>
@@ -197,7 +190,7 @@
             <a href="https://twitter.com/"><img class="iconos" src="../../../images/imagesAplication/twitter.png" alt="twitter"></a>
         </div>
         <div class="sobre">
-            <li class="1"><a class="link" href="../../htmlWebWizards/teamGroup.html">Sobre el Equipo</a></li>
+            <li class="1"><a class="link" href="/webWizards/group">Sobre el Equipo</a></li>
         </div>
     </footer>
 

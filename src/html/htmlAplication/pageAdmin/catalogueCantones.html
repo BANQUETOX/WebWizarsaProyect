@@ -20,6 +20,7 @@
       href="../../../css/styleAplication/pageAdmin/catalogues.css"
     />
     <script src="../../../js/jsAplication/catalogueLocations.js" defer></script>
+    <script src="../../../js/jsAplication/loadProvinces.js" defer></script>
 
     <title>Catalogo de Cantones</title>
   </head>
@@ -32,9 +33,7 @@
             <a href="#">Web<span>Wizard</span> Jobs</a>
           </h1>
           <div class="nav-register-log-in">
-            <a href="../landingPage/aplicationLandingPage.html"
-              >Salir de catálogos</a
-            >
+            <a href="/sne/">Salir de catálogos</a>
           </div>
         </div>
       </header>
@@ -115,9 +114,7 @@
 
       <div class="sobre">
         <li class="1">
-          <a class="link" src="" href="../../htmlWebWizards/teamGroup.html"
-            >Sobre el Equipo</a
-          >
+          <a class="link" src="" href="/webWizards/group">Sobre el Equipo</a>
         </li>
       </div>
     </footer>
@@ -152,7 +149,7 @@
 
     CANTONSFORM.addEventListener("submit", function (e) {
       e.preventDefault();
-      document.location.href = "./catalogueDistricts.html";
+      window.location.href = "/sne/admin/districts";
     });
   </script>
 </html>

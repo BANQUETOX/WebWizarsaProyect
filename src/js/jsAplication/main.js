@@ -22,7 +22,7 @@ function disableInputs(inputsCollection) {
   }
 }
 
-function enableinputs(inputsCollection) {
+function enableInputs(inputsCollection) {
   enableSelectStyle(styleElement);
   for (let i = 0; i < inputsCollection.length; i++) {
     inputsCollection[i].disabled = false;
@@ -36,7 +36,6 @@ function showSavedChanges(savedChangesLabel) {
 function hideSavedChanges(savedChangesLabel) {
   savedChangesLabel.style.display = "none";
 }
-
 
 function moveToPage(pageReference) {
   window.location.href = pageReference;

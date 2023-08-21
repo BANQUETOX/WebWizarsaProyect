@@ -19,24 +19,23 @@
       rel="stylesheet"
       href="../../../css/styleAplication/userPages/addWorkExperience.css"
     />
-    <script src="../../../js/jsAplication/work.js" defer></script>
+    <script src="../../../js/jsAplication/addworkExperience.js" defer></script>
     <script src="../../../js/jsAplication/main.js" defer></script>
-    
   </head>
   <title>Agregar experiencia laboral</title>
   <body>
     <header class="aplication-header">
       <div class="profile_images">
-        <a href="./userProfile.html">
+        <a href="/sne/app/user/profile">
           <img src="../../../images/imagesAplication/user.png" alt="Image 1" />
         </a>
       </div>
       <div class="container">
         <nav class="aplication-header--navbar">
           <ul>
-            <li><a href="#">Trabajos</a></li>
+            <li><a href="/sne/app/user/">Trabajos</a></li>
             <li>
-              <a href="../userPages/userAplicationSatus.html">Aplicaciones</a>
+              <a href="/sne/app/user/aplications">Aplicaciones</a>
             </li>
           </ul>
         </nav>
@@ -52,7 +51,12 @@
       </div>
     </header>
     <div class="addWorkExperience--container">
-      <form class="addWorkExperience" id="experienceForm">
+      <form
+        class="addWorkExperience"
+        id="experienceForm"
+        action="/sne/app/user/addWorkExperience"
+        method="post"
+      >
         <ul class="addWorkExperience--inputs-list">
           <li>
             <h1 class="addWorkExperience--header">Mi Experiencia laboral</h1>
@@ -63,11 +67,12 @@
             </label>
             <input
               type="checkbox"
-              name=""
+              name="noExperience"
               id="noWorkExperience"
               class="addWorkExperience--input addWorkExperience--input-checkbox"
             />
-          </li><br><br>
+          </li>
+          <br /><br />
           <li>
             <label for="workPosition" class="addWorkExperience--input-label"
               >Posicion de trabajo:</label
@@ -75,8 +80,8 @@
             <input
               type="text"
               id="workPosition"
-              
               class="addWorkExperience--input text-input"
+              name="workNamePosition"
             />
           </li>
           <li>
@@ -86,8 +91,8 @@
             <input
               type="text"
               id="company"
-             
               class="addWorkExperience--input text-input"
+              name="workCompanyName"
             />
           </li>
           <li>
@@ -97,8 +102,8 @@
             <input
               type="text"
               id="location"
-              
               class="addWorkExperience--input text-input"
+              name="workUbication"
             />
           </li>
           <li>
@@ -108,8 +113,8 @@
             <input
               type="date"
               id="since"
-              
               class="addWorkExperience--input text-input"
+              name="workSince"
             />
             <label for="until" class="addWorkExperience--input-label"
               >Hasta:</label
@@ -117,8 +122,8 @@
             <input
               type="date"
               id="until"
-              
               class="addWorkExperience--input text-input"
+              name="workUntil"
             />
           </li>
           <li>
@@ -127,74 +132,39 @@
             </label>
             <input
               type="checkbox"
-              name=""
+              name="workHere"
               id="workHere"
               class="addWorkExperience--input addWorkExperience--input-checkbox"
             />
-          </li><br><br>
+          </li>
+          <br /><br />
           <li>
             <label for="jobDescription" class="addWorkExperience--input-label"
               >Descripcion del trabajo:</label
             >
             <textarea
-              name=""
+              name="workDescription"
               id="jobDescription"
               cols="30"
               rows="10"
-              
               class="addWorkExperience--input text-input"
             ></textarea>
-          </li><br>
-          <p  id="inputs-errors">Debes de rellenar todos los espacios en blanco</p>
+          </li>
+          <br />
+          <p id="inputs-errors">
+            Debes de rellenar todos los espacios en blanco
+          </p>
 
-          <p class="display-none" id="saved-changes"> Se han guardado los datos ingresados </p>
-          <br>
-          <li><br><br>
+          <p class="display-none" id="saved-changes">
+            Se han guardado los datos ingresados
+          </p>
+          <br />
+          <li>
+            <br /><br />
             <button class="button--green" id="upload-work">
               Subir otro trabajo
             </button>
           </li>
-        </ul>
-      </form>
-
-      <form action="" class="addWorkExperience" id="userExtraData">
-        <ul class="addWorkExperience--inputs-list">
-          <li>
-            <label for="crimeSheet" class="addWorkExperience--input-label"
-              >
-            </label>
-            <input
-              type="file"
-              accept=".pdf"
-              id="crimeSheet"
-              class="upload-input"
-            />
-          </li>
-          <li>
-            <label for="lifeSheet" class="addWorkExperience--input-label"
-              >
-            </label>
-            <input
-              type="file"
-              accept=".pdf"
-              id="lifeSheet"
-              class="upload-input"
-              
-            />
-          </li>
-          <br><br>
-
-          
-          <p  class="message_validation" id="inputs-error">Debes de rellenar todos los espacios en blanco</p>
-
-          <p class="display-none" id="saved-change"> Se han guardado los datos ingresados </p>
-
-          <li id="save">
-            <button class="button--green button-save" >Guardar</button>
-          </li>
-
-          
-          
         </ul>
       </form>
     </div>

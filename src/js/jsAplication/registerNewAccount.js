@@ -102,7 +102,10 @@ passwordForm.addEventListener("submit", (e) => {
     isValidPassword(firstPasswordInput.value) &&
     inputsVerifyed
   ) {
-    window.location.href = "https://github.com/";
+    passwordForm.submit();
+    setTimeout(() => {
+      window.location.href = "/sne/newRegister";
+    }, 3000);
   }
   e.preventDefault();
 });

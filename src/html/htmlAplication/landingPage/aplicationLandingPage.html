@@ -73,14 +73,14 @@
 
       <div class="aplication-landing--hero--login-container">
         <div class="login-container--internal_box">
-          <form class="login-form" action="" id="aplication-landing-form">
+          <form class="login-form" action="">
             <h3 class="login--tittle">Ingresar</h3>
             <label class="input-label" for="name">Correo:</label><br />
             <input
               class="text-input aplication-landing-input"
               type="email"
               id="email"
-              name="email"
+              name="loginEmail"
               placeholder="ejemplo@correo.com"
             /><br />
           
@@ -91,6 +91,7 @@
               type="text"
               id="password"
               name="password"
+              required
             />
 
             <p  id="inputs-error" >
@@ -103,9 +104,7 @@
 
 
             <div class="login--forgot_password">
-              <a href="../sharedPages/forgetPassword.html"
-                >Olvidé mi contraseña</a
-              >
+              <a href="/sne/forgetPassword">Olvidé mi contraseña</a>
             </div>
             <a href="">
               <button
@@ -118,7 +117,7 @@
             </a>
           </form>
           <div class="login--register_account">
-            <a href="../../htmlAplication/sharedPages/registerNewAccount.html"
+            <a href="/sne/registerNewAccount"
               >Registrate aqui si no tienes cuenta</a
             >
           </div>
@@ -214,11 +213,18 @@
 
       <div class="sobre">
         <li class="1">
-          <a class="link" src="" href="../../htmlWebWizards/teamGroup.html"
-            >Sobre el Equipo</a
-          >
+          <a class="link" src="" href="/webWizards/group">Sobre el Equipo</a>
         </li>
       </div>
     </footer>
   </body>
+
+  <script>
+    document
+      .getElementById("invite-formulary")
+      .addEventListener("submit", (e) => {
+        e.preventDefault();
+        document.location.href = "../aplicationLanding/welcome.html";
+      });
+  </script>
 </html>

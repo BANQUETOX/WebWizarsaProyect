@@ -1,8 +1,5 @@
 let styleElement = document.createElement("style");
 const inputsCollection = document.getElementsByClassName("profile-input");
-// disableInputs(inputsCollection);
-// disableSelectStyle(styleElement);
-
 $("#imageUpload").change(function () {
   if (this.files[0].size > 20000000) {
     document
@@ -130,7 +127,7 @@ let editProfileButton = document.getElementById("profile-edit-button");
 let changePasswordEditButton = document.getElementById(
   "change-password-button"
 );
-let accessEditButton = document.getElementById("edit-access-button");
+
 function enableProfileinputs(inputsCollection) {
   for (let i = 0; i < inputsCollection.length; i++) {
     inputsCollection[i].readOnly = false;
@@ -140,6 +137,10 @@ function enableProfileinputs(inputsCollection) {
 
 editProfileButton.addEventListener("click", () => {
   enableProfileinputs(profileInputsCollection);
+});
+
+changePasswordEditButton.addEventListener("click", () => {
+    enableProfileinputs(changePasswordCollection);
 });
 
 
