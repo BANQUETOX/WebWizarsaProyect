@@ -42,18 +42,7 @@ firstPasswordInput.addEventListener("keyup", () => {
   alingInputs();
 });
 
-firstPasswordInput.addEventListener("blur", () => {
-  if (isValidPassword(firstPasswordInput.value)) {
-    firstPasswordInput.classList.add("text-input__valid");
-    firstPasswordInput.classList.remove("text-input__invalid");
-    firstErrorLabel.style.display = "none";
-  } else {
-    firstPasswordInput.classList.add("text-input__invalid");
-    firstPasswordInput.classList.remove("text-input__valid");
-    firstErrorLabel.style.display = "initial";
-  }
-  alingInputs();
-});
+
 
 secondPasswordInput.addEventListener("keyup", () => {
   if (

@@ -210,10 +210,10 @@ body {
 
 
 
-.job-input__valid {
+.login-input__valid {
   border: 2px solid green;
 }
-.job-input__invalid {
+.login-input__invalid {
   border: 2px solid red;
 }
 
@@ -233,15 +233,17 @@ body {
   border-radius: 15px;
 }
 
-#saved-changes{
+#saved-changes {
   display: none;
   padding: 10px;
   border: 6px solid rgb(42, 194, 42);
-  margin-left: -4%;
+  margin-left: 28%;
   padding-bottom: 2%;
-  margin-top:1%;
+  margin-top: 1%;
   color: rgb(0, 0, 0);
   box-shadow: 5px 5px 5px rgb(105, 240, 125);
   border-radius: 15px;
+  text-align: center;
+  width: 38%;
 }
 

@@ -20,6 +20,7 @@
       href="../../../css/styleAplication/landingPage/aplicationLandingpage.css"
     />
     <script src="../../../js/jsAplication/aplicationLandingPage.js" defer></script>
+    <script src="../../../js/jsAplication/main.js" defer></script>
 
     <title>Sistema Nacional de Empleos</title>
   </head>
@@ -72,26 +73,24 @@
 
       <div class="aplication-landing--hero--login-container">
         <div class="login-container--internal_box">
-          <form class="login-form" action="">
+          <form class="login-form" action="" id="aplication-landing-form">
             <h3 class="login--tittle">Ingresar</h3>
             <label class="input-label" for="name">Correo:</label><br />
             <input
-              class="text-input"
+              class="text-input aplication-landing-input"
               type="email"
               id="email"
               name="email"
               placeholder="ejemplo@correo.com"
-              required
             /><br />
           
             <br />
             <label class="input-label" for="lastname">Contraseña:</label><br />
             <input
-              class="text-input"
+              class="text-input aplication-landing-input"
               type="text"
               id="password"
               name="password"
-              required
             />
 
             <p  id="inputs-error" >
@@ -100,7 +99,7 @@
 
             <p id="saved-changes">
               Ingreso correcto 
-         </p>
+            </p>
 
 
             <div class="login--forgot_password">
@@ -222,13 +221,4 @@
       </div>
     </footer>
   </body>
-
-  <script>
-    document
-      .getElementById("invite-formulary")
-      .addEventListener("submit", (e) => {
-        e.preventDefault();
-        document.location.href = "../aplicationLanding/welcome.html";
-      });
-  </script>
 </html>
