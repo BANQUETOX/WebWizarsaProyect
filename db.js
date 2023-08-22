@@ -98,6 +98,56 @@ async function createLocation(newLocation) {
     resolve("Location created");
   });
 }
+
+async function addCantones(provinceId, provinceName, locationId, cantonList) {
+  await Location.findByIdAndUpdate(locationId, {
+    province: {
+      id: provinceId,
+      name: provinceName,
+      cantones: cantonList,
+    },
+  });
+}
+
+async function loginId(email, password) {
+  const admins = await Admin.find();
+  const users = await User.find();
+  const companies = await Company.find();
+  let userFound;
+  if (
+    admins.find((admin) => {
+      return admin.userEmail == email;
+    })
+  ) {
+    userFound = admins.find((admin) => {
+      return admin.userEmail == email;
+    });
+    return userFound.id;
+  } else if (
+    users.find((user) => {
+      return user.userEmail == email;
+    })
+  ) {
+    userFound = users.find((user) => {
+      return user.userEmail == email;
+    });
+    return userFound.id;
+  } else if (
+    companies.find((company) => {
+      return company.admin.userEmail == email;
+    })
+  ) {
+    userFound = users.find((company) => {
+      return company.admin.userEmail == email;
+    });
+    return userFound.id;
+  }
+
+  console.log(userFound);
+}
+
+module.exports.login = loginId;
+module.exports.addCantones = addCantones;
 module.exports.Location = Location;
 module.exports.createUser = createUser;
 module.exports.createCompany = createCompany;

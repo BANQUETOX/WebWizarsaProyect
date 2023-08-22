@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const bodyParser = require("body-parser");
+const db = require("../../../db");
 router.use(bodyParser.json());
 router.use(bodyParser.urlencoded({ extended: false }));
 let newAccount;
@@ -8,8 +9,9 @@ router.get("/", (req, res) => {
   res.render("htmlAplication/landingPage/aplicationLandingPage.html");
 });
 router.post("/", (req, res) => {
-  const data = req.body;
-  console.log(data);
+  const loginEmail = req.body.loginEmail;
+  const loginPassword = req.body.loginPassword;
+  db.login(loginEmail, loginPassword);
 });
 
 router.get("/welcome", (req, res) => {

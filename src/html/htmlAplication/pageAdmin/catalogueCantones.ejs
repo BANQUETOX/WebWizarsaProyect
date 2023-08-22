@@ -20,8 +20,7 @@
       href="../../../css/styleAplication/pageAdmin/catalogues.css"
     />
     <script src="../../../js/jsAplication/catalogueLocations.js" defer></script>
-
-    <title>Catalogo de distritos</title>
+    <title>Catalogo de Cantones</title>
   </head>
 
   <body>
@@ -38,30 +37,44 @@
       </header>
       <div class="header-fixed-placeholder"></div>
     </div>
-
-    <form class="catalogue" id="district-form">
+    <form
+      class="catalogue"
+      id="cantons-form"
+      action="/sne/admin/cantones"
+      method="post"
+    >
       <header>
-        <h1 class="catalogue__header">Lista de Distritos registrados</h1>
+        <h1 class="catalogue__header">Lista de cantones registrados</h1>
         <div class="select">
-          <select class="select__element" id="select-provinces">
-            <option value="1">Seleccione la provincia</option>
-            <option value="780">San Jose</option>
-            <option value="593">Alajuela</option>
-            <option value="593">Cartago</option>
-          </select>
-        </div>
-        <div class="select">
-          <select class="select__element" id="select-cantons">
-            <option value="1">Seleccione un canton</option>
+          <select class="select__element" id="select-provinces" name="province">
+            <option value="">Seleccione la provincia</option>
+            <%locations.forEach(location =>{%>
+            <option value="<%=location.province.name%>">
+              <%=location.province.name%>
+            </option>
+            <%})%>
           </select>
         </div>
         <h2 class="catalogue__subtitle">Codigo</h2>
         <h2 class="catalogue__subtitle">Nombre</h2>
       </header>
+
       <div id="catalogue__location-container">
         <div class="catalogue__location-field" id="1">
-          <input type="text" class="text-input" placeholder="Id" required />
-          <input type="text" class="text-input" placeholder="Canton" required />
+          <input
+            type="text"
+            class="text-input"
+            placeholder="Id"
+            name="cantonId"
+            required
+          />
+          <input
+            type="text"
+            class="text-input"
+            placeholder="Canton"
+            name="cantonName"
+            required
+          />
         </div>
       </div>
 
@@ -73,12 +86,14 @@
       >
         Nuevo
       </button>
-      <button class="button--green" id="save-districts-button" type="button">
-        Guardar distritos
+      <button class="button--green" id="save-canton-button" type="submit">
+        Guardar cantones
       </button>
 
       <section class="catalogue__save-discard">
-        <button class="button--green" id="save-button">Guardar</button>
+        <button class="button--green" id="save-button" type="button">
+          Guardar
+        </button>
         <button class="button--black" id="discard-button" type="button">
           Descartar
         </button>
@@ -124,14 +139,15 @@
     </footer>
   </body>
   <script>
-    const DISTRICTFORM = document.getElementById("district-form");
-    document.getElementById("discard-button").onclick = () => {
-      DISTRICTFORM.reset();
+    const CANTONSFORM = document.getElementById("cantons-form");
+    const discardButton = document.getElementById("discard-button");
+    const saveButton = document.getElementById("save-button");
+    discardButton.onclick = () => {
+      CANTONSFORM.reset();
     };
 
-    DISTRICTFORM.addEventListener("submit", function (e) {
-      e.preventDefault();
-      document.location.href = "#";
+    saveButton.addEventListener("click", () => {
+      window.location.href = "/sne/admin/districts";
     });
   </script>
 </html>

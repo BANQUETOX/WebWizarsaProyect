@@ -9,35 +9,35 @@ let saveMessage = document.getElementById("saved-changes");
 let errorLabel = document.getElementById("inputs-errors");
 let invalidInputs = document.getElementsByClassName("text-input__invalid");
 let imagePreviewBorder = document.getElementById("imagePreview");
+const passwordInput = document.getElementById("first-password");
+const secondpasswordInput = document.getElementById("second-password");
+const eyeIcon = document.getElementById("eye-icon");
+const second_eyeIcon = document.getElementById("second_eye-icon");
+const eyeToggle = document.getElementsByClassName("password-toggle");
+alingEyes();
 
-
- const passwordInput = document.getElementById("first-password");
-    const eyeIcon = document.getElementById("eye-icon");
-
-    eyeIcon.addEventListener("click", () => {
-      if (passwordInput.type === "password") {
-        passwordInput.type = "text";
-        eyeIcon.classList.remove("fa-eye");
-        eyeIcon.classList.add("fa-eye-slash");
-      } else {
-        passwordInput.type = "password";
-        eyeIcon.classList.remove("fa-eye-slash");
-        eyeIcon.classList.add("fa-eye");
-      }
-    });
-    const secondpasswordInput = document.getElementById("second-password");
-      const second_eyeIcon = document.getElementById("second_eye-icon");
-    second_eyeIcon.addEventListener("click", () => {
-      if (secondpasswordInput.type === "password") {
-        secondpasswordInput.type = "text";
-        second_eyeIcon.classList.remove("fa-eye");
-        second_eyeIcon.classList.add("fa-eye-slash");
-      } else {
-        secondpasswordInput.type = "password";
-        second_eyeIcon.classList.remove("fa-eye-slash");
-        second_eyeIcon.classList.add("fa-eye");
-      }
-    });
+eyeIcon.addEventListener("click", () => {
+  if (passwordInput.type === "password") {
+    passwordInput.type = "text";
+    eyeIcon.classList.remove("fa-eye");
+    eyeIcon.classList.add("fa-eye-slash");
+  } else {
+    passwordInput.type = "password";
+    eyeIcon.classList.remove("fa-eye-slash");
+    eyeIcon.classList.add("fa-eye");
+  }
+});
+second_eyeIcon.addEventListener("click", () => {
+  if (secondpasswordInput.type === "password") {
+    secondpasswordInput.type = "text";
+    second_eyeIcon.classList.remove("fa-eye");
+    second_eyeIcon.classList.add("fa-eye-slash");
+  } else {
+    secondpasswordInput.type = "password";
+    second_eyeIcon.classList.remove("fa-eye-slash");
+    second_eyeIcon.classList.add("fa-eye");
+  }
+});
 
 firstPasswordInput.addEventListener("keyup", () => {
   if (isValidPassword(firstPasswordInput.value)) {
@@ -49,6 +49,7 @@ firstPasswordInput.addEventListener("keyup", () => {
     firstPasswordInput.classList.remove("text-input__valid");
     firstErrorLabel.style.display = "initial";
   }
+  alingEyes();
 });
 
 firstPasswordInput.addEventListener("blur", () => {
@@ -61,6 +62,7 @@ firstPasswordInput.addEventListener("blur", () => {
     firstPasswordInput.classList.remove("text-input__valid");
     firstErrorLabel.style.display = "initial";
   }
+  alingEyes();
 });
 
 secondPasswordInput.addEventListener("keyup", () => {
@@ -76,6 +78,7 @@ secondPasswordInput.addEventListener("keyup", () => {
     secondPasswordInput.classList.remove("text-input__valid");
     secondErrorLabel.style.display = "initial";
   }
+  alingEyes();
 });
 
 secondPasswordInput.addEventListener("blur", () => {
@@ -91,6 +94,7 @@ secondPasswordInput.addEventListener("blur", () => {
     secondPasswordInput.classList.remove("text-input__valid");
     secondErrorLabel.style.display = "initial";
   }
+  alingEyes();
 });
 
 // All inputs verification
@@ -138,6 +142,31 @@ passwordForm.addEventListener("submit", (e) => {
   }
   e.preventDefault();
 });
+
+function alingEyes() {
+  if (
+    !firstPasswordInput.classList.contains("text-input__invalid") &&
+    !secondPasswordInput.classList.contains("text-input__invalid")
+  ) {
+    for (let i = 0; i < eyeToggle.length; i++) {
+      eyeToggle[i].style.top = "-62px";
+    }
+  } else if (firstPasswordInput.classList.contains("text-input__invalid")) {
+    eyeToggle[0].style.top = "-95px";
+    eyeToggle[1].style.top = "-62px";
+  } else if (secondPasswordInput.classList.contains("text-input__invalid")) {
+    eyeToggle[0].style.top = "-62px";
+    eyeToggle[1].style.top = "-95px";
+  }
+  if (
+    firstPasswordInput.classList.contains("text-input__invalid") &&
+    secondPasswordInput.classList.contains("text-input__invalid")
+  ) {
+    for (let i = 0; i < eyeToggle.length; i++) {
+      eyeToggle[i].style.top = "-95px";
+    }
+  }
+}
 
 $("#imageUpload").change(function () {
   if (this.files[0].size > 20000000) {
