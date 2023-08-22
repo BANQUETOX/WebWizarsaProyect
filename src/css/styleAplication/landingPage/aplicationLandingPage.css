@@ -247,3 +247,15 @@ body {
   width: 38%;
 }
 
+.password-toggle {
+  position: relative;
+  cursor: pointer;
+  top: 2.5px;
+  right: 10px;
+}
+
+#eye-icon {
+  font-size: 18px;
+  margin-left: -8%;
+  color: black;
+}

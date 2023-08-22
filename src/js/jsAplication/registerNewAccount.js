@@ -10,6 +10,35 @@ let errorLabel = document.getElementById("inputs-errors");
 let invalidInputs = document.getElementsByClassName("text-input__invalid");
 let imagePreviewBorder = document.getElementById("imagePreview");
 
+
+ const passwordInput = document.getElementById("first-password");
+    const eyeIcon = document.getElementById("eye-icon");
+
+    eyeIcon.addEventListener("click", () => {
+      if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+        eyeIcon.classList.remove("fa-eye");
+        eyeIcon.classList.add("fa-eye-slash");
+      } else {
+        passwordInput.type = "password";
+        eyeIcon.classList.remove("fa-eye-slash");
+        eyeIcon.classList.add("fa-eye");
+      }
+    });
+    const secondpasswordInput = document.getElementById("second-password");
+      const second_eyeIcon = document.getElementById("second_eye-icon");
+    second_eyeIcon.addEventListener("click", () => {
+      if (secondpasswordInput.type === "password") {
+        secondpasswordInput.type = "text";
+        second_eyeIcon.classList.remove("fa-eye");
+        second_eyeIcon.classList.add("fa-eye-slash");
+      } else {
+        secondpasswordInput.type = "password";
+        second_eyeIcon.classList.remove("fa-eye-slash");
+        second_eyeIcon.classList.add("fa-eye");
+      }
+    });
+
 firstPasswordInput.addEventListener("keyup", () => {
   if (isValidPassword(firstPasswordInput.value)) {
     firstPasswordInput.classList.add("text-input__valid");

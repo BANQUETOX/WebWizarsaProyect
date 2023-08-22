@@ -5,6 +5,22 @@ let inputsCollection = document.getElementsByClassName("aplication-landing-input
 let errorLabel = document.getElementById("inputs-error");
 let invalidInputs = document.getElementsByClassName("login-input__invalid");
 
+const passwordInput = document.getElementById("password");
+const eyeIcon = document.getElementById("eye-icon");
+
+eyeIcon.addEventListener("click", () => {
+  if (passwordInput.type === "password") {
+    passwordInput.type = "text";
+    eyeIcon.classList.remove("fa-eye");
+    eyeIcon.classList.add("fa-eye-slash");
+  } else {
+    passwordInput.type = "password";
+    eyeIcon.classList.remove("fa-eye-slash");
+    eyeIcon.classList.add("fa-eye");
+  }
+});
+
+
 function verifyLoginForm() {
   for (let i = 0; i < inputsCollection.length; i++) {
     if (inputsCollection[i].value == "") { //? Fomrulario esta vacio
@@ -33,7 +49,7 @@ loginFormulary.addEventListener("submit", (e) => {
     errorLabel.style.display = "none";
 
     setTimeout(() => {
-      companyForm.reset();
+      loginFormulary.reset();
       for (let i = 0; i < inputsCollection.length; i++) {
         inputsCollection[i].classList.remove("login-input__valid");
       }      

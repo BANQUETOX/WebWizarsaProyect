@@ -271,3 +271,29 @@
 .button-container {
   margin-left: 350px;
 }
+
+
+
+
+.password-toggle {
+  position: relative;
+  cursor: pointer;
+  top: -95px;
+  right: -65%;
+  color: #000;
+}
+
+#eye-icon {
+  font-size: 18px;
+  color: black;
+  position: absolute;
+ 
+}
+
+#second_eye-icon {
+  font-size: 18px;
+  color: black;
+  position: absolute;
+  
+}
+
