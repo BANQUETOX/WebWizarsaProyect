@@ -9,11 +9,13 @@ let inputEmail = document.getElementsByClassName("input-email_landing");
 let errorEmail = document.getElementById("error-email_message");
 
 let inputPassword = document.getElementsByClassName("input-password-landing");
+let confirmedPassword = document.getElementById("confirm-password-input");
 let errorPassword = document.getElementById("error-password-message");
 
 let invalidInput = document.getElementsByClassName("invalid-input-landing");
 let errorGeneral = document.getElementById("general-error-message");
 
+let confirmEye = document.getElementById("confirmation-eye");
 
 function verifyInputEmail () {
   for (let i = 0; i < inputEmail.length; i++) {
@@ -83,5 +85,17 @@ permissionFormulary.addEventListener("submit", (e) => {
   } else {
     errorGeneral.style.display = "initial";
     hideSavedChanges(saveMessage);
+  }
+});
+
+confirmEye.addEventListener("click", () => {
+  if (confirmedPassword.type === "password") {
+    confirmedPassword.type = "text";
+    confirmEye.classList.remove("fa-eye");
+    confirmEye.classList.add("fa-eye-slash");
+  } else {
+    confirmedPassword.type = "password";
+    confirmEye.classList.remove("fa-eye-slash");
+    confirmEye.classList.add("fa-eye");
   }
 });

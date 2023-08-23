@@ -237,4 +237,26 @@ saveChangesButton.addEventListener("click", () => {
   confirmSave();
 });
 
+firstEye.addEventListener("click", () => {
+  if (firstPasswordInput.type === "password") {
+    firstPasswordInput.type = "text";
+    firstEye.classList.remove("fa-eye");
+    firstEye.classList.add("fa-eye-slash");
+  } else {
+    firstPasswordInput.type = "password";
+    firstEye.classList.remove("fa-eye-slash");
+    firstEye.classList.add("fa-eye");
+  }
+});
 
+secondEye.addEventListener("click", () => {
+  if (secondPasswordInput.type === "password") {
+    secondPasswordInput.type = "text";
+    secondEye.classList.remove("fa-eye");
+    secondEye.classList.add("fa-eye-slash");
+  } else {
+    secondPasswordInput.type = "password";
+    secondEye.classList.remove("fa-eye-slash");
+    secondEye.classList.add("fa-eye");
+  }
+});

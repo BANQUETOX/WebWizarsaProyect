@@ -1,10 +1,10 @@
 const loginFormulary = document.getElementById("aplication-landing-form");
-const saveMessage = document.getElementById("saved-changes");
+const saveMessage = document.getElementById("saved-changes-cont");
 
 let inputsCollection = document.getElementsByClassName(
   "aplication-landing-input"
 );
-let errorLabel = document.getElementById("inputs-error");
+let errorLabel = document.getElementById("inputs-error-cont");
 let invalidInputs = document.getElementsByClassName("login-input__invalid");
 
 const passwordInput = document.getElementById("password");
