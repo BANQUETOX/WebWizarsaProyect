@@ -83,24 +83,6 @@ function alingEyes() {
     eyeToggle[1].style.top = "-81px";
     container[1].style.top = "14px"
   }
-  if (firstPasswordInput.classList.contains("text-input__valid"))
-  {
-  
-      eyeToggle[0].style.left="-110px"
-      eyeToggle[0].style.top="56px"
-      eyeToggle[1].style.top = "-62px";
-      eyeToggle[1].style.marginLeft = "-3px";
-      eyeToggle[2].style.top = "50px";
- }
- if (firstPasswordInput.classList.contains("text-input__valid")&&
-    secondPasswordInput.classList.contains("text-input__invalid"))
-  {
-    eyeToggle[0].style.left="-118px"
-    eyeToggle[0].style.top="72px"
-    eyeToggle[1].style.top = "-80px";
-    eyeToggle[1].style.marginLeft = "-3px";
-  }
-
   if (
     firstPasswordInput.classList.contains("text-input__invalid") &&
     secondPasswordInput.classList.contains("text-input__invalid")
@@ -114,7 +96,6 @@ function alingEyes() {
       eyeToggle[i].style.top = "-95px";
     }*/
   }
-  
 }
 
 
@@ -132,7 +113,6 @@ let secondErrorLabel = document.getElementById("second-password--message");
 let secondPasswordInputContainer = document.getElementById(
   "second-password-input-container"
 );
-let thirdPasswordInput = document.getElementById("confirm-password-input");
 let secondEye = document.getElementById("eye2");
 
 firstPasswordInput.addEventListener("keyup", () => {
@@ -166,9 +146,6 @@ secondPasswordInput.addEventListener("keyup", () => {
   alingInputs();
 });
 
-
-
-
 secondPasswordInput.addEventListener("blur", () => {
   if (
     checkTwoPasswords(firstPasswordInput.value, secondPasswordInput.value) &&
@@ -184,8 +161,6 @@ secondPasswordInput.addEventListener("blur", () => {
   }
   alingInputs();
 });
-
-
 
 passwordForm.addEventListener("submit", (e) => {
   if (
@@ -258,6 +233,7 @@ saveChangesButton.addEventListener("click", () => {
 
   confirmSave();
 });
+
 
 
 
@@ -364,3 +340,4 @@ permissionFormulary.addEventListener("submit", (e) => {
     hideSavedChanges(saveMessage);
   }
 });
+

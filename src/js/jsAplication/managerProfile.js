@@ -1,7 +1,5 @@
 let styleElement = document.createElement("style");
 const inputsCollection = document.getElementsByClassName("profile-input");
-const eyeToggle = document.getElementsByClassName("password-toggle");
-const container = document.getElementsByClassName("password-input-container")
 $("#imageUpload").change(function () {
   if (this.files[0].size > 20000000) {
     document
@@ -15,91 +13,6 @@ $("#imageUpload").change(function () {
     readURL(this);
   }
 });
-
-//Mostrar ocultar las contransenas
-const passwordInput = document.getElementById("first-new-password");
-const eyeIcon = document.getElementById("eye-icon");
-
-eyeIcon.addEventListener("click", () => {
-  if (passwordInput.type === "password") {
-    passwordInput.type = "text";
-    eyeIcon.classList.remove("fa-eye");
-    eyeIcon.classList.add("fa-eye-slash");
-  } else {
-    passwordInput.type = "password";
-    eyeIcon.classList.remove("fa-eye-slash");
-    eyeIcon.classList.add("fa-eye");
-  }
-});
-
-const secondpasswordInput = document.getElementById("second-new-password")
-const second_eyeIcon = document.getElementById("second_eye-icon");
-
-second_eyeIcon.addEventListener("click", () => {
-  if (secondpasswordInput.type === "password") {
-    secondpasswordInput.type = "text";
-    second_eyeIcon.classList.remove("fa-eye");
-    second_eyeIcon.classList.add("fa-eye-slash");
-  } else {
-    secondpasswordInput.type = "password";
-    second_eyeIcon.classList.remove("fa-eye-slash");
-    second_eyeIcon.classList.add("fa-eye");
-  }
-});
-
-function alingEyes() {
-  if (
-    !firstPasswordInput.classList.contains("text-input__invalid") &&
-    !secondPasswordInput.classList.contains("text-input__invalid")
-  ) {
-    for (let i = 0; i < eyeToggle.length; i++) {
-      eyeToggle[i].style.top = "-62px";
-    }
-  } else if (firstPasswordInput.classList.contains("text-input__invalid")) {
-    container[0].style.top= "26px"
-    eyeToggle[0].style.left="-200px"
-    eyeToggle[0].style.top="80px"
-    eyeToggle[1].style.top = "-90px";
-    eyeToggle[1].style.marginLeft = "-200px";
-    
-  } else if (secondPasswordInput.classList.contains("text-input__invalid")) {
-    eyeToggle[0].style.top = "68px";
-    eyeToggle[1].style.top = "-83px";
-    container[1].style.top = "14px"
-  }
-  if (firstPasswordInput.classList.contains("text-input__valid"))
-  {
-  
-      eyeToggle[0].style.left="-110px"
-      eyeToggle[0].style.top="56px"
-      eyeToggle[1].style.top = "-62px";
-      eyeToggle[1].style.marginLeft = "-3px";
-     
- }
- if (firstPasswordInput.classList.contains("text-input__valid")&&
-    secondPasswordInput.classList.contains("text-input__invalid"))
-  {
-    eyeToggle[0].style.left="-118px"
-    eyeToggle[0].style.top="70px"
-    eyeToggle[1].style.top = "-82px";
-    eyeToggle[1].style.marginLeft = "-3px";
-  }
-
-  if (
-    firstPasswordInput.classList.contains("text-input__invalid") &&
-    secondPasswordInput.classList.contains("text-input__invalid")
-  ) {
-    eyeToggle[0].style.top="80px"
-    eyeToggle[1].style.top = "-92px";
-    eyeToggle[1].style.right="20px"
-    container[1].style.top = "14px"
-
-    /*for (let i = 0; i < eyeToggle.length; i++) {
-      eyeToggle[i].style.top = "-95px";
-    }*/
-  }
-  
-}
 
 //passwords section
 let passwordForm = document.getElementById("password-form");
@@ -126,8 +39,7 @@ firstPasswordInput.addEventListener("keyup", () => {
     firstPasswordInput.classList.remove("text-input__valid");
     firstErrorLabel.style.display = "initial";
   }
-  // alingInputs();
-  alingEyes();
+  alingInputs();
 });
 
 firstPasswordInput.addEventListener("blur", () => {
@@ -140,8 +52,7 @@ firstPasswordInput.addEventListener("blur", () => {
     firstPasswordInput.classList.remove("text-input__valid");
     firstErrorLabel.style.display = "initial";
   }
-  // alingInputs();
-  alingEyes();
+  alingInputs();
 });
 
 secondPasswordInput.addEventListener("keyup", () => {
@@ -157,8 +68,7 @@ secondPasswordInput.addEventListener("keyup", () => {
     secondPasswordInput.classList.remove("text-input__valid");
     secondErrorLabel.style.display = "initial";
   }
-  // alingInputs();
-  alingEyes();
+  alingInputs();
 });
 
 secondPasswordInput.addEventListener("blur", () => {
@@ -174,8 +84,7 @@ secondPasswordInput.addEventListener("blur", () => {
     secondPasswordInput.classList.remove("text-input__valid");
     secondErrorLabel.style.display = "initial";
   }
-  // alingInputs();
-  alingEyes();
+  alingInputs();
 });
 
 passwordForm.addEventListener("submit", (e) => {
@@ -188,25 +97,25 @@ passwordForm.addEventListener("submit", (e) => {
   e.preventDefault();
 });
 
-// function alingInputs() {
-//   if (
-//     firstPasswordInput.classList.contains("text-input__invalid") &&
-//     secondPasswordInput.classList.contains("text-input__invalid")
-//   ) {
-//     secondPasswordInputContainer.style.marginTop = "-9px";
-//     secondEye.style.top = "61px";
-//   } else if (secondPasswordInput.classList.contains("text-input__invalid")) {
-//     firstPasswordInputContainer.style.marginTop = "-30px";
-//     firstEye.style.top = "80px";
-//   } else if (firstPasswordInput.classList.contains("text-input__invalid")) {
-//     secondPasswordInputContainer.style.marginTop = "-45px";
-//     secondEye.style.top = "98px";
-//   }
-//   if (firstPasswordInput.classList.contains("text-input__valid")) {
-//     secondPasswordInputContainer.style.marginTop = "0px";
-//     secondEye.style.top = "50px";
-//   }
-// }
+function alingInputs() {
+  if (
+    firstPasswordInput.classList.contains("text-input__invalid") &&
+    secondPasswordInput.classList.contains("text-input__invalid")
+  ) {
+    secondPasswordInputContainer.style.marginTop = "-9px";
+    secondEye.style.top = "61px";
+  } else if (secondPasswordInput.classList.contains("text-input__invalid")) {
+    firstPasswordInputContainer.style.marginTop = "-30px";
+    firstEye.style.top = "80px";
+  } else if (firstPasswordInput.classList.contains("text-input__invalid")) {
+    secondPasswordInputContainer.style.marginTop = "-45px";
+    secondEye.style.top = "98px";
+  }
+  if (firstPasswordInput.classList.contains("text-input__valid")) {
+    secondPasswordInputContainer.style.marginTop = "0px";
+    secondEye.style.top = "50px";
+  }
+}
 
 // Habilitar inputs
 let profileInputsCollection = document.getElementsByClassName("profile-input");
@@ -247,3 +156,26 @@ saveChangesButton.addEventListener("click", () => {
   confirmSave();
 });
 
+firstEye.addEventListener("click", () => {
+  if (firstPasswordInput.type === "password") {
+    firstPasswordInput.type = "text";
+    firstEye.classList.remove("fa-eye");
+    firstEye.classList.add("fa-eye-slash");
+  } else {
+    firstPasswordInput.type = "password";
+    firstEye.classList.remove("fa-eye-slash");
+    firstEye.classList.add("fa-eye");
+  }
+});
+
+secondEye.addEventListener("click", () => {
+  if (secondPasswordInput.type === "password") {
+    secondPasswordInput.type = "text";
+    secondEye.classList.remove("fa-eye");
+    secondEye.classList.add("fa-eye-slash");
+  } else {
+    secondPasswordInput.type = "password";
+    secondEye.classList.remove("fa-eye-slash");
+    secondEye.classList.add("fa-eye");
+  }
+});
