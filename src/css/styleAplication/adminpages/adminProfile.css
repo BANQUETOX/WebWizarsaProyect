@@ -382,6 +382,10 @@
   display: none;
   margin-top: 0;
 }
+
+.general-error-message{
+  display: none;
+}
 #first-password--message {
   margin-left: 89px;
 }
@@ -410,4 +414,44 @@ select:disabled {
   opacity: 1;
 }
 
+.password-toggle {
+  position: relative;
+  cursor: pointer;
+  top: 51px;
+  right: 80%;
+ 
+  color: #000;
+}
 
+#eye-icon {
+  font-size: 18px;
+  color: black;
+  position: absolute;
+ 
+}
+
+#second_eye-icon {
+  font-size: 18px;
+  color: black;
+  position: absolute;
+  
+}
+
+#second_password-toggle{
+  left: 206%;
+  top: -202%;
+  margin-bottom: 6.3%;
+}
+
+#third_eye-icon {
+  font-size: 18px;
+  color: black;
+  position: absolute;
+  
+}
+
+#third_password-toggle{
+  left: -78%;
+  top: 45%;
+  margin-bottom: 9.3%;
+}
