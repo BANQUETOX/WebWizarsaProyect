@@ -23,11 +23,47 @@ router.post("/", (req, res) => {
 
 router.get("/cantones", async (req, res) => {
   const locations = await db.Location.find();
-  res.render("htmlAplication/pageAdmin/catalogueCantones.html");
+  res.render("htmlAplication/pageAdmin/catalogueCantones.ejs", {
+    locations: locations,
+  });
 });
 
-router.get("/districts", (req, res) => {
-  res.render("htmlAplication/pageAdmin/catalogueDistricts.html");
+router.post("/cantones", async (req, res) => {
+  const locations = await db.Location.find();
+  const province = locations.find((location) => {
+    return location.province.name == req.body.province;
+  });
+  const provinceId = province.province.id;
+  const provinceName = req.body.province;
+  const cantonesIdList = req.body.cantonId;
+  const cantonesNameList = req.body.cantonName;
+  const cantonList = [];
+  for (let i = 0; i < cantonesIdList.length; i++) {
+    let cantonObj = {
+      id: cantonesIdList[i],
+      name: cantonesNameList[i],
+    };
+    cantonList.push(cantonObj);
+  }
+  db.addCantones(provinceId, provinceName, province.id, cantonList);
+
+  res.render("htmlAplication/pageAdmin/catalogueCantones.ejs", {
+    locations: locations,
+  });
+});
+
+router.get("/districts", async (req, res) => {
+  const locations = await db.Location.find();
+  res.render("htmlAplication/pageAdmin/catalogueDistricts.ejs", {
+    locations: locations,
+  });
+});
+
+router.post("/districts", async (req, res) => {
+  const locations = await db.Location.find();
+  res.render("htmlAplication/pageAdmin/catalogueDistricts.ejs", {
+    locations: locations,
+  });
 });
 
 function convertLocations(idList, namelist) {

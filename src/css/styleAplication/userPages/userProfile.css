@@ -240,7 +240,7 @@ a {
   margin-bottom: 10px;
   padding-bottom: 30px;
   padding-left: 10px;
-  width: 335px;
+  width: 290px;
 }
 
 .form-control input {
@@ -303,7 +303,7 @@ a {
   visibility: hidden;
   position: absolute;
   top: 45px;
-  margin-left: 50%;
+  margin-left: 25%;
 }
 
 .form-control i.fa-eye {
@@ -311,7 +311,7 @@ a {
   visibility: visible;
   position: absolute;
   top: 50px;
-  margin-left: 35%;
+  margin-top: 20px;
 }
 
 .form-control small {
@@ -365,11 +365,11 @@ a {
 }
 
 .text-input__invalid {
-  border: 2px solid red;
+  border: 3px solid red;
 }
 
 .text-input__valid {
-  border: 2px solid green;
+  border: 4px solid green;
 }
 
 .error__message {
@@ -389,6 +389,7 @@ a {
 .password-inputs-container {
   display: grid;
   grid-template-columns: auto auto auto;
+  
 }
 .location-container {
   margin-right: -200px;
@@ -410,7 +411,6 @@ a {
 
 .link-education {
   margin-bottom: 20px;
-
 }
 
 .password-toggle {
@@ -440,3 +440,4 @@ a {
   top: -202%;
   margin-bottom: 6.3%;
 }
+

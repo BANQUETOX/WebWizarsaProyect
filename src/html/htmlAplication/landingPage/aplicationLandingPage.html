@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <script src="../../../js/jsAplication/main.js" defer></script>
-    <script src="../../../js/jsAplication/aplicationLandingPage.js" defer></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&display=swap"
       rel="stylesheet"
@@ -21,8 +19,15 @@
       rel="stylesheet"
       href="../../../css/styleAplication/landingPage/aplicationLandingpage.css"
     />
-    <script src="../../../js/jsAplication/aplicationLandingPage.js" defer></script>
+    <script
+      src="../../../js/jsAplication/aplicationLandingPage.js"
+      defer
+    ></script>
     <script src="../../../js/jsAplication/main.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
 
     <title>Sistema Nacional de Empleos</title>
   </head>
@@ -75,7 +80,12 @@
 
       <div class="aplication-landing--hero--login-container">
         <div class="login-container--internal_box">
-          <form class="login-form" action="" id="aplication-landing-form">
+          <form
+            class="login-form"
+            action="/sne/"
+            method="post"
+            id="aplication-landing-form"
+          >
             <h3 class="login--tittle">Ingresar</h3>
             <label class="input-label" for="name">Correo:</label><br />
             <input
@@ -85,24 +95,27 @@
               name="loginEmail"
               placeholder="ejemplo@correo.com"
             /><br />
-          
+
             <br />
             <label class="input-label" for="lastname">Contraseña:</label><br />
             <input
               class="text-input aplication-landing-input"
-              type="text"
+              type="password"
               id="password"
-              name="password"
+              name="loginPassword"
             />
 
-            <p  id="inputs-error" >
-              Debes de rellenar los espacios en blanco
-            </p>
+            <span id="password-toggle" class="password-toggle">
+              <i class="fas fa-eye" id="eye-icon"></i>
+            </span>
 
-            <p id="saved-changes">
-              Ingreso correcto 
-            </p>
+            <div id="inputs-error-cont">
+              <br />
+              <br />
+              <p id="inputs-error">Debes de rellenar los espacios en blanco</p>
+            </div>
 
+            <p id="saved-changes">Ingreso correcto</p>
 
             <div class="login--forgot_password">
               <a href="/sne/forgetPassword">Olvidé mi contraseña</a>
@@ -180,7 +193,6 @@
       </div>
     </div>
 
-
     <footer class="page-footer">
       <div class="message1">
         <b>SNE, ©2023</b>
@@ -219,6 +231,4 @@
       </div>
     </footer>
   </body>
-
-
 </html>

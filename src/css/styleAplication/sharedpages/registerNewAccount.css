@@ -238,11 +238,10 @@
   margin-top: 0;
 }
 #inputs-errors {
-  display: none;
   padding: 10px;
   padding-right: -200px;
   border: 6px solid rgb(186, 0, 0);
-  margin-left: 12%;
+  margin-left: 15%;
   padding-bottom: 2%;
   margin-bottom: 30px;
   margin-top: 1%;
@@ -253,14 +252,16 @@
   text-align: center;
 }
 
-#saved-changes {
+#inputs-errors-cont {
   display: none;
+}
+
+#saved-changes {
   padding: 10px;
   border: 6px solid rgb(42, 194, 42);
-  margin-left: 14%;
+  margin-left: 15%;
   padding-bottom: 2%;
   margin-top: 1%;
-
   text-align: center;
   margin-bottom: 5%;
   box-shadow: 5px 5px 5px rgb(105, 240, 125);
@@ -268,6 +269,34 @@
   text-align: center;
   width: 70%;
 }
-.button-container {
-  margin-left: 350px;
+
+#saved-changes-cont {
+  display: none;
 }
+
+.button-container {
+  margin-left: 36%;
+}
+
+.password-toggle {
+  position: relative;
+  cursor: pointer;
+  top: -95px;
+  right: -65%;
+  color: #000;
+}
+
+#eye-icon {
+  font-size: 18px;
+  color: black;
+  position: absolute;
+ 
+}
+
+#second_eye-icon {
+  font-size: 18px;
+  color: black;
+  position: absolute;
+  
+}
+

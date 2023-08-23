@@ -52,14 +52,14 @@ const userSchema = new mongoose.Schema({
   crimeSheet: String,
 });
 const pageAdminSchema = new mongoose.Schema({
-  email: String,
-  password: String,
+  userEmail: String,
+  userPassword: String,
 });
 const locationSchema = new mongoose.Schema({
   province: Object,
 });
 
-const Admin = mongoose.model("pageAdmin", pageAdminSchema);
+const Admin = mongoose.model("pageAdmins", pageAdminSchema);
 const User = mongoose.model("users", userSchema);
 const Company = mongoose.model("companies", companySchema);
 const Location = mongoose.model("locations", locationSchema);
@@ -67,8 +67,8 @@ const Location = mongoose.model("locations", locationSchema);
 async function createPageAdmin() {
   return new Promise((resolve) => {
     admin = new Admin({
-      email: "admin@admin.com",
-      password: "admin123",
+      userEmail: "admin@admin.com",
+      userPassword: "admin",
     });
     admin.save();
     resolve("User created");
@@ -98,6 +98,67 @@ async function createLocation(newLocation) {
     resolve("Location created");
   });
 }
+
+async function addCantones(provinceId, provinceName, locationId, cantonList) {
+  await Location.findByIdAndUpdate(locationId, {
+    province: {
+      id: provinceId,
+      name: provinceName,
+      cantones: cantonList,
+    },
+  });
+}
+
+async function login(email, password) {
+  const admins = await Admin.find();
+  const users = await User.find();
+  const companies = await Company.find();
+  let userFound;
+  if (
+    admins.find((admin) => {
+      return admin.userEmail == email;
+    }) != undefined
+  ) {
+    userFound = admins.find((admin) => {
+      return admin.userEmail == email;
+    });
+    if (userFound.userPassword == password) {
+      return [userFound.id, "admin"];
+    } else {
+      return false;
+    }
+  } else if (
+    users.find((user) => {
+      return user.userEmail == email;
+    }) != undefined
+  ) {
+    userFound = users.find((user) => {
+      return user.userEmail == email;
+    });
+    if (userFound.userPassword == password) {
+      return [userFound.id, "user"];
+    } else {
+      return false;
+    }
+  } else if (
+    companies.find((company) => {
+      return company.admin.userEmail == email;
+    }) != undefined
+  ) {
+    userFound = companies.find((company) => {
+      return company.admin.userEmail == email;
+    });
+    if (userFound.admin.userPassword == password) {
+      return [userFound.id, "company"];
+    } else {
+      return false;
+    }
+  }
+}
+
+module.exports.Company = Company;
+module.exports.login = login;
+module.exports.addCantones = addCantones;
 module.exports.Location = Location;
 module.exports.createUser = createUser;
 module.exports.createCompany = createCompany;
