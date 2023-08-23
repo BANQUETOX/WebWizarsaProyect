@@ -233,7 +233,7 @@ body {
   border-radius: 15px;
 }
 
-#inputs-error-cont {
+#inputs-error {
   display: none;
 }
 
@@ -250,7 +250,7 @@ body {
   width: 38%;
 }
 
-#saved-changes-cont {
+#saved-changes {
   display: none;
 }
 
