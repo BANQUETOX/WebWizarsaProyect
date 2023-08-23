@@ -12,7 +12,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"defer></script>
     <script src="https://kit.fontawesome.com/73f851add2.js" crossorigin="anonymous" defer></script>
     <script src="../../../js/jsAplication/main.js" defer></script>
-    <script src="../../../js/jsAplication/adminProfile2.js" defer></script>
     <script src="../../../js/jsAplication/adminProfile.js" defer></script>
 
     <title>Mi perfil</title>
@@ -198,7 +197,7 @@
                                 <label>Email del nuevo administrador</label>
                                 <input class="text-input access-input input-email_landing" type="email" readonly input="emailAdminInput">
                                 <p id="error-email_message" class="error__message invalid-email-input">
-                                    Rellene el espacio en blanco
+                                    Debes de ingresar un correo válido
                                    </p>
                                 
                             </div>
@@ -206,14 +205,19 @@
                                 <label> Contraseña de Confirmacion</label>
                                 <input class="text-input access-input input-password-landing" type="password" id="confirm-password-input" readonly>
                                 <i class="fa-solid fa-eye" id="confirmation-eye"></i>
-                                <p id="error-password-message inputs-errors" class="error__message invalid-password-input">
+                                <p id="error-password-message" class="error__message invalid-password-input">
                                    Contraseña incorrecta
                                   </p>
                             </div>
                             
-                            <p id="error-email_message" class="general-error-message">
+                            <p id="inputs-error" class="general-error-message" >
                                 Rellene los espacios en blanco
                                </p>
+
+                               <p id="saved-changes">
+                                Se ha enviado la inivtacion de forma exitosa 
+                           </p>
+                           
                         </div>
                         <div class="btn-cont">
                             <div>

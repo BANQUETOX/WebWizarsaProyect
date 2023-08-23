@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="../../../js/jsAplication/main.js" defer></script>
+    <script src="../../../js/jsAplication/aplicationLandingPage.js" defer></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&display=swap"
       rel="stylesheet"
@@ -73,7 +75,7 @@
 
       <div class="aplication-landing--hero--login-container">
         <div class="login-container--internal_box">
-          <form class="login-form" action="">
+          <form class="login-form" action="" id="aplication-landing-form">
             <h3 class="login--tittle">Ingresar</h3>
             <label class="input-label" for="name">Correo:</label><br />
             <input
@@ -91,7 +93,6 @@
               type="text"
               id="password"
               name="password"
-              required
             />
 
             <p  id="inputs-error" >
@@ -219,12 +220,5 @@
     </footer>
   </body>
 
-  <script>
-    document
-      .getElementById("invite-formulary")
-      .addEventListener("submit", (e) => {
-        e.preventDefault();
-        document.location.href = "../aplicationLanding/welcome.html";
-      });
-  </script>
+
 </html>
