@@ -2,16 +2,31 @@ const express = require("express");
 const router = express.Router();
 const bodyParser = require("body-parser");
 const db = require("../../../db");
+const appAdminPages = require("../../js/routes/appAdminPages");
 router.use(bodyParser.json());
 router.use(bodyParser.urlencoded({ extended: false }));
 let newAccount;
+let userId;
 router.get("/", (req, res) => {
   res.render("htmlAplication/landingPage/aplicationLandingPage.html");
 });
-router.post("/", (req, res) => {
+router.post("/", async (req, res) => {
   const loginEmail = req.body.loginEmail;
   const loginPassword = req.body.loginPassword;
-  db.login(loginEmail, loginPassword);
+  let values = await db.login(loginEmail, loginPassword);
+  userId = values[0];
+  let loginType = values[1];
+  console.log(userId);
+  console.log(loginType);
+  // switch (loginType) {
+  //   case "admin":
+  //     appAdminPages;
+  //     break;
+  //   case "company":
+  //     break;
+  //   case "user":
+  //     break;
+  // }
 });
 
 router.get("/welcome", (req, res) => {

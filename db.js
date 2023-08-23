@@ -67,8 +67,8 @@ const Location = mongoose.model("locations", locationSchema);
 async function createPageAdmin() {
   return new Promise((resolve) => {
     admin = new Admin({
-      email: "admin@admin.com",
-      password: "admin123",
+      userEmail: "admin@admin.com",
+      userPassword: "admin",
     });
     admin.save();
     resolve("User created");
@@ -109,7 +109,7 @@ async function addCantones(provinceId, provinceName, locationId, cantonList) {
   });
 }
 
-async function loginId(email, password) {
+async function login(email, password) {
   const admins = await Admin.find();
   const users = await User.find();
   const companies = await Company.find();
@@ -117,36 +117,48 @@ async function loginId(email, password) {
   if (
     admins.find((admin) => {
       return admin.userEmail == email;
-    })
+    }) != undefined
   ) {
     userFound = admins.find((admin) => {
       return admin.userEmail == email;
     });
-    return userFound.id;
+    if (userFound.userPassword == password) {
+      console.log(userFound);
+      console.log(userFound.id);
+      return [userFound.id, "admin"];
+    } else {
+      return false;
+    }
   } else if (
     users.find((user) => {
       return user.userEmail == email;
-    })
+    }) != undefined
   ) {
     userFound = users.find((user) => {
       return user.userEmail == email;
     });
-    return userFound.id;
+    if (userFound.userPassword == password) {
+      return [userFound.id, "user"];
+    } else {
+      return false;
+    }
   } else if (
     companies.find((company) => {
       return company.admin.userEmail == email;
-    })
+    }) != undefined
   ) {
-    userFound = users.find((company) => {
+    userFound = companies.find((company) => {
       return company.admin.userEmail == email;
     });
-    return userFound.id;
+    if (userFound.admin.userPassword == password) {
+      return [userFound.id, "company"];
+    } else {
+      return false;
+    }
   }
-
-  console.log(userFound);
 }
 
-module.exports.login = loginId;
+module.exports.login = login;
 module.exports.addCantones = addCantones;
 module.exports.Location = Location;
 module.exports.createUser = createUser;

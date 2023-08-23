@@ -6,7 +6,7 @@ let provinces = [];
 router.use(bodyParser.json());
 router.use(bodyParser.urlencoded({ extended: false }));
 
-router.get("/", (req, res) => {
+let mainAdmin = router.get("/", (req, res) => {
   res.render("htmlAplication/pageAdmin/catalogueProvices.html");
 });
 
@@ -76,5 +76,5 @@ function convertLocations(idList, namelist) {
   }
   return locationsObjList;
 }
-
+module.exports.mainAdmin = mainAdmin;
 module.exports = router;
