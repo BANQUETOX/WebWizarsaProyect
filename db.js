@@ -156,6 +156,7 @@ async function login(email, password) {
   }
 }
 
+module.exports.Company = Company;
 module.exports.login = login;
 module.exports.addCantones = addCantones;
 module.exports.Location = Location;

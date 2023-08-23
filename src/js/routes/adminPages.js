@@ -17,7 +17,7 @@ router.get("/aplications", (req, res) => {
 });
 //company profile
 router.get("/companyProfile", (req, res) => {
-  res.render("htmlAplication/adminPages/adminCompanyProfile.html");
+  res.render("htmlAplication/adminPages/adminCompanyProfile.ejs", {});
 });
 //create job
 router.get("/createJob", (req, res) => {
@@ -45,7 +45,10 @@ router.post("/initialInviteMembers", (req, res) => {
 });
 // profile
 router.get("/profile", (req, res) => {
-  res.render("htmlAplication/adminPages/adminProfile.html");
+  const Company = db.Company.find();
+  res.render("htmlAplication/adminPages/adminProfile.ejs", {
+    company: Company[0],
+  });
 });
 //create company
 router.get("/createCompany", (req, res) => {
