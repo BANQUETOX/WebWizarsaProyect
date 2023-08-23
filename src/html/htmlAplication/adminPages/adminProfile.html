@@ -10,9 +10,9 @@
     <link rel="stylesheet" href="../../../css/styleAplication/generalStyles.css">
     <link rel="stylesheet" href="../../../css/styleAplication/adminpages/adminProfile.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"defer></script>
-    <script src="https://kit.fontawesome.com/73f851add2.js" crossorigin="anonymous" defer></script>
+    <!-- <script src="https://kit.fontawesome.com/73f851add2.js" crossorigin="anonymous" defer></script> -->
     <script src="../../../js/jsAplication/main.js" defer></script>
-    <script src="../../../js/jsAplication/adminProfile2.js" defer></script>
+    <!-- <script src="../../../js/jsAplication/adminProfile2.js" defer></script> -->
     <script src="../../../js/jsAplication/adminProfile.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <title>Mi perfil</title>
@@ -160,27 +160,29 @@
             <div class="container-form">
                 <form class="form" id="password-form">
                         <h2>Editar Contraseña</h2>
+                        
                         <div class="password-inputs-container">
                             <div class="form-control password-input-container" id="first-password-input-container">
                                 <label>Contraseña</label>
                                 <input class="text-input change-password-input" type="password" placeholder="Contraseña" id="first-new-password">
-                                <span id="password-toggle" class="password-toggle"><i class="fa-solid fa-eye" id="eye"></i></span>
-                                
+                               
                                 <p id="first-password--message" class="error__message">
                                     La contraseña no cumple con los requisitos (minimo 4 digitos -
                                     maximo 12 digitos)
-                                  </p>
-                            </div>
-                            <span id="password-toggle" class="password-toggle">
-                                <i class="fas fa-eye" id="eye-icon"></i>
-                              </span>
+                                </p>
 
+                                
+                            </div>
+                            
+                            <span id="password-toggle" class="password-toggle"> 
+                                <i class="fas fa-eye" id="eye-icon"></i>
+                            </span> 
                               
                             <div class="form-control password-input-container" id="second-password-input-container">
                                
                                 <label>Confirmar contraseña</label>
                                 <input class="text-input change-password-input" type="password" placeholder="Contraseña" id="second-new-password">
-                                <span id="password-toggle" class="password-toggle"><i class="fa-solid fa-eye" id="eye2"></i></span>
+                                
                                 <p id="second-password--message" class="error__message">
                                     La contraseña no coincide
                                 </p>
@@ -221,14 +223,14 @@
                             <div class="form-control password-input-container" id="confirm-password-container">
                                 <label> Contraseña de Confirmacion</label>
                                 <input class="text-input access-input input-password-landing" type="password" id="confirm-password-input">
-                                <span id="password-toggle" class="password-toggle"><i class="fa-solid fa-eye" id="confirmation-eye"></i></span>
+                                <span id="password-toggle" class="password-toggle">
                                 <p id="error-password-message inputs-errors" class="error__message invalid-password-input">
                                    Contraseña incorrecta
                                   </p>
                             </div>
-                            <span id="third_password-toggle" class="password-toggle">
-                                <i class="fas fa-eye" id="third_eye-icon"></i>
-                            </span>
+                             <span id="third_password-toggle" class="password-toggle">
+                                <i class="fas fa-eye" id="third_eye-icon"></i> 
+                             </span> 
                             
                             <p id="error-email_message" class="general-error-message">
                                 Rellene los espacios en blanco

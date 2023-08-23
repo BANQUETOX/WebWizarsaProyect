@@ -77,11 +77,11 @@ function alingEyes() {
     eyeToggle[0].style.right="200px"
     eyeToggle[0].style.top="76px"
     eyeToggle[1].style.top = "-90px";
-    eyeToggle[1].style.left = "170%";
+    eyeToggle[1].style.marginLeft = "-200px";
     
   } else if (secondPasswordInput.classList.contains("text-input__invalid")) {
-    eyeToggle[0].style.top = "70px";
-    eyeToggle[1].style.top = "-80px";
+    eyeToggle[0].style.top = "68px";
+    eyeToggle[1].style.top = "-81px";
     container[1].style.top = "14px"
   }
   if (
@@ -90,7 +90,7 @@ function alingEyes() {
   ) {
     eyeToggle[0].style.top="76px"
     eyeToggle[1].style.top = "-90px";
-    eyeToggle[1].style.right="200px"
+    eyeToggle[1].style.right="20px"
     container[1].style.top = "14px"
 
     /*for (let i = 0; i < eyeToggle.length; i++) {
@@ -237,26 +237,3 @@ saveChangesButton.addEventListener("click", () => {
   confirmSave();
 });
 
-firstEye.addEventListener("click", () => {
-  if (firstPasswordInput.type === "password") {
-    firstPasswordInput.type = "text";
-    firstEye.classList.remove("fa-eye");
-    firstEye.classList.add("fa-eye-slash");
-  } else {
-    firstPasswordInput.type = "password";
-    firstEye.classList.remove("fa-eye-slash");
-    firstEye.classList.add("fa-eye");
-  }
-});
-
-secondEye.addEventListener("click", () => {
-  if (secondPasswordInput.type === "password") {
-    secondPasswordInput.type = "text";
-    secondEye.classList.remove("fa-eye");
-    secondEye.classList.add("fa-eye-slash");
-  } else {
-    secondPasswordInput.type = "password";
-    secondEye.classList.remove("fa-eye-slash");
-    secondEye.classList.add("fa-eye");
-  }
-});
