@@ -38,7 +38,7 @@
     border: 6px solid #f8f8f8;
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
     > div {
-      background-image: url(../../images/defaultUser.png);
+      /* background-image: url(../../images/defaultUser.png); */
       width: 100%;
       height: 100%;
       border-radius: 100%;
@@ -368,11 +368,11 @@
 }
 
 .text-input__invalid {
-  border: 2px solid red;
+  border: 3px solid red;
 }
 
 .text-input__valid {
-  border: 2px solid green;
+  border: 4px solid rgb(9, 196, 9);
 }
 
 .error__message {
@@ -453,4 +453,94 @@ select:disabled {
   left: -78%;
   top: 45%;
   margin-bottom: 9.3%;
+}
+
+#error-email_message {
+  display: none;
+  padding: 10px;
+  font-size: 14px;
+  margin-left: -18%;
+  padding-bottom: 2%;
+  margin-top:-3%;
+  color: rgb(254, 0, 0);
+}
+
+#error-password-message {
+  display: none;
+  padding: 10px;
+  font-size: 14px;
+  margin-left: -35%;
+  padding-bottom: 2%;
+  margin-top:-3%;
+  color: rgb(255, 0, 0);
+ 
+}
+
+
+.valid-input-landing {
+  border: 4px solid green;
+}
+.invalid-input-landing {
+  border: 4px solid red;
+}
+
+.prueba-de-border {
+  border: 2px solid red;
+}
+
+#inputs-error {
+  display: none;
+  padding: 10px;
+  border: 6px solid rgb(186, 0, 0);
+  margin-left: -12%;
+  padding-bottom: 2%;
+  margin-top:1%;
+  color: rgb(0, 0, 0);
+  box-shadow: 5px 5px 5px rgb(189, 25, 25);
+  border-radius: 15px;
+}
+
+#saved-changes{
+  display: none;
+  padding: 10px;
+  border: 6px solid rgb(42, 194, 42);
+  margin-left: -4%;
+  padding-bottom: 2%;
+  margin-top:1%;
+  color: rgb(0, 0, 0);
+  box-shadow: 5px 5px 5px rgb(105, 240, 125);
+  border-radius: 15px;
+}
+
+
+.password-toggle {
+  position: relative;
+  cursor: pointer;
+  top: 54%;
+  right: 80%;
+  color: #000;
+}
+
+#eye-icon {
+  font-size: 18px;
+  color: black;
+  position: absolute;
+ 
+}
+
+#second_eye-icon {
+  font-size: 18px;
+  color: black;
+  position: absolute;
+  
+}
+
+#password-toggle{
+  top:45%;
+}
+
+#second_password-toggle{
+  left: 207%;
+  top: -205%;
+  margin-bottom: 6.3%;
 }

@@ -84,6 +84,24 @@ function alingEyes() {
     eyeToggle[1].style.top = "-81px";
     container[1].style.top = "14px"
   }
+  if (firstPasswordInput.classList.contains("text-input__valid"))
+  {
+  
+      eyeToggle[0].style.left="-110px"
+      eyeToggle[0].style.top="56px"
+      eyeToggle[1].style.top = "-62px";
+      eyeToggle[1].style.marginLeft = "-3px";
+      eyeToggle[2].style.top = "50px";
+ }
+ if (firstPasswordInput.classList.contains("text-input__valid")&&
+    secondPasswordInput.classList.contains("text-input__invalid"))
+  {
+    eyeToggle[0].style.left="-118px"
+    eyeToggle[0].style.top="72px"
+    eyeToggle[1].style.top = "-80px";
+    eyeToggle[1].style.marginLeft = "-3px";
+  }
+
   if (
     firstPasswordInput.classList.contains("text-input__invalid") &&
     secondPasswordInput.classList.contains("text-input__invalid")
@@ -97,6 +115,7 @@ function alingEyes() {
       eyeToggle[i].style.top = "-95px";
     }*/
   }
+  
 }
 
 
@@ -113,6 +132,7 @@ let secondErrorLabel = document.getElementById("second-password--message");
 let secondPasswordInputContainer = document.getElementById(
   "second-password-input-container"
 );
+let thirdPasswordInput = document.getElementById("confirm-password-input");
 let secondEye = document.getElementById("eye2");
 
 firstPasswordInput.addEventListener("keyup", () => {
@@ -148,6 +168,9 @@ secondPasswordInput.addEventListener("keyup", () => {
   alingEyes();
 });
 
+
+
+
 secondPasswordInput.addEventListener("blur", () => {
   if (
     checkTwoPasswords(firstPasswordInput.value, secondPasswordInput.value) &&
@@ -164,6 +187,8 @@ secondPasswordInput.addEventListener("blur", () => {
  // alingInputs();
   alingEyes();
 });
+
+
 
 passwordForm.addEventListener("submit", (e) => {
   if (
@@ -237,3 +262,81 @@ saveChangesButton.addEventListener("click", () => {
   confirmSave();
 });
 
+//access form 
+
+
+
+const permissionFormulary = document.getElementById("access-form");
+const saveMessage = document.getElementById("saved-changes");
+
+let inputEmail = document.getElementsByClassName("input-email_landing");
+let errorEmail = document.getElementById("error-email_message");
+
+let inputPassword = document.getElementsByClassName("input-password-landing");
+let errorPassword = document.getElementById("error-password-message");
+
+let invalidInput = document.getElementsByClassName("invalid-input-landing");
+let errorGeneral = document.getElementById("general-error-message");
+
+
+function verifyInputEmail () {
+  for (let i = 0; i < inputEmail.length; i++) {
+    if (inputEmail[i].value == "") { //? Fomrulario esta vacio
+      inputEmail[i].classList.add("invalid-input-landing");
+      inputEmail[i].classList.remove("valid-input-landing");
+      errorEmail.style.display = "initial";
+
+    } else { 
+      inputEmail[i].classList.add("valid-input-landing");
+      inputEmail[i].classList.remove("invalid-input-landing");
+      errorEmail.style.display = "none";
+    }
+  }
+}
+
+function verifyInputPassword () {
+  for (let i = 0; i < inputPassword.length; i++) {
+    if (inputPassword[i].value == "") { //? Fomrulario esta vacio
+      inputPassword[i].classList.add("invalid-input-landing");
+      inputPassword[i].classList.remove("valid-input-landing");
+      errorPassword.style.display = "initial";
+    } else { // TODO Este es cuando el formualario se lleno correctamente
+      inputPassword[i].classList.add("valid-input-landing");
+      inputPassword[i].classList.remove("invalid-input-landing");
+      errorPassword.style.display = "none";
+    }
+  }
+}
+
+permissionFormulary.addEventListener("submit", (e) => {
+  e.preventDefault();
+  verifyInputEmail();
+  verifyInputPassword();
+
+  if (invalidInput.length === 0) {
+    // showSavedChanges(saveMessage);
+    errorEmail.style.display = "none";
+    errorPassword.style.display = "none";
+
+    setTimeout(() => {
+      permissionFormulary.reset();
+      for (let i = 0; i < inputEmail.length; i++) {
+        inputEmail[i].classList.remove("invalid-input-landing");
+        inputEmail[i].classList.remove("valid-input-landing");
+      }      
+      hideSavedChanges(saveMessage);
+      errorEmail.style.display = "none";
+ 
+      for (let i = 0; i < inputPassword.length; i++) {
+       inputPassword[i].classList.remove("invalid-input-landing");
+       inputPassword[i].classList.remove("valid-input-landing");
+      }  
+      hideSavedChanges(saveMessage);
+      errorPassword.style.display = "none";
+    }, 3000);
+
+  } else {
+    //errorGeneral.style.display = "initial";
+    hideSavedChanges(saveMessage);
+  }
+});

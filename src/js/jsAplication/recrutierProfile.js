@@ -16,6 +16,7 @@ $("#imageUpload").change(function () {
   }
 });
 
+
 //Mostrar ocultar las contransenas
 const passwordInput = document.getElementById("first-new-password");
 const eyeIcon = document.getElementById("eye-icon");
@@ -56,15 +57,15 @@ function alingEyes() {
       eyeToggle[i].style.top = "-62px";
     }
   } else if (firstPasswordInput.classList.contains("text-input__invalid")) {
-    container[0].style.top= "26px"
-    eyeToggle[0].style.left="-200px"
-    eyeToggle[0].style.top="80px"
+    container[0].style.top = "25px"
+    eyeToggle[0].style.right="200px"
+    eyeToggle[0].style.top="76px"
     eyeToggle[1].style.top = "-90px";
     eyeToggle[1].style.marginLeft = "-200px";
     
   } else if (secondPasswordInput.classList.contains("text-input__invalid")) {
     eyeToggle[0].style.top = "68px";
-    eyeToggle[1].style.top = "-83px";
+    eyeToggle[1].style.top = "-81px";
     container[1].style.top = "14px"
   }
   if (firstPasswordInput.classList.contains("text-input__valid"))
@@ -74,14 +75,14 @@ function alingEyes() {
       eyeToggle[0].style.top="56px"
       eyeToggle[1].style.top = "-62px";
       eyeToggle[1].style.marginLeft = "-3px";
-     
+      eyeToggle[2].style.top = "50px";
  }
  if (firstPasswordInput.classList.contains("text-input__valid")&&
     secondPasswordInput.classList.contains("text-input__invalid"))
   {
     eyeToggle[0].style.left="-118px"
-    eyeToggle[0].style.top="70px"
-    eyeToggle[1].style.top = "-82px";
+    eyeToggle[0].style.top="-20px"
+    eyeToggle[1].style.margniTop = "300px";
     eyeToggle[1].style.marginLeft = "-3px";
   }
 
@@ -90,7 +91,7 @@ function alingEyes() {
     secondPasswordInput.classList.contains("text-input__invalid")
   ) {
     eyeToggle[0].style.top="80px"
-    eyeToggle[1].style.top = "-92px";
+    eyeToggle[1].style.top = "-90px";
     eyeToggle[1].style.right="20px"
     container[1].style.top = "14px"
 
@@ -100,6 +101,7 @@ function alingEyes() {
   }
   
 }
+
 
 //passwords section
 let passwordForm = document.getElementById("password-form");
@@ -114,6 +116,7 @@ let secondErrorLabel = document.getElementById("second-password--message");
 let secondPasswordInputContainer = document.getElementById(
   "second-password-input-container"
 );
+let thirdPasswordInput = document.getElementById("confirm-password-input");
 let secondEye = document.getElementById("eye2");
 
 firstPasswordInput.addEventListener("keyup", () => {
@@ -126,23 +129,11 @@ firstPasswordInput.addEventListener("keyup", () => {
     firstPasswordInput.classList.remove("text-input__valid");
     firstErrorLabel.style.display = "initial";
   }
-  // alingInputs();
+  //alingInputs();
   alingEyes();
 });
 
-firstPasswordInput.addEventListener("blur", () => {
-  if (isValidPassword(firstPasswordInput.value)) {
-    firstPasswordInput.classList.add("text-input__valid");
-    firstPasswordInput.classList.remove("text-input__invalid");
-    firstErrorLabel.style.display = "none";
-  } else {
-    firstPasswordInput.classList.add("text-input__invalid");
-    firstPasswordInput.classList.remove("text-input__valid");
-    firstErrorLabel.style.display = "initial";
-  }
-  // alingInputs();
-  alingEyes();
-});
+
 
 secondPasswordInput.addEventListener("keyup", () => {
   if (
@@ -157,9 +148,12 @@ secondPasswordInput.addEventListener("keyup", () => {
     secondPasswordInput.classList.remove("text-input__valid");
     secondErrorLabel.style.display = "initial";
   }
-  // alingInputs();
+ // alingInputs();
   alingEyes();
 });
+
+
+
 
 secondPasswordInput.addEventListener("blur", () => {
   if (
@@ -174,9 +168,11 @@ secondPasswordInput.addEventListener("blur", () => {
     secondPasswordInput.classList.remove("text-input__valid");
     secondErrorLabel.style.display = "initial";
   }
-  // alingInputs();
+ // alingInputs();
   alingEyes();
 });
+
+
 
 passwordForm.addEventListener("submit", (e) => {
   if (
@@ -188,25 +184,6 @@ passwordForm.addEventListener("submit", (e) => {
   e.preventDefault();
 });
 
-// function alingInputs() {
-//   if (
-//     firstPasswordInput.classList.contains("text-input__invalid") &&
-//     secondPasswordInput.classList.contains("text-input__invalid")
-//   ) {
-//     secondPasswordInputContainer.style.marginTop = "-9px";
-//     secondEye.style.top = "61px";
-//   } else if (secondPasswordInput.classList.contains("text-input__invalid")) {
-//     firstPasswordInputContainer.style.marginTop = "-30px";
-//     firstEye.style.top = "80px";
-//   } else if (firstPasswordInput.classList.contains("text-input__invalid")) {
-//     secondPasswordInputContainer.style.marginTop = "-45px";
-//     secondEye.style.top = "98px";
-//   }
-//   if (firstPasswordInput.classList.contains("text-input__valid")) {
-//     secondPasswordInputContainer.style.marginTop = "0px";
-//     secondEye.style.top = "50px";
-//   }
-// }
 
 // Habilitar inputs
 let profileInputsCollection = document.getElementsByClassName("profile-input");
@@ -218,7 +195,7 @@ let editProfileButton = document.getElementById("profile-edit-button");
 let changePasswordEditButton = document.getElementById(
   "change-password-button"
 );
-
+let accessEditButton = document.getElementById("edit-access-button");
 function enableProfileinputs(inputsCollection) {
   for (let i = 0; i < inputsCollection.length; i++) {
     inputsCollection[i].readOnly = false;
@@ -226,24 +203,21 @@ function enableProfileinputs(inputsCollection) {
   }
 }
 
-editProfileButton.addEventListener("click", () => {
-  enableProfileinputs(profileInputsCollection);
-});
+// editProfileButton.addEventListener("click", () => {
+//   enableProfileinputs(profileInputsCollection);
+// });
 
-changePasswordEditButton.addEventListener("click", () => {
-    enableProfileinputs(changePasswordCollection);
-});
+// changePasswordEditButton.addEventListener("click", () => {
+//   enableProfileinputs(changePasswordCollection);
+// });
 
+// accessEditButton.addEventListener("click", () => {
+//   enableProfileinputs(accessInputsCollection);
+// });
 
 function confirmSave() {
   var message = "Se han guardado los cambios";
   var result = alert(message);
 
 };
-
-let saveChangesButton = document.getElementById("profile-save-button");
-saveChangesButton.addEventListener("click", () => {
-
-  confirmSave();
-});
 
