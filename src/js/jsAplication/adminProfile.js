@@ -1,7 +1,5 @@
 let styleElement = document.createElement("style");
 const inputsCollection = document.getElementsByClassName("profile-input");
-const eyeToggle = document.getElementsByClassName("password-toggle");
-const container = document.getElementsByClassName("password-input-container")
 $("#imageUpload").change(function () {
   if (this.files[0].size > 20000000) {
     document
@@ -15,6 +13,7 @@ $("#imageUpload").change(function () {
     readURL(this);
   }
 });
+
 
 
 //Mostrar ocultar las contransenas
@@ -119,6 +118,7 @@ function alingEyes() {
 }
 
 
+
 //passwords section
 let passwordForm = document.getElementById("password-form");
 let firstPasswordInput = document.getElementById("first-new-password");
@@ -145,8 +145,7 @@ firstPasswordInput.addEventListener("keyup", () => {
     firstPasswordInput.classList.remove("text-input__valid");
     firstErrorLabel.style.display = "initial";
   }
-  //alingInputs();
-  alingEyes();
+  alingInputs();
 });
 
 
@@ -164,8 +163,7 @@ secondPasswordInput.addEventListener("keyup", () => {
     secondPasswordInput.classList.remove("text-input__valid");
     secondErrorLabel.style.display = "initial";
   }
- // alingInputs();
-  alingEyes();
+  alingInputs();
 });
 
 
@@ -184,8 +182,7 @@ secondPasswordInput.addEventListener("blur", () => {
     secondPasswordInput.classList.remove("text-input__valid");
     secondErrorLabel.style.display = "initial";
   }
- // alingInputs();
-  alingEyes();
+  alingInputs();
 });
 
 
@@ -200,7 +197,7 @@ passwordForm.addEventListener("submit", (e) => {
   e.preventDefault();
 });
 
-/*function alingInputs() {
+function alingInputs() {
   if (
     firstPasswordInput.classList.contains("text-input__invalid") &&
     secondPasswordInput.classList.contains("text-input__invalid")
@@ -218,7 +215,7 @@ passwordForm.addEventListener("submit", (e) => {
     secondPasswordInputContainer.style.marginTop = "0px";
     secondEye.style.top = "50px";
   }
-}*/
+}
 
 // Habilitar inputs
 let profileInputsCollection = document.getElementsByClassName("profile-input");
@@ -262,7 +259,6 @@ saveChangesButton.addEventListener("click", () => {
   confirmSave();
 });
 
-//access form 
 
 
 
@@ -286,12 +282,23 @@ function verifyInputEmail () {
       inputEmail[i].classList.remove("valid-input-landing");
       errorEmail.style.display = "initial";
 
-    } else { 
+
+    } 
+     else {  // TODO Este es cuando el formualario se lleno correctamente
+
       inputEmail[i].classList.add("valid-input-landing");
       inputEmail[i].classList.remove("invalid-input-landing");
       errorEmail.style.display = "none";
     }
   }
+
+  // if (invalidInput.length >= 1) {
+  //   errorEmail.style.display = "initial";
+
+  // } else {
+  //   errorEmail.style.display = "none";
+  // }
+
 }
 
 function verifyInputPassword () {
@@ -306,6 +313,17 @@ function verifyInputPassword () {
       errorPassword.style.display = "none";
     }
   }
+
+  // if (invalidInput.length >= 1) {
+  //   errorPassword.style.display = "initial";
+
+    
+  // } else {
+  //   errorPassword.style.display = "none";
+    
+  // }
+
+
 }
 
 permissionFormulary.addEventListener("submit", (e) => {
@@ -314,7 +332,11 @@ permissionFormulary.addEventListener("submit", (e) => {
   verifyInputPassword();
 
   if (invalidInput.length === 0) {
+
     // showSavedChanges(saveMessage);
+
+    showSavedChanges(saveMessage);
+
     errorEmail.style.display = "none";
     errorPassword.style.display = "none";
 
@@ -322,14 +344,18 @@ permissionFormulary.addEventListener("submit", (e) => {
       permissionFormulary.reset();
       for (let i = 0; i < inputEmail.length; i++) {
         inputEmail[i].classList.remove("invalid-input-landing");
+
         inputEmail[i].classList.remove("valid-input-landing");
+
       }      
       hideSavedChanges(saveMessage);
       errorEmail.style.display = "none";
  
       for (let i = 0; i < inputPassword.length; i++) {
        inputPassword[i].classList.remove("invalid-input-landing");
+
        inputPassword[i].classList.remove("valid-input-landing");
+
       }  
       hideSavedChanges(saveMessage);
       errorPassword.style.display = "none";

@@ -12,6 +12,7 @@ body {
 }
 .aplication-landing--hero--message p {
   font-size: 24px;
+
 }
 
 .aplication-landing--hero--message h1 {
@@ -25,38 +26,52 @@ body {
   margin-left: 9%;
   margin-top: 4%;
   margin-bottom: 80px;
+ 
+  
 }
+
+
+
 
 .menssagepromotion {
   font-family: "Montserrat", sans-serif;
   margin-left: 7%;
-  margin-top: -5%;
-  font-size: 24px;
+  margin-top: -5%; 
+  font-size: 24px;  
 }
+
+
 
 .menssagepromotion2 {
   font-family: "Montserrat", sans-serif;
   margin-top: 25%;
   font-size: 24px;
   position: absolute;
-  width: 28%;
+  width:28%;
   margin-left: 17%;
+
 }
 
-.menssagepromotion3 h2 {
+
+
+.menssagepromotion3 h2{
   font-family: "Montserrat", sans-serif;
   font-size: 24px;
 }
 
+
 .image {
   position: relative;
   margin-left: 36%;
-  padding-top: 40%;
+  padding-top: 40%
+  
 }
 .image img {
-  width: 50%;
+  width: 50%; 
   position: relative;
 }
+
+
 
 /* presentation -> login */
 
@@ -88,6 +103,7 @@ body {
   font-size: 24px;
 }
 
+
 .login--forgot_password {
   display: absolute;
   padding-left: 42px;
@@ -114,6 +130,7 @@ body {
   margin-top: -10px;
 }
 
+
 /* testaments */
 .users-testaments {
   margin-top: 43%;
@@ -124,7 +141,7 @@ body {
   font-weight: 700;
   text-align: center;
   font-size: 3vh;
-  margin-left: 90px;
+  margin-left:90px ;
   margin-top: -40%;
 }
 
@@ -169,13 +186,15 @@ body {
   text-align: center;
 }
 
+
+
 .login--forgot_password a {
   color: transparent;
   color: aliceblue;
 }
 
 .login--forgot_password a:hover {
-  color: #9fd3c7;
+  color:#9fd3c7;
 }
 
 .login--register_account a {
@@ -183,9 +202,13 @@ body {
   color: aliceblue;
 }
 
-.login--register_account a:hover {
-  color: #9fd3c7;
+.login--register_account a:hover{
+  color:#9fd3c7;
 }
+
+
+
+
 
 .login-input__valid {
   border: 2px solid green;
@@ -199,47 +222,30 @@ body {
 }
 
 #inputs-error {
-  width: 325px;
-  padding: 10px;
+  
+  color:aliceblue;
+  width: 50%;
+  display: flex;
   border: 6px solid rgb(186, 0, 0);
-  margin-left: -12%;
+  position: absolute;
+  margin-right: 10%;
   padding-bottom: 2%;
-  margin-top: 1%;
-  color: rgb(255, 255, 255);
+  margin-top:2%;
   box-shadow: 5px 5px 5px rgb(189, 25, 25);
   border-radius: 15px;
 }
 
-#inputs-error {
-  display: none;
-}
-
 #saved-changes {
+  display: none;
   padding: 10px;
   border: 6px solid rgb(42, 194, 42);
-  margin-left: 10%;
+  margin-left: 28%;
   padding-bottom: 2%;
   margin-top: 1%;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   box-shadow: 5px 5px 5px rgb(105, 240, 125);
   border-radius: 15px;
   text-align: center;
   width: 38%;
 }
 
-#saved-changes {
-  display: none;
-}
-
-.password-toggle {
-  position: relative;
-  cursor: pointer;
-  top: 2.5px;
-  right: 10px;
-}
-
-#eye-icon {
-  font-size: 18px;
-  margin-left: -8%;
-  color: black;
-}

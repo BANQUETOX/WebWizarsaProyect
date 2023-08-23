@@ -1,8 +1,10 @@
 let styleElement = document.createElement("style");
 const inputsCollection = document.getElementsByClassName("profile-input");
+
 const eyeToggle = document.getElementsByClassName("password-toggle");
 const container = document.getElementsByClassName("password-input-container")
 const container_try = document.getElementsByClassName("container_try")
+
 // disableInputs(inputsCollection);
 // disableSelectStyle(styleElement);
 
@@ -19,6 +21,7 @@ $("#imageUpload").change(function () {
     readURL(this);
   }
 });
+
 
 //Mostrar ocultar las contransenas
 const passwordInput = document.getElementById("first-new-password");
@@ -129,8 +132,7 @@ firstPasswordInput.addEventListener("keyup", () => {
     firstPasswordInput.classList.remove("text-input__valid");
     firstErrorLabel.style.display = "initial";
   }
-  //alingInputs();
-  alingEyes();
+  alingInputs();
 });
 
 firstPasswordInput.addEventListener("blur", () => {
@@ -143,8 +145,7 @@ firstPasswordInput.addEventListener("blur", () => {
     firstPasswordInput.classList.remove("text-input__valid");
     firstErrorLabel.style.display = "initial";
   }
-  //alingInputs();
-  alingEyes();
+  alingInputs();
 });
 
 secondPasswordInput.addEventListener("keyup", () => {
@@ -160,8 +161,7 @@ secondPasswordInput.addEventListener("keyup", () => {
     secondPasswordInput.classList.remove("text-input__valid");
     secondErrorLabel.style.display = "initial";
   }
-  //alingInputs();
-  alingEyes();
+  alingInputs();
 });
 
 secondPasswordInput.addEventListener("blur", () => {
@@ -177,8 +177,7 @@ secondPasswordInput.addEventListener("blur", () => {
     secondPasswordInput.classList.remove("text-input__valid");
     secondErrorLabel.style.display = "initial";
   }
-  //alingInputs();
-  alingEyes();
+  alingInputs();
 });
 
 
@@ -192,25 +191,25 @@ passwordForm.addEventListener("submit", (e) => {
   e.preventDefault();
 });
 
-// function alingInputs() {
-//   if (
-//     firstPasswordInput.classList.contains("text-input__invalid") &&
-//     secondPasswordInput.classList.contains("text-input__invalid")
-//   ) {
-//     secondPasswordInputContainer.style.marginTop = "-9px";
-//     secondEye.style.top = "61px";
-//   } else if (secondPasswordInput.classList.contains("text-input__invalid")) {
-//     firstPasswordInputContainer.style.marginTop = "-30px";
-//     firstEye.style.top = "80px";
-//   } else if (firstPasswordInput.classList.contains("text-input__invalid")) {
-//     secondPasswordInputContainer.style.marginTop = "-45px";
-//     secondEye.style.top = "98px";
-//   }
-//   if (firstPasswordInput.classList.contains("text-input__valid")) {
-//     secondPasswordInputContainer.style.marginTop = "0px";
-//     secondEye.style.top = "50px";
-//   }
-// }
+function alingInputs() {
+  if (
+    firstPasswordInput.classList.contains("text-input__invalid") &&
+    secondPasswordInput.classList.contains("text-input__invalid")
+  ) {
+    secondPasswordInputContainer.style.marginTop = "-9px";
+    secondEye.style.top = "61px";
+  } else if (secondPasswordInput.classList.contains("text-input__invalid")) {
+    firstPasswordInputContainer.style.marginTop = "-30px";
+    firstEye.style.top = "80px";
+  } else if (firstPasswordInput.classList.contains("text-input__invalid")) {
+    secondPasswordInputContainer.style.marginTop = "-45px";
+    secondEye.style.top = "98px";
+  }
+  if (firstPasswordInput.classList.contains("text-input__valid")) {
+    secondPasswordInputContainer.style.marginTop = "0px";
+    secondEye.style.top = "50px";
+  }
+}
 
 // Habilitar inputs
 let profileInputsCollection = document.getElementsByClassName("profile-input");

@@ -239,7 +239,7 @@
   margin-bottom: 10px;
   padding-bottom: 30px;
   padding-left: 10px;
-  width: 290px;
+  width: 335px;
 }
 
 .form-control input {
@@ -299,7 +299,7 @@
   visibility: hidden;
   position: absolute;
   top: 45px;
-  margin-left: 25%;
+  margin-left: 50%;
 }
 
 .form-control i.fa-eye {
@@ -308,14 +308,6 @@
   position: absolute;
   top: 50px;
 }
-
-.form-control i.fa-eye-slash {
-  color: #000;
-  visibility: visible;
-  position: absolute;
-  top: 50px;
-}
-
 
 .form-control small {
   visibility: hidden;
@@ -382,10 +374,6 @@
   display: none;
   margin-top: 0;
 }
-
-.general-error-message{
-  display: none;
-}
 #first-password--message {
   margin-left: 89px;
 }
@@ -414,46 +402,68 @@ select:disabled {
   opacity: 1;
 }
 
-.password-toggle {
-  position: relative;
-  cursor: pointer;
-  top: 51px;
-  right: 80%;
-  color: #000;
+
+
+#error-email_message {
+  display: none;
+  padding: 10px;
+  border: 6px solid rgb(186, 0, 0);
+  margin-left: -12%;
+  padding-bottom: 2%;
+  margin-top:1%;
+  color: rgb(0, 0, 0);
+  box-shadow: 5px 5px 5px rgb(189, 25, 25);
+  border-radius: 15px;
 }
 
-#eye-icon {
-  font-size: 18px;
-  color: black;
-  position: absolute;
- 
+#error-password-message {
+  display: none;
+  padding: 10px;
+  border: 6px solid rgb(186, 0, 0);
+  margin-left: -12%;
+  padding-bottom: 2%;
+  margin-top:1%;
+  color: rgb(0, 0, 0);
+  box-shadow: 5px 5px 5px rgb(189, 25, 25);
+  border-radius: 15px;
 }
 
-#second_eye-icon {
-  font-size: 18px;
-  color: black;
-  position: absolute;
-  
+
+.valid-input-landing {
+  border: 2px solid green;
+}
+.invalid-input-landing {
+  border: 2px solid red;
 }
 
-#second_password-toggle{
-  left: 206%;
-  top: -202%;
-  margin-bottom: 6.3%;
+.prueba-de-border {
+  border: 2px solid red;
 }
 
-#third_eye-icon {
-  font-size: 18px;
-  color: black;
-  position: absolute;
-  
+#inputs-error {
+  display: none;
+  padding: 10px;
+  border: 6px solid rgb(186, 0, 0);
+  margin-left: -12%;
+  padding-bottom: 2%;
+  margin-top:1%;
+  color: rgb(0, 0, 0);
+  box-shadow: 5px 5px 5px rgb(189, 25, 25);
+  border-radius: 15px;
 }
 
-#third_password-toggle{
-  left: -78%;
-  top: 45%;
-  margin-bottom: 9.3%;
+#saved-changes{
+  display: none;
+  padding: 10px;
+  border: 6px solid rgb(42, 194, 42);
+  margin-left: -4%;
+  padding-bottom: 2%;
+  margin-top:1%;
+  color: rgb(0, 0, 0);
+  box-shadow: 5px 5px 5px rgb(105, 240, 125);
+  border-radius: 15px;
 }
+
 
 #error-email_message {
   display: none;
@@ -544,3 +554,4 @@ select:disabled {
   top: -205%;
   margin-bottom: 6.3%;
 }
+

@@ -10,11 +10,10 @@
     <link rel="stylesheet" href="../../../css/styleAplication/generalStyles.css">
     <link rel="stylesheet" href="../../../css/styleAplication/adminpages/adminProfile.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"defer></script>
-    <!-- <script src="https://kit.fontawesome.com/73f851add2.js" crossorigin="anonymous" defer></script> -->
+    <script src="https://kit.fontawesome.com/73f851add2.js" crossorigin="anonymous" defer></script>
     <script src="../../../js/jsAplication/main.js" defer></script>
-    <!-- <script src="../../../js/jsAplication/adminProfile2.js" defer></script> -->
     <script src="../../../js/jsAplication/adminProfile.js" defer></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
     <title>Mi perfil</title>
 
 </head>
@@ -62,7 +61,7 @@
             <div>
                 <div class="avatar-upload">
                     <div class="avatar-edit">
-                        <input class="profile-input" type='file' id="imageUpload" accept=".png" />
+                        <input class="profile-input" type='file' id="imageUpload" accept=".png" disabled />
                         <label  for="imageUpload"></label>
                     </div>
                     <div class="avatar-preview" id="avatar-preview">
@@ -78,29 +77,29 @@
                     <div class="colums">
                         <div class="form-control">
                             <label>Nombre Completo:</label>
-                            <input class="text-input profile-input" type="text" placeholder="Juan Reyes" id="fname">
+                            <input class="text-input profile-input" type="text" placeholder="Juan Reyes" id="fname" readonly>
                             <small>El campo no puede estar en blanco</small>
                         </div>
                         <div class="form-control">
                             <label>Número teléfonico:</label>
-                            <input class="text-input profile-input" type="tel" placeholder="1234 5678" id="tel" accept="application/pdf">
+                            <input class="text-input profile-input" type="tel" placeholder="1234 5678" id="tel" accept="application/pdf" readonly>
                         </div>
                     </div>
                     <div class="colums">
                         <div class="form-control">
                             <label>Fecha de nacimiento:</label>
-                            <input class="text-input profile-input" type="date" placeholder="01/12/1990" id="birth">
+                            <input class="text-input profile-input" type="date" placeholder="01/12/1990" id="birth" readonly>
                         </div>
                         <div class="form-control">
                             <label>Cédula, DIMEX, Pasaporte:</label>
-                            <input class="text-input profile-input" type="number" placeholder="12345678">
+                            <input class="text-input profile-input" type="number" placeholder="12345678" readonly>
                         </div>
                     </div>
                     <div class="colums">
                         <div class="form-control genre-container">
                             <label>Género</label>
                             <div class="select">
-                                <select name="genre" id="genre" class="select__element profile-input">
+                                <select name="genre" id="genre" class="select__element profile-input" disabled>
                                             <option value=""></option>
                                             <option value="man">Masculino</option>
                                             <option value="woman">Femenino</option>
@@ -111,14 +110,14 @@
                         </div>
                         <div class="form-control">
                             <label>Correo electronico:</label>
-                            <input class="text-input profile-input" type="email" >
+                            <input class="text-input profile-input" type="email"  readonly>
                         </div>
                     </div>
                     <div class="colums general-location-container">
                         <div class="form-control location-container">
                             <label>Provincia</label>
                             <div class="select">
-                                <select name="genre"  class="select__element profile-input" >
+                                <select name="genre"  class="select__element profile-input" disabled >
                                             <option value=""></option>
                                         </select>
                             </div>
@@ -127,7 +126,7 @@
                         <div class="form-control location-container">
                             <label>Canton</label>
                             <div class="select">
-                                <select name="genre"  class="select__element profile-input">
+                                <select name="genre"  class="select__element profile-input" disabled>
                                             <option value=""></option>
                                             
                                         </select>
@@ -136,7 +135,7 @@
                         <div class="form-control  location-container">
                             <label>Distrito</label>
                             <div class="select">
-                                <select name="genre"  class="select__element profile-input">
+                                <select name="genre"  class="select__element profile-input" disabled>
                                             <option value=""></option>
                                           
                                         </select>
@@ -152,7 +151,7 @@
                             <button class="button--red" id="profile-edit-button" type="button">Editar perfil</button>
                         </div>
                         <div>
-                            <button class="button--green profile-input" id="profile-save-button">Guardar cambios</button>
+                            <button class="button--green profile-input" id="profile-save-button" disabled>Guardar cambios</button>
                         </div>
                     </div>
                 </form>
@@ -160,56 +159,39 @@
             <div class="container-form">
                 <form class="form" id="password-form">
                         <h2>Editar Contraseña</h2>
-                        
                         <div class="password-inputs-container">
                             <div class="form-control password-input-container" id="first-password-input-container">
                                 <label>Contraseña</label>
-                                <input class="text-input change-password-input" type="password" placeholder="Contraseña" id="first-new-password">
-                               
+                                <input class="text-input change-password-input" type="password" placeholder="Contraseña" id="first-new-password" readonly>
+                                <i class="fa-solid fa-eye" id="eye"></i>
+                                
                                 <p id="first-password--message" class="error__message">
                                     La contraseña no cumple con los requisitos (minimo 4 digitos -
                                     maximo 12 digitos)
-                                </p>
-
-                                
+                                  </p>
                             </div>
-                            
-                            <span id="password-toggle" class="password-toggle"> 
-                                <i class="fas fa-eye" id="eye-icon"></i>
-                            </span> 
-                              
                             <div class="form-control password-input-container" id="second-password-input-container">
-                               
                                 <label>Confirmar contraseña</label>
-                                <input class="text-input change-password-input" type="password" placeholder="Contraseña" id="second-new-password">
-                                
+                                <input class="text-input change-password-input" type="password" placeholder="Contraseña" id="second-new-password" readonly>
+                                <i class="fa-solid fa-eye" id="eye2"></i>
                                 <p id="second-password--message" class="error__message">
                                     La contraseña no coincide
-                                </p>
-
-                                
+                                  </p>
                             </div>
-                            <span id="second_password-toggle" class="password-toggle">
-                                <i class="fas fa-eye" id="second_eye-icon"></i>
-                            </span>
                         </div>
-                            
-                            
-
                         <div class="btn-cont">
                             <div>
                                 <button class="button--red" id="change-password-button"> Editar contraseña</button>
                             </div>
                             <div>
-                                <button class="button--green change-password-input">Guardar contraseña</button>
+                                <button class="button--green change-password-input" disabled>Guardar contraseña</button>
                             </div>
                         </div>
-                        
                     </form>
-                   
             </div>
             <div class="container-form">
                 <form class="form" id="access-form">
+
                     <h2>Ceder permisos de administrador</h2>
                     <div class="password-inputs-container">
                         <div class="form-control password-input-container" id="emailAdminInputContainer">
@@ -228,6 +210,25 @@
                                   </p>
                             </div>
                               
+
+                        <h2>Ceder permisos de administrador</h2>
+                        <div class="password-inputs-container">
+                            <div class="form-control password-input-container" id="emailAdminInputContainer">
+                                <label>Email del nuevo administrador</label>
+                                <input class="text-input access-input input-email_landing" type="email" readonly input="emailAdminInput">
+                                <p id="error-email_message" class="error__message invalid-email-input">
+                                    Debes de ingresar un correo válido
+                                   </p>
+                                
+                            </div>
+                            <div class="form-control password-input-container" id="confirm-password-container">
+                                <label> Contraseña de Confirmacion</label>
+                                <input class="text-input access-input input-password-landing" type="password" id="confirm-password-input" readonly>
+                                <i class="fa-solid fa-eye" id="confirmation-eye"></i>
+                                <p id="error-password-message" class="error__message invalid-password-input">
+                                   Contraseña incorrecta
+                                  </p>
+                            </div>
                             
 
                             <p id="inputs-error" class="general-error-message" >
@@ -240,14 +241,18 @@
                            <span id="third_password-toggle" class="password-toggle">
                             <i class="fas fa-eye" id="third_eye-icon"></i> 
                             </span>
+
                         </div>
-                         
                         <div class="btn-cont">
                             <div>
                                 <button class="button--red" id="edit-access-button" type="button"> Editar permisos</button>
                             </div>
                             <div>
+
                                 <button class="button--green access-input" type="submit">Guardar cambios</button>
+
+                                <button class="button--green access-input" disabled>Guardar cambios</button>
+
                             </div>
                         </div>
                     </form>

@@ -20,8 +20,9 @@
       href="../../../css/styleAplication/pageAdmin/catalogues.css"
     />
     <script src="../../../js/jsAplication/catalogueLocations.js" defer></script>
+    <script src="../../../js/jsAplication/loadProvinces.js" defer></script>
 
-    <title>Catalogo de distritos</title>
+    <title>Catalogo de Cantones</title>
   </head>
 
   <body>
@@ -38,59 +39,25 @@
       </header>
       <div class="header-fixed-placeholder"></div>
     </div>
-
-    <form
-      class="catalogue"
-      id="district-form"
-      action="/sne/admin/districts"
-      method="post"
-    >
+    <form class="catalogue" id="cantons-form">
       <header>
-        <h1 class="catalogue__header">Lista de Distritos registrados</h1>
+        <h1 class="catalogue__header">Lista de cantones registrados</h1>
         <div class="select">
-          <select
-            class="select__element"
-            id="select-provinces"
-            name="provinceSelect"
-            required
-          >
-            <option value="">Seleccione la provincia</option>
-            <%locations.forEach(location =>{%>
-            <option value="<%=location.province.name%>">
-              <%=location.province.name%>
-            </option>
-            <%})%>
-          </select>
-        </div>
-        <div class="select">
-          <select
-            class="select__element"
-            id="select-cantons"
-            name="cantonSelect"
-            required
-          >
-            <option value="0">Seleccione un canton</option>
+          <select class="select__element" id="select-provinces">
+            <option value="1">Seleccione la provincia</option>
+            <option value="780">San Jose</option>
+            <option value="593">Alajuela</option>
+            <option value="593">Cartago</option>
           </select>
         </div>
         <h2 class="catalogue__subtitle">Codigo</h2>
         <h2 class="catalogue__subtitle">Nombre</h2>
       </header>
+
       <div id="catalogue__location-container">
         <div class="catalogue__location-field" id="1">
-          <input
-            type="text"
-            class="text-input"
-            placeholder="Id"
-            name="districtId"
-            required
-          />
-          <input
-            type="text"
-            class="text-input"
-            placeholder="Canton"
-            name="districtName"
-            required
-          />
+          <input type="text" class="text-input" placeholder="Id" required />
+          <input type="text" class="text-input" placeholder="Canton" required />
         </div>
       </div>
 
@@ -102,8 +69,8 @@
       >
         Nuevo
       </button>
-      <button class="button--green" id="save-districts-button" type="button">
-        Guardar distritos
+      <button class="button--green" id="save-canton-button" type="button">
+        Guardar cantones
       </button>
 
       <section class="catalogue__save-discard">
@@ -153,17 +120,36 @@
     </footer>
   </body>
   <script>
-    const DISTRICTFORM = document.getElementById("district-form");
-    const discardButton = document.getElementById("discard-button");
-    const provinceSelect = document.getElementById("select-provinces");
-    const cantonSelect = document.getElementById("select-cantons");
-    discardButton.onclick = () => {
-      DISTRICTFORM.reset();
+    // document.getElementById('save-canton-button').onclick = () =>{
+    //     let optionValue = document.getElementById('select-provinces').value
+    //     console.log(optionValue)
+    //     let provinceObject = listedProvinces.find(e => e.internId == optionValue)
+    //     let elementCollection = document.getElementsByClassName("catalogue__location-field")
+    //     for(let i = 0; i < elementCollection.length; i++){
+    //         let internId = elementCollection[i].id
+    //         let cantonObject
+    //         if(!provinceObject.cantones.find(e => e.internId == optionValue)){
+    //         cantonObject = createCantonObject(optionValue,internId)
+    //         }
+    //         else{
+    //             cantonObject =  provinceObject.cantones.find(e => e.internId == internId)
+    //         }
+    //         provinceObject.cantones.push(cantonObject)
+    //         console.log(provinceObject.cantones)
+    //         // provinceObject.cantones[i].cantonObject.name = elementCollection[i].childNodes[3].value
+    //         // provinceObject.cantones.id = elementCollection[i].childNodes[1].value
+    // }
+    // console.log(listedProvinces)
+    // }
+
+    const CANTONSFORM = document.getElementById("cantons-form");
+    document.getElementById("discard-button").onclick = () => {
+      CANTONSFORM.reset();
     };
 
-    // DISTRICTFORM.addEventListener("submit", function (e) {
-    //   e.preventDefault();
-    //   document.location.href = "#";
-    // });
+    CANTONSFORM.addEventListener("submit", function (e) {
+      e.preventDefault();
+      window.location.href = "/sne/admin/districts";
+    });
   </script>
 </html>
