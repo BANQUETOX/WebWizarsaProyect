@@ -16,17 +16,17 @@ router.post("/", async (req, res) => {
   let values = await db.login(loginEmail, loginPassword);
   userId = values[0];
   let loginType = values[1];
-  console.log(userId);
-  console.log(loginType);
-  // switch (loginType) {
-  //   case "admin":
-  //     appAdminPages;
-  //     break;
-  //   case "company":
-  //     break;
-  //   case "user":
-  //     break;
-  // }
+  switch (loginType) {
+    case "admin":
+      res.render("htmlAplication/pageAdmin/catalogueProvices.html");
+      break;
+    case "company":
+      res.render("htmlAplication/adminPages/adminAplicationJobs.html");
+      break;
+    case "user":
+      res.render("htmlAplication/userPages/userAplicationJobs.html");
+      break;
+  }
 });
 
 router.get("/welcome", (req, res) => {

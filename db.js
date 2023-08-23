@@ -52,14 +52,14 @@ const userSchema = new mongoose.Schema({
   crimeSheet: String,
 });
 const pageAdminSchema = new mongoose.Schema({
-  email: String,
-  password: String,
+  userEmail: String,
+  userPassword: String,
 });
 const locationSchema = new mongoose.Schema({
   province: Object,
 });
 
-const Admin = mongoose.model("pageAdmin", pageAdminSchema);
+const Admin = mongoose.model("pageAdmins", pageAdminSchema);
 const User = mongoose.model("users", userSchema);
 const Company = mongoose.model("companies", companySchema);
 const Location = mongoose.model("locations", locationSchema);
@@ -123,8 +123,6 @@ async function login(email, password) {
       return admin.userEmail == email;
     });
     if (userFound.userPassword == password) {
-      console.log(userFound);
-      console.log(userFound.id);
       return [userFound.id, "admin"];
     } else {
       return false;
