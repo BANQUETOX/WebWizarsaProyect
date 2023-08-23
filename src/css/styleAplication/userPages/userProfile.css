@@ -389,6 +389,7 @@ a {
 .password-inputs-container {
   display: grid;
   grid-template-columns: auto auto auto;
+  
 }
 .location-container {
   margin-right: -200px;
@@ -410,4 +411,32 @@ a {
 
 .link-education {
   margin-bottom: 20px;
+}
+
+.password-toggle {
+  position: relative;
+  cursor: pointer;
+  top: 54%;
+  right: 80%;
+  color: #000;
+}
+
+#eye-icon {
+  font-size: 18px;
+  color: black;
+  position: absolute;
+ 
+}
+
+#second_eye-icon {
+  font-size: 18px;
+  color: black;
+  position: absolute;
+  
+}
+
+#second_password-toggle{
+  left: 207%;
+  top: -202%;
+  margin-bottom: 6.3%;
 }
