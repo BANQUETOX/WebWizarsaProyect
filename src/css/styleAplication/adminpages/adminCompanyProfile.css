@@ -229,7 +229,7 @@ textarea:disabled {
   border-style: none;
   box-shadow: none;
   margin-top: 8%;
-  margin-left: -37%;
+  margin-left: 80%;
 }
 
 .avatar-upload-input--label {
@@ -264,6 +264,7 @@ textarea:disabled {
   font-weight: normal;
   transition: all 0.2s ease-in-out;
   margin-left: -80px;
+  margin-top: 120px;
 }
 
 .avatar-upload .avatar-edit input + label:hover {

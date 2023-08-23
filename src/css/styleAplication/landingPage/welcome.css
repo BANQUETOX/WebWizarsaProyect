@@ -8,4 +8,19 @@
 .welcome--text {
   font-family: "Montserrat", sans-serif;
   text-align: right;
+  margin-right: 250px;
+}
+
+.welcome--container h1 {
+  margin-top: -200px;
+}
+
+.image {
+  position: relative;
+  width: 256px;
+  margin-left: 250px
+}
+
+.image img {
+  position: relative;
 }

@@ -239,7 +239,7 @@
   margin-bottom: 10px;
   padding-bottom: 30px;
   padding-left: 10px;
-  width: 335px;
+  width: 290px;
 }
 
 .form-control input {
@@ -299,7 +299,7 @@
   visibility: hidden;
   position: absolute;
   top: 45px;
-  margin-left: 50%;
+  margin-left: 25%;
 }
 
 .form-control i.fa-eye {
@@ -308,6 +308,14 @@
   position: absolute;
   top: 50px;
 }
+
+.form-control i.fa-eye-slash {
+  color: #000;
+  visibility: visible;
+  position: absolute;
+  top: 50px;
+}
+
 
 .form-control small {
   visibility: hidden;

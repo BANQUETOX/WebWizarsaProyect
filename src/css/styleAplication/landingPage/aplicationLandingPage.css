@@ -222,7 +222,7 @@ body {
 }
 
 #inputs-error {
-  display: none;
+  width: 325px;
   padding: 10px;
   border: 6px solid rgb(186, 0, 0);
   margin-left: -12%;
@@ -233,11 +233,14 @@ body {
   border-radius: 15px;
 }
 
-#saved-changes {
+#inputs-error-cont {
   display: none;
+}
+
+#saved-changes {
   padding: 10px;
   border: 6px solid rgb(42, 194, 42);
-  margin-left: 28%;
+  margin-left: 10%;
   padding-bottom: 2%;
   margin-top: 1%;
   color: rgb(0, 0, 0);
@@ -245,6 +248,10 @@ body {
   border-radius: 15px;
   text-align: center;
   width: 38%;
+}
+
+#saved-changes-cont {
+  display: none;
 }
 
 .password-toggle {

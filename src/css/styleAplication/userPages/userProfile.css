@@ -240,7 +240,7 @@ a {
   margin-bottom: 10px;
   padding-bottom: 30px;
   padding-left: 10px;
-  width: 335px;
+  width: 290px;
 }
 
 .form-control input {
@@ -303,7 +303,7 @@ a {
   visibility: hidden;
   position: absolute;
   top: 45px;
-  margin-left: 50%;
+  margin-left: 25%;
 }
 
 .form-control i.fa-eye {
@@ -311,7 +311,7 @@ a {
   visibility: visible;
   position: absolute;
   top: 50px;
-  margin-left: 35%;
+  margin-top: 20px;
 }
 
 .form-control small {
