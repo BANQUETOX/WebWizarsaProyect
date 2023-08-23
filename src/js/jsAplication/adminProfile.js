@@ -333,9 +333,7 @@ permissionFormulary.addEventListener("submit", (e) => {
 
   if (invalidInput.length === 0) {
 
-    // showSavedChanges(saveMessage);
-
-    showSavedChanges(saveMessage);
+    
 
     errorEmail.style.display = "none";
     errorPassword.style.display = "none";
