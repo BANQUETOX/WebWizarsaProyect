@@ -384,6 +384,9 @@
 .password-inputs-container {
   display: grid;
   grid-template-columns: auto auto auto;
+  margin-top: 10%;
+  margin-left: 10%;
+  
 }
 .location-container {
   margin-right: -200px;
@@ -401,33 +404,6 @@
 select:disabled {
   opacity: 1;
 }
-
-
-
-#error-email_message {
-  display: none;
-  padding: 10px;
-  border: 6px solid rgb(186, 0, 0);
-  margin-left: -12%;
-  padding-bottom: 2%;
-  margin-top:1%;
-  color: rgb(0, 0, 0);
-  box-shadow: 5px 5px 5px rgb(189, 25, 25);
-  border-radius: 15px;
-}
-
-#error-password-message {
-  display: none;
-  padding: 10px;
-  border: 6px solid rgb(186, 0, 0);
-  margin-left: -12%;
-  padding-bottom: 2%;
-  margin-top:1%;
-  color: rgb(0, 0, 0);
-  box-shadow: 5px 5px 5px rgb(189, 25, 25);
-  border-radius: 15px;
-}
-
 
 .valid-input-landing {
   border: 2px solid green;
@@ -550,8 +526,12 @@ select:disabled {
 }
 
 #second_password-toggle{
-  left: 207%;
-  top: -205%;
+  left: 204%;
+  top: -225%;
   margin-bottom: 6.3%;
+}
+
+#third_password-toggle{
+  top: 45%;
 }
 
