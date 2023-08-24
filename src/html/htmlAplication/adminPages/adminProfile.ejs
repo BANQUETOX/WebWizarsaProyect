@@ -207,31 +207,36 @@
             </div>
             <div class="container-form">
                 <form class="form" id="access-form">
-                        <h2>Ceder permisos de administrador</h2>
-                        <div class="password-inputs-container">
-                            <div class="form-control password-input-container" id="emailAdminInputContainer">
-                                <label>Email del nuevo administrador</label>
-                                <input class="text-input access-input input-email_landing" type="email" input="emailAdminInput">
-                                <p id="error-email_message" class="error__message invalid-email-input">
-                                    Rellene el espacio en blanco
-                                   </p>
-                                
-                            </div>
+                    <h2>Ceder permisos de administrador</h2>
+                    <div class="password-inputs-container">
+                        <div class="form-control password-input-container" id="emailAdminInputContainer">
+                            <label>Email del nuevo administrador</label>
+                            <input class="text-input access-input input-email_landing" type="email" readonly input="emailAdminInput">
+                            <p id="error-email_message" class="errormessage invalid-email-input">
+                                Debes de ingresar un correo válido
+                               </p>
+
+                        </div>
                             <div class="form-control password-input-container" id="confirm-password-container">
                                 <label> Contraseña de Confirmacion</label>
-                                <input class="text-input access-input input-password-landing" type="password" id="confirm-password-input">
-                                <span id="password-toggle" class="password-toggle">
-                                <p id="error-password-message inputs-errors" class="error__message invalid-password-input">
+                                <input class="text-input access-input input-password-landing" type="password" id="confirm-password-input" readonly>
+                                <p id="error-password-message" class="errormessage invalid-password-input">
                                    Contraseña incorrecta
                                   </p>
                             </div>
-                             <span id="third_password-toggle" class="password-toggle">
-                                <i class="fas fa-eye" id="third_eye-icon"></i> 
-                             </span> 
+                              
                             
-                            <p id="error-email_message" class="general-error-message">
+
+                            <p id="inputs-error" class="general-error-message" >
                                 Rellene los espacios en blanco
                                </p>
+
+                               <p id="saved-changes">
+                                Se ha enviado la inivtacion de forma exitosa 
+                           </p>
+                           <span id="third_password-toggle" class="password-toggle">
+                            <i class="fas fa-eye" id="third_eye-icon"></i> 
+                            </span>
                         </div>
                          
                         <div class="btn-cont">
@@ -239,7 +244,7 @@
                                 <button class="button--red" id="edit-access-button" type="button"> Editar permisos</button>
                             </div>
                             <div>
-                                <button class="button--green access-input">Guardar cambios</button>
+                                <button class="button--green access-input" type="submit">Guardar cambios</button>
                             </div>
                         </div>
                     </form>

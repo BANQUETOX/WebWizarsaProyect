@@ -2,6 +2,7 @@ let styleElement = document.createElement("style");
 const inputsCollection = document.getElementsByClassName("profile-input");
 const eyeToggle = document.getElementsByClassName("password-toggle");
 const container = document.getElementsByClassName("password-input-container")
+const container_try = document.getElementsByClassName("container_try")
 // disableInputs(inputsCollection);
 // disableSelectStyle(styleElement);
 
@@ -64,12 +65,29 @@ function alingEyes() {
     eyeToggle[0].style.marginTop="-2px"
     eyeToggle[1].style.top = "-88px";
     eyeToggle[1].style.marginLeft = "-203px";
-    
-  } else if (secondPasswordInput.classList.contains("text-input__invalid")) {
+  
+  }else if (secondPasswordInput.classList.contains("text-input__invalid")) {
     eyeToggle[0].style.top = "89px";
     eyeToggle[1].style.top = "-81px";
     container[1].style.top = "14px"
   }
+   if (firstPasswordInput.classList.contains("text-input__valid"))
+    {
+    
+    eyeToggle[0].style.left="-120px"
+    eyeToggle[0].style.top="74px"
+    eyeToggle[1].style.top = "-62px";
+    eyeToggle[1].style.marginLeft = "-3px";
+   }
+   if (firstPasswordInput.classList.contains("text-input__valid")&&
+      secondPasswordInput.classList.contains("text-input__invalid"))
+    {
+      eyeToggle[0].style.left="-120px"
+      eyeToggle[0].style.top="88px"
+      eyeToggle[1].style.top = "-80px";
+      eyeToggle[1].style.marginLeft = "-3px";
+    }
+  
   if (
     firstPasswordInput.classList.contains("text-input__invalid") &&
     secondPasswordInput.classList.contains("text-input__invalid")
@@ -162,6 +180,7 @@ secondPasswordInput.addEventListener("blur", () => {
   //alingInputs();
   alingEyes();
 });
+
 
 passwordForm.addEventListener("submit", (e) => {
   if (
