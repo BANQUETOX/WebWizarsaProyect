@@ -14,7 +14,6 @@ $("#imageUpload").change(function () {
   }
 });
 
-
 function alingInputs() {
   if (
     firstPasswordInput.classList.contains("text-input__invalid") &&
@@ -57,16 +56,14 @@ editProfileButton.addEventListener("click", () => {
   enableProfileinputs(profileInputsCollection);
 });
 
-
 function confirmSave() {
   var message = "Se han guardado los cambios";
   var result = alert(message);
+}
 
-};
-
+const profileForm = document.getElementById("company-profile-form");
 let saveChangesButton = document.getElementById("profile-save-button");
 saveChangesButton.addEventListener("click", () => {
-
+  profileForm.submit();
   confirmSave();
 });
-

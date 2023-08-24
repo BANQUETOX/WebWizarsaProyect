@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -61,7 +62,7 @@
         <div>
             <div class="avatar-upload">
                 <div class="avatar-edit">
-                    <input class="profile-input" type='file' id="imageUpload" accept=".png" />
+                    <input class="profile-input" type='file' id="imageUpload" accept=".png" value="<%=company.image%>" name="companyImage" />
                     <label  for="imageUpload"></label>
                 </div>
                 <div class="avatar-preview" id="avatar-preview">
@@ -72,17 +73,17 @@
         </div>
 
         <div class="container-form">
-            <form class="form" id="form" action="/sne/app/admin/companyProfile" method="post">
+            <form class="form" id="company-profile-form" action="/sne/app/admin/companyProfile" method="post">
                 <h2>Editar perfil</h2>
                 <div class="colums">
                     <div class="form-control">
                         <label>Nombre de la empresa:</label>
-                        <input class="text-input profile-input" type="text" placeholder="Juan Reyes" id="fname" readonly>
+                        <input class="text-input profile-input" type="text" placeholder="<%=company.name%>" id="fname" name="companyName" value="<%=company.name%>" readonly>
                         <small>El campo no puede estar en blanco</small>
                     </div>
                     <div class="form-control">
                         <label>Número teléfonico:</label>
-                        <input class="text-input profile-input" type="tel" placeholder="1234 5678" id="tel" accept="application/pdf" readonly>
+                        <input class="text-input profile-input" type="tel" placeholder="<%=company.phone%>" id="tel"name="companyPhone" value="<%=company.phone%>" readonly>
                         <i class="fas fa-check-circle"></i>
                         <i class="fas fa-exclamation-circle"></i>
                         <small>El campo no puede estar en blanco</small>
@@ -91,27 +92,27 @@
                 <div class="colums">
                     <div class="form-control">
                         <label>Cédula Juridica:</label>
-                        <input class="text-input profile-input" type="number" placeholder="12345678" id="idnum" name="companyId">
+                        <input class="text-input profile-input" type="number" placeholder="<%=company.id%>" id="idnum" name="companyId" value="<%=company.id%>" readonly>
                     </div>
                     <div class="form-control">
                         <label>Correo electronico:</label>
-                        <input class="text-input profile-input" type="email" id="idnum" name="companyEmail">
+                        <input class="text-input profile-input" type="email" id="idnum" placeholder="<%=company.admin.userEmail%>" name="companyEmail" value="<%=company.admin.userEmail%>" readonly >
                     </div>
                     
                 </div>
                 <div class="colums general-location-container">
                     <div class="form-control location-container">
                         <label>Facebook:</label>
-                        <input class="text-input profile-input" type="text" name="companyFacebook" id="">
+                        <input class="text-input profile-input" type="text" name="companyFacebook" placeholder="<%=company.facebook%>" id="" value="<%=company.facebook%>" readonly>
                     </div>
 
                     <div class="form-control location-container">
                         <label>instagram:</label>
-                        <input class="text-input profile-input " type="text" name="companyInstagram" id="">
+                        <input class="text-input profile-input " type="text" name="companyInstagram" placeholder="<%=company.instagram%>" id="" value="<%=company.instagram%>" readonly>
                     </div>
                     <div class="form-control  location-container">
                         <label>Twitter:</label>
-                        <input class="text-input profile-input" type="text" name="companyTwitter" id="">
+                        <input class="text-input profile-input" type="text" name="companyTwitter" placeholder="<%=company.twitter%>" id=""  value="<%=company.twitter%>" readonly>
                     </div>
                     
                 </div>
@@ -119,8 +120,8 @@
                     <div class="form-control location-container">
                         <label>Provincia</label>
                         <div class="select">
-                            <select name="companyProvince" id="province" class="select__element profile-input">
-                                        <option value=""></option>
+                            <select name="companyProvince" id="province" class="select__element profile-input" placeholder="<%=company.facebook%>" readonly>
+                                        <option value="<%=company.province%>"> <%=company.province%> </option>
                                         <option value="si">San Jose</option>
                                     </select>
                         </div>
@@ -130,8 +131,8 @@
                         <label>Canton</label>
                         <div class="select">
                             <select name="companyCanton" id="province" class="select__element profile-input">
-                                        <option value=""></option>
-                                        <option value="sipa">Esca</option>
+                                <option value="<%=company.canton%>"> <%=company.canton%> </option>
+                                        <option value="nopa">Esca</option>
                                     </select>
                         </div>
                     </div>
@@ -140,7 +141,7 @@
                         <div class="select">
                             <select name="companyDistrict" id="province" class="select__element profile-input">
                                         <option value=""></option>
-                                        <option value="pinga">san mige</option>
+                                        <option value="si">san mige</option>
                                     </select>
                         </div>
                     </div>
@@ -150,7 +151,7 @@
                 <div class="colums">
                     <div class="form-control">
                         <label>Direccion detallada</label>
-                        <textarea class="text-input" id="" cols="30" rows="10" name="companyAddress"></textarea>
+                        <textarea class="text-input profile-input" id="" cols="30" rows="10" name="companyAddress" placeholder="<%=company.address%>" value="<%=company.address%>" readonly></textarea>
                     </div>
 
                 </div>
@@ -159,16 +160,16 @@
 
                 <div class="btn-cont">
                     <div>
-                        <button class="button--red" type="button">Editar perfil</button>
+                        <button class="button--red" type="button" id="profile-edit-button">Editar perfil</button>
                     </div>
                     <div>
-                        <button class="button--green" type="submit">Guardar cambios</button>
+                        <button class="button--green" type="button" id="profile-save-button">Guardar cambios</button>
                     </div>
                 </div>
             </form>
         </div>
         <div class="session">
-            <a href=""><button class="button--red">Cerrar sesión</button></a>
+            <a href="/sne/"><button class="button--red">Cerrar sesión</button></a>
 
         </div>
 </section>

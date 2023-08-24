@@ -13,28 +13,33 @@ router.get("/", (req, res) => {
 router.get("/aplications", (req, res) => {
   res.render("htmlAplication/userPages/userAplicationSatus.html");
 });
-router.get("/profile", (req, res) => {
-  res.render("htmlAplication/userPages/userProfile.html");
+router.get("/profile", async (req, res) => {
+  const user = await db.User.find();
+  res.render("htmlAplication/userPages/userProfile.ejs", {
+    user: user[0],
+  });
 });
 
 router.get("/addInitialWorkExperience", (req, res) => {
   res.render("htmlAplication/userPages/userInitialWorkExperience.html");
 });
 router.post("/addInitialWorkExperience", (req, res) => {
-  newAccount.workExperience = [];
   const workFormulary = req.body;
+  console.log(workFormulary);
   let workExperience = {
-    educationLevel: workFormulary.educationLevel,
-    schoolName: workFormulary.schoolName,
-    studyField: workFormulary.studyField,
-    endingYear: workFormulary.endingYear,
-    carrerInCourse: workFormulary.carrerInCourse,
+    workNamePosition: workFormulary.workNamePosition,
+    workDescription: workFormulary.workDescription,
+    workCompanyName: workFormulary.workCompanyName,
+    workUbication: workFormulary.workUbication,
+    workSince: workFormulary.workSince,
+    workUntil: workFormulary.workUntil,
   };
   newAccount.workExperience.push(workExperience);
-  newAccount.lifeSheet = workFormulary.userLifeSheet;
-  newAccount.crimeSheet = workFormulary.userCrimeSheet;
-  console.log(newAccount);
-  db.createUser(newAccount);
+  if (workFormulary.userLifeSheet) {
+    newAccount.lifeSheet = workFormulary.userLifeSheet;
+    newAccount.crimeSheet = workFormulary.userCrimeSheet;
+    db.createUser(newAccount);
+  }
 });
 
 router.get("/addWorkExperience", (req, res) => {
@@ -53,6 +58,7 @@ router.get("/addInitialEducation", (req, res) => {
 });
 router.post("/addInitialEducation", (req, res) => {
   newAccount.education = [];
+  newAccount.workExperience = [];
   const education = req.body;
   newAccount.education.push(education);
 });

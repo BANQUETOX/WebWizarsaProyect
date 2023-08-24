@@ -156,6 +156,66 @@ async function login(email, password) {
   }
 }
 
+async function editCompany(editedCompany, newData) {
+  const companyId = editedCompany._id.toHexString();
+  companyId.toString();
+
+  await Company.findByIdAndUpdate(companyId, {
+    image: newData.companyImage,
+    id: newData.companyId,
+    name: newData.companyName,
+    phone: newData.companyPhone,
+    facebook: newData.companyFacebook,
+    instagram: newData.companyInstagram,
+    twitter: newData.companyTwitter,
+    province: newData.companyProvince,
+    canton: newData.companyCanton,
+    district: newData.companyDistrict,
+    address: newData.companyAddress,
+    admin: editedCompany.admin,
+    members: editedCompany.members,
+    jobPositions: editedCompany.jobPositions,
+  });
+}
+
+async function editAdmin(editedCompany, newData) {
+  const companyId = editedCompany._id.toHexString();
+  companyId.toString();
+  await Company.findByIdAndUpdate(companyId, {
+    image: editedCompany.image,
+    id: editedCompany.id,
+    name: editedCompany.name,
+    phone: editedCompany.phone,
+    facebook: editedCompany.facebook,
+    instagram: editedCompany.instagram,
+    twitter: editedCompany.twitter,
+    province: editedCompany.province,
+    canton: editedCompany.canton,
+    district: editedCompany.district,
+    address: editedCompany.address,
+    admin: {
+      username: newData.userName,
+      userEmail: newData.userEmail,
+      userPassword: editedCompany.admin.password,
+      userGenre: newData.userGenre,
+      userIdType: editedCompany.admin.userIdType,
+      userId: newData.userId,
+      userBirthDay: newData.userBirthDay,
+      userImage: editedCompany.admin.userIdType,
+      userRole: editedCompany.admin.userRole,
+      isActive: editedCompany.admin.isActive,
+    },
+    members: editedCompany.members,
+    jobPositions: editedCompany.jobPositions,
+  });
+}
+
+async function editUser(user, newData) {}
+
+module.exports.editUser = editUser;
+module.exports.User = User;
+module.exports.editAdmin = editAdmin;
+module.exports.editCompany = editCompany;
 module.exports.Company = Company;
 module.exports.login = login;
 module.exports.addCantones = addCantones;

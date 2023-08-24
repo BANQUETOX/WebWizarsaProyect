@@ -67,82 +67,65 @@
                     <div class="colums">
                         <div class="form-control">
                             <label>Nombre Completo:</label>
-                            <input class="text-input profile-input" type="text" placeholder="Juan Reyes" id="fname" readonly>
+                            <input class="text-input profile-input" type="text" value="<%=user.username%>" name="username" id="fname" readonly>
                             <small>El campo no puede estar en blanco</small>
                         </div>
                         <div class="form-control">
                             <label>Número teléfonico:</label>
-                            <input class="text-input profile-input" type="tel" placeholder="1234 5678" id="tel" accept="application/pdf" readonly>
-                            <i class="fas fa-check-circle"></i>
-                            <i class="fas fa-exclamation-circle"></i>
-                            <small>El campo no puede estar en blanco</small>
+                            <input class="text-input profile-input" type="tel"  id="tel" name="userPhone" value="<%=user.phone%>"  readonly>
                         </div>
                     </div>
                     <div class="colums">
                         <div class="form-control">
                             <label>Fecha de nacimiento:</label>
-                            <input class="text-input profile-input" type="date" placeholder="01/12/1990" id="birth" readonly>
-                            <i class="fas fa-check-circle"></i>
-                            <i class="fas fa-exclamation-circle"></i>
-                            <small>El campo no puede estar en blanco</small>
+                            <input class="text-input profile-input" type="date" id="birth" name="userBirthDay" value="<%=user.userBirthDay%>"  readonly>
                         </div>
                         <div class="form-control">
                             <label>Cédula, DIMEX, Pasaporte:</label>
-                            <input class="text-input profile-input" type="number" placeholder="12345678" id="number" readonly>
-                            <i class="fas fa-check-circle"></i>
-                            <i class="fas fa-exclamation-circle"></i>
-                            <small>El campo no puede estar en blanco</small>
+                            <input class="text-input profile-input" type="number" id="number" name="userId" value="<%=user.userId%>" readonly>
                         </div>
                     </div>
                     <div class="colums">
                         <div class="form-control genre-container">
                             <label class="select-margin">Género</label>
                             <div class="select">
-                                <select name="genre" id="genre" class="select__element profile-input " readonly>
-                                            <option value=""></option>
+                                <select name="userGenre" id="genre" class="select__element profile-input " readonly>
+                                            <option value="<%=user.userGenre%>"><%=user.userGenre%></option>
                                             <option value="man">Masculino</option>
                                             <option value="woman">Femenino</option>
                                             <option value="nogender">Prefiero no especificar</option>
                                         </select>
-                                        <i class="fas fa-check-circle"></i>
-                                        <i class="fas fa-exclamation-circle"></i>
-                                        <small>El campo no puede estar en blanco</small>
 
                             </div>
                         </div>
                         <div class="form-control">
                             <label>Correo electronico:</label>
-                            <input class="text-input profile-input" type="email" id="email">
+                            <input class="text-input profile-input" type="email" id="email" name="userEmail" value="<%=user.userEmail%>" readonly>
                         </div>
                     </div>
                     <div class="colums general-location-container">
                         <div class="form-control location-container">
                             <label calss="arreglo">Provincia</label>
                             <div class="select select-user-profile">
-                                <select name="genre" id="province" class="select__element profile-input" readonly>
-                                            <option value=""></option>
+                                <select name="userProvince" id="province" class="select__element profile-input" >
+                                            <option value="<%=user.userProvince%>"><%=user.userProvince%></option>
                                         </select>
-                                        <i class="fas fa-check-circle"></i>
-                                        <i class="fas fa-exclamation-circle"></i>
-                                        <small>El campo no puede estar en blanco</small>
                             </div>
                         </div>
 
                         <div class="form-control location-container">
                             <label>Canton</label>
                             <div class="select select-user-profile">
-                                <select name="genre" id="canton" class="select__element profile-input" readonly>
-                                            <option value=""></option>
-                                            
+                                <select name="userCanton" id="canton" class="select__element profile-input" readonly>
+                                            <option value="<%=user.userCanton%>"><%=user.userCanton%></option>
                                         </select>
                             </div>
                         </div>
                         <div class="form-control  location-container">
                             <label>Distrito</label>
                             <div class="select select-user-profile">
-                                <select name="genre" id="distrito" class="select__element profile-input" readonly>
-                                            <option value=""></option>
-                                          
+                                <select name="userDistrict" id="distrito" class="select__element profile-input" readonly>
+                                            <option value="<%=user.userDistrict%>"><%=user.userCanton%></option>
                                         </select>
                             </div>
                         </div>
@@ -153,52 +136,64 @@
                     <div class="colums">
                     <div class="form-control location-container-last">
                         <label>Hoja de vida:</label>
-                        <input class="CV" type="file" id="cv" name="logo" accept="document/*">
+                        <input class="CV" type="file" id="cv" name="lifeSheet" accept="document/*" value="<%=user.lifeSheet%>">
                     </div>
 
                     <div class="form-control location-container-last">
                         <label>Hoja de delincuencia:</label>
-                        <input class="criminal record" type="file" id="logo" name="logo" accept="document/*">
+                        <input class="criminal record" type="file" id="logo" name="crimeSheet" value="<%=user.crimeSheet%>" accept="document/*">
                     </div>
-                    
-
                     </div>
 
-                    <div class="colums">
+                    <!-- <div class="colums">
                         <div class="colums1"> 
                         <div class="form-control location-container-last-2">
                         <label>Educación:</label>
-                        <a class="link-education" href=""
-                        >Ejemplo</a>
-                        <a class="link-education"  href=""
-                        >Ejemplo</a>
-                        </div>
-                        </div>
+                        <%user.education.forEach(educ =>{%>
+                            <a href="">
+                              <%=educ.educationLevel%>
+                            </a>
+                            <%})%>
                         
+                       
+                        </div>
+                        </div>
                         <div class="colums2"> 
                         <div class="form-control location-container-last-2">
                         <label>Experiencia laboral:</label>
-                        <a href=""
-                        >Ejemplo</a>                 
-                        <a href=""
-                        >Ejemplo</a>
+                        <%user.workExperience.forEach(work =>{%>
+                            <a href="">
+                              <%=work.workPosition%>
+                            </a>
+                            <%})%>
                         </div>
                         </div>
-                    </div>
+                    <div>
+                 -->
+                    
 
                     
 
     
-                    <div class="btn-cont">
+                    <!-- <div class="btn-cont">
                         <div>
-                            <button class="button--red">Editar perfil</button>
+                            <button class="button--red" type="button">Editar perfil</button>
                         </div>
                         <div>
-                            <button class="button--green">Guardar cambios</button>
+                            <button class="button--green" type="submit">Guardar cambios</button>
+                        </div>
+                    </div> -->
+                    <div class="btn-cont">
+                        <div>
+                            <button class="button--red" id="profile-edit-button" type="button"> Editar contraseña</button>
+                        </div>
+                        <div>
+                            <button class="button--green" id="profile-save-button">Guardar contraseña</button>
                         </div>
                     </div>
                 </form>
             </div>
+            
             <div class="container-form">
                 <form class="form" id="password-form">
                         <h2>Editar Contraseña</h2>
@@ -232,10 +227,10 @@
                         </div>
                         <div class="btn-cont">
                             <div>
-                                <button class="button--red" id="profile-edit-button" type="button"> Editar contraseña</button>
+                                <button class="button--red" id="password-edit-button" type="button"> Editar contraseña</button>
                             </div>
                             <div>
-                                <button class="button--green" id="profile-save-button">Guardar contraseña</button>
+                                <button class="button--green" id="password-save-button" type="submit">Guardar contraseña</button>
                             </div>
                         </div>
                     </form>
