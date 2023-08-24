@@ -11,6 +11,7 @@ router.get("/", (req, res) => {
   res.render("htmlAplication/landingPage/aplicationLandingPage.html");
 });
 router.post("/", async (req, res) => {
+  const location = await db.Location.find();
   const loginEmail = req.body.loginEmail;
   const loginPassword = req.body.loginPassword;
   let values = await db.login(loginEmail, loginPassword);
@@ -21,10 +22,14 @@ router.post("/", async (req, res) => {
       res.render("htmlAplication/pageAdmin/catalogueProvices.html");
       break;
     case "company":
-      res.render("htmlAplication/adminPages/adminAplicationJobs.html");
+      res.render("htmlAplication/adminPages/adminAplicationJobs.ejs", {
+        locations: location,
+      });
       break;
     case "user":
-      res.render("htmlAplication/userPages/userAplicationJobs.html");
+      res.render("htmlAplication/userPages/userAplicationJobs.ejs", {
+        locations: location,
+      });
       break;
   }
 });
