@@ -210,7 +210,25 @@ async function editAdmin(editedCompany, newData) {
   });
 }
 
-async function editUser(user, newData) {}
+async function editUser(user, newData) {
+  const userId = user.id;
+  console.log(userId);
+  await User.findByIdAndUpdate(userId, {
+    username: newData.username,
+    userLastNmae: user.userLastName,
+    userEmail: newData.userEmail,
+    userPassword: user.userPassword,
+    userGenre: newData.userGenre,
+    userId: newData.userId,
+    userBirthDay: newData.userBirthDay,
+    userImage: user.userImage,
+    userRole: user.userRole,
+    education: user.education,
+    workExperience: user.workExperience,
+    lifeSheet: newData.lifeSheet,
+    crimeSheet: newData.crimeSheet,
+  });
+}
 
 module.exports.editUser = editUser;
 module.exports.User = User;

@@ -114,9 +114,11 @@
                   <option value=""  selected hidden>
                     Provincia
                   </option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
+                  <%locations.forEach(location =>{%>
+                    <option value="<%=location.province.name%>">
+                      <%=location.province.name%>
+                    </option>
+                    <%})%>
                 </select>
                 <!-- <p class="error--input-label"></p> -->
               </div>
@@ -127,15 +129,22 @@
                   class="select__element company-input"
                   name="companyCanton"
                   id="selectCanton"
-                  
-                  
                 >
-                  <option value=""  selected hidden>
-                    Canton
-                  </option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
+                  <option value=""  selected hidden>Canton</option>
+                  <%locations.forEach(location =>{%>
+                    <% location.province.cantones.forEach(canton =>{  %>
+                      <option value="<%=canton.name%>">
+                        <%=canton.name%>
+                      </option>
+                    <%})%>
+                    <%})%>
+                  
+            
+
+                 
+
+
+                 
                 </select>
                 <!-- <p class="error--input-label"></p> -->
               </div>

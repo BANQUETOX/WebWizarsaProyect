@@ -8,12 +8,18 @@ router.use(bodyParser.json());
 router.use(bodyParser.urlencoded({ extended: false }));
 
 //Main jobs page
-router.get("/", (req, res) => {
-  res.render("htmlAplication/adminPages/adminAplicationJobs.html");
+router.get("/", async (req, res) => {
+  const location = await db.Location.find();
+  res.render("htmlAplication/adminPages/adminAplicationJobs.ejs", {
+    locations: location,
+  });
 });
 // aplications Status
-router.get("/aplications", (req, res) => {
-  res.render("htmlAplication/adminPages/adminAplicationStatus.html");
+router.get("/aplications", async (req, res) => {
+  const location = await db.Location.find();
+  res.render("htmlAplication/adminPages/adminAplicationStatus.ejs", {
+    locations: location,
+  });
 });
 //company profile
 router.get("/companyProfile", async (req, res) => {
@@ -56,24 +62,31 @@ router.post("/initialInviteMembers", (req, res) => {
 });
 // profile
 router.get("/profile", async (req, res) => {
+  const location = await db.Location.find();
   const company = await db.Company.find();
   res.render("htmlAplication/adminPages/adminProfile.ejs", {
+    locations: location,
     company: company[0],
   });
 });
 
 router.post("/profile", async (req, res) => {
+  const location = await db.Location.find();
   const newData = req.body;
   const company = await db.Company.find();
   await db.editAdmin(company[0], newData);
   res.render("htmlAplication/adminPages/adminProfile.ejs", {
+    locations: location,
     company: company[0],
   });
 });
 
 //create company
-router.get("/createCompany", (req, res) => {
-  res.render("htmlAplication/adminPages/createCompany.html");
+router.get("/createCompany", async (req, res) => {
+  const location = await db.Location.find();
+  res.render("htmlAplication/adminPages/createCompany.ejs", {
+    locations: location,
+  });
 });
 router.post("/createCompany", (req, res) => {
   const sharedPages = require("./sharedPages");

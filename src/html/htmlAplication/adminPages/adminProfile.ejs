@@ -22,7 +22,7 @@
         <div class="profile_images">
           <a href="/sne/app/admin/profile">
             <img
-              src="../../../images/imagesAplication/user.png"
+              src="../../../images/imagesAplication/admin.png"
               alt="Icono de Usuario"
             />
           </a>
@@ -117,6 +117,11 @@
                             <div class="select">
                                 <select name="userProvince"  class="select__element profile-input" >
                                             <option value="<%=company.province%>"><%=company.province%></option>
+                                            <%locations.forEach(location =>{%>
+                                                <option value="<%=location.province.name%>">
+                                                  <%=location.province.name%>
+                                                </option>
+                                                <%})%>
                                         </select>
                             </div>
                         </div>
@@ -126,6 +131,13 @@
                             <div class="select">
                                 <select name="userCanton"  class="select__element profile-input">
                                             <option value="<%=company.canton%>"><%=company.canton%></option>
+                                            <%locations.forEach(location =>{%>
+                                                <% location.province.cantones.forEach(canton =>{  %>
+                                                  <option value="<%=canton.name%>">
+                                                    <%=canton.name%>
+                                                  </option>
+                                                <%})%>
+                                                <%})%>
                                             
                                         </select>
                             </div>

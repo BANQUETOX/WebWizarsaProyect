@@ -28,7 +28,7 @@
       <div class="profile_images">
         <a href="/sne/app/admin/profile">
           <img
-            src="../../../images/imagesAplication/user.png"
+            src="../../../images/imagesAplication/admin.png"
             alt="Icono de Usuario"
           />
         </a>
@@ -69,11 +69,20 @@
             <div class="select">
               <select class="select__element">
                 <option value="1">Provincia</option>
+                <%locations.forEach(location =>{%>
+                <option value="<%=location.province.name%>">
+                  <%=location.province.name%>
+                </option>
+                <%})%>
               </select>
             </div>
             <div class="select">
               <select class="select__element">
                 <option value="1">Canton</option>
+                <%locations.forEach(location =>{%> <%
+                location.province.cantones.forEach(canton =>{ %>
+                <option value="<%=canton.name%>"><%=canton.name%></option>
+                <%})%> <%})%>
               </select>
             </div>
             <div class="select">

@@ -6,16 +6,34 @@ let newAccount;
 router.use(bodyParser.json());
 router.use(bodyParser.urlencoded({ extended: false }));
 
-router.get("/", (req, res) => {
-  res.render("htmlAplication/userPages/userAplicationJobs.html");
+router.get("/", async (req, res) => {
+  const location = await db.Location.find();
+  res.render("htmlAplication/userPages/userAplicationJobs.ejs", {
+    locations: location,
+  });
 });
 
-router.get("/aplications", (req, res) => {
-  res.render("htmlAplication/userPages/userAplicationSatus.html");
+router.get("/aplications", async (req, res) => {
+  const location = await db.Location.find();
+  res.render("htmlAplication/userPages/userAplicationSatus.ejs", {
+    locations: location,
+  });
 });
 router.get("/profile", async (req, res) => {
+  const location = await db.Location.find();
   const user = await db.User.find();
   res.render("htmlAplication/userPages/userProfile.ejs", {
+    locations: location,
+    user: user[0],
+  });
+});
+router.post("/profile", async (req, res) => {
+  const location = await db.Location.find();
+  const user = await db.User.find();
+  const newData = req.body;
+  db.editUser(user[0], newData);
+  res.render("htmlAplication/userPages/userProfile.ejs", {
+    locations: location,
     user: user[0],
   });
 });

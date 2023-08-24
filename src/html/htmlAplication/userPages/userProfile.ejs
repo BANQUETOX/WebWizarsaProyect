@@ -62,7 +62,7 @@
             </div>
 
             <div class="container-form">
-                <form class="form" id="form">
+                <form class="form" id="form" action="/sne/app/user/profile" method="post">
                     <h2>Editar perfil</h2>
                     <div class="colums">
                         <div class="form-control">
@@ -109,6 +109,11 @@
                             <div class="select select-user-profile">
                                 <select name="userProvince" id="province" class="select__element profile-input" >
                                             <option value="<%=user.userProvince%>"><%=user.userProvince%></option>
+                                            <%locations.forEach(location =>{%>
+                                                <option value="<%=location.province.name%>">
+                                                  <%=location.province.name%>
+                                                </option>
+                                                <%})%>
                                         </select>
                             </div>
                         </div>
@@ -118,6 +123,13 @@
                             <div class="select select-user-profile">
                                 <select name="userCanton" id="canton" class="select__element profile-input" readonly>
                                             <option value="<%=user.userCanton%>"><%=user.userCanton%></option>
+                                            <%locations.forEach(location =>{%>
+                                                <% location.province.cantones.forEach(canton =>{  %>
+                                                  <option value="<%=canton.name%>">
+                                                    <%=canton.name%>
+                                                  </option>
+                                                <%})%>
+                                                <%})%>
                                         </select>
                             </div>
                         </div>
@@ -136,12 +148,12 @@
                     <div class="colums">
                     <div class="form-control location-container-last">
                         <label>Hoja de vida:</label>
-                        <input class="CV" type="file" id="cv" name="lifeSheet" accept="document/*" value="<%=user.lifeSheet%>">
+                        <input class="CV" type="file" id="cv" name="lifeSheet" accept=".pdf" value="<%=user.lifeSheet%>">
                     </div>
 
                     <div class="form-control location-container-last">
                         <label>Hoja de delincuencia:</label>
-                        <input class="criminal record" type="file" id="logo" name="crimeSheet" value="<%=user.crimeSheet%>" accept="document/*">
+                        <input class="criminal record" type="file" id="logo" name="crimeSheet" value="<%=user.crimeSheet%>" accept=".pdf">
                     </div>
                     </div>
 
@@ -238,7 +250,7 @@
                     </form>
             </div>
             <div class="session">
-                <a href="../landingPage/aplicationLandingPage.html"><button class="button--red">Cerrar sesión</button></a>
+                <a href="/sne/"><button class="button--red">Cerrar sesión</button></a>
 
             </div>
     </section>
